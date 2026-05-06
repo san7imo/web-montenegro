@@ -1,0 +1,66 @@
+import { motion, useReducedMotion } from 'framer-motion'
+
+import ctaBackground from '../../../assets/esencia/tu-mejor-version-imagen.webp'
+import { Button } from '../../../components/ui/Button'
+import { ImageLayer } from '../../../components/ui/ImageLayer'
+import { esenciaCtaContent } from '../../../data/esencia'
+
+export function EsenciaCTA() {
+  const shouldReduceMotion = useReducedMotion()
+
+  const fadeUp = (delay: number) =>
+    shouldReduceMotion
+      ? {}
+      : {
+          initial: { opacity: 0, y: 24, filter: 'blur(6px)' },
+          whileInView: { opacity: 1, y: 0, filter: 'blur(0px)' },
+          viewport: { once: true, amount: 0.25 },
+          transition: {
+            delay,
+            duration: 0.8,
+            ease: 'easeOut' as const,
+          },
+        }
+
+  return (
+    <section className="bg-cream">
+      <div className="relative overflow-hidden min-h-[22rem] sm:min-h-[24rem] lg:h-[25.5rem]">
+        <ImageLayer
+          src={ctaBackground}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
+
+        <div className="relative z-10 flex h-full items-start">
+          <div className="w-full max-w-[58rem] px-8 pt-10 pb-10 text-left sm:px-10 sm:pt-12 lg:px-12 lg:pt-16">
+            <motion.h2
+              className="max-w-[15ch] font-heading text-[2.65rem] leading-[0.94] tracking-[-0.04em] text-pink-soft drop-shadow-[0_10px_20px_rgba(31,53,43,0.16)] sm:max-w-[17ch] sm:text-[3.45rem] lg:max-w-none lg:text-[4.2rem]"
+              {...fadeUp(0.06)}
+            >
+              <span className="block lg:whitespace-nowrap">Permítenos ayudarte a encontrar</span>
+              <span className="block">tu mejor versión.</span>
+            </motion.h2>
+
+            <motion.p
+              className="mt-3 max-w-[35rem] text-[1.02rem] leading-8 text-cream-light/96 sm:text-[1.08rem] sm:leading-8"
+              {...fadeUp(0.18)}
+            >
+              {esenciaCtaContent.description}
+            </motion.p>
+
+            <motion.div className="mt-6" {...fadeUp(0.3)}>
+              <Button
+                to={esenciaCtaContent.ctaHref}
+                variant="outline"
+                showArrow
+                className="min-w-[18rem] border-pink-soft bg-transparent px-7 text-[0.78rem] tracking-[0.08em] text-pink-soft hover:border-white hover:bg-white hover:text-forest"
+              >
+                {esenciaCtaContent.ctaLabel}
+              </Button>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

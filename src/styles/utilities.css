@@ -1,0 +1,23 @@
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .surface-card {
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+  }
+
+  .surface-panel {
+    border-radius: var(--radius-soft);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .overlay-forest {
+    background-image: var(--overlay-forest);
+  }
+
+  .overlay-soft {
+    background-image: var(--overlay-soft);
+  }
+}
