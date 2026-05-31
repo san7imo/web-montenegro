@@ -1,19 +1,14 @@
 import { useEffect, useState } from 'react'
-import { Link, NavLink, useLocation } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 
 import navbarLogo from '../../assets/logo/montenegro-logo-navbar.webp'
-import { primaryNavigationLinks } from '../../data/navigation'
+import { headerNavigationLinks } from '../../data/navigation'
 import { Container } from '../ui/Container'
 
 export function Header() {
   const shouldReduceMotion = useReducedMotion()
-  const location = useLocation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-  useEffect(() => {
-    setIsMenuOpen(false)
-  }, [location.pathname])
 
   useEffect(() => {
     if (!isMenuOpen) {
@@ -40,7 +35,7 @@ export function Header() {
       animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: 'easeOut' }}
     >
-      <Container className="relative flex items-start justify-between py-7 text-white sm:py-8">
+      <Container className="relative flex max-w-none items-start justify-between px-7 py-7 text-white sm:px-8 sm:py-8 lg:px-8">
         <motion.div
           initial={shouldReduceMotion ? false : { opacity: 0, x: -16 }}
           animate={shouldReduceMotion ? undefined : { opacity: 1, x: 0 }}
@@ -49,6 +44,7 @@ export function Header() {
           <Link
             to="/"
             aria-label="Montenegro Salud y Belleza"
+            onClick={() => setIsMenuOpen(false)}
             className="drop-shadow-[0_8px_24px_rgba(0,0,0,0.18)]"
           >
             <img
@@ -114,10 +110,11 @@ export function Header() {
               transition={{ duration: 0.22, ease: 'easeOut' }}
             >
               <ul className="space-y-1.5">
-                {primaryNavigationLinks.map((item) => (
+                {headerNavigationLinks.map((item) => (
                   <li key={item.href}>
                     <NavLink
                       to={item.href}
+                      onClick={() => setIsMenuOpen(false)}
                       className={({ isActive }) =>
                         [
                           'flex rounded-[0.95rem] px-4 py-3 text-[0.76rem] font-medium uppercase tracking-[0.16em] transition-colors duration-200',

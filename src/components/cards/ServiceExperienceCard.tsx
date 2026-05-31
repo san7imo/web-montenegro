@@ -1,10 +1,21 @@
-import medicinalBathImage from '../../assets/oasis/baños-medicinales.webp'
-import cellularHydrationImage from '../../assets/oasis/hidratacion-celular.webp'
-import detoxTherapyImage from '../../assets/oasis/terapias-de-detoxificacion.webp'
+import descontracturanteImage from '../../assets/oasis/descontracturante.png'
+import drenajeLinfaticoImage from '../../assets/oasis/drenajelinfatico.png'
+import exfoliacionImage from '../../assets/oasis/exfoliacion.png'
+import masajeRelajanteImage from '../../assets/oasis/masajerelajante.png'
+import presoterapiaImage from '../../assets/oasis/presoterapia.png'
+import ritualesEnTinaImage from '../../assets/oasis/ritualesentina.png'
+import ventosasImage from '../../assets/oasis/ventosas.png'
 import { Button } from '../ui/Button'
 import { ImageLayer } from '../ui/ImageLayer'
 
-type ServiceExperienceImageKey = 'bath' | 'detox' | 'hydration'
+type ServiceExperienceImageKey =
+  | 'ritualesEnTina'
+  | 'exfoliacion'
+  | 'drenajeLinfatico'
+  | 'masajeRelajante'
+  | 'presoterapia'
+  | 'ventosas'
+  | 'descontracturante'
 
 type ServiceExperienceCardProps = {
   title: string
@@ -17,9 +28,13 @@ type ServiceExperienceCardProps = {
 }
 
 const imageByKey: Record<ServiceExperienceImageKey, string> = {
-  bath: medicinalBathImage,
-  detox: detoxTherapyImage,
-  hydration: cellularHydrationImage,
+  ritualesEnTina: ritualesEnTinaImage,
+  exfoliacion: exfoliacionImage,
+  drenajeLinfatico: drenajeLinfaticoImage,
+  masajeRelajante: masajeRelajanteImage,
+  presoterapia: presoterapiaImage,
+  ventosas: ventosasImage,
+  descontracturante: descontracturanteImage,
 }
 
 export function ServiceExperienceCard({
@@ -32,40 +47,39 @@ export function ServiceExperienceCard({
   ctaLabel,
 }: ServiceExperienceCardProps) {
   return (
-    <article className="grid gap-8 py-4 sm:py-5 lg:grid-cols-[11rem_10rem_1fr] lg:items-start lg:gap-7 xl:grid-cols-[12rem_11rem_1fr] xl:gap-10">
-      <div className="mx-auto w-full max-w-[11rem] lg:mx-0 lg:max-w-none">
+    <article className="grid gap-4 rounded-[1.45rem] border border-cream-light/80 bg-cream/50 p-2.5 shadow-[0_2px_5px_rgba(36,61,49,0.16)] sm:grid-cols-[10.5rem_1fr] sm:gap-6 sm:p-3 lg:min-h-[11.4rem] lg:grid-cols-[14.7rem_1fr] lg:gap-10 lg:rounded-[1.65rem]">
+      <div className="w-full overflow-hidden rounded-[1.1rem] sm:h-full lg:rounded-[1.25rem]">
         <ImageLayer
           src={imageByKey[image]}
           alt={title}
-          className="aspect-square w-full rounded-[1.5rem] object-cover"
+          className="aspect-square h-full w-full object-cover"
         />
       </div>
 
-      <div className="w-full max-w-[12rem] text-forest-dark/92">
-        <div className="grid grid-cols-[auto_1fr] items-center gap-x-4 text-[1rem] leading-7">
-          <span>Duración</span>
-          <span className="justify-self-end font-semibold">{duration}</span>
-        </div>
-        <div className="mt-1 h-px w-full bg-pink/55" />
-        <div className="mt-2 grid grid-cols-[auto_1fr] items-center gap-x-4 text-[1rem] leading-7">
-          <span>Precio</span>
-          <span className="justify-self-end font-semibold">{price}</span>
-        </div>
-        <div className="mt-1 h-px w-full bg-pink/55" />
-      </div>
-
-      <div className="max-w-[25rem] lg:max-w-none">
-        <h3 className="font-heading text-[2.45rem] leading-[0.92] tracking-[-0.04em] text-forest sm:text-[2.8rem] lg:text-[3rem]">
+      <div className="flex min-w-0 flex-col pb-1 pt-1 sm:pr-3 lg:pr-6 lg:pt-3">
+        <h3 className="font-heading text-[2.15rem] font-semibold leading-[0.96] text-forest sm:text-[2.35rem] lg:text-[2.75rem]">
           {title}
         </h3>
-        <p className="mt-2 max-w-[24rem] text-[1.05rem] leading-8 text-forest-dark/92 sm:text-[1.08rem] lg:max-w-[26rem]">
+        <p className="mt-1 max-w-[34rem] text-[0.86rem] font-medium leading-[1.45] text-forest-dark/90 sm:text-[0.9rem] lg:text-[0.94rem]">
           {description}
         </p>
-        <div className="mt-6">
+
+        <dl className="mt-3 text-[0.86rem] font-semibold leading-5 text-forest-dark sm:mt-4 sm:text-[0.9rem]">
+          <div>
+            <dt className="inline">Duración </dt>
+            <dd className="inline">{duration}</dd>
+          </div>
+          <div>
+            <dt className="inline">Precio </dt>
+            <dd className="inline">{price}</dd>
+          </div>
+        </dl>
+
+        <div className="mt-5 flex sm:mt-auto sm:justify-end">
           <Button
             to={ctaHref}
-            variant="primary"
-            className="min-w-[11.25rem] px-7 text-[0.78rem] tracking-[0.08em]"
+            variant="outline"
+            className="min-h-9 min-w-[10.4rem] border-pink bg-transparent px-5 py-2 text-[0.66rem] font-bold tracking-[0.03em] text-pink shadow-none hover:border-pink-dark hover:bg-pink/8 hover:text-pink-dark focus-visible:ring-pink sm:min-w-[11.7rem] lg:min-h-[2.35rem]"
           >
             {ctaLabel}
           </Button>

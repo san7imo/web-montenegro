@@ -23,35 +23,32 @@ export function PurificationExperiences() {
         }
 
   return (
-    <section className="bg-cream py-14 text-forest sm:py-16 lg:py-20">
-      <Container className="max-w-[78rem] px-0 sm:px-0">
-        <motion.div className="mx-auto max-w-[25rem] px-5 text-center sm:max-w-[33rem] sm:px-6" {...fadeUp(0.04)}>
+    <section className="bg-cream py-12 text-forest sm:py-14 lg:py-20">
+      <Container className="max-w-[60rem] px-5 sm:px-6 lg:px-0">
+        <motion.div className="mx-auto max-w-[23rem] text-center sm:max-w-[29rem]" {...fadeUp(0.04)}>
           <SectionTitle
             as="h2"
-            className="text-forest sm:text-[4.15rem] lg:text-[4.7rem]"
+            className="text-forest sm:text-[3.55rem] lg:text-[4.05rem]"
           >
             <span className="block">{oasisPurificationExperiencesContent.titleLines[0]}</span>
             <span className="block">{oasisPurificationExperiencesContent.titleLines[1]}</span>
           </SectionTitle>
         </motion.div>
 
-        <div className="mt-12 lg:mt-14">
+        <div className="mt-9 space-y-4 sm:mt-10 lg:mt-12 lg:space-y-5">
           {oasisPurificationExperiencesContent.items.map((item, index) => (
             <motion.div key={item.id} {...fadeUp(0.12 + index * 0.08)}>
-              <div className="border-t border-pink/55 px-5 py-3 sm:px-6 lg:px-8">
-                <ServiceExperienceCard
-                  title={item.title}
-                  description={item.description}
-                  duration={item.duration}
-                  price={item.price}
-                  image={item.image}
-                  ctaHref={oasisPurificationExperiencesContent.ctaHref}
-                  ctaLabel={oasisPurificationExperiencesContent.ctaLabel}
-                />
-              </div>
+              <ServiceExperienceCard
+                title={item.title}
+                description={item.description}
+                duration={item.duration}
+                price={item.price}
+                image={item.image}
+                ctaHref={oasisPurificationExperiencesContent.ctaHref}
+                ctaLabel={oasisPurificationExperiencesContent.ctaLabel}
+              />
             </motion.div>
           ))}
-          <div className="border-t border-pink/55" />
         </div>
       </Container>
     </section>
