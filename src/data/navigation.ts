@@ -23,4 +23,7 @@ export const headerNavigationLinks: NavigationItem[] = [
   { label: 'TACTO', href: '/tacto' },
   { label: 'RAÍZ', href: '/raiz' },
   { label: 'BROTE', href: '/brote' },
+  { label: 'FILO', href: '/filo' },
+  { label: 'HEBRA', href: '/hebra' },
+  { label: 'TEZ', href: '/tez' },
 ]
