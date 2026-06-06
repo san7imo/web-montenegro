@@ -5,7 +5,7 @@ export const homePageContent: PagePlaceholderContent = {
   title: 'Sumérgete en el lujo, tu refugio de bienestar y belleza.',
   description:
     'Montenegro es el santuario donde la sabiduría ancestral, el lujo sensorial y la vanguardia de alta cosmética convergen para renovar tu ser integral.',
-  ctaHref: '/contacto',
+  ctaHref: `https://wa.me/?text=${encodeURIComponent('Hola, quiero reservar una cita en Montenegro Salud y Belleza. ¿Me puedes confirmar disponibilidad?')}`,
   ctaLabel: 'RESERVA TU CITA',
 }
 
@@ -19,7 +19,7 @@ export const homeIntroContent = {
   title: 'Despierta tu calma interior.',
   titleLines: ['Despierta tu', 'calma interior.'],
   description:
-    'En Montenegro, tu bienestar no es un lujo, es nuestra prioridad. Guiados por el legado botánico de Olga Montenegro y potenciados por la tecnología estética más avanzada, creamos rituales de autor que fusionan el éxtasis sensorial con resultados visibles. Somos el equilibrio perfecto entre la sanación de la Tierra y la precisión de la Ciencia.',
+    'En Montenegro, tu bienestar no es un lujo, es nuestra prioridad. Guiados por el legado botánico de Olga Lucia Montenegro y potenciados por la tecnología estética más avanzada, creamos rituales que fusionan el éxtasis sensorial con resultados visibles. Somos el equilibrio perfecto entre la sanación de la Tierra y la precisión de la Ciencia.',
   ctaHref: '/esencia',
   ctaLabel: 'NUESTRA ESENCIA',
 } as const

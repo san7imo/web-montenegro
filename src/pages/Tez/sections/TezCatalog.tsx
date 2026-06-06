@@ -46,6 +46,7 @@ export function TezCatalog() {
               {section.items.map((item, index) => (
                 <motion.div key={item.id} {...fadeUp(0.08 + index * 0.035)}>
                   <TezCatalogCard
+                    id={item.id}
                     title={item.title}
                     description={item.description}
                     image={item.image}

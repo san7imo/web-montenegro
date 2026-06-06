@@ -1,9 +1,11 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
 import tactoHeroBackground from '../../../assets/tacto/hero.png'
+import tactoHeroVideo from '../../../assets/videos-hero/optimized/tacto.mp4'
 import { Container } from '../../../components/ui/Container'
 import { DecorativeLine } from '../../../components/ui/DecorativeLine'
-import { ImageLayer } from '../../../components/ui/ImageLayer'
+import { HeroOverlay } from '../../../components/ui/HeroOverlay'
+import { HeroVideoBackground } from '../../../components/ui/HeroVideoBackground'
 import { SectionTitle } from '../../../components/ui/SectionTitle'
 import { tactoHeroContent } from '../../../data/tacto'
 
@@ -26,14 +28,13 @@ export function TactoHero() {
 
   return (
     <section className="overflow-hidden bg-forest text-white">
-      <div className="relative aspect-[1440/671] min-h-[23rem]">
-        <ImageLayer
-          src={tactoHeroBackground}
-          alt=""
-          loading="eager"
+      <div className="relative h-[64svh] min-h-[25rem] max-h-[44rem]">
+        <HeroVideoBackground
+          src={tactoHeroVideo}
+          poster={tactoHeroBackground}
           className="absolute inset-0 h-full w-full object-cover object-[43%_center] sm:object-center"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(21,25,18,0.18)_0%,rgba(31,53,43,0.2)_48%,rgba(31,53,43,0.58)_100%)]" />
+        <HeroOverlay />
 
         <div className="relative z-10 flex h-full items-end px-[6.2vw] pb-6 sm:pb-7 lg:pb-2">
           <motion.div className="max-w-[72rem]" {...fadeUp(0.08)}>

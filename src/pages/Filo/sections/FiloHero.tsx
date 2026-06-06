@@ -1,9 +1,11 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
 import filoHeroBackground from '../../../assets/filo/hero-filo.png'
+import filoHeroVideo from '../../../assets/videos-hero/optimized/filo.mp4'
 import { Container } from '../../../components/ui/Container'
 import { DecorativeLine } from '../../../components/ui/DecorativeLine'
-import { ImageLayer } from '../../../components/ui/ImageLayer'
+import { HeroOverlay } from '../../../components/ui/HeroOverlay'
+import { HeroVideoBackground } from '../../../components/ui/HeroVideoBackground'
 import { SectionTitle } from '../../../components/ui/SectionTitle'
 import { filoHeroContent } from '../../../data/filo'
 
@@ -26,15 +28,13 @@ export function FiloHero() {
 
   return (
     <section className="overflow-hidden bg-forest text-white">
-      <div className="relative aspect-[1440/701] min-h-[24rem]">
-        <ImageLayer
-          src={filoHeroBackground}
-          alt=""
-          loading="eager"
+      <div className="relative h-[64svh] min-h-[25rem] max-h-[44rem]">
+        <HeroVideoBackground
+          src={filoHeroVideo}
+          poster={filoHeroBackground}
           className="absolute inset-0 h-full w-full object-cover object-[52%_center]"
         />
-        <div className="absolute inset-0 bg-forest/18" />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(18,22,18,0.12)_0%,rgba(31,53,43,0.18)_48%,rgba(31,53,43,0.56)_100%)]" />
+        <HeroOverlay />
 
         <div className="relative z-10 flex h-full items-end px-[6.2vw] pb-8 sm:pb-10 lg:pb-9">
           <motion.div className="max-w-[70rem]" {...fadeUp(0.08)}>

@@ -1,8 +1,10 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
 import origenHeroBackground from '../../../assets/origen/origenportada-editada.webp'
+import origenHeroVideo from '../../../assets/videos-hero/optimized/origen.mp4'
 import { Container } from '../../../components/ui/Container'
-import { ImageLayer } from '../../../components/ui/ImageLayer'
+import { HeroOverlay } from '../../../components/ui/HeroOverlay'
+import { HeroVideoBackground } from '../../../components/ui/HeroVideoBackground'
 import { SectionLabel } from '../../../components/ui/SectionLabel'
 import { SectionTitle } from '../../../components/ui/SectionTitle'
 import { origenHeroContent } from '../../../data/origen'
@@ -25,20 +27,20 @@ export function OrigenHero() {
         }
 
   return (
-    <section className="relative min-h-[100svh] overflow-hidden bg-forest-dark text-white">
-      <ImageLayer
-        src={origenHeroBackground}
-        alt=""
-        loading="eager"
+    <section className="relative h-[64svh] min-h-[25rem] max-h-[44rem] overflow-hidden bg-forest-dark text-white">
+      <HeroVideoBackground
+        src={origenHeroVideo}
+        poster={origenHeroBackground}
         className="absolute inset-0 h-full w-full object-cover object-center"
       />
+      <HeroOverlay />
 
-      <Container className="relative z-10 flex min-h-[100svh] items-end pb-14 pt-28 sm:pb-16 sm:pt-32 lg:pb-18">
+      <Container className="relative z-10 flex h-full items-end pb-14 pt-28 sm:pb-16 sm:pt-32 lg:pb-18">
         <div className="max-w-[22rem] sm:max-w-[34rem] lg:max-w-[66rem]">
           <motion.div {...fadeUp(0.06)}>
             <SectionLabel
               variant="dark"
-              className="border-white/70 bg-white/6 px-8 text-[0.8rem] tracking-[0.05em] text-cream-light"
+              className="border-pink-soft/72 bg-pink-soft/14 px-8 text-[0.8rem] tracking-[0.05em] text-pink-soft shadow-[0_14px_34px_rgba(194,11,114,0.1)]"
             >
               {origenHeroContent.label}
             </SectionLabel>

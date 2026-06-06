@@ -51,14 +51,20 @@ export function ValuesSection() {
             className="relative mt-12 px-3 text-center lg:mt-14 lg:px-12"
             {...fadeUp(0.42)}
           >
-            <span className="absolute left-0 top-[-0.35rem] font-heading text-[4rem] leading-none text-cream-light/92 sm:left-4 lg:left-0 lg:text-[4.8rem]" aria-hidden="true">
-              “
-            </span>
-            <span className="absolute right-0 top-[-0.35rem] font-heading text-[4rem] leading-none text-cream-light/92 sm:right-4 lg:right-0 lg:text-[4.8rem]" aria-hidden="true">
-              ”
-            </span>
             <p className="mx-auto max-w-[68rem] text-[1.02rem] leading-8 text-cream-light/94 sm:text-[1.08rem] sm:leading-9 lg:text-[1.1rem]">
+              <span
+                className="relative top-2 mr-3 font-heading text-[3.5rem] leading-none text-cream-light/92 sm:text-[4rem]"
+                aria-hidden="true"
+              >
+                “
+              </span>
               {esenciaValuesContent.quote}
+              <span
+                className="relative top-2 ml-3 font-heading text-[3.5rem] leading-none text-cream-light/92 sm:text-[4rem]"
+                aria-hidden="true"
+              >
+                ”
+              </span>
             </p>
           </motion.div>
         </div>

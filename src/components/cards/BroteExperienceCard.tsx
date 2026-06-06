@@ -7,6 +7,8 @@ import spaFacialImage from '../../assets/brote/spafacial.png'
 import tinaMagicaImage from '../../assets/brote/tinamagica.png'
 import { Button } from '../ui/Button'
 import { ImageLayer } from '../ui/ImageLayer'
+import { ServiceModal } from '../ui/ServiceModal'
+import { useServiceModalState } from '../ui/useServiceModalState'
 
 type BroteExperienceImageKey =
   | 'tinaMagica'
@@ -18,6 +20,7 @@ type BroteExperienceImageKey =
   | 'peinados'
 
 type BroteExperienceCardProps = {
+  id: string
   title: string
   description: string
   duration: string
@@ -38,19 +41,34 @@ const imageByKey: Record<BroteExperienceImageKey, string> = {
 }
 
 export function BroteExperienceCard({
+  id,
   title,
   description,
   duration,
   price,
   image,
-  ctaHref,
   ctaLabel,
 }: BroteExperienceCardProps) {
+  const { closeModal, isModalOpen, openModal } = useServiceModalState(id)
+  const imageSrc = imageByKey[image]
+
   return (
-    <article className="grid gap-5 rounded-[1.85rem] border border-cream-light/80 bg-cream/50 p-3 shadow-[0_2px_5px_rgba(36,61,49,0.2)] sm:grid-cols-[12.8rem_1fr] sm:gap-8 sm:p-3.5 lg:min-h-[13.8rem] lg:grid-cols-[17.9rem_1fr] lg:gap-14 lg:rounded-[2rem]">
+    <>
+    <article
+      role="button"
+      tabIndex={0}
+      onClick={openModal}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault()
+          openModal()
+        }
+      }}
+      className="grid cursor-pointer gap-5 rounded-[1.85rem] border border-cream-light/80 bg-cream/50 p-3 shadow-[0_2px_5px_rgba(36,61,49,0.2)] transition-transform duration-300 hover:-translate-y-0.5 sm:grid-cols-[12.8rem_1fr] sm:gap-8 sm:p-3.5 lg:min-h-[13.8rem] lg:grid-cols-[17.9rem_1fr] lg:gap-14 lg:rounded-[2rem]"
+    >
       <div className="w-full overflow-hidden rounded-[1.35rem] sm:h-full lg:rounded-[1.55rem]">
         <ImageLayer
-          src={imageByKey[image]}
+          src={imageSrc}
           alt={title}
           className="aspect-square h-full w-full object-cover"
         />
@@ -77,14 +95,29 @@ export function BroteExperienceCard({
 
         <div className="mt-5 flex sm:mt-auto sm:justify-end">
           <Button
-            to={ctaHref}
             variant="outline"
-            className="min-h-10 min-w-[11rem] !border-pink bg-transparent px-5 py-2 text-[0.67rem] font-bold tracking-[0.03em] !text-pink shadow-none hover:!border-pink-dark hover:bg-pink/8 hover:!text-pink-dark focus-visible:ring-pink sm:min-w-[13.7rem] lg:min-h-[2.6rem]"
+            onClick={(event) => {
+              event.stopPropagation()
+              openModal()
+            }}
+            className="min-h-10 min-w-[11rem] !border-pink bg-transparent px-5 py-2 text-[0.67rem] font-bold tracking-[0.03em] !text-pink shadow-none hover:!border-pink hover:!bg-pink hover:!text-white focus-visible:ring-pink sm:min-w-[13.7rem] lg:min-h-[2.6rem]"
           >
             {ctaLabel}
           </Button>
         </div>
       </div>
     </article>
+    <ServiceModal
+      isOpen={isModalOpen}
+      onClose={closeModal}
+      category="brote"
+      serviceId={id}
+      title={title}
+      description={description}
+      duration={duration}
+      price={price}
+      image={imageSrc}
+    />
+    </>
   )
 }

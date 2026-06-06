@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { FaFacebookF, FaInstagram, FaTiktok, FaWhatsapp } from 'react-icons/fa'
 
 import footerLogo from '../../assets/logo/montenegro-logo-footer.webp'
 import { footerContent } from '../../data/footer'
@@ -21,39 +22,12 @@ const toneStyles: Record<FooterTone, { wrapper: string; copy: string }> = {
   },
 }
 
-function SocialIcon({ platform }: { platform: 'facebook' | 'instagram' | 'whatsapp' | 'tiktok' }) {
-  const className = 'h-6 w-6'
-
-  switch (platform) {
-    case 'facebook':
-      return (
-        <svg aria-hidden="true" viewBox="0 0 24 24" className={className} fill="currentColor">
-          <path d="M13.5 21v-7h2.4l.4-2.8h-2.8V9.4c0-.8.2-1.4 1.4-1.4H16V5.5c-.3 0-1.1-.1-2.2-.1-2.2 0-3.8 1.3-3.8 3.8v2.1H7.8V14H10v7h3.5Z" />
-        </svg>
-      )
-    case 'instagram':
-      return (
-        <svg aria-hidden="true" viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2">
-          <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" />
-          <circle cx="12" cy="12" r="4.2" />
-          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-        </svg>
-      )
-    case 'whatsapp':
-      return (
-        <svg aria-hidden="true" viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 20.3a8.2 8.2 0 0 0 7.9-8.2A8.2 8.2 0 0 0 12 4a8.2 8.2 0 0 0-8.2 8.1c0 1.4.4 2.8 1.1 4L4 20l4-1.1a8.1 8.1 0 0 0 4 .4Z" />
-          <path d="M9.3 8.9c.2-.4.4-.4.7-.4h.5c.2 0 .3.1.4.3l.9 1.9c.1.2.1.3 0 .5l-.5.7c-.1.1-.1.3 0 .4.3.5.7 1 1.3 1.5.6.5 1.2.8 1.8 1 .2.1.3.1.4-.1l.8-.7c.1-.1.3-.1.5-.1l1.8.8c.2.1.3.3.3.5v.6c0 .2 0 .5-.4.7-.5.2-1.2.3-1.8.2-.8-.1-1.9-.5-3.3-1.5-1.6-1.2-2.8-3-3.2-3.8-.4-.8-.4-1.5-.2-2Z" />
-        </svg>
-      )
-    case 'tiktok':
-      return (
-        <svg aria-hidden="true" viewBox="0 0 24 24" className={className} fill="currentColor">
-          <path d="M14.6 3h2.3c.2 1.6 1.2 3 2.8 3.7v2.4c-1.2 0-2.4-.4-3.3-1v6.4a5 5 0 1 1-5-5h.5v2.3h-.5a2.6 2.6 0 1 0 2.6 2.7V3Z" />
-        </svg>
-      )
-  }
-}
+const socialIconMap = {
+  facebook: FaFacebookF,
+  instagram: FaInstagram,
+  whatsapp: FaWhatsapp,
+  tiktok: FaTiktok,
+} as const
 
 export function Footer({ tone = 'dark' }: FooterProps) {
   const toneClass = toneStyles[tone]
@@ -69,12 +43,12 @@ export function Footer({ tone = 'dark' }: FooterProps) {
               className="h-[5.4rem] w-auto sm:h-[6rem]"
               loading="lazy"
             />
-            <div className="space-y-1 text-[0.96rem] leading-7 text-white/88 sm:text-[0.98rem]">
+            <div className="space-y-0.5 text-[0.86rem] leading-5 text-white/88 sm:text-[0.9rem]">
               {footerContent.addressLines.map((line) => (
                 <p key={line}>{line}</p>
               ))}
             </div>
-            <div className="space-y-1 text-[0.96rem] leading-7 text-white/88 sm:text-[0.98rem]">
+            <div className="space-y-0.5 text-[0.86rem] leading-5 text-white/88 sm:text-[0.9rem]">
               {footerContent.scheduleLines.map((line) => (
                 <p key={line}>{line}</p>
               ))}
@@ -85,7 +59,7 @@ export function Footer({ tone = 'dark' }: FooterProps) {
             <p className="text-[0.72rem] font-medium uppercase tracking-[0.14em] text-white">
               Navegación
             </p>
-            <ul className="space-y-1 text-[0.96rem] leading-8 text-white/88 sm:text-[0.98rem]">
+            <ul className="space-y-0.5 text-[0.86rem] leading-5 text-white/88 sm:text-[0.9rem]">
               {footerContent.navigationLinks.map((link) => (
                 <li key={link.href}>
                   <Link to={link.href} className="transition-opacity duration-200 hover:opacity-80">
@@ -100,7 +74,7 @@ export function Footer({ tone = 'dark' }: FooterProps) {
             <p className="text-[0.72rem] font-medium uppercase tracking-[0.14em] text-white">
               Legal
             </p>
-            <ul className="space-y-1 text-[0.96rem] leading-8 text-white/88 sm:text-[0.98rem]">
+            <ul className="space-y-0.5 text-[0.86rem] leading-5 text-white/88 sm:text-[0.9rem]">
               {footerContent.legalLinks.map((link) => (
                 <li key={link.href}>
                   <Link to={link.href} className="transition-opacity duration-200 hover:opacity-80">
@@ -115,7 +89,7 @@ export function Footer({ tone = 'dark' }: FooterProps) {
             <p className="text-[0.72rem] font-medium uppercase tracking-[0.14em] text-white">
               Newsletter
             </p>
-            <p className="max-w-[18rem] text-[0.96rem] leading-7 text-white/88 sm:text-[0.98rem]">
+            <p className="max-w-[18rem] text-[0.86rem] leading-5 text-white/88 sm:text-[0.9rem]">
               {footerContent.newsletter}
             </p>
             <div className="flex max-w-[294px] overflow-hidden rounded-[16px] bg-white/92">
@@ -138,16 +112,21 @@ export function Footer({ tone = 'dark' }: FooterProps) {
                   key={link.label}
                   href={link.href}
                   aria-label={link.label}
-                  className="transition-opacity duration-200 hover:opacity-80"
-                >
-                  <SocialIcon platform={link.platform} />
+                target="_blank"
+                rel="noreferrer"
+                className="transition-opacity duration-200 hover:opacity-80"
+              >
+                  {(() => {
+                    const Icon = socialIconMap[link.platform]
+                    return <Icon aria-hidden="true" className="h-5 w-5" />
+                  })()}
                 </a>
               ))}
             </div>
           </div>
         </div>
 
-        <div className={['pt-12 text-center text-[0.95rem] leading-8 sm:pt-14', toneClass.copy].join(' ')}>
+        <div className={['pt-10 text-center text-[0.86rem] leading-5 sm:pt-12', toneClass.copy].join(' ')}>
           <p>{footerContent.copyright}</p>
           <p>
             {footerContent.creditHref ? (
@@ -155,7 +134,7 @@ export function Footer({ tone = 'dark' }: FooterProps) {
                 href={footerContent.creditHref}
                 target="_blank"
                 rel="noreferrer"
-                className="transition-opacity duration-200 hover:opacity-80"
+                className="font-bold transition-opacity duration-200 hover:opacity-80"
               >
                 {footerContent.credit}
               </a>

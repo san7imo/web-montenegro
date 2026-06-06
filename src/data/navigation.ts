@@ -19,11 +19,14 @@ export const headerNavigationLinks: NavigationItem[] = [
   { label: 'HOME', href: '/' },
   { label: 'ESENCIA', href: '/esencia' },
   { label: 'ORIGEN', href: '/origen' },
-  { label: 'OASIS', href: '/oasis' },
-  { label: 'TACTO', href: '/tacto' },
-  { label: 'RAÍZ', href: '/raiz' },
-  { label: 'BROTE', href: '/brote' },
-  { label: 'FILO', href: '/filo' },
-  { label: 'HEBRA', href: '/hebra' },
-  { label: 'TEZ', href: '/tez' },
 ]
+
+export const serviceNavigationLinks = [
+  { label: 'OASIS', href: '/oasis', description: 'Rituales de purificación' },
+  { label: 'TACTO', href: '/tacto', description: 'Manos, pies y uñas' },
+  { label: 'RAÍZ', href: '/raiz', description: 'Bio-ciencia y tecnología' },
+  { label: 'BROTE', href: '/brote', description: 'Spa infantil' },
+  { label: 'FILO', href: '/filo', description: 'Depilación y mirada' },
+  { label: 'HEBRA', href: '/hebra', description: 'Cuidado capilar' },
+  { label: 'TEZ', href: '/tez', description: 'Piel y contorno' },
+] satisfies Array<NavigationItem & { description?: string }>

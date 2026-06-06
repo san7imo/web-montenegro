@@ -6,7 +6,7 @@ import { ValuesSection } from './sections/ValuesSection'
 
 export function EsenciaPage() {
   return (
-    <PageShell footerTone="sage">
+    <PageShell footerTone="dark">
       <EsenciaHero />
       <HistorySection />
       <ValuesSection />

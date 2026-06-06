@@ -45,7 +45,10 @@ export function HistorySection() {
           </motion.div>
 
           <motion.div className="pt-2 lg:pt-0" {...fadeUp(0.18)}>
-            <SectionLabel variant="light" className="border-forest bg-transparent px-7 text-forest">
+            <SectionLabel
+              variant="light"
+              className="min-h-10 border-white/45 bg-muted-white/58 px-7 text-[0.62rem] font-semibold tracking-[0.18em] text-forest shadow-[0_12px_28px_rgba(36,61,49,0.05)]"
+            >
               {esenciaHistoryContent.label}
             </SectionLabel>
             <SectionTitle

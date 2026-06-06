@@ -53,7 +53,7 @@ export function EsenciaCTA() {
                 to={esenciaCtaContent.ctaHref}
                 variant="outline"
                 showArrow
-                className="min-w-[18rem] border-pink-soft bg-transparent px-7 text-[0.78rem] tracking-[0.08em] text-pink-soft hover:border-white hover:bg-white hover:text-forest"
+                className="min-w-[18rem] border-cream-light/78 bg-white/4 px-7 text-[0.78rem] tracking-[0.08em] text-cream-light shadow-[0_12px_32px_rgba(31,53,43,0.18)] hover:border-pink-soft hover:bg-pink-soft/14 hover:text-pink-soft"
               >
                 {esenciaCtaContent.ctaLabel}
               </Button>

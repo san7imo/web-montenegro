@@ -1,9 +1,11 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
 import raizHeroBackground from '../../../assets/raiz/heroraiz.png'
+import raizHeroVideo from '../../../assets/videos-hero/optimized/raiz.mp4'
 import { Container } from '../../../components/ui/Container'
 import { DecorativeLine } from '../../../components/ui/DecorativeLine'
-import { ImageLayer } from '../../../components/ui/ImageLayer'
+import { HeroOverlay } from '../../../components/ui/HeroOverlay'
+import { HeroVideoBackground } from '../../../components/ui/HeroVideoBackground'
 import { SectionTitle } from '../../../components/ui/SectionTitle'
 import { raizHeroContent } from '../../../data/raiz'
 
@@ -26,14 +28,13 @@ export function RaizHero() {
 
   return (
     <section className="overflow-hidden bg-forest text-white">
-      <div className="relative aspect-[1440/671] min-h-[24rem]">
-        <ImageLayer
-          src={raizHeroBackground}
-          alt=""
-          loading="eager"
+      <div className="relative h-[64svh] min-h-[25rem] max-h-[44rem]">
+        <HeroVideoBackground
+          src={raizHeroVideo}
+          poster={raizHeroBackground}
           className="absolute inset-0 h-full w-full object-cover object-[54%_center]"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(21,25,18,0.12)_0%,rgba(31,53,43,0.18)_48%,rgba(31,53,43,0.5)_100%)]" />
+        <HeroOverlay />
 
         <div className="relative z-10 flex h-full items-end px-[6.2vw] pb-8 sm:pb-10 lg:pb-11">
           <motion.div className="max-w-[76rem]" {...fadeUp(0.08)}>

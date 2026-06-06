@@ -39,6 +39,7 @@ export function TactoMenu() {
           {tactoMenuContent.items.map((item, index) => (
             <motion.div key={item.id} {...fadeUp(0.1 + index * 0.05)}>
               <TactoExperienceCard
+                id={item.id}
                 title={item.title}
                 description={item.description}
                 duration={item.duration}

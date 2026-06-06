@@ -1,9 +1,11 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
 import oasisHeroBackground from '../../../assets/oasis/oasis-portada.webp'
+import oasisHeroVideo from '../../../assets/videos-hero/optimized/oasis.mp4'
 import { Container } from '../../../components/ui/Container'
 import { DecorativeLine } from '../../../components/ui/DecorativeLine'
-import { ImageLayer } from '../../../components/ui/ImageLayer'
+import { HeroOverlay } from '../../../components/ui/HeroOverlay'
+import { HeroVideoBackground } from '../../../components/ui/HeroVideoBackground'
 import { SectionTitle } from '../../../components/ui/SectionTitle'
 import { oasisHeroContent } from '../../../data/oasis'
 
@@ -25,19 +27,17 @@ export function OasisHero() {
         }
 
   return (
-    <section className="min-h-[100svh] overflow-hidden bg-forest text-white">
-      <div className="relative min-h-[68svh] sm:min-h-[70svh] lg:min-h-[69svh]">
-        <ImageLayer
-          src={oasisHeroBackground}
-          alt=""
-          loading="eager"
+    <section className="overflow-hidden bg-forest text-white">
+      <div className="relative h-[64svh] min-h-[25rem] max-h-[44rem]">
+        <HeroVideoBackground
+          src={oasisHeroVideo}
+          poster={oasisHeroBackground}
           className="absolute inset-0 h-full w-full object-cover object-[57%_center] sm:object-center"
         />
+        <HeroOverlay />
 
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,14,11,0.34)_0%,rgba(31,53,43,0.28)_48%,rgba(31,53,43,0.46)_100%)]" />
-
-        <Container className="relative z-10 flex min-h-[68svh] items-center justify-center px-6 pt-24 pb-12 text-center sm:min-h-[70svh] sm:pt-28 lg:min-h-[69svh] lg:pt-28 lg:pb-14">
-          <div className="max-w-[21rem] sm:max-w-[40rem] lg:max-w-[55rem]">
+        <div className="relative z-10 flex h-full items-end px-[6.2vw] pb-8 sm:pb-10 lg:pb-9">
+          <div className="max-w-[70rem]">
             <motion.div {...fadeUp(0.06)}>
               <SectionTitle
                 as="h1"
@@ -49,13 +49,13 @@ export function OasisHero() {
             </motion.div>
 
             <motion.p
-              className="mx-auto mt-4 max-w-[18rem] text-[1rem] leading-7 text-cream-light/95 sm:max-w-[34rem] sm:text-[1.12rem] sm:leading-8 lg:mt-5 lg:max-w-[50rem] lg:text-[1.18rem] lg:leading-9"
+              className="mt-3 max-w-[52rem] text-[1rem] leading-7 text-cream-light/95 sm:text-[1.08rem] lg:text-[1.14rem]"
               {...fadeUp(0.18)}
             >
               {oasisHeroContent.description}
             </motion.p>
           </div>
-        </Container>
+        </div>
       </div>
 
       <div className="bg-forest">

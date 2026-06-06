@@ -1,9 +1,11 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
 import hebraHeroBackground from '../../../assets/hebra/herohebra.png'
+import hebraHeroVideo from '../../../assets/videos-hero/optimized/hebra.mp4'
 import { Container } from '../../../components/ui/Container'
 import { DecorativeLine } from '../../../components/ui/DecorativeLine'
-import { ImageLayer } from '../../../components/ui/ImageLayer'
+import { HeroOverlay } from '../../../components/ui/HeroOverlay'
+import { HeroVideoBackground } from '../../../components/ui/HeroVideoBackground'
 import { SectionTitle } from '../../../components/ui/SectionTitle'
 import { hebraHeroContent } from '../../../data/hebra'
 
@@ -26,15 +28,13 @@ export function HebraHero() {
 
   return (
     <section className="overflow-hidden bg-forest text-white">
-      <div className="relative aspect-[1438/742] min-h-[25rem]">
-        <ImageLayer
-          src={hebraHeroBackground}
-          alt=""
-          loading="eager"
+      <div className="relative h-[64svh] min-h-[25rem] max-h-[44rem]">
+        <HeroVideoBackground
+          src={hebraHeroVideo}
+          poster={hebraHeroBackground}
           className="absolute inset-0 h-full w-full object-cover object-[47%_center]"
         />
-        <div className="absolute inset-0 bg-forest/12" />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(18,22,18,0.08)_0%,rgba(31,53,43,0.12)_48%,rgba(31,53,43,0.5)_100%)]" />
+        <HeroOverlay />
 
         <div className="relative z-10 flex h-full items-end px-[6.2vw] pb-7 sm:pb-9 lg:pb-8">
           <motion.div className="max-w-[76rem]" {...fadeUp(0.08)}>

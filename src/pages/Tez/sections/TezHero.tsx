@@ -1,9 +1,11 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
 import tezHeroBackground from '../../../assets/tez/herotez.png'
+import tezHeroVideo from '../../../assets/videos-hero/optimized/tez.mp4'
 import { Container } from '../../../components/ui/Container'
 import { DecorativeLine } from '../../../components/ui/DecorativeLine'
-import { ImageLayer } from '../../../components/ui/ImageLayer'
+import { HeroOverlay } from '../../../components/ui/HeroOverlay'
+import { HeroVideoBackground } from '../../../components/ui/HeroVideoBackground'
 import { SectionTitle } from '../../../components/ui/SectionTitle'
 import { tezHeroContent } from '../../../data/tez'
 
@@ -26,15 +28,13 @@ export function TezHero() {
 
   return (
     <section className="overflow-hidden bg-forest text-white">
-      <div className="relative aspect-[1383/777] min-h-[25rem]">
-        <ImageLayer
-          src={tezHeroBackground}
-          alt=""
-          loading="eager"
+      <div className="relative h-[64svh] min-h-[25rem] max-h-[44rem]">
+        <HeroVideoBackground
+          src={tezHeroVideo}
+          poster={tezHeroBackground}
           className="absolute inset-0 h-full w-full object-cover object-[50%_center]"
         />
-        <div className="absolute inset-0 bg-forest/18" />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(18,22,18,0.1)_0%,rgba(31,53,43,0.16)_48%,rgba(31,53,43,0.54)_100%)]" />
+        <HeroOverlay />
 
         <div className="relative z-10 flex h-full items-end px-[5.1vw] pb-7 sm:pb-8 lg:pb-8">
           <motion.div className="max-w-[38rem]" {...fadeUp(0.08)}>

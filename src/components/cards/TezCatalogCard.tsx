@@ -15,8 +15,9 @@ import radiofrecuenciaGeneralImage from '../../assets/tez/ragiofrecuengeneral.pn
 import rejuvenecimientoVaginalImage from '../../assets/tez/rejuevenicmientovaginal.png'
 import tratamientoVaricesImage from '../../assets/tez/tratamientodevarices.png'
 import vendasFriasImage from '../../assets/tez/vendasfrias.png'
-import { Link } from 'react-router-dom'
 import { ImageLayer } from '../ui/ImageLayer'
+import { ServiceModal } from '../ui/ServiceModal'
+import { useServiceModalState } from '../ui/useServiceModalState'
 
 type TezCatalogImageKey =
   | 'hydrafacialPiel'
@@ -39,6 +40,7 @@ type TezCatalogImageKey =
   | 'multifuncional'
 
 type TezCatalogCardProps = {
+  id: string
   title: string
   description: string
   image: TezCatalogImageKey
@@ -69,18 +71,33 @@ const imageByKey: Record<TezCatalogImageKey, string> = {
 }
 
 export function TezCatalogCard({
+  id,
   title,
   description,
   image,
   price,
-  ctaHref,
   ctaLabel,
 }: TezCatalogCardProps) {
+  const { closeModal, isModalOpen, openModal } = useServiceModalState(id)
+  const imageSrc = imageByKey[image]
+
   return (
-    <article className="overflow-hidden rounded-[1.6rem] border border-cream-light/80 bg-cream/55 shadow-[0_2px_6px_rgba(36,61,49,0.16)]">
+    <>
+    <article
+      role="button"
+      tabIndex={0}
+      onClick={openModal}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault()
+          openModal()
+        }
+      }}
+      className="overflow-hidden rounded-[1.6rem] border border-cream-light/80 bg-cream/55 shadow-[0_2px_6px_rgba(36,61,49,0.16)] transition-transform duration-300 hover:-translate-y-0.5"
+    >
       <div className="aspect-[390/292] overflow-hidden rounded-b-[1.15rem]">
         <ImageLayer
-          src={imageByKey[image]}
+          src={imageSrc}
           alt={title}
           className="h-full w-full object-cover"
         />
@@ -98,14 +115,29 @@ export function TezCatalogCard({
           <span className="font-heading text-[1.55rem] font-semibold leading-none text-forest">
             {price}
           </span>
-          <Link
-            to={ctaHref}
-            className="text-[0.9rem] font-bold text-pink underline underline-offset-2 transition-colors duration-200 hover:text-pink-dark"
+          <button
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation()
+              openModal()
+            }}
+            className="rounded-full border border-pink px-4 py-1.5 text-[0.82rem] font-bold text-pink no-underline transition-colors duration-200 hover:bg-pink hover:text-white"
           >
             {ctaLabel}
-          </Link>
+          </button>
         </div>
       </div>
     </article>
+    <ServiceModal
+      isOpen={isModalOpen}
+      onClose={closeModal}
+      category="tez"
+      serviceId={id}
+      title={title}
+      description={description}
+      price={price}
+      image={imageSrc}
+    />
+    </>
   )
 }

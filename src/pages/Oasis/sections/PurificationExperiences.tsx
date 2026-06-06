@@ -24,7 +24,7 @@ export function PurificationExperiences() {
 
   return (
     <section className="bg-cream py-12 text-forest sm:py-14 lg:py-20">
-      <Container className="max-w-[60rem] px-5 sm:px-6 lg:px-0">
+      <Container className="!max-w-[66.5rem] px-5 sm:px-6 lg:!px-0">
         <motion.div className="mx-auto max-w-[23rem] text-center sm:max-w-[29rem]" {...fadeUp(0.04)}>
           <SectionTitle
             as="h2"
@@ -35,10 +35,11 @@ export function PurificationExperiences() {
           </SectionTitle>
         </motion.div>
 
-        <div className="mt-9 space-y-4 sm:mt-10 lg:mt-12 lg:space-y-5">
+        <div className="mt-10 space-y-5 sm:mt-12 lg:mt-16 lg:space-y-7">
           {oasisPurificationExperiencesContent.items.map((item, index) => (
             <motion.div key={item.id} {...fadeUp(0.12 + index * 0.08)}>
               <ServiceExperienceCard
+                id={item.id}
                 title={item.title}
                 description={item.description}
                 duration={item.duration}

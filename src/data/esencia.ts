@@ -3,7 +3,7 @@ export const esenciaHeroContent = {
   titleLines: ['Esencia:', 'La visión detrás', 'del bienestar.'],
   quote:
     'No entiendo la belleza sin salud, ni la salud sin equilibrio. Mi misión es fusionar la vanguardia tecnológica con la sabiduría que nos regala la naturaleza.',
-  author: 'Olga Montenegro',
+  author: 'Olga Lucia Montenegro',
   role: 'Fundadora',
 } as const
 
@@ -22,13 +22,13 @@ export const esenciaValuesContent = {
       title: 'Identidad',
       icon: 'left',
       description:
-        'Cuidado de autor, donde cada protocolo es diseñado personalmente por mí.',
+        'Cuidado personalizado, donde cada protocolo refleja la esencia de Montenegro.',
     },
     {
       title: 'Innovación',
       icon: 'center',
       description:
-        'Apostamos todo por las tecnología que respeta la biología de tu cuerpo.',
+        'Apostamos por la tecnología que respeta la biología de tu cuerpo.',
     },
     {
       title: 'Legado',
@@ -44,7 +44,7 @@ export const esenciaValuesContent = {
 export const esenciaCtaContent = {
   title: 'Permítenos ayudarte a encontrar tu mejor versión.',
   description:
-    '¿Quieres saber más sobre la filosofía de Olga o prefieres ver los servicios disponibles?',
+    '¿Quieres saber más sobre la filosofía de Olga Lucia o prefieres ver los servicios disponibles?',
   ctaLabel: 'RESERVA UNA ASESORÍA PERSONALIZADA',
   ctaHref: '/contacto',
 } as const

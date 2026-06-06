@@ -1,14 +1,17 @@
 import { useEffect, useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 
 import navbarLogo from '../../assets/logo/montenegro-logo-navbar.webp'
-import { headerNavigationLinks } from '../../data/navigation'
+import { headerNavigationLinks, serviceNavigationLinks } from '../../data/navigation'
 import { Container } from '../ui/Container'
 
 export function Header() {
   const shouldReduceMotion = useReducedMotion()
+  const location = useLocation()
+  const isServiceRoute = serviceNavigationLinks.some((item) => item.href === location.pathname)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(isServiceRoute)
 
   useEffect(() => {
     if (!isMenuOpen) {
@@ -30,12 +33,12 @@ export function Header() {
 
   return (
     <motion.header
-      className="absolute inset-x-0 top-0 z-50"
+      className="fixed inset-x-0 top-0 z-50"
       initial={shouldReduceMotion ? false : { opacity: 0, y: -18 }}
       animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: 'easeOut' }}
     >
-      <Container className="relative flex max-w-none items-start justify-between px-7 py-7 text-white sm:px-8 sm:py-8 lg:px-8">
+      <Container className="relative flex max-w-none items-start justify-between px-7 py-4 text-white sm:px-8 sm:py-5 lg:px-8">
         <motion.div
           initial={shouldReduceMotion ? false : { opacity: 0, x: -16 }}
           animate={shouldReduceMotion ? undefined : { opacity: 1, x: 0 }}
@@ -50,7 +53,7 @@ export function Header() {
             <img
               src={navbarLogo}
               alt="Montenegro Salud y Belleza"
-              className="h-9 w-auto sm:h-10 lg:h-[3rem]"
+              className="h-12 w-auto sm:h-[3.2rem] lg:h-[3.65rem]"
               loading="eager"
             />
           </Link>
@@ -61,7 +64,13 @@ export function Header() {
           aria-label={isMenuOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación'}
           aria-expanded={isMenuOpen}
           aria-controls="header-navigation-panel"
-          onClick={() => setIsMenuOpen((current) => !current)}
+          onClick={() => {
+            if (!isMenuOpen && isServiceRoute) {
+              setIsServicesOpen(true)
+            }
+
+            setIsMenuOpen((current) => !current)
+          }}
           className="inline-flex h-10 w-10 items-center justify-center text-white transition-opacity duration-300 hover:opacity-82 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
           initial={shouldReduceMotion ? false : { opacity: 0, x: 16 }}
           animate={shouldReduceMotion ? undefined : { opacity: 1, x: 0 }}
@@ -103,7 +112,7 @@ export function Header() {
             <motion.nav
               id="header-navigation-panel"
               aria-label="Navegación principal"
-              className="absolute top-[3.6rem] right-5 z-50 w-[13.5rem] rounded-[1.35rem] border border-white/16 bg-forest-dark/92 p-3 text-cream-light shadow-[0_24px_60px_rgba(11,18,14,0.24)] backdrop-blur-md sm:top-[4rem] sm:right-6 lg:right-8"
+              className="absolute top-[3.6rem] right-5 z-50 w-[15rem] rounded-[1.35rem] border border-white/16 bg-forest-dark/92 p-3 text-cream-light shadow-[0_24px_60px_rgba(11,18,14,0.24)] backdrop-blur-md sm:top-[4rem] sm:right-6 lg:right-8"
               initial={shouldReduceMotion ? false : { opacity: 0, y: -8, scale: 0.98 }}
               animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
               exit={shouldReduceMotion ? undefined : { opacity: 0, y: -8, scale: 0.98 }}
@@ -130,6 +139,74 @@ export function Header() {
                     </NavLink>
                   </li>
                 ))}
+                <li>
+                  <button
+                    type="button"
+                    aria-expanded={isServicesOpen}
+                    aria-controls="header-services-submenu"
+                    onClick={() => setIsServicesOpen((current) => !current)}
+                    className={[
+                      'flex w-full items-center justify-between rounded-[0.95rem] px-4 py-3 text-left text-[0.76rem] font-medium uppercase tracking-[0.16em] transition-colors duration-200',
+                      isServiceRoute
+                        ? 'bg-white/10 text-white'
+                        : 'text-cream-light/88 hover:bg-white/6 hover:text-white',
+                    ]
+                      .filter(Boolean)
+                      .join(' ')}
+                  >
+                    <span>Servicios</span>
+                    <span
+                      aria-hidden="true"
+                      className={[
+                        'text-[0.95rem] leading-none transition-transform duration-200',
+                        isServicesOpen ? 'rotate-180' : '',
+                      ]
+                        .filter(Boolean)
+                        .join(' ')}
+                    >
+                      v
+                    </span>
+                  </button>
+
+                  <AnimatePresence initial={false}>
+                    {isServicesOpen ? (
+                      <motion.ul
+                        id="header-services-submenu"
+                        className="mt-1.5 space-y-1 overflow-hidden rounded-[1rem] bg-black/10 p-1.5"
+                        initial={shouldReduceMotion ? false : { height: 0, opacity: 0 }}
+                        animate={shouldReduceMotion ? undefined : { height: 'auto', opacity: 1 }}
+                        exit={shouldReduceMotion ? undefined : { height: 0, opacity: 0 }}
+                        transition={{ duration: 0.2, ease: 'easeOut' }}
+                      >
+                        {serviceNavigationLinks.map((item) => (
+                          <li key={item.href}>
+                            <NavLink
+                              to={item.href}
+                              onClick={() => setIsMenuOpen(false)}
+                              className={({ isActive }) =>
+                                [
+                                  'block rounded-[0.85rem] px-3 py-2 transition-colors duration-200',
+                                  isActive
+                                    ? 'bg-white/10 text-white'
+                                    : 'text-cream-light/82 hover:bg-white/6 hover:text-white',
+                                ]
+                                  .filter(Boolean)
+                                  .join(' ')
+                              }
+                            >
+                              <span className="block text-[0.72rem] font-semibold uppercase leading-none tracking-[0.13em]">
+                                {item.label}
+                              </span>
+                              <span className="mt-1 block text-[0.64rem] font-medium normal-case leading-4 tracking-[0.01em] text-cream-light/62">
+                                {item.description}
+                              </span>
+                            </NavLink>
+                          </li>
+                        ))}
+                      </motion.ul>
+                    ) : null}
+                  </AnimatePresence>
+                </li>
               </ul>
             </motion.nav>
           ) : null}

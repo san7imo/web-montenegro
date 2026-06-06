@@ -7,8 +7,10 @@ export const footerContent: FooterContent = {
     'Araba, España.',
   ],
   scheduleLines: [
-    'De Lunes a Sabado',
-    '9:00 A.M. - 2:00 P.M. / 5:00 P.M. - 8:00 P.M.',
+    'Lunes a Viernes',
+    '9:00 - 14:00 hrs / 17:00 - 20:00 hrs',
+    'Sábados',
+    '9:00 - 14:00 hrs',
   ],
   navigationLinks,
   legalLinks: [
@@ -20,13 +22,29 @@ export const footerContent: FooterContent = {
   newsletterPlaceholder: 'Tu correo electronico',
   newsletterButtonLabel: 'Subscribirse',
   socialLinks: [
-    { label: 'Facebook', href: '#', platform: 'facebook' },
-    { label: 'Instagram', href: '#', platform: 'instagram' },
-    { label: 'WhatsApp', href: '#', platform: 'whatsapp' },
-    { label: 'TikTok', href: '#', platform: 'tiktok' },
+    {
+      label: 'Facebook',
+      href: 'https://www.facebook.com/montenegrosaludybelleza',
+      platform: 'facebook',
+    },
+    {
+      label: 'Instagram',
+      href: 'https://www.instagram.com/montenegrosaludybelleza/',
+      platform: 'instagram',
+    },
+    {
+      label: 'WhatsApp',
+      href: `https://wa.me/?text=${encodeURIComponent('Hola, quiero reservar una cita en Montenegro Salud y Belleza. ¿Me puedes confirmar disponibilidad?')}`,
+      platform: 'whatsapp',
+    },
+    {
+      label: 'TikTok',
+      href: 'https://www.tiktok.com/@montenegrosaludybelleza',
+      platform: 'tiktok',
+    },
   ],
   copyright:
     '© 2026 Montenegro Salud y Belleza. Todos los derechos reservados.',
-  credit: 'Desarrollado por mlanstudio.',
+  credit: 'Desarrollado por MLaNStudio.',
   creditHref: 'https://www.mlanstudio.com',
 }

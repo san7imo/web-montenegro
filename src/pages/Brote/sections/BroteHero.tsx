@@ -3,6 +3,7 @@ import { motion, useReducedMotion } from 'framer-motion'
 import broteHeroBackground from '../../../assets/brote/herobrote.png'
 import { Container } from '../../../components/ui/Container'
 import { DecorativeLine } from '../../../components/ui/DecorativeLine'
+import { HeroOverlay } from '../../../components/ui/HeroOverlay'
 import { ImageLayer } from '../../../components/ui/ImageLayer'
 import { SectionTitle } from '../../../components/ui/SectionTitle'
 import { broteHeroContent } from '../../../data/brote'
@@ -26,14 +27,14 @@ export function BroteHero() {
 
   return (
     <section className="overflow-hidden bg-forest text-white">
-      <div className="relative aspect-[1440/732] min-h-[24rem]">
+      <div className="relative h-[64svh] min-h-[25rem] max-h-[44rem]">
         <ImageLayer
           src={broteHeroBackground}
           alt=""
           loading="eager"
           className="absolute inset-0 h-full w-full object-cover object-[53%_center]"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(18,22,18,0.16)_0%,rgba(31,53,43,0.16)_48%,rgba(31,53,43,0.48)_100%)]" />
+        <HeroOverlay />
 
         <div className="relative z-10 flex h-full items-end px-[6.2vw] pb-8 sm:pb-10 lg:pb-9">
           <motion.div className="max-w-[67rem]" {...fadeUp(0.08)}>

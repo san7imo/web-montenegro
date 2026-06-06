@@ -58,6 +58,7 @@
 
   html {
     scroll-behavior: smooth;
+    font-size: 15px;
     font-family: var(--font-body);
     background: var(--color-muted-white);
     color: var(--color-forest-dark);
