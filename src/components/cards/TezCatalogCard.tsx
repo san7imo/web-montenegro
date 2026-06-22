@@ -93,7 +93,7 @@ export function TezCatalogCard({
           openModal()
         }
       }}
-      className="overflow-hidden rounded-[1.6rem] border border-cream-light/80 bg-cream/55 shadow-[0_2px_6px_rgba(36,61,49,0.16)] transition-transform duration-300 hover:-translate-y-0.5"
+      className="overflow-hidden rounded-[1.6rem] border border-cream-light/80 bg-cream/55 shadow-[0_10px_24px_rgba(36,61,49,0.13)] transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(36,61,49,0.16)]"
     >
       <div className="aspect-[390/292] overflow-hidden rounded-b-[1.15rem]">
         <ImageLayer

@@ -19,6 +19,8 @@ export const headerNavigationLinks: NavigationItem[] = [
   { label: 'HOME', href: '/' },
   { label: 'ESENCIA', href: '/esencia' },
   { label: 'ORIGEN', href: '/origen' },
+  { label: 'ECO', href: '/eco' },
+  { label: 'CONTACTO', href: '/contacto' },
 ]
 
 export const serviceNavigationLinks = [

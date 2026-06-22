@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom'
 import { useNavigate } from 'react-router-dom'
 
 import { getRandomServiceRecommendation, type ServiceCategory } from '../../data/serviceCatalog'
+import { getServiceModalDescription } from '../../data/serviceModalDescriptions'
 
 type ServiceModalProps = {
   ctaLabel?: string
@@ -88,15 +89,18 @@ export function ServiceModal({
   title,
 }: ServiceModalProps) {
   const [isShareOpen, setIsShareOpen] = useState(false)
+  const [shareStatus, setShareStatus] = useState('')
   const navigate = useNavigate()
   const handleClose = useCallback(() => {
     setIsShareOpen(false)
+    setShareStatus('')
     onClose()
   }, [onClose])
   const currentKey = `${category}:${serviceId}`
+  const displayDescription = getServiceModalDescription(category, serviceId) || description
   const shareText = useMemo(
-    () => buildShareText(title, description, duration, price),
-    [description, duration, price, title],
+    () => buildShareText(title, displayDescription, duration, price),
+    [displayDescription, duration, price, title],
   )
   const recommendation = useMemo(
     () => getRandomServiceRecommendation(currentKey),
@@ -133,44 +137,96 @@ export function ServiceModal({
   const encodedShareText = encodeURIComponent(`${shareText} ${shareUrl}`.trim())
   const encodedShareUrl = encodeURIComponent(shareUrl)
   const recommendationHref = `${recommendation.path}?service=${recommendation.id}`
+  const sharePayload = {
+    text: shareText,
+    title,
+    url: shareUrl,
+  }
 
   const openRecommendation = () => {
     handleClose()
     navigate(recommendationHref)
   }
 
+  const openResults = () => {
+    handleClose()
+    navigate('/eco#resultados')
+  }
+
+  const copyShareMessage = async (message = 'Mensaje copiado') => {
+    try {
+      await navigator.clipboard?.writeText(`${shareText} ${shareUrl}`.trim())
+      setShareStatus(message)
+    } catch {
+      setShareStatus('Copia el enlace desde la barra del navegador')
+    }
+  }
+
+  const shareNative = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share(sharePayload)
+        setShareStatus('Compartido')
+        setIsShareOpen(false)
+        return
+      } catch (error) {
+        if (error instanceof DOMException && error.name === 'AbortError') {
+          return
+        }
+      }
+    }
+
+    await copyShareMessage()
+  }
+
+  const shareInstagram = async () => {
+    await copyShareMessage('Mensaje copiado para Instagram')
+    window.open('https://www.instagram.com/direct/inbox/', '_blank', 'noopener,noreferrer')
+  }
+
   const modal = (
     <div
       role="presentation"
-      className="fixed inset-0 isolate z-[9999] flex items-center justify-center bg-forest-deep/68 px-4 py-6 backdrop-blur-sm"
+      className="fixed inset-0 isolate z-[9999] flex items-center justify-center bg-forest-deep/68 px-3 py-4 backdrop-blur-sm sm:px-4"
       onClick={handleClose}
     >
       <section
         role="dialog"
         aria-modal="true"
         aria-label={title}
-        className="relative z-[10000] grid max-h-[92vh] w-full max-w-[72rem] overflow-y-auto rounded-[2.4rem] border border-white/85 bg-cream text-forest shadow-[0_28px_90px_rgba(13,25,20,0.48)] sm:p-4 lg:grid-cols-[minmax(20rem,31rem)_1fr] lg:gap-x-7 lg:rounded-[3.2rem]"
+        className="relative z-[10000] grid max-h-[94vh] w-full max-w-[64rem] overflow-hidden rounded-[1.6rem] border border-white/85 bg-cream p-3 text-forest shadow-[0_28px_90px_rgba(13,25,20,0.48)] sm:rounded-[2rem] sm:p-4 lg:grid-cols-[minmax(16rem,25rem)_1fr] lg:gap-x-5 lg:rounded-[2.35rem]"
         onClick={(event) => event.stopPropagation()}
       >
-        <div className="m-4 overflow-hidden rounded-[1.8rem] sm:m-0 lg:rounded-[2.6rem]">
-          <img src={image} alt={title} className="h-full min-h-[18rem] w-full object-cover" />
+        <div className="overflow-hidden rounded-[1.25rem] lg:rounded-[1.75rem]">
+          <img
+            src={image}
+            alt={title}
+            className="h-[13rem] w-full object-cover sm:h-[15rem] lg:h-full lg:min-h-[26rem]"
+          />
         </div>
 
-        <div className="flex min-h-[28rem] flex-col px-6 pb-6 pt-2 sm:px-4 sm:pt-4 lg:px-0 lg:pb-4">
+        <div className="flex min-h-0 flex-col px-2 pb-1 pt-2 sm:px-1 sm:pt-3 lg:px-0">
           <div className="flex items-start justify-end gap-3">
             <div className="relative">
               <button
                 type="button"
                 aria-expanded={isShareOpen}
                 aria-label="Compartir servicio"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full text-pink transition-colors duration-200 hover:bg-pink/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full text-pink transition-colors duration-200 hover:bg-pink/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink"
                 onClick={() => setIsShareOpen((current) => !current)}
               >
                 <ModalIcon type="share" />
               </button>
 
               {isShareOpen ? (
-                <div className="absolute right-0 top-12 z-[10001] min-w-[11.5rem] rounded-2xl border border-forest/15 bg-cream-light p-2 text-[0.86rem] font-semibold text-forest shadow-[0_16px_38px_rgba(13,25,20,0.2)]">
+                <div className="absolute right-0 top-10 z-[10001] min-w-[14rem] rounded-2xl border border-forest/15 bg-cream-light p-2 text-[0.8rem] font-semibold text-forest shadow-[0_16px_38px_rgba(13,25,20,0.2)]">
+                  <button
+                    type="button"
+                    onClick={shareNative}
+                    className="block w-full rounded-xl px-3 py-2 text-left transition-colors duration-200 hover:bg-pink/10 hover:text-pink"
+                  >
+                    Compartir desde el dispositivo
+                  </button>
                   <a
                     href={`https://wa.me/?text=${encodedShareText}`}
                     target="_blank"
@@ -180,22 +236,25 @@ export function ServiceModal({
                     WhatsApp
                   </a>
                   <a
-                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodedShareUrl}`}
+                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodedShareUrl}&quote=${encodedShareText}`}
                     target="_blank"
                     rel="noreferrer"
                     className="block rounded-xl px-3 py-2 transition-colors duration-200 hover:bg-pink/10 hover:text-pink"
                   >
                     Facebook
                   </a>
-                  <a
-                    href={`https://www.instagram.com/direct/inbox/`}
-                    target="_blank"
-                    rel="noreferrer"
-                    onClick={() => navigator.clipboard?.writeText(`${shareText} ${shareUrl}`.trim())}
-                    className="block rounded-xl px-3 py-2 transition-colors duration-200 hover:bg-pink/10 hover:text-pink"
+                  <button
+                    type="button"
+                    onClick={shareInstagram}
+                    className="block w-full rounded-xl px-3 py-2 text-left transition-colors duration-200 hover:bg-pink/10 hover:text-pink"
                   >
-                    Instagram
-                  </a>
+                    Instagram Direct
+                  </button>
+                  {shareStatus ? (
+                    <p className="px-3 pb-1 pt-1 text-[0.72rem] leading-4 text-forest-dark/70">
+                      {shareStatus}
+                    </p>
+                  ) : null}
                 </div>
               ) : null}
             </div>
@@ -203,95 +262,85 @@ export function ServiceModal({
             <button
               type="button"
               aria-label="Cerrar modal"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-forest/20 bg-forest text-cream transition-colors duration-200 hover:bg-pink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-forest/20 bg-forest text-cream transition-colors duration-200 hover:bg-pink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink"
               onClick={handleClose}
             >
               <ModalIcon type="close" />
             </button>
           </div>
 
-          <h2 className="mt-11 font-heading text-[2.35rem] font-semibold leading-[0.98] text-forest sm:text-[2.9rem]">
+          <h2 className="mt-2 font-heading text-[2rem] font-semibold leading-[0.98] text-forest sm:mt-3 sm:text-[2.45rem] lg:text-[2.65rem]">
             {title}
           </h2>
 
-          <p className="mt-5 max-w-[42rem] text-[1rem] font-medium leading-8 text-forest-dark/88">
-            {description}
+          <p className="mt-3 line-clamp-[7] max-w-[42rem] text-[0.88rem] font-medium leading-6 text-forest-dark/88 sm:text-[0.94rem] sm:leading-7 lg:line-clamp-[8]">
+            {displayDescription}
           </p>
 
-          <div className="mt-auto grid gap-5 pt-9 sm:grid-cols-[1fr_auto] sm:items-end">
-            <dl className="grid gap-5 sm:grid-cols-2">
+          <div className="mt-auto grid gap-4 pt-5 sm:grid-cols-[1fr_auto] sm:items-end">
+            <dl className="grid grid-cols-2 gap-4">
               <div>
-                <dt className="text-[1rem] font-semibold text-forest-dark/80">Precio</dt>
-                <dd className="mt-1 font-heading text-[2.1rem] font-semibold leading-none text-forest">
+                <dt className="text-[0.82rem] font-semibold text-forest-dark/80">Precio</dt>
+                <dd className="mt-1 font-heading text-[1.38rem] font-semibold leading-none text-forest sm:text-[1.6rem]">
                   {price || 'Consultar'}
                 </dd>
               </div>
               <div>
-                <dt className="text-[1rem] font-semibold text-forest-dark/80">Duración</dt>
-                <dd className="mt-1 font-heading text-[2.1rem] font-semibold leading-none text-forest">
+                <dt className="text-[0.82rem] font-semibold text-forest-dark/80">Duración</dt>
+                <dd className="mt-1 font-heading text-[1.38rem] font-semibold leading-none text-forest sm:text-[1.6rem]">
                   {duration || 'Consultar'}
                 </dd>
               </div>
             </dl>
 
-            <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex min-h-10 items-center justify-center justify-self-start rounded-full border border-pink px-7 text-[0.95rem] font-bold text-pink no-underline transition-colors duration-200 hover:bg-pink hover:text-white sm:justify-self-end"
-            >
-              {ctaLabel}
-            </a>
-          </div>
-        </div>
-
-        <button
-          type="button"
-          className="mt-4 grid w-full cursor-pointer gap-4 rounded-[2rem] border border-white/85 bg-cream-light/55 p-3 text-left shadow-[0_8px_22px_rgba(36,61,49,0.18)] transition-transform duration-300 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink sm:grid-cols-[12rem_1fr] lg:col-span-2 lg:mt-5 lg:grid-cols-[18rem_1fr]"
-          onClick={openRecommendation}
-        >
-          <div className="overflow-hidden rounded-[1.5rem]">
-            <img
-              src={recommendation.image}
-              alt={recommendation.title}
-              className="aspect-[4/3] h-full w-full object-cover"
-            />
+            <div className="flex flex-row flex-wrap gap-2 sm:flex-col sm:items-end">
+              <button
+                type="button"
+                onClick={openResults}
+                className="inline-flex min-h-9 items-center justify-center justify-self-start rounded-full border border-forest/35 px-5 text-[0.82rem] font-bold text-forest no-underline transition-colors duration-200 hover:border-pink hover:bg-pink/8 hover:text-pink sm:justify-self-end"
+              >
+                Ver resultados
+              </button>
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex min-h-9 items-center justify-center justify-self-start rounded-full border border-pink px-5 text-[0.82rem] font-bold text-pink no-underline transition-colors duration-200 hover:bg-pink hover:text-white sm:justify-self-end"
+              >
+                {ctaLabel}
+              </a>
+            </div>
           </div>
 
-          <div className="flex min-w-0 flex-col justify-center py-1 pr-2">
-            <p className="text-[0.86rem] font-bold uppercase tracking-[0.08em] text-pink">
-              Recomendación similar
-            </p>
-            <h3 className="mt-1 font-heading text-[2rem] font-semibold leading-none text-forest sm:text-[2.35rem]">
-              {recommendation.title}
-            </h3>
-            <p className="mt-2 line-clamp-2 text-[0.98rem] font-medium leading-6 text-forest-dark/88">
-              {recommendation.description}
-            </p>
+          <button
+            type="button"
+            className="mt-4 grid w-full cursor-pointer gap-3 rounded-[1.2rem] border border-white/85 bg-cream-light/55 p-2 text-left shadow-[0_8px_22px_rgba(36,61,49,0.14)] transition-transform duration-300 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink sm:grid-cols-[5.6rem_1fr]"
+            onClick={openRecommendation}
+          >
+            <div className="hidden overflow-hidden rounded-[0.85rem] sm:block">
+              <img
+                src={recommendation.image}
+                alt={recommendation.title}
+                className="aspect-square h-full w-full object-cover"
+              />
+            </div>
 
-            <div className="mt-4 grid gap-4 sm:grid-cols-[1fr_1fr_auto] sm:items-end">
-              <div>
-                <span className="block text-[0.85rem] font-semibold text-forest-dark/78">
-                  Precio base
-                </span>
-                <span className="font-heading text-[1.75rem] font-semibold leading-none text-forest">
-                  {recommendation.price || 'Consultar'}
-                </span>
-              </div>
-              <div>
-                <span className="block text-[0.85rem] font-semibold text-forest-dark/78">
-                  Duración
-                </span>
-                <span className="font-heading text-[1.75rem] font-semibold leading-none text-forest">
-                  {recommendation.duration || 'Consultar'}
-                </span>
-              </div>
-              <span className="text-[0.98rem] font-bold text-pink">
+            <div className="min-w-0 py-1 pr-1">
+              <p className="text-[0.68rem] font-bold uppercase tracking-[0.08em] text-pink">
+                Recomendación similar
+              </p>
+              <h3 className="mt-0.5 line-clamp-1 font-heading text-[1.45rem] font-semibold leading-none text-forest">
+                {recommendation.title}
+              </h3>
+              <p className="mt-1 line-clamp-1 text-[0.78rem] font-medium leading-5 text-forest-dark/82">
+                {recommendation.description}
+              </p>
+              <span className="mt-1 inline-block text-[0.8rem] font-bold text-pink">
                 Ver servicio
               </span>
             </div>
-          </div>
-        </button>
+          </button>
+        </div>
       </section>
     </div>
   )

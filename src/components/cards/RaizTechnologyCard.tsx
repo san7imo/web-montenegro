@@ -37,7 +37,7 @@ export function RaizTechnologyCard({
   placeholder,
 }: RaizTechnologyCardProps) {
   return (
-    <article className="overflow-hidden rounded-[1.9rem] border border-cream-light/35 bg-forest/18 text-white shadow-[0_14px_34px_rgba(18,34,27,0.18)]">
+    <article className="overflow-hidden rounded-[1.9rem] border border-cream-light/35 bg-forest/18 text-white shadow-[0_14px_34px_rgba(18,34,27,0.22)] transition-shadow duration-300 hover:shadow-[0_18px_42px_rgba(18,34,27,0.26)]">
       <div className="relative aspect-square overflow-hidden">
         {image ? (
           <ImageLayer
