@@ -1,13 +1,17 @@
 import type { NavigationItem } from '../types/common'
 
 export const navigationLinks: NavigationItem[] = [
-  { label: 'HOME', href: '/' },
-  { label: 'ESENCIA', href: '/esencia' },
+  { label: 'INICIO', href: '/' },
   { label: 'ORIGEN', href: '/origen' },
+  { label: 'ESENCIA', href: '/esencia' },
   { label: 'OASIS', href: '/oasis' },
-  { label: 'SERVICIOS', href: '/servicios' },
-  { label: 'FRUTO', href: '/fruto' },
-  { label: 'AURA', href: '/aura' },
+  { label: 'RAÍZ', href: '/raiz' },
+  { label: 'TEZ', href: '/tez' },
+  { label: 'FILO', href: '/filo' },
+  { label: 'TACTO', href: '/tacto' },
+  { label: 'HEBRA', href: '/hebra' },
+  { label: 'BROTE', href: '/brote' },
+  { label: 'ECO', href: '/eco' },
   { label: 'CONTACTO', href: '/contacto' },
 ]
 
@@ -16,19 +20,19 @@ export const primaryNavigationLinks: NavigationItem[] = navigationLinks.filter((
 )
 
 export const headerNavigationLinks: NavigationItem[] = [
-  { label: 'HOME', href: '/' },
-  { label: 'ESENCIA', href: '/esencia' },
+  { label: 'INICIO', href: '/' },
   { label: 'ORIGEN', href: '/origen' },
+  { label: 'ESENCIA', href: '/esencia' },
   { label: 'ECO', href: '/eco' },
   { label: 'CONTACTO', href: '/contacto' },
 ]
 
 export const serviceNavigationLinks = [
   { label: 'OASIS', href: '/oasis', description: 'Rituales de purificación' },
-  { label: 'TACTO', href: '/tacto', description: 'Manos, pies y uñas' },
   { label: 'RAÍZ', href: '/raiz', description: 'Bio-ciencia y tecnología' },
-  { label: 'BROTE', href: '/brote', description: 'Spa infantil' },
-  { label: 'FILO', href: '/filo', description: 'Depilación y mirada' },
-  { label: 'HEBRA', href: '/hebra', description: 'Cuidado capilar' },
   { label: 'TEZ', href: '/tez', description: 'Piel y contorno' },
+  { label: 'FILO', href: '/filo', description: 'Depilación y mirada' },
+  { label: 'TACTO', href: '/tacto', description: 'Manos, pies y uñas' },
+  { label: 'HEBRA', href: '/hebra', description: 'Cuidado capilar' },
+  { label: 'BROTE', href: '/brote', description: 'Spa infantil' },
 ] satisfies Array<NavigationItem & { description?: string }>

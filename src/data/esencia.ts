@@ -41,6 +41,18 @@ export const esenciaValuesContent = {
     'Como madre y empresaria, entiendo que el tiempo es el lujo más valioso. Por eso, he volcado mi energía en automatizar la excelencia: para que cuando cruces nuestra puerta, tu única tarea sea disfrutar de tu propia esencia.',
 } as const
 
+export const esenciaFounderLegacyContent = {
+  eyebrow: 'Nuestra fundadora',
+  title: 'Un legado de bienestar.\nUna visión de belleza real.',
+  paragraphs: [
+    'Detrás de cada tratamiento, de cada espacio y de nuestra tecnología, está mi compromiso personal: ofrecerte un refugio donde desconectes del exterior para reconectar con tu esencia.',
+    'Te acompaño a descubrir la fuerza de tu origen y a restaurar tu armonía interior y exterior.',
+    'Bienvenido a tu santuario.',
+  ],
+  signature: 'Olga Lucia Montenegro',
+  role: 'Fundadora',
+} as const
+
 export const esenciaCtaContent = {
   title: 'Permítenos ayudarte a encontrar tu mejor versión.',
   description:

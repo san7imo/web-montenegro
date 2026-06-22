@@ -7,6 +7,7 @@ import { EsenciaPage } from '../pages/Esencia/EsenciaPage'
 import { FiloPage } from '../pages/Filo/FiloPage'
 import { HebraPage } from '../pages/Hebra/HebraPage'
 import { HomePage } from '../pages/Home/HomePage'
+import { LegalPage } from '../pages/Legal/LegalPage'
 import { OasisPage } from '../pages/Oasis/OasisPage'
 import { OrigenPage } from '../pages/Origen/OrigenPage'
 import { RaizPage } from '../pages/Raiz/RaizPage'
@@ -28,6 +29,10 @@ export function AppRoutes() {
       <Route path="/tez" element={<TezPage />} />
       <Route path="/eco" element={<EcoPage />} />
       <Route path="/contacto" element={<ContactoPage />} />
+      <Route path="/legal/aviso-legal" element={<LegalPage page="aviso-legal" />} />
+      <Route path="/legal/privacidad" element={<LegalPage page="privacidad" />} />
+      <Route path="/legal/politicas-de-seguridad" element={<LegalPage page="privacidad" />} />
+      <Route path="/legal/cookies" element={<LegalPage page="cookies" />} />
     </Routes>
   )
 }

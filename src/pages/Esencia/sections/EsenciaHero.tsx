@@ -1,7 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
 import backgroundImage from '../../../assets/esencia/portada-fondo-estetica.webp'
-import olgaWithLeavesImage from '../../../assets/esencia/olga-con-hojas.webp'
+import olgaWithLeavesImage from '../../../assets/esencia/olga-con-hojas.png'
 import { esenciaHeroContent } from '../../../data/esencia'
 import { Container } from '../../../components/ui/Container'
 import { ImageLayer } from '../../../components/ui/ImageLayer'
@@ -85,7 +85,7 @@ export function EsenciaHero() {
             </motion.div>
 
             <motion.div
-              className="relative z-20 mt-8 ml-auto w-[18rem] sm:mt-10 sm:w-[22rem] lg:absolute lg:right-[-122px] lg:bottom-[-81px] lg:mt-0 lg:w-[48rem] xl:right-[-122px] xl:bottom-[-81px] xl:w-[52rem]"
+              className="relative z-20 mt-8 ml-auto w-[14.25rem] sm:mt-10 sm:w-[17.5rem] lg:absolute lg:right-[-24px] lg:bottom-[1.35rem] lg:mt-0 lg:w-[34rem] xl:right-[-34px] xl:bottom-[1.55rem] xl:w-[36.5rem]"
               {...fadeUp(0.24)}
             >
               <ImageLayer

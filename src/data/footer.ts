@@ -15,7 +15,7 @@ export const footerContent: FooterContent = {
   navigationLinks,
   legalLinks: [
     { label: 'Aviso legal', href: '/legal/aviso-legal' },
-    { label: 'Políticas de seguridad', href: '/legal/politicas-de-seguridad' },
+    { label: 'Privacidad', href: '/legal/privacidad' },
     { label: 'Cookies', href: '/legal/cookies' },
   ],
   newsletter: 'Recibe novedades, promos y noticias sobre nuevos servicios.',

@@ -31,6 +31,13 @@ export function Header() {
     }
   }, [isMenuOpen])
 
+  const mainNavigationBeforeServices = headerNavigationLinks.filter(
+    (item) => !['/eco', '/contacto'].includes(item.href),
+  )
+  const mainNavigationAfterServices = headerNavigationLinks.filter((item) =>
+    ['/eco', '/contacto'].includes(item.href),
+  )
+
   return (
     <motion.header
       className="fixed inset-x-0 top-0 z-50"
@@ -119,7 +126,7 @@ export function Header() {
               transition={{ duration: 0.22, ease: 'easeOut' }}
             >
               <ul className="space-y-1.5">
-                {headerNavigationLinks.map((item) => (
+                {mainNavigationBeforeServices.map((item) => (
                   <li key={item.href}>
                     <NavLink
                       to={item.href}
@@ -158,13 +165,13 @@ export function Header() {
                     <span
                       aria-hidden="true"
                       className={[
-                        'text-[0.95rem] leading-none transition-transform duration-200',
+                        'inline-flex h-5 w-5 items-center justify-center text-[0.9rem] leading-none transition-transform duration-200',
                         isServicesOpen ? 'rotate-180' : '',
                       ]
                         .filter(Boolean)
                         .join(' ')}
                     >
-                      v
+                      ↓
                     </span>
                   </button>
 
@@ -207,6 +214,26 @@ export function Header() {
                     ) : null}
                   </AnimatePresence>
                 </li>
+                {mainNavigationAfterServices.map((item) => (
+                  <li key={item.href}>
+                    <NavLink
+                      to={item.href}
+                      onClick={() => setIsMenuOpen(false)}
+                      className={({ isActive }) =>
+                        [
+                          'flex rounded-[0.95rem] px-4 py-3 text-[0.76rem] font-medium uppercase tracking-[0.16em] transition-colors duration-200',
+                          isActive
+                            ? 'bg-white/10 text-white'
+                            : 'text-cream-light/88 hover:bg-white/6 hover:text-white',
+                        ]
+                          .filter(Boolean)
+                          .join(' ')
+                      }
+                    >
+                      {item.label}
+                    </NavLink>
+                  </li>
+                ))}
               </ul>
             </motion.nav>
           ) : null}
