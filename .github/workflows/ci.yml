@@ -27,3 +27,18 @@ jobs:
 
       - name: Compilar aplicación
         run: npm run build
+
+      - name: Configurar SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/github_actions_montenegro
+          chmod 600 ~/.ssh/github_actions_montenegro
+          ssh-keyscan -p "${{ vars.SSH_PORT }}" "${{ vars.SSH_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Probar conexión SSH
+        run: |
+          ssh \
+            -i ~/.ssh/github_actions_montenegro \
+            -p "${{ vars.SSH_PORT }}" \
+            "${{ vars.SSH_USER }}@${{ vars.SSH_HOST }}" \
+            "echo 'GitHub Actions conectado correctamente' && hostname && pwd"
