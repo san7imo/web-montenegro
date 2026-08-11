@@ -33,8 +33,8 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/github_actions_montenegro
           chmod 600 ~/.ssh/github_actions_montenegro
-          ssh-keyscan -p "${{ vars.SSH_PORT }}" "${{ vars.SSH_HOST }}" >> ~/.ssh/known_hosts
-
+          echo "${{ vars.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
       - name: Probar conexión SSH
         run: |
           ssh \
