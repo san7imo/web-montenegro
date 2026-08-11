@@ -4,8 +4,14 @@ const GOOGLE_REVIEW_PLACE_ID = 'ChIJtdGREVrDTw0R_AERQThipl4'
 const GOOGLE_REVIEW_SOURCE = 'g.page.m.ia._'
 const GOOGLE_REVIEW_LAA = 'nmx-review-solicitation-ia2'
 
+export const CLUB_CAMPAIGNS = {
+  lipoSweepstakes: {
+    href: 'https://docs.google.com/forms/d/e/1FAIpQLSf3rHZ0HFR8UYkzvcO-Zud9Y2GcG2h7MSJ5wQv0CbA72P30ug/viewform',
+    isActive: false,
+  },
+} as const
+
 export const LINKS = {
-  lipoSweepstakes: '',
   googleReview: `https://search.google.com/local/writereview?placeid=${GOOGLE_REVIEW_PLACE_ID}&source=${GOOGLE_REVIEW_SOURCE}&laa=${GOOGLE_REVIEW_LAA}`,
   website: 'https://www.montenegrosaludybelleza.com',
   instagram: 'https://www.instagram.com/montenegrosaludbelleza/',

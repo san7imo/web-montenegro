@@ -100,7 +100,7 @@ Incluye:
 - mensajes de confirmación mediante toast;
 - botón preparado para **“Sorteo: Lipo Sin Cirugía”**.
 
-El botón del sorteo está visible pero desactivado mientras su URL permanezca vacía. La ruta Club no muestra el banner global de cookies para conservar su formato compacto.
+El botón del sorteo está visible, muestra “Próximamente” y permanece desactivado mientras su bandera `isActive` sea `false`. La URL definitiva ya está configurada. La ruta Club no muestra el banner global de cookies para conservar su formato compacto.
 
 ### Contacto y conversión
 
@@ -300,14 +300,16 @@ Allí se administran:
 - web oficial;
 - Instagram, TikTok y Facebook;
 - mensajes predefinidos;
-- enlace del sorteo.
+- URL y estado de activación del sorteo.
 
-Para activar el botón **Sorteo: Lipo Sin Cirugía**, sustituir el valor vacío por la URL recibida:
+La URL definitiva del sorteo ya está guardada. Para activar el botón **Sorteo: Lipo Sin Cirugía** cuando comience la campaña, cambiar únicamente `isActive` a `true`:
 
 ```ts
-export const LINKS = {
-  lipoSweepstakes: 'https://ejemplo.com/formulario-sorteo',
-  // ...
+export const CLUB_CAMPAIGNS = {
+  lipoSweepstakes: {
+    href: 'https://docs.google.com/forms/d/e/.../viewform',
+    isActive: true,
+  },
 }
 ```
 
@@ -496,7 +498,7 @@ Checklist recomendado:
 ## Limitaciones actuales
 
 - El formulario de contacto es únicamente visual y todavía no envía datos a un backend, correo o CRM.
-- El botón **Sorteo: Lipo Sin Cirugía** está desactivado hasta recibir la URL del formulario.
+- El botón **Sorteo: Lipo Sin Cirugía** ya tiene la URL definitiva, pero permanece desactivado mediante configuración hasta que comience la campaña.
 - No hay pruebas unitarias, de integración o E2E automatizadas.
 - No existe integración automática entre el Excel y `servicePricing.ts`; la sincronización debe revisarse antes de publicar.
 - Vite puede mostrar una advertencia por el tamaño del bundle principal. No impide compilar, pero puede mejorarse en el futuro con división de código por rutas.

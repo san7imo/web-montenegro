@@ -158,8 +158,11 @@ function PriceBreakdownGrid({ breakdown }: { breakdown: PriceBreakdown }) {
           <dt className="text-[0.56rem] font-extrabold uppercase leading-3 tracking-[0.06em] text-forest-dark/65 sm:text-[0.61rem]">
             {item.label}
           </dt>
-          <dd className="mt-1 font-heading text-[1.12rem] font-bold leading-none text-pink sm:text-[1.28rem]">
-            {item.value}
+          <dd className="mt-1 leading-none">
+            <PriceText
+              value={item.value}
+              className="text-[0.9rem] font-extrabold leading-5 text-pink"
+            />
           </dd>
           {item.detail ? (
             <span className="mt-1 block text-[0.58rem] font-bold leading-3 text-forest-dark/68">

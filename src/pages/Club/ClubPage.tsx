@@ -17,7 +17,7 @@ import {
 import logo from '../../assets/logo/montenegro-logo-footer.webp'
 import symbol from '../../assets/logo/montenegro-symbol.webp'
 import { serviceNavigationLinks } from '../../data/navigation'
-import { buildWhatsAppUrl, LINKS, MESSAGES } from './clubConfig'
+import { buildWhatsAppUrl, CLUB_CAMPAIGNS, LINKS, MESSAGES } from './clubConfig'
 
 type ClubCardProps = {
   children: ReactNode
@@ -229,14 +229,21 @@ export function ClubPage() {
         </header>
 
         <ActionLink
-          href={LINKS.lipoSweepstakes || undefined}
-          target={LINKS.lipoSweepstakes ? '_blank' : undefined}
-          disabled={!LINKS.lipoSweepstakes}
+          href={CLUB_CAMPAIGNS.lipoSweepstakes.isActive
+            ? CLUB_CAMPAIGNS.lipoSweepstakes.href
+            : undefined}
+          target={CLUB_CAMPAIGNS.lipoSweepstakes.isActive ? '_blank' : undefined}
+          disabled={!CLUB_CAMPAIGNS.lipoSweepstakes.isActive}
           tone="primary"
           icon={<FiGift />}
           className="min-h-14 text-[0.86rem] shadow-[0_20px_42px_rgba(194,11,114,0.3)]"
         >
-          Sorteo: Lipo Sin Cirugía
+          <span className="flex flex-col items-center leading-tight">
+            <span>Sorteo: Lipo Sin Cirugía</span>
+            <span className="mt-1 text-[0.62rem] font-bold uppercase tracking-[0.14em] text-white/82">
+              Próximamente
+            </span>
+          </span>
         </ActionLink>
 
         <ClubCard surface="dark">
