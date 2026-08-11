@@ -33,21 +33,21 @@ export function GrandfatherCorner() {
           alt=""
           className="absolute inset-0 h-full w-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(36,61,49,0.18)_0%,rgba(36,61,49,0.1)_42%,rgba(36,61,49,0.48)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(20,34,27,0.26)_0%,rgba(26,44,35,0.2)_38%,rgba(24,40,32,0.78)_100%)]" />
 
         <motion.div
           className="relative z-10 flex min-h-[34rem] items-end justify-center px-8 pb-8 text-center text-white sm:px-10 sm:pb-10 lg:min-h-[100svh] lg:px-12 lg:pb-10"
           {...fadeUp(0.06)}
         >
           <div className="w-full max-w-[29rem] lg:max-w-[33rem]">
-            <p className="text-[1.28rem] leading-[1.34] tracking-[-0.03em] text-white drop-shadow-[0_12px_28px_rgba(23,34,28,0.18)] sm:text-[1.5rem] lg:text-[1.72rem]">
+            <p className="text-[1.28rem] font-medium leading-[1.34] tracking-[-0.03em] text-white drop-shadow-[0_14px_30px_rgba(12,22,17,0.5)] sm:text-[1.5rem] lg:text-[1.72rem]">
               {origenGrandfatherContent.imageDescription}
             </p>
             <div className="mt-5">
               <Button
                 to={origenGrandfatherContent.ctaHref}
                 variant="light"
-                className="min-w-[11.75rem] border-transparent bg-white/88 px-6 text-[0.72rem] tracking-[0.06em] text-forest hover:bg-white hover:text-forest-dark"
+                className="min-w-[11.75rem] border-white bg-white px-6 text-[0.72rem] tracking-[0.06em] text-forest shadow-[0_14px_30px_rgba(10,20,16,0.28)] hover:bg-cream-light hover:text-forest-dark"
               >
                 {origenGrandfatherContent.ctaLabel}
               </Button>

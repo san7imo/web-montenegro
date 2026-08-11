@@ -54,7 +54,7 @@ const serviceModalDescriptions: Partial<Record<ServiceModalKey, string>> = {
   'filo:depilacion-cera':
     'Consigue una suavidad inmediata y duradera con un servicio de depilación que cuida y respeta la sensibilidad de tu piel. El servicio comienza preparando la zona para aplicar nuestra cera premium a una temperatura totalmente controlada, lo que reduce las molestias y protege el tejido. Mediante una técnica manual precisa y rápida, eliminamos el vello de raíz a la vez que realizamos una suave exfoliación.',
   'filo:depilacion-ipl':
-    'Elimina el vello de forma inteligente y progresiva con un tratamiento lumínico avanzado que estimula la suavidad de tu piel. El servicio comienza con un diagnóstico personalizado para ajustar los filtros de luz según tus necesidades específicas. A continuación, aplicamos destellos controlados de alta intensidad sobre la zona elegida; la energía es absorbida por la melanina del vello y debilita el folículo desde la raíz.',
+    'Elimina el vello de forma inteligente y progresiva con un tratamiento lumínico avanzado. Para que el precio sea claro: la primera sesión funciona como precio promocional de entrada, desde la segunda sesión aplica el precio regular de la zona y el pack de 6 sesiones ofrece una tarifa total más conveniente. El servicio comienza con diagnóstico personalizado para ajustar los filtros de luz según tu piel, vello y zona a tratar.',
 
   'hebra:corte-dama':
     'Nuestro servicio de Corte de Dama comienza con un diagnóstico personalizado donde analizamos la morfología de tu rostro, la caída natural de tu cabello y tu estilo de vida. Diseñamos la estructura ideal para tu melena, ya sea que busques sanear y aportar un volumen estratégico, definir capas con movimiento orgánico o apostar por un cambio de look drástico e impecable. Eliminamos con precisión la fibra dañada y las puntas abiertas, devolviéndole la ligereza y el vigor al cabello.',
@@ -80,19 +80,19 @@ const serviceModalDescriptions: Partial<Record<ServiceModalKey, string>> = {
     'La solución rápida para llevar una melena impecable, suave y bajo control. En nuestro servicio de Planchado Profesional, el alisado va de la mano con el cuidado de tu salud capilar. Antes de usar las planchas de última generación, aplicamos protectores térmicos de alta calidad que retienen la hidratación y evitan el daño por calor. Alineamos cada mechón para cerrar la cutícula y lograr máximo brillo.',
 
   'brote:ritual-tina-magica':
-    'El bienestar también es un juego de niños. Transformamos nuestra tina de hidromasaje en un escenario de fábula diseñado meticulosamente como un estímulo terapéutico, emocional y sensorial para los más pequeños. Bajo una atmósfera de música envolvente, utilizamos alta cosmética efervescente orgánica que respeta al máximo la delicada piel infantil. Una pausa mágica alejada de las pantallas que fusiona la diversión con el cuidado personal temprano.',
+    'Tina compartida para niños y niñas con bomba efervescente de color, espuma aromática, cromoterapia, música y albornoces. Un ritual colectivo pensado para convertir el spa en un juego sensorial seguro, cuidado y memorable.',
   'brote:envoltura-corporal':
-    'Regala a tus niños una experiencia de autocuidado donde su piel se convierte en un lienzo para aplicar una mascarilla tibia de cacao puro cosmético, arcilla rosa, extractos botánicos o aceite de almendras dulces. El tratamiento se realiza mientras escuchan un audiocuento mágico, convirtiendo el cuidado corporal en una experiencia segura, sensorial y divertida.',
+    'Exfoliación y envoltura corporal con manteca de cacao o pulpa de frutas. Es un tratamiento hidratante y antioxidante de 80 minutos por persona, pensado para cuidar la piel mientras la experiencia se mantiene lúdica, aromática y segura.',
+  'brote:chocolaterapia-express':
+    'Tratamiento express con crema de cacao, aplicación lúdica y masaje suave de manos. Una experiencia breve para introducir a los niños en el autocuidado desde una sensación dulce, divertida y relajante.',
   'brote:masaje-corporal':
-    'Regala a tus niños una experiencia de autocuidado donde su piel se convierte en un lienzo para aplicar productos orgánicos con pinceles suaves y aromas dulces. El tratamiento se realiza mientras escuchan un audiocuento mágico, transformando el masaje en una experiencia de calma, juego y conexión sensorial.',
+    'Mini masaje relajante en camilla con técnica seca suave en espalda y piernas. Está diseñado para liberar tensión, crear una pausa tranquila y acercar a los peques al bienestar corporal de forma amable.',
   'brote:manicura-pedicura':
-    'Manicura y Pedicura "Súper Héroes & Fantasía" es una experiencia de cuidado y diseño adaptado para los más pequeños. Incluye limado ultra suave, hidratación profunda con masaje de aroma a fresa o gominola y esmaltado seguro con productos al agua, libres de tóxicos y de fácil retirada. El diseño se adapta a mundos de princesas, hadas, súper héroes o aventureros.',
+    'Manicura y pedicura express para niñas con esmalte de color, purpurina y base coat. Es un servicio de 20 minutos para cuidar manos y pies con un acabado divertido, delicado y fácil de disfrutar.',
   'brote:mini-hair-spa':
-    'Sumerge el descanso de tus hijos en una sofisticada inmersión terapéutica que traslada la tecnología del Spa Capilar Asiático de adultos a un universo infantil de fantasía. Protegidos con capas impermeables y albornoces de spa, los peques experimentan el relax de nuestra cascada y arco de agua digitalizada a temperatura segura, logrando calmar la mente y liberar tensiones de forma divertida.',
+    'Mascarilla capilar nutritiva, masaje de cuero cabelludo, aclarado y secado suave. Una experiencia de 20 minutos que cuida el cabello y convierte el lavado en un pequeño ritual de descanso.',
   'brote:mini-spa-facial':
-    'Descubre un protocolo interactivo de estética infantil donde el cuidado facial se transforma en un juego de estimulación sensorial saludable. A través de este ritual premium, los niños aprenden hábitos de bienestar mientras se divierten con sus personajes favoritos utilizando cosmética de grado alimentario, libre de sulfatos y diseñada exclusivamente para proteger las pieles más delicadas.',
-  'brote:peinados-estrella':
-    'Desata la expresión creativa y la autoestima de tus peques convirtiendo el peinado convencional en un divertido taller de transformación estética. En este espacio libre de pantallas, ellos eligen la identidad lúdica que quieren lucir mediante fórmulas hipoalergénicas que respetan el cuero cabelludo infantil y se eliminan por completo en el primer baño con champú.',
+    'Limpieza facial, mascarilla hidratante y masaje facial. Un protocolo suave de 20 minutos para que la piel se sienta luminosa, fresca y descansada sin dejar de ser una experiencia divertida.',
 
   'tez:hydrafacial-rs':
     'Devuélvele la claridad y la frescura a tu piel sin pasar por el trauma de las limpiezas tradicionales. Este tratamiento abraza tu rostro con un cóctel de antioxidantes y ácido hialurónico de alta gama. Nuestra tecnología de succión vacuum purifica cada poro de forma delicada, previniendo brotes y asegurando un proceso placentero. El resultado es una piel impecable, jugosa y llena de luz propia.',

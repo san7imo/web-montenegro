@@ -2,6 +2,7 @@ import { motion, useReducedMotion } from 'framer-motion'
 
 import { ServiceExperienceCard } from '../../../components/cards/ServiceExperienceCard'
 import { Container } from '../../../components/ui/Container'
+import { ExpandableServiceList } from '../../../components/ui/ExpandableServiceList'
 import { SectionTitle } from '../../../components/ui/SectionTitle'
 import { oasisPurificationExperiencesContent } from '../../../data/oasis'
 
@@ -35,9 +36,12 @@ export function PurificationExperiences() {
           </SectionTitle>
         </motion.div>
 
-        <div className="mt-10 space-y-5 sm:mt-12 lg:mt-16 lg:space-y-7">
-          {oasisPurificationExperiencesContent.items.map((item, index) => (
-            <motion.div key={item.id} {...fadeUp(0.12 + index * 0.08)}>
+        <ExpandableServiceList
+          items={oasisPurificationExperiencesContent.items}
+          getKey={(item) => item.id}
+          className="mt-10 space-y-5 sm:mt-12 lg:mt-16 lg:space-y-7"
+          renderItem={(item, index) => (
+            <motion.div {...fadeUp(0.12 + index * 0.08)}>
               <ServiceExperienceCard
                 id={item.id}
                 title={item.title}
@@ -49,8 +53,8 @@ export function PurificationExperiences() {
                 ctaLabel={oasisPurificationExperiencesContent.ctaLabel}
               />
             </motion.div>
-          ))}
-        </div>
+          )}
+        />
       </Container>
     </section>
   )

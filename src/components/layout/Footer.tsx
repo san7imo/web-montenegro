@@ -40,7 +40,7 @@ export function Footer({ tone = 'dark' }: FooterProps) {
             <img
               src={footerLogo}
               alt="Montenegro Salud y Belleza"
-              className="h-[5.4rem] w-auto sm:h-[6rem]"
+              className="h-[7.5rem] w-auto sm:h-[8.5rem] lg:h-[9rem]"
               loading="lazy"
             />
             <div className="space-y-0.5 text-[0.86rem] leading-5 text-white/88 sm:text-[0.9rem]">
@@ -56,7 +56,7 @@ export function Footer({ tone = 'dark' }: FooterProps) {
           </div>
 
           <div className="space-y-3">
-            <p className="text-[0.72rem] font-medium uppercase tracking-[0.14em] text-white">
+            <p className="text-[0.86rem] font-semibold uppercase tracking-[0.14em] text-white sm:text-[0.92rem]">
               Navegación
             </p>
             <ul className="space-y-0.5 text-[0.86rem] leading-5 text-white/88 sm:text-[0.9rem]">
@@ -71,7 +71,7 @@ export function Footer({ tone = 'dark' }: FooterProps) {
           </div>
 
           <div className="space-y-3">
-            <p className="text-[0.72rem] font-medium uppercase tracking-[0.14em] text-white">
+            <p className="text-[0.86rem] font-semibold uppercase tracking-[0.14em] text-white sm:text-[0.92rem]">
               Legal
             </p>
             <ul className="space-y-0.5 text-[0.86rem] leading-5 text-white/88 sm:text-[0.9rem]">
@@ -86,7 +86,7 @@ export function Footer({ tone = 'dark' }: FooterProps) {
           </div>
 
           <div className="space-y-4">
-            <p className="text-[0.72rem] font-medium uppercase tracking-[0.14em] text-white">
+            <p className="text-[0.86rem] font-semibold uppercase tracking-[0.14em] text-white sm:text-[0.92rem]">
               Newsletter
             </p>
             <p className="max-w-[18rem] text-[0.86rem] leading-5 text-white/88 sm:text-[0.9rem]">
@@ -112,10 +112,10 @@ export function Footer({ tone = 'dark' }: FooterProps) {
                   key={link.label}
                   href={link.href}
                   aria-label={link.label}
-                target="_blank"
-                rel="noreferrer"
-                className="transition-opacity duration-200 hover:opacity-80"
-              >
+                  target="_blank"
+                  rel="noreferrer"
+                  className="transition-opacity duration-200 hover:opacity-80"
+                >
                   {(() => {
                     const Icon = socialIconMap[link.platform]
                     return <Icon aria-hidden="true" className="h-5 w-5" />

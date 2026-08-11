@@ -39,10 +39,12 @@ export function RaizTechnology() {
         {raizTechnologyContent.items.map((item, index) => (
           <motion.div key={item.id} {...fadeUp(0.08 + index * 0.04)}>
             <RaizTechnologyCard
+              id={item.id}
               title={item.title}
               description={item.description}
-              image={'image' in item ? item.image : undefined}
-              placeholder={'placeholder' in item ? item.placeholder : undefined}
+              duration={item.duration}
+              price={item.price}
+              image={item.image}
             />
           </motion.div>
         ))}

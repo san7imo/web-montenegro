@@ -7,12 +7,18 @@ import broteSpaFacialImage from '../assets/brote/spafacial.png'
 import broteTinaMagicaImage from '../assets/brote/tinamagica.png'
 import filoCejasHennaImage from '../assets/filo/cejasconhena.png'
 import filoDepilacionCeraImage from '../assets/filo/depilacionconcera.png'
-import filoDepilacionHiloImage from '../assets/filo/depilacionhilo.png'
+import filoDepilacionCejasCeraImage from '../assets/filo/depilacion-cejas-cera.webp'
 import filoDepilacionIplImage from '../assets/filo/depilacionipl.png'
+import filoEliminacionMicropigmentacionCejasImage from '../assets/filo/eliminacion-micropigmentacion-cejas.webp'
 import filoLaserDiodoImage from '../assets/filo/depilacionlaserdiodo.png'
 import filoExtensionesPestanasImage from '../assets/filo/extensionesdepestañas.png'
 import filoLaminadoCejasImage from '../assets/filo/laminadodecejas.png'
 import filoLiftingPestanasImage from '../assets/filo/liftingdepestañas.png'
+import filoMicrobladingCejasImage from '../assets/filo/microblading-cejas.webp'
+import filoMicropigmentacionCejasImage from '../assets/filo/micropigmentacion-cejas.webp'
+import filoPestanasOjoGatoImage from '../assets/filo/pestanas-ojo-gato.webp'
+import filoPestanasVolumenRusoImage from '../assets/filo/pestanas-volumen-ruso.webp'
+import filoPestanasWispyImage from '../assets/filo/pestanas-wispy.webp'
 import hebraCepilladoImage from '../assets/hebra/cepillado.png'
 import hebraCoctelAnticaidaImage from '../assets/hebra/coctelanticaida.png'
 import hebraCorteCaballeroImage from '../assets/hebra/cortecaballero.png'
@@ -64,8 +70,9 @@ import { hebraExperiencesContent } from './hebra'
 import { oasisPurificationExperiencesContent } from './oasis'
 import { tactoMenuContent } from './tacto'
 import { tezCatalogContent } from './tez'
+import type { PricingCategory } from './servicePricing'
 
-export type ServiceCategory = 'oasis' | 'tacto' | 'brote' | 'filo' | 'hebra' | 'tez'
+export type ServiceCategory = PricingCategory
 
 export type ServiceCatalogItem = {
   category: ServiceCategory
@@ -113,7 +120,7 @@ const broteImages = {
 }
 
 const filoImages = {
-  depilacionHilo: filoDepilacionHiloImage,
+  depilacionCejasCera: filoDepilacionCejasCeraImage,
   laminadoCejas: filoLaminadoCejasImage,
   cejasHenna: filoCejasHennaImage,
   extensionesPestanas: filoExtensionesPestanasImage,
@@ -121,6 +128,12 @@ const filoImages = {
   laserDiodo: filoLaserDiodoImage,
   depilacionCera: filoDepilacionCeraImage,
   depilacionIpl: filoDepilacionIplImage,
+  eliminacionMicropigmentacionCejas: filoEliminacionMicropigmentacionCejasImage,
+  microbladingCejas: filoMicrobladingCejasImage,
+  micropigmentacionCejas: filoMicropigmentacionCejasImage,
+  pestanasOjoGato: filoPestanasOjoGatoImage,
+  pestanasVolumenRuso: filoPestanasVolumenRusoImage,
+  pestanasWispy: filoPestanasWispyImage,
 }
 
 const hebraImages = {
@@ -198,8 +211,8 @@ export const serviceCatalog: ServiceCatalogItem[] = [
       '/tez',
       section.items.map((item) => ({
         ...item,
-        duration: 'Consultar',
-        price: tezCatalogContent.price,
+        duration: item.duration,
+        price: item.price,
       })),
       tezImages,
     ),

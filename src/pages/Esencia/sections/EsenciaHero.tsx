@@ -56,21 +56,7 @@ export function EsenciaHero() {
               {...fadeUp(0.18)}
             >
               <div className="relative z-10 lg:min-h-[18rem] lg:max-w-[47%] xl:max-w-[45%]">
-                <div className="mb-3 flex h-8 items-start justify-between text-cream-light/88 sm:mb-4 sm:h-10 lg:mb-5">
-                  <span
-                    className="font-heading text-[3.35rem] leading-none sm:text-[3.8rem] lg:text-[4.4rem]"
-                    aria-hidden="true"
-                  >
-                    “
-                  </span>
-                  <span
-                    className="font-heading text-[3.35rem] leading-none sm:text-[3.8rem] lg:text-[4.4rem]"
-                    aria-hidden="true"
-                  >
-                    ”
-                  </span>
-                </div>
-                <p className="max-w-[18rem] text-[0.98rem] leading-[1.24] text-cream-light/96 sm:max-w-[21rem] sm:text-[1.12rem] lg:max-w-[30rem] lg:text-[1.18rem] lg:leading-[1.22]">
+                <p className="max-w-[18rem] text-[0.98rem] leading-[1.42] text-cream-light/96 sm:max-w-[21rem] sm:text-[1.12rem] lg:max-w-[30rem] lg:text-[1.18rem] lg:leading-[1.4]">
                   {esenciaHeroContent.quote}
                 </p>
                 <div className="mt-8 sm:mt-10">

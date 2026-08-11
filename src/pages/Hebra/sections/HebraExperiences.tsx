@@ -2,6 +2,7 @@ import { motion, useReducedMotion } from 'framer-motion'
 
 import { HebraExperienceCard } from '../../../components/cards/HebraExperienceCard'
 import { Container } from '../../../components/ui/Container'
+import { ExpandableServiceList } from '../../../components/ui/ExpandableServiceList'
 import { SectionTitle } from '../../../components/ui/SectionTitle'
 import { hebraExperiencesContent } from '../../../data/hebra'
 
@@ -35,9 +36,12 @@ export function HebraExperiences() {
           </SectionTitle>
         </motion.div>
 
-        <div className="mt-10 space-y-5 sm:mt-12 lg:mt-16 lg:space-y-7">
-          {hebraExperiencesContent.items.map((item, index) => (
-            <motion.div key={item.id} {...fadeUp(0.1 + index * 0.05)}>
+        <ExpandableServiceList
+          items={hebraExperiencesContent.items}
+          getKey={(item) => item.id}
+          className="mt-10 space-y-5 sm:mt-12 lg:mt-16 lg:space-y-7"
+          renderItem={(item, index) => (
+            <motion.div {...fadeUp(0.1 + index * 0.05)}>
               <HebraExperienceCard
                 id={item.id}
                 title={item.title}
@@ -49,8 +53,8 @@ export function HebraExperiences() {
                 ctaLabel={hebraExperiencesContent.ctaLabel}
               />
             </motion.div>
-          ))}
-        </div>
+          )}
+        />
       </Container>
     </section>
   )

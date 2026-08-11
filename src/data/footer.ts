@@ -8,9 +8,8 @@ export const footerContent: FooterContent = {
   ],
   scheduleLines: [
     'Lunes a Viernes',
-    '9:00 - 14:00 hrs / 17:00 - 20:00 hrs',
-    'Sábados',
-    '9:00 - 14:00 hrs',
+    '9:30 - 14:30 hrs / 17:00 - 20:00 hrs',
+    'Sábados 9:30 - 14:30 hrs',
   ],
   navigationLinks,
   legalLinks: [
@@ -29,7 +28,7 @@ export const footerContent: FooterContent = {
     },
     {
       label: 'Instagram',
-      href: 'https://www.instagram.com/montenegrosaludybelleza/',
+      href: 'https://www.instagram.com/montenegrosaludbelleza/',
       platform: 'instagram',
     },
     {

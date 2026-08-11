@@ -2,8 +2,11 @@ import { motion, useReducedMotion } from 'framer-motion'
 
 import { TezCatalogCard } from '../../../components/cards/TezCatalogCard'
 import { Container } from '../../../components/ui/Container'
+import { ExpandableServiceList } from '../../../components/ui/ExpandableServiceList'
 import { SectionTitle } from '../../../components/ui/SectionTitle'
 import { tezCatalogContent } from '../../../data/tez'
+
+type TezCatalogItem = (typeof tezCatalogContent.sections)[number]['items'][number]
 
 export function TezCatalog() {
   const shouldReduceMotion = useReducedMotion()
@@ -42,21 +45,24 @@ export function TezCatalog() {
               </p>
             </motion.div>
 
-            <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-7 lg:gap-y-9">
-              {section.items.map((item, index) => (
-                <motion.div key={item.id} {...fadeUp(0.08 + index * 0.035)}>
+            <ExpandableServiceList<TezCatalogItem>
+              items={section.items}
+              getKey={(item) => item.id}
+              className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-7 lg:gap-y-9"
+              renderItem={(item, index) => (
+                <motion.div {...fadeUp(0.08 + index * 0.035)}>
                   <TezCatalogCard
                     id={item.id}
                     title={item.title}
                     description={item.description}
                     image={item.image}
-                    price={tezCatalogContent.price}
+                    price={item.price}
                     ctaHref={tezCatalogContent.ctaHref}
                     ctaLabel={tezCatalogContent.ctaLabel}
                   />
                 </motion.div>
-              ))}
-            </div>
+              )}
+            />
           </div>
         ))}
       </Container>

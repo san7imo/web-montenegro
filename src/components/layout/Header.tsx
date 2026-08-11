@@ -31,8 +31,8 @@ export function Header() {
     }
   }, [isMenuOpen])
 
-  const mainNavigationBeforeServices = headerNavigationLinks.filter(
-    (item) => !['/eco', '/contacto'].includes(item.href),
+  const mainNavigationBeforeServices = headerNavigationLinks.filter((item) =>
+    ['/', '/esencia', '/origen'].includes(item.href),
   )
   const mainNavigationAfterServices = headerNavigationLinks.filter((item) =>
     ['/eco', '/contacto'].includes(item.href),
@@ -119,7 +119,7 @@ export function Header() {
             <motion.nav
               id="header-navigation-panel"
               aria-label="Navegación principal"
-              className="absolute top-[3.6rem] right-5 z-50 w-[15rem] rounded-[1.35rem] border border-white/16 bg-forest-dark/92 p-3 text-cream-light shadow-[0_24px_60px_rgba(11,18,14,0.24)] backdrop-blur-md sm:top-[4rem] sm:right-6 lg:right-8"
+              className="absolute top-[3.6rem] right-5 z-50 max-h-[calc(100svh-5rem)] w-[15rem] overflow-y-auto rounded-[1.35rem] border border-white/16 bg-forest-dark/92 p-3 text-cream-light shadow-[0_24px_60px_rgba(11,18,14,0.24)] backdrop-blur-md sm:top-[4rem] sm:right-6 lg:right-8"
               initial={shouldReduceMotion ? false : { opacity: 0, y: -8, scale: 0.98 }}
               animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
               exit={shouldReduceMotion ? undefined : { opacity: 0, y: -8, scale: 0.98 }}

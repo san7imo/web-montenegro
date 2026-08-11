@@ -1,3 +1,5 @@
+import { buildCategoryServiceItems } from './servicePricing'
+
 export const oasisHeroContent = {
   titleLines: ['Oasis:', 'Tu Ritual de Purificación.'],
   description:
@@ -8,71 +10,21 @@ export const oasisHeroContent = {
 
 export const oasisPurificationExperiencesContent = {
   titleLines: ['Experiencias de', 'Purificación'],
-  items: [
-    {
-      id: 'rituales-en-tina',
-      title: 'Rituales en Tina',
-      description:
-        'Inmersiones con sales de Epsom, aceites esenciales puros y botánica recolectada bajo criterios de Origen.',
-      duration: '45 Minutos',
-      price: 'XX$',
-      image: 'ritualesEnTina',
-    },
-    {
-      id: 'exfoliacion',
-      title: 'Exfoliación',
-      description:
-        'Envolturas de arcilla volcánica y algas que extraen impurezas y devuelven minerales esenciales.',
-      duration: '1 Hora',
-      price: 'XX$',
-      image: 'exfoliacion',
-    },
-    {
-      id: 'drenaje-linfatico',
-      title: 'Drenaje Linfático',
-      description:
-        'Rituales de vapor y aromaterapia para abrir los sentidos y preparar la Tez y que así reciba todos los beneficios de nuestros productos.',
-      duration: '1 Hora',
-      price: 'XX$',
-      image: 'drenajeLinfatico',
-    },
-    {
-      id: 'masaje-relajante',
-      title: 'Masaje Relajante',
-      description:
-        'Inmersiones con sales de Epsom, aceites esenciales puros y botánica recolectada bajo criterios de Origen.',
-      duration: '1 Hora',
-      price: 'XX$',
-      image: 'masajeRelajante',
-    },
-    {
-      id: 'presoterapia',
-      title: 'Presoterapia',
-      description:
-        'Envolturas de arcilla volcánica y algas que extraen impurezas y devuelven minerales esenciales.',
-      duration: '1 Hora',
-      price: 'XX$',
-      image: 'presoterapia',
-    },
-    {
-      id: 'ventosas',
-      title: 'Ventosas',
-      description:
-        'Rituales de vapor y aromaterapia para abrir los sentidos y preparar la Tez y que así reciba todos los beneficios de nuestros productos.',
-      duration: '1 Hora',
-      price: 'XX$',
-      image: 'ventosas',
-    },
-    {
-      id: 'descontracturante',
-      title: 'Descontracturante',
-      description:
-        'Rituales de vapor y aromaterapia para abrir los sentidos y preparar la Tez y que así reciba todos los beneficios de nuestros productos.',
-      duration: '1 Hora',
-      price: 'XX$',
-      image: 'descontracturante',
-    },
-  ],
+  items: buildCategoryServiceItems('oasis', [
+    'ritualesEnTina',
+    'exfoliacion',
+    'drenajeLinfatico',
+    'masajeRelajante',
+    'ventosas',
+    'ritualesEnTina',
+    'exfoliacion',
+    'ritualesEnTina',
+    'masajeRelajante',
+    'exfoliacion',
+    'ritualesEnTina',
+    'descontracturante',
+    'ritualesEnTina',
+  ] as const),
   ctaLabel: 'RESERVA TU CITA',
   ctaHref: '/contacto',
 } as const

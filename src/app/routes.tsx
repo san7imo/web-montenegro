@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
 
 import { BrotePage } from '../pages/Brote/BrotePage'
+import { ClubPage } from '../pages/Club/ClubPage'
 import { ContactoPage } from '../pages/Contacto/ContactoPage'
 import { EcoPage } from '../pages/Eco/EcoPage'
 import { EsenciaPage } from '../pages/Esencia/EsenciaPage'
@@ -28,6 +29,7 @@ export function AppRoutes() {
       <Route path="/hebra" element={<HebraPage />} />
       <Route path="/tez" element={<TezPage />} />
       <Route path="/eco" element={<EcoPage />} />
+      <Route path="/club" element={<ClubPage />} />
       <Route path="/contacto" element={<ContactoPage />} />
       <Route path="/legal/aviso-legal" element={<LegalPage page="aviso-legal" />} />
       <Route path="/legal/privacidad" element={<LegalPage page="privacidad" />} />

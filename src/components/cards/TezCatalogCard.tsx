@@ -16,6 +16,7 @@ import rejuvenecimientoVaginalImage from '../../assets/tez/rejuevenicmientovagin
 import tratamientoVaricesImage from '../../assets/tez/tratamientodevarices.png'
 import vendasFriasImage from '../../assets/tez/vendasfrias.png'
 import { ImageLayer } from '../ui/ImageLayer'
+import { PriceText } from '../ui/PriceText'
 import { ServiceModal } from '../ui/ServiceModal'
 import { useServiceModalState } from '../ui/useServiceModalState'
 
@@ -93,7 +94,7 @@ export function TezCatalogCard({
           openModal()
         }
       }}
-      className="overflow-hidden rounded-[1.6rem] border border-cream-light/80 bg-cream/55 shadow-[0_10px_24px_rgba(36,61,49,0.13)] transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(36,61,49,0.16)]"
+      className="flex h-full flex-col overflow-hidden rounded-[1.6rem] border border-white/75 bg-cream/65 shadow-[0_0_18px_rgba(31,53,43,0.24),0_8px_18px_rgba(31,53,43,0.16)] transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_22px_rgba(31,53,43,0.28),0_10px_22px_rgba(31,53,43,0.18)]"
     >
       <div className="aspect-[390/292] overflow-hidden rounded-b-[1.15rem]">
         <ImageLayer
@@ -103,17 +104,17 @@ export function TezCatalogCard({
         />
       </div>
 
-      <div className="px-4 pb-4 pt-3 text-center text-forest">
+      <div className="flex flex-1 flex-col px-4 pb-4 pt-3 text-center text-forest">
         <h3 className="font-heading text-[1.82rem] font-semibold leading-[0.98] text-forest sm:text-[2rem]">
           {title}
         </h3>
-        <p className="mt-2 line-clamp-4 min-h-[5.8rem] text-justify text-[0.95rem] font-medium leading-[1.45] text-forest-dark/88">
+        <p className="mt-2 line-clamp-3 min-h-[3.9rem] text-justify text-[0.94rem] font-medium leading-[1.4] text-forest-dark/88">
           {description}
         </p>
 
-        <div className="mt-3 flex items-center justify-between gap-4 text-left">
+        <div className="mt-auto flex items-center justify-between gap-4 pt-4 text-left">
           <span className="font-heading text-[1.55rem] font-semibold leading-none text-forest">
-            {price}
+            <PriceText value={price} />
           </span>
           <button
             type="button"
@@ -121,7 +122,7 @@ export function TezCatalogCard({
               event.stopPropagation()
               openModal()
             }}
-            className="rounded-full border border-pink px-4 py-1.5 text-[0.82rem] font-bold text-pink no-underline transition-colors duration-200 hover:bg-pink hover:text-white"
+            className="min-h-10 min-w-[8.5rem] rounded-full border border-pink px-5 py-2 text-[0.82rem] font-bold text-pink no-underline transition-colors duration-200 hover:bg-pink hover:text-white"
           >
             {ctaLabel}
           </button>

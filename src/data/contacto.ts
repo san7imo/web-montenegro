@@ -44,7 +44,7 @@ export const contactoDirectContent = {
     },
   ],
   schedule:
-    'Lunes a viernes de 9:00am a 2:00pm y de 5:00pm a 8:00pm. Sábados de 9:00am a 2:00pm.',
+    'Lunes a viernes de 9:30am a 2:30pm y de 5:00pm a 8:00pm. Sábados de 9:30am a 2:30pm.',
   mapTitle: 'Ubicación de Montenegro Salud y Belleza en Google Maps',
   mapEmbedUrl:
     'https://maps.google.com/maps?q=C%2F%20Badaia%2033%20Bajo%2C%2001012%20Vitoria-Gasteiz%2C%20Espa%C3%B1a&z=16&output=embed',

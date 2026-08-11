@@ -1,3 +1,5 @@
+import { buildCategoryServiceItems } from './servicePricing'
+
 export const hebraHeroContent = {
   titleLines: ['Hebra:', 'El Arte del Cuidado Capilar.'],
   description:
@@ -8,7 +10,7 @@ export const hebraHeroContent = {
 
 export const hebraAtelierContent = {
   label: '¿Por qué elegirnos?',
-  titleLines: ['Especialidades del', 'Atelier'],
+  titleLines: ['Especialidades', 'del Atelier'],
   items: [
     {
       eyebrow: 'Arquitectura del corte',
@@ -31,107 +33,19 @@ export const hebraAtelierContent = {
 
 export const hebraExperiencesContent = {
   titleLines: ['Experiencias de', 'Hebra'],
-  items: [
-    {
-      id: 'corte-dama',
-      title: 'Corte Dama',
-      description:
-        'Servicios de corte, estilismo y cuidado que respetan la naturaleza de tu cabello.',
-      duration: '1 hora',
-      price: 'XX$',
-      image: 'corteDama',
-    },
-    {
-      id: 'corte-caballero',
-      title: 'Corte Caballero',
-      description:
-        'Potente infusión de nutrientes esenciales, vitaminas y activos botánicos para restaurar tu cabello.',
-      duration: '1 hora',
-      price: 'XX$',
-      image: 'corteCaballero',
-    },
-    {
-      id: 'coctel-anticaida',
-      title: 'Coctel Anticaída',
-      description:
-        'Tecnología de análisis para evaluar el estado de tu cuero cabelludo, y diseñar un protocolo 100% personalizado.',
-      duration: '1 hora',
-      price: 'XX$',
-      image: 'coctelAnticaida',
-    },
-    {
-      id: 'spa-hair-asiatico',
-      title: 'Spa Hair Asiático',
-      description:
-        'Baño terapéutico bajo nuestro arco de cascada, diseñado para la purificación y relajación absoluta para tu mente y tu cabello.',
-      duration: '1 hora',
-      price: 'XX$',
-      image: 'spaHairAsiatico',
-    },
-    {
-      id: 'keratina',
-      title: 'Keratina',
-      description:
-        'Servicios de corte, estilismo y cuidado que respetan la naturaleza de tu cabello.',
-      duration: '1 hora',
-      price: 'XX$',
-      image: 'keratina',
-    },
-    {
-      id: 'extensiones',
-      title: 'Extensiones',
-      description:
-        'Potente infusión de nutrientes esenciales, vitaminas y activos botánicos para restaurar tu cabello.',
-      duration: '1 hora',
-      price: 'XX$',
-      image: 'extensiones',
-    },
-    {
-      id: 'tintes',
-      title: 'Tintes',
-      description:
-        'Tecnología de análisis para evaluar el estado de tu cuero cabelludo, y diseñar un protocolo 100% personalizado.',
-      duration: '1 hora',
-      price: 'XX$',
-      image: 'tintes',
-    },
-    {
-      id: 'mechas',
-      title: 'Mechas',
-      description:
-        'Baño terapéutico bajo nuestro arco de cascada, diseñado para la purificación y relajación absoluta para tu mente y tu cabello.',
-      duration: '1 hora',
-      price: 'XX$',
-      image: 'mechas',
-    },
-    {
-      id: 'iluminaciones',
-      title: 'Iluminaciones',
-      description:
-        'Potente infusión de nutrientes esenciales, vitaminas y activos botánicos para restaurar tu cabello.',
-      duration: '1 hora',
-      price: 'XX$',
-      image: 'iluminaciones',
-    },
-    {
-      id: 'cepillado',
-      title: 'Cepillado',
-      description:
-        'Tecnología de análisis para evaluar el estado de tu cuero cabelludo, y diseñar un protocolo 100% personalizado.',
-      duration: '1 hora',
-      price: 'XX$',
-      image: 'cepillado',
-    },
-    {
-      id: 'planchado',
-      title: 'Planchado',
-      description:
-        'Baño terapéutico bajo nuestro arco de cascada, diseñado para la purificación y relajación absoluta para tu mente y tu cabello.',
-      duration: '1 hora',
-      price: 'XX$',
-      image: 'planchado',
-    },
-  ],
+  items: buildCategoryServiceItems('hebra', [
+    'cepillado',
+    'coctelAnticaida',
+    'corteCaballero',
+    'corteDama',
+    'extensiones',
+    'spaHairAsiatico',
+    'iluminaciones',
+    'keratina',
+    'mechas',
+    'planchado',
+    'tintes',
+  ] as const),
   ctaLabel: 'RESERVA TU CITA',
   ctaHref: '/contacto',
 } as const

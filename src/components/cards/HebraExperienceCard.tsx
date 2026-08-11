@@ -11,6 +11,7 @@ import spaHairAsiaticoImage from '../../assets/hebra/spahairasiatico.png'
 import tintesImage from '../../assets/hebra/tintes.png'
 import { Button } from '../ui/Button'
 import { ImageLayer } from '../ui/ImageLayer'
+import { PriceText } from '../ui/PriceText'
 import { ServiceModal } from '../ui/ServiceModal'
 import { useServiceModalState } from '../ui/useServiceModalState'
 
@@ -76,7 +77,7 @@ export function HebraExperienceCard({
           openModal()
         }
       }}
-      className="grid cursor-pointer gap-5 rounded-[1.85rem] border border-cream-light/80 bg-cream/50 p-3 shadow-[0_10px_24px_rgba(36,61,49,0.13)] transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(36,61,49,0.16)] sm:grid-cols-[12.8rem_1fr] sm:gap-8 sm:p-3.5 lg:min-h-[13.8rem] lg:grid-cols-[17.9rem_1fr] lg:gap-14 lg:rounded-[2rem]"
+      className="grid cursor-pointer gap-5 rounded-[1.85rem] border border-white/75 bg-cream/65 p-3 shadow-[0_0_18px_rgba(31,53,43,0.26),0_8px_18px_rgba(31,53,43,0.18)] transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_22px_rgba(31,53,43,0.3),0_10px_22px_rgba(31,53,43,0.2)] sm:grid-cols-[11.4rem_1fr] sm:gap-6 sm:p-3.5 lg:min-h-[11.75rem] lg:grid-cols-[14.8rem_1fr] lg:gap-6 lg:rounded-[2rem]"
     >
       <div className="w-full overflow-hidden rounded-[1.35rem] sm:h-full lg:rounded-[1.55rem]">
         <ImageLayer
@@ -86,7 +87,7 @@ export function HebraExperienceCard({
         />
       </div>
 
-      <div className="flex min-w-0 flex-col pb-1 pt-1 sm:pr-4 lg:pr-8 lg:pt-4">
+      <div className="flex min-w-0 flex-col justify-center pb-1 pt-1 sm:pr-4 lg:pr-6 lg:pt-2">
         <h3 className="font-heading text-[2.4rem] font-semibold leading-[0.96] text-forest sm:text-[2.75rem] lg:text-[3.1rem]">
           {title}
         </h3>
@@ -94,25 +95,26 @@ export function HebraExperienceCard({
           {description}
         </p>
 
-        <dl className="mt-3 text-[0.9rem] font-semibold leading-5 text-forest-dark sm:mt-4 sm:text-[0.96rem]">
-          <div>
-            <dt className="inline">Duración </dt>
-            <dd className="inline">{duration}</dd>
-          </div>
-          <div>
-            <dt className="inline">Precio </dt>
-            <dd className="inline">{price}</dd>
-          </div>
-        </dl>
-
-        <div className="mt-5 flex sm:mt-auto sm:justify-end">
+        <div className="mt-4 grid gap-4 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end lg:mt-5">
+          <dl className="text-[0.9rem] font-semibold leading-5 text-forest-dark sm:text-[0.96rem]">
+            <div>
+              <dt className="inline">Duración </dt>
+              <dd className="inline">{duration}</dd>
+            </div>
+            <div>
+              <dt className="inline">Precio </dt>
+              <dd className="inline">
+                <PriceText value={price} />
+              </dd>
+            </div>
+          </dl>
           <Button
             variant="outline"
             onClick={(event) => {
               event.stopPropagation()
               openModal()
             }}
-            className="min-h-10 min-w-[11rem] !border-pink bg-transparent px-5 py-2 text-[0.67rem] font-bold tracking-[0.03em] !text-pink shadow-none hover:!border-pink hover:!bg-pink hover:!text-white focus-visible:ring-pink sm:min-w-[13.7rem] lg:min-h-[2.6rem]"
+            className="min-h-11 !border-pink bg-transparent px-5 py-2 text-[0.72rem] font-bold tracking-[0.04em] !text-pink shadow-none hover:!border-pink hover:!bg-pink hover:!text-white focus-visible:ring-pink"
           >
             {ctaLabel}
           </Button>
