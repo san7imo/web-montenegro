@@ -42,9 +42,9 @@ jobs:
             -p "${{ vars.SSH_PORT }}" \
             "${{ vars.SSH_USER }}@${{ vars.SSH_HOST }}" \
             "echo 'GitHub Actions conectado correctamente' && hostname && pwd"
-      - name: Simular despliegue con rsync
+      - name: Desplegar a producción
         run: |
-          rsync -avzn --delete \
+          rsync -avz --delete \
             -e "ssh -i ~/.ssh/github_actions_montenegro -p ${{ vars.SSH_PORT }}" \
             dist/ \
             "${{ vars.SSH_USER }}@${{ vars.SSH_HOST }}:${{ vars.DEPLOY_PATH }}/"
