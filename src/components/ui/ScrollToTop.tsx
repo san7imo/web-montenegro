@@ -1,0 +1,27 @@
+import { useEffect, useLayoutEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+
+export function ScrollToTop() {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    const previousScrollRestoration = window.history.scrollRestoration
+
+    window.history.scrollRestoration = 'manual'
+
+    return () => {
+      window.history.scrollRestoration = previousScrollRestoration
+    }
+  }, [])
+
+  useLayoutEffect(() => {
+    const root = document.documentElement
+    const previousScrollBehavior = root.style.scrollBehavior
+
+    root.style.scrollBehavior = 'auto'
+    window.scrollTo({ top: 0, left: 0 })
+    root.style.scrollBehavior = previousScrollBehavior
+  }, [pathname])
+
+  return null
+}
