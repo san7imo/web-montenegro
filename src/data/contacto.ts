@@ -1,3 +1,5 @@
+import { buildWhatsAppContactUrl } from '../utils/whatsapp'
+
 export const contactoHeroContent = {
   titleLines: ['Contacto:', 'Todo comienza con una conversación.'],
 } as const
@@ -14,7 +16,9 @@ export const contactoAuraContent = {
   description:
     'Aura es nuestra guía virtual está disponible las 24 horas del día para ayudarte a elegir el ritual perfecto según tus objetivos de salud y bienestar, resolver dudas sobre nuestro catálogo clínico o agendar tu próxima cita en segundos.',
   ctaLabel: 'INICIAR CONSULTA POR WHATSAPP',
-  ctaHref: `https://wa.me/?text=${encodeURIComponent('Hola Aura, quiero iniciar una consulta personalizada en Montenegro Salud y Belleza.')}`,
+  ctaHref: buildWhatsAppContactUrl(
+    'Hola Aura, quiero iniciar una consulta personalizada en Montenegro Salud y Belleza.',
+  ),
 } as const
 
 export const contactoDirectContent = {

@@ -61,15 +61,15 @@ export function FounderLegacySection() {
 
         <div className="flex items-center bg-sage px-8 py-14 text-cream-light sm:px-12 lg:px-16 lg:py-16 xl:px-20">
           <motion.div className="max-w-[38rem]" {...fadeUp(0.06)}>
-            <p className="text-[0.98rem] font-medium text-cream-light/88 sm:text-[1.05rem]">
+            <p className="type-body font-medium text-cream-light/88">
               {esenciaFounderLegacyContent.eyebrow}
             </p>
 
-            <h2 className="mt-3 whitespace-pre-line font-heading text-[2.85rem] leading-[0.98] tracking-[-0.035em] text-white sm:text-[3.45rem] lg:text-[4rem]">
+            <h2 className="type-feature-title mt-3 whitespace-pre-line text-white">
               {esenciaFounderLegacyContent.title}
             </h2>
 
-            <div className="mt-7 space-y-6 text-[1.02rem] font-medium leading-8 text-cream-light/95 sm:text-[1.08rem] sm:leading-9">
+            <div className="type-body mt-7 space-y-6 font-medium text-cream-light/95">
               {esenciaFounderLegacyContent.paragraphs.map((paragraph, index) => (
                 <p
                   key={paragraph}
@@ -80,8 +80,8 @@ export function FounderLegacySection() {
               ))}
             </div>
 
-            <div className="mt-12 text-right text-[1.02rem] leading-7 text-cream-light sm:mt-16">
-              <p className="font-heading text-[1.35rem] italic leading-none">
+            <div className="type-body mt-12 text-right text-cream-light sm:mt-16">
+              <p className="type-card-title-compact italic">
                 {esenciaFounderLegacyContent.signature}
               </p>
               <p className="font-medium">{esenciaFounderLegacyContent.role}</p>

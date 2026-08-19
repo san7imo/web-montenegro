@@ -36,11 +36,11 @@ export function TezCatalog() {
             <motion.div className="mx-auto max-w-[63rem] text-center" {...fadeUp(0.04)}>
               <SectionTitle
                 as="h2"
-                className="text-pink sm:text-[4.05rem] lg:text-[4.75rem]"
+                className="text-pink"
               >
                 {section.title}
               </SectionTitle>
-              <p className="mx-auto mt-4 max-w-[68rem] text-[0.98rem] font-semibold leading-7 text-forest-dark/78 sm:text-[1.04rem]">
+              <p className="type-body mx-auto mt-4 max-w-[68rem] font-semibold text-forest-dark/78">
                 {section.description}
               </p>
             </motion.div>
@@ -50,7 +50,7 @@ export function TezCatalog() {
               getKey={(item) => item.id}
               className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-7 lg:gap-y-9"
               renderItem={(item, index) => (
-                <motion.div {...fadeUp(0.08 + index * 0.035)}>
+                <motion.div className="h-full" {...fadeUp(0.08 + index * 0.035)}>
                   <TezCatalogCard
                     id={item.id}
                     title={item.title}

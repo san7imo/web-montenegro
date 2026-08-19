@@ -28,3 +28,157 @@
     font-weight: 600;
   }
 }
+
+@layer components {
+  /*
+   * Escala tipográfica semántica.
+   * Las vistas solo deciden color, alineación y ancho; el tamaño y la fuente
+   * pertenecen a la categoría del texto para mantener consistencia global.
+   */
+  .type-display {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    line-height: 0.92;
+  }
+
+  .type-section-title {
+    font-family: var(--font-heading);
+    font-size: 2.75rem;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    line-height: 0.94;
+  }
+
+  .type-feature-title {
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    line-height: 0.96;
+  }
+
+  .type-card-title {
+    font-family: var(--font-heading);
+    font-size: 2.15rem;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 0.98;
+  }
+
+  .type-card-title-compact {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1;
+  }
+
+  .type-lead {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .type-body {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .type-body-sm {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .type-eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    line-height: 1.35;
+    text-transform: uppercase;
+  }
+
+  .type-caption {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+
+  .type-action {
+    font-family: var(--font-body);
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    line-height: 1.35;
+    text-transform: uppercase;
+  }
+
+  .type-quote {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    line-height: 1.55;
+  }
+
+  .type-price {
+    font-family: var(--font-body);
+    font-size: 1.35rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  @media (min-width: 640px) {
+    .type-display {
+      font-size: 4rem;
+    }
+
+    .type-section-title {
+      font-size: 3.5rem;
+    }
+
+    .type-feature-title {
+      font-size: 3rem;
+    }
+
+    .type-card-title {
+      font-size: 2.45rem;
+    }
+
+    .type-card-title-compact {
+      font-size: 1.9rem;
+    }
+
+    .type-lead {
+      font-size: 1.1rem;
+    }
+
+    .type-quote {
+      font-size: 1.35rem;
+    }
+
+    .type-price {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .type-display {
+      font-size: 4.75rem;
+    }
+
+    .type-section-title {
+      font-size: 4.25rem;
+    }
+
+    .type-feature-title {
+      font-size: 3.6rem;
+    }
+
+    .type-card-title {
+      font-size: 2.7rem;
+    }
+  }
+}

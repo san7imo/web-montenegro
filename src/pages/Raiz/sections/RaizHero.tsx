@@ -37,15 +37,16 @@ export function RaizHero() {
         <HeroOverlay />
 
         <div className="relative z-10 flex h-full items-end px-[6.2vw] pb-8 sm:pb-10 lg:pb-11">
-          <motion.div className="max-w-[76rem]" {...fadeUp(0.08)}>
+          <motion.div className="w-full min-w-0 max-w-[76rem]" {...fadeUp(0.08)}>
             <SectionTitle
               as="h1"
-              className="text-pink-soft drop-shadow-[0_10px_20px_rgba(18,22,18,0.28)] sm:text-[4.5rem] lg:text-[5.45rem] lg:leading-[0.9]"
+              variant="display"
+              className="text-pink-soft drop-shadow-[0_10px_20px_rgba(18,22,18,0.28)]"
             >
               <span className="block">{raizHeroContent.titleLines[0]}</span>
               <span className="block">{raizHeroContent.titleLines[1]}</span>
             </SectionTitle>
-            <p className="mt-3 max-w-[69rem] text-[1.05rem] leading-7 text-cream-light/96 sm:text-[1.18rem] lg:text-[1.28rem] lg:leading-8">
+            <p className="type-lead mt-3 max-w-[69rem] text-cream-light/96">
               {raizHeroContent.description}
             </p>
           </motion.div>
@@ -55,7 +56,7 @@ export function RaizHero() {
       <div className="bg-forest">
         <Container className="px-7 py-12 sm:px-8 sm:py-[4.25rem] lg:px-12 lg:py-[5.35rem]">
           <motion.div className="mx-auto max-w-[58rem]" {...fadeUp(0.2)}>
-            <p className="text-[1.08rem] font-semibold leading-[1.65] text-cream-light/96 sm:text-[1.22rem] sm:leading-[1.72]">
+            <p className="type-lead font-semibold text-cream-light/96">
               {raizHeroContent.bodyDescription}
             </p>
             <DecorativeLine variant="light" className="mx-auto mt-12 w-[28rem] max-w-[72%] opacity-95" />

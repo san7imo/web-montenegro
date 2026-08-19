@@ -29,7 +29,7 @@ export function TactoMenu() {
         <motion.div className="mx-auto max-w-[28rem] text-center sm:max-w-[33rem]" {...fadeUp(0.04)}>
           <SectionTitle
             as="h2"
-            className="text-forest sm:text-[4.15rem] lg:text-[4.85rem]"
+            className="text-forest"
           >
             <span className="block">{tactoMenuContent.titleLines[0]}</span>
             <span className="block">{tactoMenuContent.titleLines[1]}</span>

@@ -29,7 +29,7 @@ export function PurificationExperiences() {
         <motion.div className="mx-auto max-w-[23rem] text-center sm:max-w-[29rem]" {...fadeUp(0.04)}>
           <SectionTitle
             as="h2"
-            className="text-forest sm:text-[3.55rem] lg:text-[4.05rem]"
+            className="text-forest"
           >
             <span className="block">{oasisPurificationExperiencesContent.titleLines[0]}</span>
             <span className="block">{oasisPurificationExperiencesContent.titleLines[1]}</span>

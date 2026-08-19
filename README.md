@@ -2,7 +2,7 @@
 
 Sitio web oficial de **Montenegro Salud y Belleza**, desarrollado como una experiencia editorial y responsive para presentar la marca, sus universos de bienestar, el catálogo completo de servicios, precios, bonos, resultados y canales de contacto.
 
-El proyecto también incluye una página independiente tipo *link-in-bio* para el Club Montenegro, páginas legales, consentimiento de cookies y enlaces directos de reserva mediante WhatsApp.
+El proyecto también incluye una página independiente tipo *link-in-bio* para **Montenegro VIP**, páginas legales, consentimiento de cookies y enlaces directos de reserva mediante WhatsApp.
 
 ## Tabla de contenidos
 
@@ -35,7 +35,7 @@ La aplicación se encuentra funcional y compilable. Actualmente están implement
 - Modales detallados para cada servicio.
 - Página Eco con testimonios, resultados y galería.
 - Página de contacto.
-- Club Montenegro tipo *link-in-bio*.
+- Montenegro VIP tipo *link-in-bio*.
 - Aviso legal, privacidad y política de cookies.
 - Navegación responsive, footer común y acceso flotante a WhatsApp.
 
@@ -84,9 +84,9 @@ No se utiliza Bootstrap, jQuery ni una librería UI externa. Los componentes y e
 /filo?service=depilacion-ipl
 ```
 
-### Club Montenegro
+### Montenegro VIP
 
-La ruta `/club` funciona como una página compacta tipo *link-in-bio* y está pensada para enlaces de redes sociales, chips NFC y acciones posteriores a una visita.
+La ruta `/vip` funciona como una página compacta tipo *link-in-bio* y está pensada para enlaces de redes sociales, códigos QR, chips NFC y acciones posteriores a una visita.
 
 Incluye:
 
@@ -100,7 +100,9 @@ Incluye:
 - mensajes de confirmación mediante toast;
 - botón preparado para **“Sorteo: Lipo Sin Cirugía”**.
 
-El botón del sorteo está visible, muestra “Próximamente” y permanece desactivado mientras su bandera `isActive` sea `false`. La URL definitiva ya está configurada. La ruta Club no muestra el banner global de cookies para conservar su formato compacto.
+El botón del sorteo está visible, muestra “Próximamente” y permanece desactivado mientras su bandera `isActive` sea `false`. La URL definitiva ya está configurada. La ruta VIP no muestra el banner global de cookies para conservar su formato compacto.
+
+El Smart Link público es `https://www.montenegrosaludybelleza.com/vip`. Sus códigos QR listos para impresión están disponibles en `public/qr/montenegro-vip-smart-link.svg` y `public/qr/montenegro-vip-smart-link.png`. La ruta anterior `/club` solo se conserva como una redirección compatible hacia `/vip`.
 
 ### Contacto y conversión
 
@@ -125,7 +127,8 @@ El botón del sorteo está visible, muestra “Próximamente” y permanece desa
 | `/raiz` | Raíz | Tecnología estética y tratamientos avanzados |
 | `/eco` | Eco | Testimonios, resultados y galería |
 | `/contacto` | Contacto | Canales de contacto, ubicación y formulario |
-| `/club` | Club Montenegro | Página tipo *link-in-bio* |
+| `/vip` | Montenegro VIP | Página tipo *link-in-bio* y destino del Smart Link |
+| `/club` | Redirección compatible | Redirige automáticamente hacia `/vip` |
 | `/legal/aviso-legal` | Aviso legal | Condiciones de uso del sitio |
 | `/legal/privacidad` | Privacidad | Tratamiento de datos personales |
 | `/legal/politicas-de-seguridad` | Privacidad | Alias compatible con la navegación existente |
@@ -285,12 +288,12 @@ src/data/footer.ts
 
 Al agregar una ruta también debe registrarse en `src/app/routes.tsx` y, si corresponde, en la navegación del header o footer.
 
-### Club y enlaces externos
+### Montenegro VIP y enlaces externos
 
-La configuración del Club se encuentra en:
+La configuración de Montenegro VIP se encuentra en:
 
 ```text
-src/pages/Club/clubConfig.ts
+src/pages/Vip/vipConfig.ts
 ```
 
 Allí se administran:
@@ -305,7 +308,7 @@ Allí se administran:
 La URL definitiva del sorteo ya está guardada. Para activar el botón **Sorteo: Lipo Sin Cirugía** cuando comience la campaña, cambiar únicamente `isActive` a `true`:
 
 ```ts
-export const CLUB_CAMPAIGNS = {
+export const VIP_CAMPAIGNS = {
   lipoSweepstakes: {
     href: 'https://docs.google.com/forms/d/e/.../viewform',
     isActive: true,
@@ -389,6 +392,26 @@ Los estilos globales se cargan desde `src/styles/globals.css`, que importa Tailw
 
 Las fuentes se solicitan desde Google Fonts, por lo que requieren conexión a internet en la primera carga si no están almacenadas en caché.
 
+La escala responsive está centralizada en `src/styles/typography.css`. Cada texto debe utilizar una categoría semántica en lugar de declarar un tamaño arbitrario dentro de la página:
+
+| Categoría | Clase | Uso |
+| --- | --- | --- |
+| Display | `type-display` | Títulos principales de página y hero |
+| Título de sección | `type-section-title` | Encabezados principales de cada sección |
+| Título destacado | `type-feature-title` | Bloques editoriales y CTA destacados |
+| Título de tarjeta | `type-card-title` | Tarjetas amplias y servicios |
+| Título compacto | `type-card-title-compact` | Tarjetas pequeñas, modales y Montenegro VIP |
+| Texto principal | `type-lead` | Introducciones y descripciones destacadas |
+| Párrafo | `type-body` | Contenido general |
+| Párrafo auxiliar | `type-body-sm` | Tarjetas, formularios y elementos compactos |
+| Etiqueta | `type-eyebrow` | Categorías y antetítulos en mayúsculas |
+| Texto auxiliar | `type-caption` | Notas, ayudas y metadatos |
+| Acción | `type-action` | Botones y navegación |
+| Cita | `type-quote` | Testimonios y frases destacadas |
+| Precio | `type-price` | Tarifas y duraciones destacadas |
+
+`SectionTitle` expone las variantes `display`, `section`, `feature`, `card` y `cardCompact`. Los componentes `SectionLabel` y `Button` ya aplican automáticamente las categorías de etiqueta y acción. Al crear una sección nueva se deben reutilizar estas categorías y evitar clases locales como `text-[…rem]` para contenido textual.
+
 ### Tokens principales
 
 ```css
@@ -433,7 +456,7 @@ Antes de publicar cambios visuales, revisar como mínimo anchos cercanos a 360 p
 - imagen social de 1200 × 630;
 - favicon.
 
-La página Club actualiza su título y descripción al montarse.
+La página Montenegro VIP actualiza su título y descripción al montarse.
 
 El consentimiento de cookies guarda la elección en `localStorage` bajo la clave:
 
@@ -458,7 +481,7 @@ npm run build
 
 3. Subir el contenido de `dist/` al directorio público del dominio.
 4. Confirmar que también se haya subido `dist/.htaccess`.
-5. Verificar directamente rutas como `/filo`, `/club` y `/legal/cookies`.
+5. Verificar directamente rutas como `/filo`, `/vip` y `/legal/cookies`.
 
 `public/.htaccess` contiene la regla de fallback necesaria para React Router y Vite lo copia al build.
 
@@ -491,7 +514,7 @@ Checklist recomendado:
 - comprobar enlaces sociales y Google Maps;
 - revisar vídeos y posters;
 - confirmar que no exista scroll horizontal;
-- revisar Club en móvil;
+- revisar Montenegro VIP en móvil;
 - verificar el banner de cookies y las páginas legales;
 - revisar metadatos e imagen social en producción.
 

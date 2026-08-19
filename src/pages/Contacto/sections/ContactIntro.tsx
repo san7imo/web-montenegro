@@ -17,7 +17,7 @@ export function ContactIntro() {
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.78, ease: 'easeOut' }}
         >
-          <p className="text-[1rem] font-semibold leading-[1.72] text-cream-light/92 sm:text-[1.04rem] lg:text-[1.08rem]">
+          <p className="type-body font-semibold text-cream-light/92">
             {contactoIntroContent.description}
           </p>
           <DecorativeLine

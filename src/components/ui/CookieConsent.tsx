@@ -25,10 +25,10 @@ export function CookieConsent() {
       animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.46, ease: 'easeOut' }}
     >
-      <p className="font-heading text-[1.75rem] leading-none tracking-[-0.03em] text-forest">
+      <p className="type-card-title-compact text-forest">
         Cookies
       </p>
-      <p className="mt-3 text-[0.9rem] leading-6 text-forest-dark/78">
+      <p className="type-body-sm mt-3 text-forest-dark/78">
         Usamos cookies técnicas y almacenamiento local para recordar tus preferencias.
         Puedes aceptar o rechazar su uso no esencial.
       </p>
@@ -37,20 +37,20 @@ export function CookieConsent() {
         <button
           type="button"
           onClick={() => saveChoice('rejected')}
-          className="min-h-10 rounded-full border border-forest/24 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-forest transition-colors duration-200 hover:border-forest/50"
+          className="type-action min-h-10 rounded-full border border-forest/24 px-4 py-2 text-forest transition-colors duration-200 hover:border-forest/50"
         >
           Rechazar
         </button>
         <button
           type="button"
           onClick={() => saveChoice('accepted')}
-          className="min-h-10 rounded-full border border-pink bg-pink px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-white transition-colors duration-200 hover:border-pink-dark hover:bg-pink-dark"
+          className="type-action min-h-10 rounded-full border border-pink bg-pink px-4 py-2 text-white transition-colors duration-200 hover:border-pink-dark hover:bg-pink-dark"
         >
           Aceptar
         </button>
         <Link
           to="/legal/cookies"
-          className="inline-flex min-h-10 items-center rounded-full px-3 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-pink transition-opacity duration-200 hover:opacity-78"
+          className="type-action inline-flex min-h-10 items-center rounded-full px-3 py-2 text-pink transition-opacity duration-200 hover:opacity-78"
         >
           Ver política
         </Link>

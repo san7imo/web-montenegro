@@ -1,4 +1,4 @@
-import { buildCategoryServiceItems } from './servicePricing'
+import { buildMappedCategoryServiceItems } from './servicePricing'
 
 export const raizHeroContent = {
   titleLines: ['Raíz:', 'El Fundamento de tu Bienestar.'],
@@ -11,17 +11,17 @@ export const raizHeroContent = {
 export const raizTechnologyContent = {
   label: 'Servicios Montenegro',
   title: 'Conoce nuestros servicios',
-  items: buildCategoryServiceItems('raiz', [
-    'criolipolisis',
-    'radiofrecuencia',
-    'presoterapia',
-    'radiofrecuencia',
-    'waterfall',
-    'hydrafacial',
-    'radiofrecuencia',
-    'radiofrecuencia',
-    'gimnasiaPasiva',
-    'hydrafacial',
-    'hydrafacial',
-  ] as const),
+  items: buildMappedCategoryServiceItems('raiz', {
+    criopolosis: 'criolipolisis',
+    dermapen: 'dermapen',
+    presoterapia: 'presoterapia',
+    cavitacion: 'cavitacion',
+    asiatica: 'asiatica',
+    multifuncional: 'multifuncional',
+    'radiofrecuencia-normal': 'radiofrecuencia',
+    'radiofrecuencia-fracionada': 'radiofrecuenciaFraccionada',
+    vacuum: 'vacuum',
+    'laser-luminage': 'laserLuminage',
+    'hollywood-pelling': 'hollywoodPeeling',
+  } as const),
 } as const

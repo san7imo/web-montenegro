@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
 import { FaFacebookF, FaInstagram, FaTiktok, FaWhatsapp } from 'react-icons/fa'
+import type { FormEvent } from 'react'
 
 import footerLogo from '../../assets/logo/montenegro-logo-footer.webp'
 import { footerContent } from '../../data/footer'
+import { buildWhatsAppContactUrl } from '../../utils/whatsapp'
 import { Container } from '../ui/Container'
 
 type FooterTone = 'dark' | 'sage'
@@ -31,6 +33,20 @@ const socialIconMap = {
 
 export function Footer({ tone = 'dark' }: FooterProps) {
   const toneClass = toneStyles[tone]
+  const handleNewsletterSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    const form = event.currentTarget
+    const formData = new FormData(form)
+    const email = String(formData.get('newsletterEmail') ?? '').trim()
+
+    if (!email) {
+      return
+    }
+
+    const message = `Hola, quiero suscribirme a las novedades de Montenegro Salud y Belleza con el correo ${email}.`
+    window.open(buildWhatsAppContactUrl(message), '_blank', 'noopener,noreferrer')
+    form.reset()
+  }
 
   return (
     <footer className={toneClass.wrapper}>
@@ -43,12 +59,12 @@ export function Footer({ tone = 'dark' }: FooterProps) {
               className="h-[7.5rem] w-auto sm:h-[8.5rem] lg:h-[9rem]"
               loading="lazy"
             />
-            <div className="space-y-0.5 text-[0.86rem] leading-5 text-white/88 sm:text-[0.9rem]">
+            <div className="type-body-sm space-y-0.5 text-white/88">
               {footerContent.addressLines.map((line) => (
                 <p key={line}>{line}</p>
               ))}
             </div>
-            <div className="space-y-0.5 text-[0.86rem] leading-5 text-white/88 sm:text-[0.9rem]">
+            <div className="type-body-sm space-y-0.5 text-white/88">
               {footerContent.scheduleLines.map((line) => (
                 <p key={line}>{line}</p>
               ))}
@@ -56,10 +72,10 @@ export function Footer({ tone = 'dark' }: FooterProps) {
           </div>
 
           <div className="space-y-3">
-            <p className="text-[0.86rem] font-semibold uppercase tracking-[0.14em] text-white sm:text-[0.92rem]">
+            <p className="type-eyebrow text-white">
               Navegación
             </p>
-            <ul className="space-y-0.5 text-[0.86rem] leading-5 text-white/88 sm:text-[0.9rem]">
+            <ul className="type-body-sm space-y-0.5 text-white/88">
               {footerContent.navigationLinks.map((link) => (
                 <li key={link.href}>
                   <Link to={link.href} className="transition-opacity duration-200 hover:opacity-80">
@@ -71,10 +87,10 @@ export function Footer({ tone = 'dark' }: FooterProps) {
           </div>
 
           <div className="space-y-3">
-            <p className="text-[0.86rem] font-semibold uppercase tracking-[0.14em] text-white sm:text-[0.92rem]">
+            <p className="type-eyebrow text-white">
               Legal
             </p>
-            <ul className="space-y-0.5 text-[0.86rem] leading-5 text-white/88 sm:text-[0.9rem]">
+            <ul className="type-body-sm space-y-0.5 text-white/88">
               {footerContent.legalLinks.map((link) => (
                 <li key={link.href}>
                   <Link to={link.href} className="transition-opacity duration-200 hover:opacity-80">
@@ -86,26 +102,31 @@ export function Footer({ tone = 'dark' }: FooterProps) {
           </div>
 
           <div className="space-y-4">
-            <p className="text-[0.86rem] font-semibold uppercase tracking-[0.14em] text-white sm:text-[0.92rem]">
+            <p className="type-eyebrow text-white">
               Newsletter
             </p>
-            <p className="max-w-[18rem] text-[0.86rem] leading-5 text-white/88 sm:text-[0.9rem]">
+            <p className="type-body-sm max-w-[18rem] text-white/88">
               {footerContent.newsletter}
             </p>
-            <div className="flex max-w-[294px] overflow-hidden rounded-[16px] bg-white/92">
+            <form
+              onSubmit={handleNewsletterSubmit}
+              className="flex max-w-[294px] overflow-hidden rounded-[16px] bg-white/92"
+            >
               <input
                 type="email"
+                name="newsletterEmail"
+                required
                 aria-label="Correo electrónico"
                 placeholder={footerContent.newsletterPlaceholder}
-                className="min-w-0 flex-1 bg-transparent px-4 py-3 text-[0.95rem] text-forest-dark placeholder:text-forest-dark/34 focus:outline-none"
+                className="type-body-sm min-w-0 flex-1 bg-transparent px-4 py-3 text-forest-dark placeholder:text-forest-dark/34 focus:outline-none"
               />
               <button
                 type="button"
-                className="bg-white/24 px-5 py-3 text-[0.95rem] font-medium text-white transition-colors duration-300 hover:bg-white/28"
+                className="type-body-sm bg-white/24 px-5 py-3 font-medium text-white transition-colors duration-300 hover:bg-white/28"
               >
                 {footerContent.newsletterButtonLabel}
               </button>
-            </div>
+            </form>
             <div className="flex items-center gap-4 pt-1 text-white">
               {footerContent.socialLinks.map((link) => (
                 <a
@@ -126,7 +147,7 @@ export function Footer({ tone = 'dark' }: FooterProps) {
           </div>
         </div>
 
-        <div className={['pt-10 text-center text-[0.86rem] leading-5 sm:pt-12', toneClass.copy].join(' ')}>
+        <div className={['type-body-sm pt-10 text-center sm:pt-12', toneClass.copy].join(' ')}>
           <p>{footerContent.copyright}</p>
           <p>
             {footerContent.creditHref ? (

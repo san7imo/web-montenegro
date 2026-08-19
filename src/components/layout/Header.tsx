@@ -9,7 +9,8 @@ import { Container } from '../ui/Container'
 export function Header() {
   const shouldReduceMotion = useReducedMotion()
   const location = useLocation()
-  const isServiceRoute = serviceNavigationLinks.some((item) => item.href === location.pathname)
+  const isServiceRoute = location.pathname === '/servicios'
+    || serviceNavigationLinks.some((item) => item.href === location.pathname)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(isServiceRoute)
 
@@ -133,7 +134,7 @@ export function Header() {
                       onClick={() => setIsMenuOpen(false)}
                       className={({ isActive }) =>
                         [
-                          'flex rounded-[0.95rem] px-4 py-3 text-[0.76rem] font-medium uppercase tracking-[0.16em] transition-colors duration-200',
+                          'type-action flex rounded-[0.95rem] px-4 py-3 font-medium transition-colors duration-200',
                           isActive
                             ? 'bg-white/10 text-white'
                             : 'text-cream-light/88 hover:bg-white/6 hover:text-white',
@@ -153,7 +154,7 @@ export function Header() {
                     aria-controls="header-services-submenu"
                     onClick={() => setIsServicesOpen((current) => !current)}
                     className={[
-                      'flex w-full items-center justify-between rounded-[0.95rem] px-4 py-3 text-left text-[0.76rem] font-medium uppercase tracking-[0.16em] transition-colors duration-200',
+                      'type-action flex w-full items-center justify-between rounded-[0.95rem] px-4 py-3 text-left font-medium transition-colors duration-200',
                       isServiceRoute
                         ? 'bg-white/10 text-white'
                         : 'text-cream-light/88 hover:bg-white/6 hover:text-white',
@@ -185,6 +186,20 @@ export function Header() {
                         exit={shouldReduceMotion ? undefined : { height: 0, opacity: 0 }}
                         transition={{ duration: 0.2, ease: 'easeOut' }}
                       >
+                        <li>
+                          <NavLink
+                            to="/servicios"
+                            onClick={() => setIsMenuOpen(false)}
+                            className={({ isActive }) =>
+                              [
+                                'type-action block rounded-[0.85rem] border border-pink-soft/20 px-3 py-2.5 font-semibold text-pink-soft transition-colors duration-200',
+                                isActive ? 'bg-white/10' : 'hover:bg-white/6 hover:text-white',
+                              ].join(' ')
+                            }
+                          >
+                            Ver todos los servicios
+                          </NavLink>
+                        </li>
                         {serviceNavigationLinks.map((item) => (
                           <li key={item.href}>
                             <NavLink
@@ -201,10 +216,10 @@ export function Header() {
                                   .join(' ')
                               }
                             >
-                              <span className="block text-[0.72rem] font-semibold uppercase leading-none tracking-[0.13em]">
+                              <span className="type-action block">
                                 {item.label}
                               </span>
-                              <span className="mt-1 block text-[0.64rem] font-medium normal-case leading-4 tracking-[0.01em] text-cream-light/62">
+                              <span className="type-caption mt-1 block font-medium normal-case tracking-[0.01em] text-cream-light/62">
                                 {item.description}
                               </span>
                             </NavLink>
@@ -221,7 +236,7 @@ export function Header() {
                       onClick={() => setIsMenuOpen(false)}
                       className={({ isActive }) =>
                         [
-                          'flex rounded-[0.95rem] px-4 py-3 text-[0.76rem] font-medium uppercase tracking-[0.16em] transition-colors duration-200',
+                          'type-action flex rounded-[0.95rem] px-4 py-3 font-medium transition-colors duration-200',
                           isActive
                             ? 'bg-white/10 text-white'
                             : 'text-cream-light/88 hover:bg-white/6 hover:text-white',

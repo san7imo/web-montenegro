@@ -1,3 +1,5 @@
+import { getServiceCardDescription } from './serviceCardDescriptions'
+
 export type PricingCategory = 'oasis' | 'tez' | 'filo' | 'brote' | 'hebra' | 'tacto' | 'raiz'
 
 export type ServicePriceOption = {
@@ -1680,7 +1682,7 @@ export function buildCategoryServiceItems<const TImage extends string>(
   images: readonly TImage[],
 ) {
   return getCategoryPricing(category).map((service, index) => ({
-    description: service.description,
+    description: getServiceCardDescription(category, service.id, service.description),
     duration: 'Según opción',
     id: service.id,
     image: images[index % images.length],
@@ -1701,7 +1703,7 @@ export function buildMappedCategoryServiceItems<const TImage extends string>(
     }
 
     return {
-      description: service.description,
+      description: getServiceCardDescription(category, service.id, service.description),
       duration: 'Según opción',
       id: service.id,
       image,

@@ -37,7 +37,7 @@ export function HomeIntro() {
               <SectionLabel variant="pink">Respira relajación</SectionLabel>
               <SectionTitle
                 as="h2"
-                className="mt-5 max-w-[12ch] text-forest-dark sm:max-w-[11ch] lg:max-w-none lg:text-[4.2rem] xl:text-[4.55rem]"
+                className="mt-5 max-w-[12ch] text-forest-dark sm:max-w-[11ch] lg:max-w-none"
               >
                 {homeIntroContent.titleLines.map((line) => (
                   <span key={line} className="block lg:whitespace-nowrap">
@@ -51,7 +51,7 @@ export function HomeIntro() {
               className="max-w-[38rem] pt-1 lg:justify-self-end"
               {...fadeUp(0.2)}
             >
-              <p className="text-[1rem] leading-8 text-forest-dark/88 sm:text-[1.04rem] sm:leading-9 lg:text-[1.06rem] lg:leading-9">
+              <p className="type-body text-forest-dark/88">
                 {homeIntroContent.description}
               </p>
             </motion.div>
@@ -76,7 +76,7 @@ export function HomeIntro() {
               to={homeIntroContent.ctaHref}
               variant="light"
               showArrow
-              className="min-w-[14.5rem] border-forest-soft/45 px-8 text-[0.78rem] tracking-[0.12em] shadow-[0_10px_26px_rgba(47,77,60,0.12)] hover:border-forest-soft/60"
+              className="min-w-[14.5rem] border-forest-soft/45 px-8 shadow-[0_10px_26px_rgba(47,77,60,0.12)] hover:border-forest-soft/60"
             >
               {homeIntroContent.ctaLabel}
             </Button>

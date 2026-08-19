@@ -40,7 +40,8 @@ export function EsenciaHero() {
               <motion.div {...fadeUp(0.06)}>
                 <SectionTitle
                   as="h1"
-                  className="text-center text-[3rem] leading-[0.92] tracking-[-0.035em] text-pink drop-shadow-[0_12px_18px_rgba(194,11,114,0.16)] sm:text-[4rem] lg:text-right lg:text-[3.95rem] xl:text-[4.25rem]"
+                  variant="display"
+                  className="text-center text-pink drop-shadow-[0_12px_18px_rgba(194,11,114,0.16)] lg:text-right"
                 >
                   {esenciaHeroContent.titleLines.map((line) => (
                     <span key={line} className="block">
@@ -56,14 +57,14 @@ export function EsenciaHero() {
               {...fadeUp(0.18)}
             >
               <div className="relative z-10 lg:min-h-[18rem] lg:max-w-[47%] xl:max-w-[45%]">
-                <p className="max-w-[18rem] text-[0.98rem] leading-[1.42] text-cream-light/96 sm:max-w-[21rem] sm:text-[1.12rem] lg:max-w-[30rem] lg:text-[1.18rem] lg:leading-[1.4]">
+                <p className="type-quote max-w-[18rem] text-cream-light/96 sm:max-w-[21rem] lg:max-w-[30rem]">
                   {esenciaHeroContent.quote}
                 </p>
                 <div className="mt-8 sm:mt-10">
-                  <p className="font-heading text-[2rem] leading-none tracking-[-0.03em] text-cream-light sm:text-[2.25rem] lg:text-[2.55rem]">
+                  <p className="type-card-title text-cream-light">
                     {esenciaHeroContent.author}
                   </p>
-                  <p className="mt-1 text-[1.1rem] leading-7 text-cream-light/92 sm:text-[1.16rem] lg:text-[1.28rem]">
+                  <p className="type-body mt-1 text-cream-light/92">
                     {esenciaHeroContent.role}
                   </p>
                 </div>

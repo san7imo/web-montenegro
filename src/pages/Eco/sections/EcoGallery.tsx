@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion, useReducedMotion } from 'framer-motion'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+import { useState } from 'react'
 
 import galleryHebraImage from '../../../assets/eco/galeriahebra.png'
 import galleryTactoImage from '../../../assets/eco/galeriatacto.png'
@@ -19,6 +20,20 @@ const imageByKey = {
 
 export function EcoGallery() {
   const shouldReduceMotion = useReducedMotion()
+  const [firstVisibleIndex, setFirstVisibleIndex] = useState(0)
+  const orderedItems = ecoGalleryContent.items.map(
+    (_, index) => ecoGalleryContent.items[(firstVisibleIndex + index) % ecoGalleryContent.items.length],
+  )
+
+  const showPrevious = () => {
+    setFirstVisibleIndex((current) =>
+      (current - 1 + ecoGalleryContent.items.length) % ecoGalleryContent.items.length,
+    )
+  }
+
+  const showNext = () => {
+    setFirstVisibleIndex((current) => (current + 1) % ecoGalleryContent.items.length)
+  }
 
   return (
     <section
@@ -28,6 +43,7 @@ export function EcoGallery() {
       <button
         type="button"
         aria-label="Galería anterior"
+        onClick={showPrevious}
         className="absolute left-0 top-[55%] hidden h-[15rem] w-[3.4rem] -translate-y-1/2 items-center justify-center rounded-r-[0.9rem] bg-[#d7d9d0] text-pink shadow-[0_12px_24px_rgba(36,61,49,0.06)] transition-colors duration-200 hover:bg-[#ccd1c7] lg:flex"
       >
         <FaChevronLeft aria-hidden="true" className="h-7 w-7" />
@@ -35,6 +51,7 @@ export function EcoGallery() {
       <button
         type="button"
         aria-label="Galería siguiente"
+        onClick={showNext}
         className="absolute right-0 top-[55%] hidden h-[15rem] w-[3.4rem] -translate-y-1/2 items-center justify-center rounded-l-[0.9rem] bg-[#d7d9d0] text-pink shadow-[0_12px_24px_rgba(36,61,49,0.06)] transition-colors duration-200 hover:bg-[#ccd1c7] lg:flex"
       >
         <FaChevronRight aria-hidden="true" className="h-7 w-7" />
@@ -50,23 +67,23 @@ export function EcoGallery() {
         >
           <SectionLabel
             variant="pink"
-            className="min-h-10 min-w-[12.2rem] justify-center border-pink/70 bg-transparent py-1 text-[0.78rem] normal-case tracking-[0.01em]"
+            className="min-h-10 min-w-[12.2rem] justify-center border-pink/70 bg-transparent py-1 normal-case tracking-[0.01em]"
           >
             {ecoGalleryContent.label}
           </SectionLabel>
           <SectionTitle
             as="h2"
-            className="mt-4 text-forest sm:text-[3.65rem] lg:text-[4.15rem]"
+            className="mt-4 text-forest"
           >
             {ecoGalleryContent.title}
           </SectionTitle>
-          <p className="mx-auto mt-1 max-w-[61rem] text-[0.98rem] font-semibold leading-6 text-forest-dark/84 sm:text-[1.02rem]">
+          <p className="type-body mx-auto mt-1 max-w-[61rem] font-semibold text-forest-dark/84">
             {ecoGalleryContent.description}
           </p>
         </motion.div>
 
         <div className="mt-10 grid items-end gap-7 sm:mt-12 lg:grid-cols-[1fr_1.16fr_1fr] lg:gap-6">
-          {ecoGalleryContent.items.map((item, index) => (
+          {orderedItems.map((item, index) => (
             <motion.div
               key={item.id}
               initial={shouldReduceMotion ? false : { opacity: 0, y: 24, filter: 'blur(6px)' }}
@@ -93,7 +110,7 @@ export function EcoGallery() {
                 <h3
                   className={[
                     'mt-6 font-body font-bold uppercase tracking-[0.02em] text-forest-soft group-hover:text-forest-dark',
-                    index === 1 ? 'text-[1.08rem] sm:text-[1.22rem]' : 'text-[0.9rem]',
+                    index === 1 ? 'type-lead' : 'type-body-sm',
                   ].join(' ')}
                 >
                   {item.title}

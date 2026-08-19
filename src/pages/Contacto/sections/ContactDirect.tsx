@@ -30,11 +30,11 @@ export function ContactDirect() {
         <motion.div {...fadeUp(0.04)}>
           <SectionTitle
             as="h2"
-            className="text-forest sm:text-[3.55rem] lg:text-[4.15rem]"
+            className="text-forest"
           >
             {contactoDirectContent.title}
           </SectionTitle>
-          <p className="-mt-1 text-[0.98rem] font-bold leading-6 text-pink sm:text-[1.04rem]">
+          <p className="type-body -mt-1 font-bold text-pink">
             {contactoDirectContent.subtitle}
           </p>
         </motion.div>
@@ -53,10 +53,10 @@ export function ContactDirect() {
                 {...fadeUp(0.08 + index * 0.07)}
               >
                 <Icon aria-hidden="true" className="h-6 w-6 text-cream-light" />
-                <h3 className="mt-2.5 font-heading text-[1.7rem] font-semibold leading-none text-cream-light sm:text-[1.9rem]">
+                <h3 className="type-card-title-compact mt-2.5 text-cream-light">
                   {card.title}
                 </h3>
-                <p className="mt-1 max-w-[14rem] text-[0.82rem] font-semibold leading-4 text-cream-light/92 sm:text-[0.88rem]">
+                <p className="type-body-sm mt-1 max-w-[14rem] break-words font-semibold text-cream-light/92">
                   {card.text}
                 </p>
               </motion.a>
@@ -69,17 +69,17 @@ export function ContactDirect() {
           {...fadeUp(0.16)}
         >
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-[linear-gradient(135deg,rgba(111,128,104,0.3),rgba(47,77,60,0.18))] px-6 text-center text-forest">
-            <p className="font-heading text-[2rem] font-semibold leading-none">
+            <p className="type-card-title-compact">
               Montenegro Salud y Belleza
             </p>
-            <p className="mt-2 text-[0.9rem] font-semibold text-forest-dark/75">
+            <p className="type-body-sm mt-2 font-semibold text-forest-dark/75">
               C/. Badaia 33 Bajo, 01012. Vitoria-Gasteiz, España.
             </p>
             <a
               href={contactoDirectContent.mapHref}
               target="_blank"
               rel="noreferrer"
-              className="mt-4 rounded-full border border-pink/55 px-5 py-2 text-[0.72rem] font-bold uppercase tracking-[0.08em] text-pink"
+              className="type-action mt-4 rounded-full border border-pink/55 px-5 py-2 text-pink"
             >
               Abrir en Google Maps
             </a>
@@ -94,7 +94,7 @@ export function ContactDirect() {
         </motion.div>
 
         <motion.p
-          className="mx-auto mt-8 max-w-[62rem] text-[0.9rem] font-bold leading-6 text-forest-soft sm:mt-9 lg:text-[0.96rem]"
+          className="type-body-sm mx-auto mt-8 max-w-[62rem] font-bold text-forest-soft sm:mt-9"
           {...fadeUp(0.2)}
         >
           {contactoDirectContent.schedule}

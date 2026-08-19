@@ -29,7 +29,7 @@ export function FiloExperiences() {
         <motion.div className="mx-auto max-w-[43rem] text-center" {...fadeUp(0.04)}>
           <SectionTitle
             as="h2"
-            className="text-forest sm:text-[4.05rem] lg:text-[4.75rem]"
+            className="text-forest"
           >
             {filoExperiencesContent.title}
           </SectionTitle>

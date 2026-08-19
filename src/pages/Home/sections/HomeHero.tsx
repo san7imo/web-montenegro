@@ -50,7 +50,7 @@ export function HomeHero() {
             </motion.div>
 
             <motion.h1
-              className="max-w-[15ch] font-heading text-[2.4rem] leading-[0.95] tracking-[-0.038em] text-cream-light drop-shadow-[0_12px_28px_rgba(8,12,10,0.34)] sm:max-w-[18ch] sm:text-[3rem] lg:inline-block lg:max-w-none lg:text-[3rem]"
+              className="type-display max-w-[15ch] text-cream-light drop-shadow-[0_12px_28px_rgba(8,12,10,0.34)] sm:max-w-[18ch] lg:inline-block lg:max-w-none"
               {...fadeUp(0.42)}
             >
               {homeHeroTitleLines.map((line, index) => (
@@ -58,7 +58,7 @@ export function HomeHero() {
                   key={line}
                   className={[
                     'block',
-                    index === 1 ? 'mt-1 whitespace-nowrap lg:mt-2' : '',
+                    index === 1 ? 'mt-1 lg:mt-2 lg:whitespace-nowrap' : '',
                   ]
                     .filter(Boolean)
                     .join(' ')}
@@ -69,7 +69,7 @@ export function HomeHero() {
             </motion.h1>
 
             <motion.p
-              className="mt-5 max-w-[21rem] text-[0.94rem] leading-7 text-cream-light/95 drop-shadow-[0_8px_20px_rgba(8,12,10,0.34)] sm:mt-6 sm:max-w-[40rem] sm:text-base sm:leading-8 lg:max-w-[56rem] lg:text-[0.98rem] lg:leading-8"
+              className="type-lead mt-5 max-w-[21rem] text-cream-light/95 drop-shadow-[0_8px_20px_rgba(8,12,10,0.34)] sm:mt-6 sm:max-w-[40rem] lg:max-w-[56rem]"
               {...fadeUp(0.56)}
             >
               {homePageContent.description}
@@ -80,7 +80,7 @@ export function HomeHero() {
                 href={homePageContent.ctaHref}
                 target="_blank"
                 rel="noreferrer"
-                className="min-w-[14rem] px-8 text-[0.78rem] tracking-[0.12em] sm:min-w-[16rem] sm:px-10"
+                className="min-w-[14rem] px-8 sm:min-w-[16rem] sm:px-10"
               >
                 {homePageContent.ctaLabel}
               </Button>

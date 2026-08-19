@@ -35,7 +35,7 @@ export function HistorySection() {
               alt="Tratamiento corporal sobre la espalda con una marca botánica"
               className="h-auto w-full object-contain"
             />
-            <div className="absolute right-[-0.25rem] bottom-[-1.4rem] rounded-[1.8rem] bg-pink px-5 py-4 text-center font-heading text-[2rem] leading-[0.96] tracking-[-0.03em] text-white shadow-[0_18px_38px_rgba(194,11,114,0.24)] sm:right-3 sm:bottom-[-1.8rem] sm:px-6 sm:py-5 sm:text-[2.45rem] lg:right-[-0.6rem] lg:bottom-[-2rem]">
+            <div className="type-card-title absolute right-[-0.25rem] bottom-[-1.4rem] rounded-[1.8rem] bg-pink px-5 py-4 text-center text-white shadow-[0_18px_38px_rgba(194,11,114,0.24)] sm:right-3 sm:bottom-[-1.8rem] sm:px-6 sm:py-5 lg:right-[-0.6rem] lg:bottom-[-2rem]">
               {esenciaHistoryContent.badge.split('\n').map((line) => (
                 <span key={line} className="block">
                   {line}
@@ -47,17 +47,17 @@ export function HistorySection() {
           <motion.div className="pt-2 lg:pt-0" {...fadeUp(0.18)}>
             <SectionLabel
               variant="light"
-              className="min-h-10 border-white/45 bg-muted-white/58 px-7 text-[0.62rem] font-semibold tracking-[0.18em] text-forest shadow-[0_12px_28px_rgba(36,61,49,0.05)]"
+              className="min-h-10 border-white/45 bg-muted-white/58 px-7 tracking-[0.18em] text-forest shadow-[0_12px_28px_rgba(36,61,49,0.05)]"
             >
               {esenciaHistoryContent.label}
             </SectionLabel>
             <SectionTitle
               as="h2"
-              className="mt-5 text-pink sm:text-[4.15rem] lg:text-[4.75rem] xl:text-[5rem]"
+              className="mt-5 text-pink"
             >
               {esenciaHistoryContent.title}
             </SectionTitle>
-            <p className="mt-5 max-w-[40rem] text-[1.02rem] leading-8 text-forest-dark/86 sm:text-[1.08rem] sm:leading-9 lg:max-w-[36rem] lg:text-[1.04rem] lg:leading-8">
+            <p className="type-body mt-5 max-w-[40rem] text-forest-dark/86 lg:max-w-[36rem]">
               {esenciaHistoryContent.description}
             </p>
             <DecorativeLine variant="forest" className="mt-8 w-full max-w-[26rem] opacity-85 lg:mt-10 lg:max-w-[28rem]" />

@@ -37,15 +37,16 @@ export function BroteHero() {
         <HeroOverlay />
 
         <div className="relative z-10 flex h-full items-end px-[6.2vw] pb-8 sm:pb-10 lg:pb-9">
-          <motion.div className="max-w-[67rem]" {...fadeUp(0.08)}>
+          <motion.div className="w-full min-w-0 max-w-[67rem]" {...fadeUp(0.08)}>
             <SectionTitle
               as="h1"
-              className="text-pink-soft drop-shadow-[0_10px_20px_rgba(18,22,18,0.28)] sm:text-[4.35rem] lg:text-[5.25rem] lg:leading-[0.9]"
+              variant="display"
+              className="text-pink-soft drop-shadow-[0_10px_20px_rgba(18,22,18,0.28)]"
             >
               <span className="block">{broteHeroContent.titleLines[0]}</span>
               <span className="block">{broteHeroContent.titleLines[1]}</span>
             </SectionTitle>
-            <p className="mt-3 max-w-[42rem] text-[1rem] leading-7 text-cream-light/96 sm:text-[1.12rem] lg:text-[1.18rem]">
+            <p className="type-lead mt-3 max-w-[42rem] text-cream-light/96">
               {broteHeroContent.description}
             </p>
           </motion.div>
@@ -55,7 +56,7 @@ export function BroteHero() {
       <div className="bg-forest">
         <Container className="px-7 py-12 sm:px-8 sm:py-[4.2rem] lg:px-12 lg:py-[5.2rem]">
           <motion.div className="mx-auto max-w-[61rem]" {...fadeUp(0.2)}>
-            <p className="text-[1.05rem] font-semibold leading-[1.72] text-cream-light/96 sm:text-[1.18rem] sm:leading-[1.82]">
+            <p className="type-lead font-semibold text-cream-light/96">
               {broteHeroContent.bodyDescription}
             </p>
             <DecorativeLine variant="light" className="mx-auto mt-12 w-[28rem] max-w-[72%] opacity-95" />

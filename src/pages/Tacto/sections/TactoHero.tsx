@@ -37,15 +37,16 @@ export function TactoHero() {
         <HeroOverlay />
 
         <div className="relative z-10 flex h-full items-end px-[6.2vw] pb-6 sm:pb-7 lg:pb-2">
-          <motion.div className="max-w-[72rem]" {...fadeUp(0.08)}>
+          <motion.div className="w-full min-w-0 max-w-[72rem]" {...fadeUp(0.08)}>
             <SectionTitle
               as="h1"
-              className="text-pink-soft drop-shadow-[0_10px_20px_rgba(18,22,18,0.26)] sm:text-[4.2rem] lg:text-[5.2rem] lg:leading-[0.9]"
+              variant="display"
+              className="text-pink-soft drop-shadow-[0_10px_20px_rgba(18,22,18,0.26)]"
             >
               <span className="block">{tactoHeroContent.titleLines[0]}</span>
               <span className="block sm:whitespace-nowrap">{tactoHeroContent.titleLines[1]}</span>
             </SectionTitle>
-            <p className="mt-3 max-w-[45rem] text-[0.96rem] leading-6 text-cream-light/96 sm:text-[1.08rem] lg:text-[1.12rem]">
+            <p className="type-lead mt-3 max-w-[45rem] text-cream-light/96">
               {tactoHeroContent.description}
             </p>
           </motion.div>
@@ -55,7 +56,7 @@ export function TactoHero() {
       <div className="bg-forest">
         <Container className="px-7 py-12 sm:px-8 sm:py-[4.15rem] lg:px-12 lg:py-[5.75rem]">
           <motion.div className="mx-auto max-w-[52rem]" {...fadeUp(0.2)}>
-            <p className="text-[1rem] font-medium leading-[1.75] text-cream-light/96 sm:text-[1.08rem] sm:leading-[1.86]">
+            <p className="type-lead font-medium text-cream-light/96">
               {tactoHeroContent.bodyDescription}
             </p>
             <DecorativeLine variant="light" className="mx-auto mt-10 w-[28rem] max-w-[72%] opacity-95" />

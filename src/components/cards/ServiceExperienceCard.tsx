@@ -1,9 +1,17 @@
+import banoCleopatraImage from '../../assets/oasis/bano-cleopatra.webp'
+import banoFloresImage from '../../assets/oasis/bano-de-flores.webp'
+import cerrarMatrizImage from '../../assets/oasis/cerrar-matriz.webp'
 import descontracturanteImage from '../../assets/oasis/descontracturante.png'
 import drenajeLinfaticoImage from '../../assets/oasis/drenajelinfatico.png'
 import exfoliacionImage from '../../assets/oasis/exfoliacion.png'
 import masajeRelajanteImage from '../../assets/oasis/masajerelajante.png'
 import presoterapiaImage from '../../assets/oasis/presoterapia.png'
 import ritualesEnTinaImage from '../../assets/oasis/ritualesentina.png'
+import ritualBotanicoImage from '../../assets/oasis/ritual-botanico.webp'
+import ritualCacaoImage from '../../assets/oasis/ritual-de-cacao.webp'
+import ritualDosAlmasImage from '../../assets/oasis/ritual-dos-almas.webp'
+import ritualVidaImage from '../../assets/oasis/ritual-vida.webp'
+import ritualVolcanicoImage from '../../assets/oasis/ritual-volcanico.webp'
 import ventosasImage from '../../assets/oasis/ventosas.png'
 import { Button } from '../ui/Button'
 import { ImageLayer } from '../ui/ImageLayer'
@@ -12,6 +20,9 @@ import { ServiceModal } from '../ui/ServiceModal'
 import { useServiceModalState } from '../ui/useServiceModalState'
 
 type ServiceExperienceImageKey =
+  | 'banoCleopatra'
+  | 'banoFlores'
+  | 'cerrarMatriz'
   | 'ritualesEnTina'
   | 'exfoliacion'
   | 'drenajeLinfatico'
@@ -19,6 +30,11 @@ type ServiceExperienceImageKey =
   | 'presoterapia'
   | 'ventosas'
   | 'descontracturante'
+  | 'ritualBotanico'
+  | 'ritualCacao'
+  | 'ritualDosAlmas'
+  | 'ritualVida'
+  | 'ritualVolcanico'
 
 type ServiceExperienceCardProps = {
   id: string
@@ -32,6 +48,9 @@ type ServiceExperienceCardProps = {
 }
 
 const imageByKey: Record<ServiceExperienceImageKey, string> = {
+  banoCleopatra: banoCleopatraImage,
+  banoFlores: banoFloresImage,
+  cerrarMatriz: cerrarMatrizImage,
   ritualesEnTina: ritualesEnTinaImage,
   exfoliacion: exfoliacionImage,
   drenajeLinfatico: drenajeLinfaticoImage,
@@ -39,6 +58,11 @@ const imageByKey: Record<ServiceExperienceImageKey, string> = {
   presoterapia: presoterapiaImage,
   ventosas: ventosasImage,
   descontracturante: descontracturanteImage,
+  ritualBotanico: ritualBotanicoImage,
+  ritualCacao: ritualCacaoImage,
+  ritualDosAlmas: ritualDosAlmasImage,
+  ritualVida: ritualVidaImage,
+  ritualVolcanico: ritualVolcanicoImage,
 }
 
 export function ServiceExperienceCard({
@@ -65,7 +89,7 @@ export function ServiceExperienceCard({
           openModal()
         }
       }}
-      className="grid cursor-pointer gap-5 rounded-[1.85rem] border border-white/75 bg-cream/65 p-3 shadow-[0_0_18px_rgba(31,53,43,0.26),0_8px_18px_rgba(31,53,43,0.18)] transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_22px_rgba(31,53,43,0.3),0_10px_22px_rgba(31,53,43,0.2)] sm:grid-cols-[11.4rem_1fr] sm:gap-6 sm:p-3.5 lg:min-h-[11.75rem] lg:grid-cols-[14.8rem_1fr] lg:gap-6 lg:rounded-[2rem]"
+      className="grid cursor-pointer gap-5 rounded-[1.85rem] border border-white/75 bg-cream/65 p-3 shadow-[0_0_18px_rgba(31,53,43,0.26),0_8px_18px_rgba(31,53,43,0.18)] transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_22px_rgba(31,53,43,0.3),0_10px_22px_rgba(31,53,43,0.2)] sm:h-[22rem] sm:grid-cols-[11.4rem_1fr] sm:gap-6 sm:p-3.5 lg:h-[21rem] lg:grid-cols-[14.8rem_1fr] lg:gap-6 lg:rounded-[2rem]"
     >
       <div className="w-full overflow-hidden rounded-[1.35rem] sm:h-full lg:rounded-[1.55rem]">
         <ImageLayer
@@ -75,16 +99,16 @@ export function ServiceExperienceCard({
         />
       </div>
 
-      <div className="flex min-w-0 flex-col justify-center pb-1 pt-1 sm:pr-4 lg:pr-6 lg:pt-2">
-        <h3 className="font-heading text-[2.4rem] font-semibold leading-[0.96] text-forest sm:text-[2.75rem] lg:text-[3.1rem]">
+      <div className="flex min-w-0 flex-col pb-1 pt-1 sm:py-2 sm:pr-4 lg:pr-6">
+        <h3 title={title} className="type-card-title line-clamp-2 min-h-[4.2rem] text-forest sm:min-h-[4.8rem] lg:min-h-[5.3rem]">
           {title}
         </h3>
-        <p className="mt-1 max-w-[38rem] text-[0.92rem] font-medium leading-[1.45] text-forest-dark/90 sm:text-[0.98rem] lg:text-[1rem]">
+        <p title={description} className="type-body mt-1 line-clamp-6 min-h-[10.5rem] max-w-[38rem] font-medium text-forest-dark/90 sm:line-clamp-5 sm:min-h-[8.75rem] lg:line-clamp-4 lg:min-h-[7rem]">
           {description}
         </p>
 
-        <div className="mt-4 grid gap-4 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end lg:mt-5">
-          <dl className="text-[0.9rem] font-semibold leading-5 text-forest-dark sm:text-[0.96rem]">
+        <div className="mt-auto grid gap-4 pt-4 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
+          <dl className="type-body-sm font-semibold text-forest-dark">
             <div>
               <dt className="inline">Duración </dt>
               <dd className="inline">{duration}</dd>
@@ -102,7 +126,7 @@ export function ServiceExperienceCard({
               event.stopPropagation()
               openModal()
             }}
-            className="min-h-11 !border-pink bg-transparent px-5 py-2 text-[0.72rem] font-bold tracking-[0.04em] !text-pink shadow-none hover:!border-pink hover:!bg-pink hover:!text-white focus-visible:ring-pink"
+            className="min-h-11 !border-pink bg-transparent px-5 py-2 font-bold tracking-[0.04em] !text-pink shadow-none hover:!border-pink hover:!bg-pink hover:!text-white focus-visible:ring-pink"
           >
             {ctaLabel}
           </Button>

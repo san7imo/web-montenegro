@@ -27,7 +27,8 @@ export function EcoHero() {
       >
         <SectionTitle
           as="h1"
-          className="max-w-[22rem] text-pink-soft drop-shadow-[0_10px_22px_rgba(19,22,18,0.42)] sm:max-w-none sm:text-[4.5rem] lg:text-[5rem] lg:leading-[0.94]"
+          variant="display"
+          className="max-w-[22rem] text-pink-soft drop-shadow-[0_10px_22px_rgba(19,22,18,0.42)] sm:max-w-none"
         >
           <span className="block">{ecoHeroContent.titleLines[0]}</span>
           <span className="block sm:whitespace-nowrap">{ecoHeroContent.titleLines[1]}</span>

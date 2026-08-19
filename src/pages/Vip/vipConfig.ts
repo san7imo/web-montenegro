@@ -1,10 +1,14 @@
-export const WHATSAPP_PHONE = '34614698393'
+import {
+  buildWhatsAppContactUrl,
+  buildWhatsAppShareUrl as buildSharedWhatsAppUrl,
+  WHATSAPP_PHONE,
+} from '../../utils/whatsapp'
 
 const GOOGLE_REVIEW_PLACE_ID = 'ChIJtdGREVrDTw0R_AERQThipl4'
 const GOOGLE_REVIEW_SOURCE = 'g.page.m.ia._'
 const GOOGLE_REVIEW_LAA = 'nmx-review-solicitation-ia2'
 
-export const CLUB_CAMPAIGNS = {
+export const VIP_CAMPAIGNS = {
   lipoSweepstakes: {
     href: 'https://docs.google.com/forms/d/e/1FAIpQLSf3rHZ0HFR8UYkzvcO-Zud9Y2GcG2h7MSJ5wQv0CbA72P30ug/viewform',
     isActive: false,
@@ -14,6 +18,7 @@ export const CLUB_CAMPAIGNS = {
 export const LINKS = {
   googleReview: `https://search.google.com/local/writereview?placeid=${GOOGLE_REVIEW_PLACE_ID}&source=${GOOGLE_REVIEW_SOURCE}&laa=${GOOGLE_REVIEW_LAA}`,
   website: 'https://www.montenegrosaludybelleza.com',
+  vip: 'https://www.montenegrosaludybelleza.com/vip',
   instagram: 'https://www.instagram.com/montenegrosaludbelleza/',
   instagramStory: 'instagram://story-camera',
   tiktok: 'https://www.tiktok.com/@montenegrosaludybelleza',
@@ -38,9 +43,9 @@ export const MESSAGES = {
 }
 
 export function buildWhatsAppUrl(message: string, phone = WHATSAPP_PHONE) {
-  return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
+  return buildWhatsAppContactUrl(message, phone)
 }
 
 export function buildWhatsAppShareUrl(message: string) {
-  return `https://wa.me/?text=${encodeURIComponent(message)}`
+  return buildSharedWhatsAppUrl(message)
 }

@@ -35,7 +35,7 @@ export function ContactAura() {
           <motion.div {...fadeUp(0.04)}>
             <SectionLabel
               variant="dark"
-              className="min-h-9 min-w-[13.3rem] justify-center border-white/62 bg-transparent py-1 text-[0.8rem] normal-case tracking-[0.01em] text-cream-light"
+              className="min-h-9 min-w-[13.3rem] justify-center border-white/62 bg-transparent py-1 normal-case tracking-[0.01em] text-cream-light"
             >
               {contactoAuraContent.label}
             </SectionLabel>
@@ -44,21 +44,21 @@ export function ContactAura() {
           <motion.div className="mt-5" {...fadeUp(0.12)}>
             <SectionTitle
               as="h2"
-              className="text-white sm:text-[4.35rem] lg:text-[5rem] lg:leading-[0.95]"
+              className="text-white"
             >
               {contactoAuraContent.title}
             </SectionTitle>
           </motion.div>
 
           <motion.p
-            className="mt-2 max-w-[37rem] text-[1rem] font-semibold leading-7 text-cream-light/90 sm:text-[1.08rem]"
+            className="type-body mt-2 max-w-[37rem] font-semibold text-cream-light/90"
             {...fadeUp(0.18)}
           >
             {contactoAuraContent.lead}
           </motion.p>
 
           <motion.p
-            className="mt-8 max-w-[37rem] text-[1rem] font-semibold leading-8 text-cream-light/92 sm:text-[1.05rem]"
+            className="type-body mt-8 max-w-[37rem] font-semibold text-cream-light/92"
             {...fadeUp(0.24)}
           >
             {contactoAuraContent.description}
@@ -70,7 +70,7 @@ export function ContactAura() {
               target="_blank"
               rel="noreferrer"
               variant="outline"
-              className="min-w-[18.5rem] border-pink-soft/80 bg-transparent px-7 text-[0.72rem] tracking-[0.04em] text-pink-soft hover:border-white/70 hover:bg-white/10"
+              className="min-w-[18.5rem] border-pink-soft/80 bg-transparent px-7 tracking-[0.04em] text-pink-soft hover:border-white/70 hover:bg-white/10"
             >
               {contactoAuraContent.ctaLabel}
             </Button>

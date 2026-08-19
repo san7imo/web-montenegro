@@ -22,7 +22,7 @@ export function SectionLabel({
   return (
     <span
       className={[
-        'inline-flex min-h-11 items-center rounded-full px-5 py-2 text-[0.68rem] font-medium uppercase tracking-[0.16em]',
+        'type-eyebrow inline-flex min-h-11 items-center rounded-full px-5 py-2',
         variantStyles[variant],
         className,
       ]

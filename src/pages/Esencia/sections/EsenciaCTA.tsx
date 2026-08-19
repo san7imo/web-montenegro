@@ -34,7 +34,7 @@ export function EsenciaCTA() {
         <div className="relative z-10 flex h-full items-start">
           <div className="w-full max-w-[58rem] px-8 pt-10 pb-10 text-left sm:px-10 sm:pt-12 lg:px-12 lg:pt-16">
             <motion.h2
-              className="max-w-[15ch] font-heading text-[2.65rem] leading-[0.94] tracking-[-0.04em] text-pink-soft drop-shadow-[0_10px_20px_rgba(31,53,43,0.16)] sm:max-w-[17ch] sm:text-[3.45rem] lg:max-w-none lg:text-[4.2rem]"
+              className="type-feature-title max-w-[15ch] text-pink-soft drop-shadow-[0_10px_20px_rgba(31,53,43,0.16)] sm:max-w-[17ch] lg:max-w-none"
               {...fadeUp(0.06)}
             >
               <span className="block lg:whitespace-nowrap">Permítenos ayudarte a encontrar</span>
@@ -42,7 +42,7 @@ export function EsenciaCTA() {
             </motion.h2>
 
             <motion.p
-              className="mt-3 max-w-[35rem] text-[1.02rem] leading-8 text-cream-light/96 sm:text-[1.08rem] sm:leading-8"
+              className="type-body mt-3 max-w-[35rem] text-cream-light/96"
               {...fadeUp(0.18)}
             >
               {esenciaCtaContent.description}
@@ -53,7 +53,7 @@ export function EsenciaCTA() {
                 to={esenciaCtaContent.ctaHref}
                 variant="outline"
                 showArrow
-                className="min-w-[18rem] border-cream-light/78 bg-white/4 px-7 text-[0.78rem] tracking-[0.08em] text-cream-light shadow-[0_12px_32px_rgba(31,53,43,0.18)] hover:border-pink-soft hover:bg-pink-soft/14 hover:text-pink-soft"
+                className="min-w-[18rem] border-cream-light/78 bg-white/4 px-7 tracking-[0.08em] text-cream-light shadow-[0_12px_32px_rgba(31,53,43,0.18)] hover:border-pink-soft hover:bg-pink-soft/14 hover:text-pink-soft"
               >
                 {esenciaCtaContent.ctaLabel}
               </Button>

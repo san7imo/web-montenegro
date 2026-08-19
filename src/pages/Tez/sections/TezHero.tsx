@@ -37,16 +37,17 @@ export function TezHero() {
         <HeroOverlay />
 
         <div className="relative z-10 flex h-full items-end px-[5.1vw] pb-7 sm:pb-8 lg:pb-8">
-          <motion.div className="max-w-[38rem]" {...fadeUp(0.08)}>
+          <motion.div className="w-full min-w-0 max-w-[38rem]" {...fadeUp(0.08)}>
             <SectionTitle
               as="h1"
-              className="text-pink-soft drop-shadow-[0_10px_20px_rgba(18,22,18,0.28)] sm:text-[4.05rem] lg:text-[4.8rem] lg:leading-[0.9]"
+              variant="display"
+              className="text-pink-soft drop-shadow-[0_10px_20px_rgba(18,22,18,0.28)]"
             >
               <span className="block">{tezHeroContent.titleLines[0]}</span>
               <span className="block">{tezHeroContent.titleLines[1]}</span>
               <span className="block">{tezHeroContent.titleLines[2]}</span>
             </SectionTitle>
-            <p className="mt-3 max-w-[38rem] text-[0.95rem] leading-6 text-cream-light/96 sm:text-[1.04rem] lg:text-[1.08rem]">
+            <p className="type-lead mt-3 max-w-[38rem] text-cream-light/96">
               {tezHeroContent.description}
             </p>
           </motion.div>
@@ -56,7 +57,7 @@ export function TezHero() {
       <div className="bg-forest">
         <Container className="px-7 py-12 sm:px-8 sm:py-[4.1rem] lg:px-12 lg:py-[5.1rem]">
           <motion.div className="mx-auto max-w-[58rem]" {...fadeUp(0.2)}>
-            <p className="text-[0.98rem] font-semibold leading-[1.72] text-cream-light/96 sm:text-[1.08rem] sm:leading-[1.82]">
+            <p className="type-lead font-semibold text-cream-light/96">
               {tezHeroContent.bodyDescription}
             </p>
             <DecorativeLine variant="light" className="mx-auto mt-10 w-[28rem] max-w-[72%] opacity-95" />

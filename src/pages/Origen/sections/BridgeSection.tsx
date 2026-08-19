@@ -39,10 +39,10 @@ export function BridgeSection() {
           </motion.div>
 
           <motion.div className="lg:-ml-24 lg:pr-0" {...fadeUp(0.14)}>
-            <h2 className="font-heading text-[2.65rem] leading-[0.96] tracking-[-0.04em] text-pink-soft sm:text-[3.25rem] lg:text-[3.3rem] lg:whitespace-nowrap xl:text-[3.5rem]">
+            <h2 className="type-feature-title text-pink-soft lg:whitespace-nowrap">
               {origenBridgeContent.title}
             </h2>
-            <p className="mt-4 max-w-[44rem] text-[1rem] leading-8 text-cream-light/95 sm:text-[1.08rem] sm:leading-9 lg:max-w-[58rem] lg:text-[1.02rem] lg:leading-[2.05rem] xl:max-w-[62rem]">
+            <p className="type-body mt-4 max-w-[44rem] text-cream-light/95 lg:max-w-[58rem] xl:max-w-[62rem]">
               {origenBridgeContent.description}
             </p>
             <DecorativeLine

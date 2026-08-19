@@ -1,12 +1,15 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { FaWhatsapp } from 'react-icons/fa'
+import { buildWhatsAppContactUrl } from '../../utils/whatsapp'
 
 type FloatingWhatsAppButtonProps = {
   href?: string
 }
 
 export function FloatingWhatsAppButton({
-  href = `https://wa.me/?text=${encodeURIComponent('Hola, quiero reservar una cita en Montenegro Salud y Belleza. ¿Me puedes confirmar disponibilidad?')}`,
+  href = buildWhatsAppContactUrl(
+    'Hola, quiero reservar una cita en Montenegro Salud y Belleza. ¿Me puedes confirmar disponibilidad?',
+  ),
 }: FloatingWhatsAppButtonProps) {
   const shouldReduceMotion = useReducedMotion()
 

@@ -6,7 +6,7 @@ import { ScrollToTop } from '../components/ui/ScrollToTop'
 
 export default function App() {
   const location = useLocation()
-  const showCookieConsent = location.pathname !== '/club'
+  const showCookieConsent = !['/vip', '/club'].includes(location.pathname)
 
   return (
     <>

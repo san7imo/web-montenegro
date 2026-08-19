@@ -1,4 +1,4 @@
-import { buildCategoryServiceItems } from './servicePricing'
+import { buildMappedCategoryServiceItems } from './servicePricing'
 
 export const tezHeroContent = {
   titleLines: ['Tez:', 'La Ciencia del', 'Rejuvenecimiento.'],
@@ -15,24 +15,24 @@ export const tezCatalogContent = {
       title: 'Servicios',
       description:
         'Protocolos faciales, corporales y de estética avanzada organizados con sus opciones y tarifas actualizadas.',
-      items: buildCategoryServiceItems('tez', [
-        'tratamientoVarices',
-        'limpiezaFacial',
-        'tratamientoVarices',
-        'gimnasiaPasiva',
-        'limpiezaFacial',
-        'packLipo',
-        'maderoterapia',
-        'maderoterapia',
-        'metaloterapia',
-        'rejuvenecimientoVaginal',
-        'radiofrecuenciaGeneralCorporal',
-        'radiofrecuenciaGeneral',
-        'rejuvenecimientoVaginal',
-        'hydrafacialPiel',
-        'hydrafacialPiel',
-        'hydrafacialPiel',
-      ] as const),
+      items: buildMappedCategoryServiceItems('tez', {
+        'eliminacion-de-tatuajes': 'eliminacionTatuajes',
+        'eliminacion-de-manchas': 'eliminacionManchas',
+        'curacion-de-varices': 'tratamientoVarices',
+        'gym-pasiva': 'gimnasiaPasiva',
+        'limpieza-facial': 'limpiezaFacial',
+        'lipo-sin-cirugia': 'packLipo',
+        'masajes-reductores': 'masajesReductores',
+        maderoterapia: 'maderoterapia',
+        metaterapia: 'metaloterapia',
+        'micropigmentacion-de-labios': 'micropigmentacionLabios',
+        'rejuvenecimiento-360-incluye-zona-corporal-combinado-con-rostro': 'radiofrecuenciaGeneralCorporal',
+        'rejuvenecimiento-facial': 'radiofrecuenciaGeneral',
+        'rejuvenecimiento-intimo': 'rejuvenecimientoVaginal',
+        'manicura-y-pedicura-semipermanente': 'manicuraPedicuraSemipermanente',
+        'manicura-tradicional': 'manicuraTradicional',
+        'pedicura-completa-tradicional': 'pedicuraCompletaTradicional',
+      } as const),
     },
   ],
   ctaLabel: 'Reservar Cita',

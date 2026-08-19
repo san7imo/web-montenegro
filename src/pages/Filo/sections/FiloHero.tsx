@@ -37,14 +37,15 @@ export function FiloHero() {
         <HeroOverlay />
 
         <div className="relative z-10 flex h-full items-end px-[6.2vw] pb-8 sm:pb-10 lg:pb-9">
-          <motion.div className="max-w-[70rem]" {...fadeUp(0.08)}>
+          <motion.div className="w-full min-w-0 max-w-[70rem]" {...fadeUp(0.08)}>
             <SectionTitle
               as="h1"
-              className="text-pink-soft drop-shadow-[0_10px_20px_rgba(18,22,18,0.28)] sm:text-[4.2rem] lg:text-[5.05rem] lg:leading-[0.9]"
+              variant="display"
+              className="text-pink-soft drop-shadow-[0_10px_20px_rgba(18,22,18,0.28)]"
             >
               {filoHeroContent.title}
             </SectionTitle>
-            <p className="mt-3 max-w-[56rem] text-[1rem] leading-7 text-cream-light/96 sm:text-[1.1rem] lg:text-[1.16rem]">
+            <p className="type-lead mt-3 max-w-[56rem] text-cream-light/96">
               {filoHeroContent.description}
             </p>
           </motion.div>
@@ -54,7 +55,7 @@ export function FiloHero() {
       <div className="bg-forest">
         <Container className="px-7 py-12 sm:px-8 sm:py-[4.2rem] lg:px-12 lg:py-[5.2rem]">
           <motion.div className="mx-auto max-w-[55rem]" {...fadeUp(0.2)}>
-            <p className="text-[1.02rem] font-semibold leading-[1.72] text-cream-light/96 sm:text-[1.13rem] sm:leading-[1.82]">
+            <p className="type-lead font-semibold text-cream-light/96">
               {filoHeroContent.bodyDescription}
             </p>
             <DecorativeLine variant="light" className="mx-auto mt-12 w-[28rem] max-w-[72%] opacity-95" />

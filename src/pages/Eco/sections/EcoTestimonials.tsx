@@ -29,19 +29,19 @@ function ReviewCard({ review }: { review: Review }) {
   return (
     <article className="rounded-[0.95rem] border border-white/65 bg-white/8 p-4 text-white shadow-[0_2px_5px_rgba(24,35,28,0.16)]">
       <RatingStars rating={review.rating} />
-      <p className="mt-2.5 text-[0.82rem] font-semibold leading-[1.58] text-white/95">
+      <p className="type-body-sm mt-2.5 font-semibold text-white/95">
         {review.text}
       </p>
       <div className="mt-4 flex items-center gap-2.5">
         <span
           className={[
-            'inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[0.72rem] font-bold text-white shadow-[0_4px_10px_rgba(18,24,18,0.18)]',
+            'type-caption inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full font-bold text-white shadow-[0_4px_10px_rgba(18,24,18,0.18)]',
             review.color,
           ].join(' ')}
         >
           {review.initials}
         </span>
-        <p className="text-[0.8rem] font-semibold leading-4 text-white/96">
+        <p className="type-caption font-semibold text-white/96">
           <span className="block">{review.name}</span>
           <span className="block font-medium text-white/86">{review.date}</span>
         </p>
@@ -69,13 +69,13 @@ export function EcoTestimonials() {
         <motion.div className="text-center" {...fadeUp(0.04)}>
           <SectionLabel
             variant="dark"
-            className="min-h-9 border-white/70 bg-transparent px-8 py-1 text-[0.78rem] normal-case tracking-[0.01em] text-white"
+            className="min-h-9 border-white/70 bg-transparent px-8 py-1 normal-case tracking-[0.01em] text-white"
           >
             {ecoTestimonialsContent.label}
           </SectionLabel>
           <SectionTitle
             as="h2"
-            className="mx-auto mt-5 max-w-[42rem] text-pink-soft sm:text-[3.45rem] lg:max-w-[65rem] lg:text-[3.65rem] lg:leading-[0.98]"
+            className="mx-auto mt-5 max-w-[42rem] text-pink-soft lg:max-w-[65rem]"
           >
             <span className="block">{ecoTestimonialsContent.titleLines[0]}</span>
             <span className="block">{ecoTestimonialsContent.titleLines[1]}</span>
@@ -102,7 +102,7 @@ export function EcoTestimonials() {
             href={ecoLeaveContent.ctaHref}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-1 border-b border-white/85 pb-0.5 text-[0.82rem] font-bold uppercase tracking-[0.03em] text-white transition-opacity duration-200 hover:opacity-80"
+            className="type-action inline-flex items-center gap-1 border-b border-white/85 pb-0.5 text-white transition-opacity duration-200 hover:opacity-80"
           >
             {ecoTestimonialsContent.moreLabel}
             <span aria-hidden="true">↘</span>

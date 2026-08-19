@@ -18,10 +18,10 @@ export function EcoLeaveReview() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.78, ease: 'easeOut' }}
         >
-          <SectionTitle as="h2" className="text-white sm:text-[4.1rem] lg:text-[4.9rem]">
+          <SectionTitle as="h2" className="text-white">
             {ecoLeaveContent.title}
           </SectionTitle>
-          <p className="mx-auto mt-5 max-w-[69rem] text-[0.98rem] font-semibold leading-7 text-cream-light/90 sm:text-[1.04rem]">
+          <p className="type-body mx-auto mt-5 max-w-[69rem] font-semibold text-cream-light/90">
             {ecoLeaveContent.description}
           </p>
           <div className="mt-9">
@@ -29,7 +29,7 @@ export function EcoLeaveReview() {
               href={ecoLeaveContent.ctaHref}
               target="_blank"
               rel="noreferrer"
-              className="min-w-[15.3rem] px-8 text-[0.73rem] tracking-[0.05em]"
+              className="min-w-[15.3rem] px-8 tracking-[0.05em]"
             >
               {ecoLeaveContent.ctaLabel}
             </Button>

@@ -28,7 +28,7 @@ export function WisdomPillars() {
         <motion.div className="mx-auto max-w-[22rem] sm:max-w-[30rem]" {...fadeUp(0.04)}>
           <SectionTitle
             as="h2"
-            className="text-center text-pink-soft sm:text-[4.1rem] lg:text-[4.7rem]"
+            className="text-center text-pink-soft"
           >
             <span className="block">Los Pilares de la</span>
             <span className="block">Sabiduría</span>

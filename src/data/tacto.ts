@@ -1,4 +1,4 @@
-import { buildCategoryServiceItems } from './servicePricing'
+import { buildMappedCategoryServiceItems } from './servicePricing'
 
 export const tactoHeroContent = {
   titleLines: ['Tacto:', 'El Bienestar en tus uñas.'],
@@ -10,17 +10,17 @@ export const tactoHeroContent = {
 
 export const tactoMenuContent = {
   titleLines: ['Menú de', 'Experiencias'],
-  items: buildCategoryServiceItems('tacto', [
-    'acrilicas',
-    'cortarYLimar',
-    'mantenimientoAcrilico',
-    'mantenimientoAcrilico',
-    'permanente',
-    'pressOn',
-    'reparaciones',
-    'retiros',
-    'esmalteTradicional',
-  ] as const),
+  items: buildMappedCategoryServiceItems('tacto', {
+    'unas-acrilicas': 'acrilicas',
+    'corte-y-limado-de-unas': 'cortarYLimar',
+    'laser-antihongos-en-unas': 'laserAntihongos',
+    'mantenimiento-de-unas': 'mantenimientoAcrilico',
+    'pedicura-permanente': 'permanente',
+    'press-on': 'pressOn',
+    'reparacion-de-unas': 'reparaciones',
+    'retiro-de-acrilico': 'retiros',
+    'retiro-de-esmalte-tradicional': 'retiroEsmalteTradicional',
+  } as const),
   ctaLabel: 'RESERVA TU CITA',
   ctaHref: '/contacto',
 } as const

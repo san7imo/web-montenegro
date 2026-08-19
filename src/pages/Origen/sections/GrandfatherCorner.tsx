@@ -40,14 +40,14 @@ export function GrandfatherCorner() {
           {...fadeUp(0.06)}
         >
           <div className="w-full max-w-[29rem] lg:max-w-[33rem]">
-            <p className="text-[1.28rem] font-medium leading-[1.34] tracking-[-0.03em] text-white drop-shadow-[0_14px_30px_rgba(12,22,17,0.5)] sm:text-[1.5rem] lg:text-[1.72rem]">
+            <p className="type-quote font-medium text-white drop-shadow-[0_14px_30px_rgba(12,22,17,0.5)]">
               {origenGrandfatherContent.imageDescription}
             </p>
             <div className="mt-5">
               <Button
                 to={origenGrandfatherContent.ctaHref}
                 variant="light"
-                className="min-w-[11.75rem] border-white bg-white px-6 text-[0.72rem] tracking-[0.06em] text-forest shadow-[0_14px_30px_rgba(10,20,16,0.28)] hover:bg-cream-light hover:text-forest-dark"
+                className="min-w-[11.75rem] border-white bg-white px-6 tracking-[0.06em] text-forest shadow-[0_14px_30px_rgba(10,20,16,0.28)] hover:bg-cream-light hover:text-forest-dark"
               >
                 {origenGrandfatherContent.ctaLabel}
               </Button>
@@ -61,7 +61,7 @@ export function GrandfatherCorner() {
           <motion.div {...fadeUp(0.1)}>
             <SectionLabel
               variant="dark"
-              className="border-pink-soft/90 bg-transparent px-7 text-[0.8rem] tracking-[0.05em] text-pink-soft"
+              className="border-pink-soft/90 bg-transparent px-7 tracking-[0.05em] text-pink-soft"
             >
               {origenGrandfatherContent.label}
             </SectionLabel>
@@ -70,14 +70,14 @@ export function GrandfatherCorner() {
           <motion.div className="mt-5" {...fadeUp(0.16)}>
             <SectionTitle
               as="h2"
-              className="max-w-[14ch] text-white sm:max-w-[10ch] sm:text-[4.5rem] lg:text-[5.35rem] lg:leading-[0.92]"
+              className="max-w-[14ch] text-white sm:max-w-[10ch]"
             >
               {origenGrandfatherContent.title}
             </SectionTitle>
           </motion.div>
 
           <motion.p
-            className="mt-5 max-w-[34rem] text-[1.05rem] leading-8 text-cream-light/96 sm:text-[1.12rem] sm:leading-9 lg:text-[1.16rem]"
+            className="type-lead mt-5 max-w-[34rem] text-cream-light/96"
             {...fadeUp(0.22)}
           >
             {origenGrandfatherContent.description}

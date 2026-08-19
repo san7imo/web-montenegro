@@ -1,4 +1,4 @@
-import { buildCategoryServiceItems } from './servicePricing'
+import { buildMappedCategoryServiceItems } from './servicePricing'
 
 export const broteHeroContent = {
   titleLines: ['Brote:', 'Primeros Pasos en el Spa.'],
@@ -9,18 +9,18 @@ export const broteHeroContent = {
 
 export const broteExperiencesContent = {
   title: 'Mimos & Bienestar',
-  items: buildCategoryServiceItems('brote', [
-    'tinaMagica',
-    'tinaMagica',
-    'envoltura',
-    'tinaMagica',
-    'manicuraPedicura',
-    'masajeCorporal',
-    'tinaMagica',
-    'miniHairSpa',
-    'spaFacial',
-    'peinados',
-  ] as const),
+  items: buildMappedCategoryServiceItems('brote', {
+    'bolsa-de-regalo': 'bolsaRegalo',
+    'tina-magica-infantil': 'tinaMagica',
+    'envoltura-corporal': 'envoltura',
+    'mini-spa-party': 'miniSpaParty',
+    'manicura-y-pedicura-infantil': 'manicuraPedicura',
+    'masaje-corporal-infantil': 'masajeCorporal',
+    'merienda-saludable-infantil': 'meriendaSaludable',
+    'mini-hair-spa-infantil': 'miniHairSpa',
+    'mini-spa-facial-infantil': 'spaFacial',
+    'peinados-infantil': 'peinados',
+  } as const),
   ctaLabel: 'RESERVA TU CITA',
   ctaHref: '/contacto',
 } as const

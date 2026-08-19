@@ -1,7 +1,10 @@
+import broteBolsaRegaloImage from '../assets/brote/bolsa-de-regalo.webp'
 import broteEnvolturaImage from '../assets/brote/envoltura.png'
 import broteManicuraPedicuraImage from '../assets/brote/manicuraypedicura.png'
 import broteMasajeCorporalImage from '../assets/brote/masajecorpotal.png'
+import broteMeriendaSaludableImage from '../assets/brote/merienda-saludable.webp'
 import broteMiniHairSpaImage from '../assets/brote/minihairspa.png'
+import broteMiniSpaPartyImage from '../assets/brote/mini-spa-party.webp'
 import brotePeinadosImage from '../assets/brote/peinados.png'
 import broteSpaFacialImage from '../assets/brote/spafacial.png'
 import broteTinaMagicaImage from '../assets/brote/tinamagica.png'
@@ -30,40 +33,44 @@ import hebraMechasImage from '../assets/hebra/mechas.png'
 import hebraPlanchadoImage from '../assets/hebra/planchado.png'
 import hebraSpaHairAsiaticoImage from '../assets/hebra/spahairasiatico.png'
 import hebraTintesImage from '../assets/hebra/tintes.png'
-import oasisDescontracturanteImage from '../assets/oasis/descontracturante.png'
+import oasisBanoCleopatraImage from '../assets/oasis/bano-cleopatra.webp'
+import oasisBanoFloresImage from '../assets/oasis/bano-de-flores.webp'
+import oasisCerrarMatrizImage from '../assets/oasis/cerrar-matriz.webp'
 import oasisDrenajeLinfaticoImage from '../assets/oasis/drenajelinfatico.png'
 import oasisExfoliacionImage from '../assets/oasis/exfoliacion.png'
 import oasisMasajeRelajanteImage from '../assets/oasis/masajerelajante.png'
-import oasisPresoterapiaImage from '../assets/oasis/presoterapia.png'
+import oasisRitualBotanicoImage from '../assets/oasis/ritual-botanico.webp'
+import oasisRitualCacaoImage from '../assets/oasis/ritual-de-cacao.webp'
+import oasisRitualDosAlmasImage from '../assets/oasis/ritual-dos-almas.webp'
+import oasisRitualVidaImage from '../assets/oasis/ritual-vida.webp'
+import oasisRitualVolcanicoImage from '../assets/oasis/ritual-volcanico.webp'
 import oasisRitualesEnTinaImage from '../assets/oasis/ritualesentina.png'
 import oasisVentosasImage from '../assets/oasis/ventosas.png'
 import tactoAcrilicasImage from '../assets/tacto/acrilicas.png'
 import tactoCortarYLimarImage from '../assets/tacto/cortarylimar.png'
-import tactoEsmalteTradicionalImage from '../assets/tacto/esmaltetradicional.png'
+import tactoLaserAntihongosImage from '../assets/tacto/laser-antihongos.webp'
 import tactoMantenimientoAcrilicoImage from '../assets/tacto/mantenimientoacrilico.png'
 import tactoPermanenteImage from '../assets/tacto/permanente.png'
 import tactoPressOnImage from '../assets/tacto/press-on.png'
 import tactoReparacionesImage from '../assets/tacto/reparaciones.png'
 import tactoRetirosImage from '../assets/tacto/retiros.png'
-import tactoSemipermanenteImage from '../assets/tacto/semipermanente.png'
-import tactoSpaManosPiesImage from '../assets/tacto/spamanosypies.png'
-import tezCavitacionImage from '../assets/tez/cavitacion.png'
-import tezCriolipolisisImage from '../assets/tez/criolipolisiscontorno.png'
-import tezDrenajeLinfaticoImage from '../assets/tez/drenajelinfaticomanual.png'
+import tactoRetiroEsmalteTradicionalImage from '../assets/tacto/retiro-esmalte-tradicional.webp'
+import tezEliminacionManchasImage from '../assets/tez/eliminacion-de-manchas.webp'
+import tezEliminacionTatuajesImage from '../assets/tez/eliminacion-de-tatuajes.webp'
 import tezGimnasiaPasivaImage from '../assets/tez/gimnasiapasiva.png'
-import tezHydrafacialPielImage from '../assets/tez/hydrafacialpiel.png'
 import tezLimpiezaFacialImage from '../assets/tez/limpiezafacial.png'
+import tezManicuraPedicuraSemipermanenteImage from '../assets/tez/manicura-y-pedicura-semipermanente.webp'
+import tezManicuraTradicionalImage from '../assets/tez/manicura-tradicional.webp'
 import tezMaderoterapiaImage from '../assets/tez/maderoterapia.png'
+import tezMasajesReductoresImage from '../assets/tez/masajes-reductores.webp'
 import tezMetaloterapiaImage from '../assets/tez/metaloterapia.png'
-import tezMultifuncionalImage from '../assets/tez/multifuncional.png'
+import tezMicropigmentacionLabiosImage from '../assets/tez/micropigmentacion-de-labios.webp'
 import tezPackLipoImage from '../assets/tez/packliposincirugia.png'
-import tezPresoterapiaImage from '../assets/tez/presoterapiacontorno.png'
-import tezRadiofrecuenciaCorporalImage from '../assets/tez/radiofrecuenciafraccionadacorporal.png'
+import tezPedicuraCompletaTradicionalImage from '../assets/tez/pedicura-completa-tradicional.webp'
 import tezRadiofrecuenciaGeneralCorporalImage from '../assets/tez/radifrecuenciageneralcorporal.png'
 import tezRadiofrecuenciaGeneralImage from '../assets/tez/ragiofrecuengeneral.png'
 import tezRejuvenecimientoVaginalImage from '../assets/tez/rejuevenicmientovaginal.png'
 import tezTratamientoVaricesImage from '../assets/tez/tratamientodevarices.png'
-import tezVendasFriasImage from '../assets/tez/vendasfrias.png'
 import { broteExperiencesContent } from './brote'
 import { filoExperiencesContent } from './filo'
 import { hebraExperiencesContent } from './hebra'
@@ -87,29 +94,35 @@ export type ServiceCatalogItem = {
 }
 
 const oasisImages = {
+  banoCleopatra: oasisBanoCleopatraImage,
+  banoFlores: oasisBanoFloresImage,
+  cerrarMatriz: oasisCerrarMatrizImage,
   ritualesEnTina: oasisRitualesEnTinaImage,
   exfoliacion: oasisExfoliacionImage,
   drenajeLinfatico: oasisDrenajeLinfaticoImage,
   masajeRelajante: oasisMasajeRelajanteImage,
-  presoterapia: oasisPresoterapiaImage,
   ventosas: oasisVentosasImage,
-  descontracturante: oasisDescontracturanteImage,
+  ritualBotanico: oasisRitualBotanicoImage,
+  ritualCacao: oasisRitualCacaoImage,
+  ritualDosAlmas: oasisRitualDosAlmasImage,
+  ritualVida: oasisRitualVidaImage,
+  ritualVolcanico: oasisRitualVolcanicoImage,
 }
 
 const tactoImages = {
-  esmalteTradicional: tactoEsmalteTradicionalImage,
-  semipermanente: tactoSemipermanenteImage,
   permanente: tactoPermanenteImage,
   cortarYLimar: tactoCortarYLimarImage,
   acrilicas: tactoAcrilicasImage,
   pressOn: tactoPressOnImage,
-  spaManosPies: tactoSpaManosPiesImage,
   reparaciones: tactoReparacionesImage,
   retiros: tactoRetirosImage,
   mantenimientoAcrilico: tactoMantenimientoAcrilicoImage,
+  laserAntihongos: tactoLaserAntihongosImage,
+  retiroEsmalteTradicional: tactoRetiroEsmalteTradicionalImage,
 }
 
 const broteImages = {
+  bolsaRegalo: broteBolsaRegaloImage,
   tinaMagica: broteTinaMagicaImage,
   envoltura: broteEnvolturaImage,
   manicuraPedicura: broteManicuraPedicuraImage,
@@ -117,6 +130,8 @@ const broteImages = {
   miniHairSpa: broteMiniHairSpaImage,
   spaFacial: broteSpaFacialImage,
   peinados: brotePeinadosImage,
+  meriendaSaludable: broteMeriendaSaludableImage,
+  miniSpaParty: broteMiniSpaPartyImage,
 }
 
 const filoImages = {
@@ -151,24 +166,22 @@ const hebraImages = {
 }
 
 const tezImages = {
-  hydrafacialPiel: tezHydrafacialPielImage,
   limpiezaFacial: tezLimpiezaFacialImage,
+  eliminacionManchas: tezEliminacionManchasImage,
+  eliminacionTatuajes: tezEliminacionTatuajesImage,
   tratamientoVarices: tezTratamientoVaricesImage,
-  radiofrecuenciaFraccionada: tezRadiofrecuenciaCorporalImage,
   radiofrecuenciaGeneral: tezRadiofrecuenciaGeneralImage,
   rejuvenecimientoVaginal: tezRejuvenecimientoVaginalImage,
   packLipo: tezPackLipoImage,
-  criolipolisis: tezCriolipolisisImage,
-  cavitacion: tezCavitacionImage,
-  presoterapia: tezPresoterapiaImage,
   maderoterapia: tezMaderoterapiaImage,
-  radiofrecuenciaCorporal: tezRadiofrecuenciaCorporalImage,
   gimnasiaPasiva: tezGimnasiaPasivaImage,
   radiofrecuenciaGeneralCorporal: tezRadiofrecuenciaGeneralCorporalImage,
-  drenajeLinfatico: tezDrenajeLinfaticoImage,
   metaloterapia: tezMetaloterapiaImage,
-  vendasFrias: tezVendasFriasImage,
-  multifuncional: tezMultifuncionalImage,
+  manicuraPedicuraSemipermanente: tezManicuraPedicuraSemipermanenteImage,
+  manicuraTradicional: tezManicuraTradicionalImage,
+  masajesReductores: tezMasajesReductoresImage,
+  micropigmentacionLabios: tezMicropigmentacionLabiosImage,
+  pedicuraCompletaTradicional: tezPedicuraCompletaTradicionalImage,
 }
 
 function toCatalogItems<TImageKey extends string>(

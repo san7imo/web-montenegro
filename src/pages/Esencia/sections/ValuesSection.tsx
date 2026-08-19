@@ -29,7 +29,7 @@ export function ValuesSection() {
           <motion.div className="mx-auto" {...fadeUp(0.04)}>
             <SectionTitle
               as="h2"
-              className="text-center text-cream-light sm:text-[4.4rem] lg:text-[5.2rem]"
+              className="text-center text-cream-light"
             >
               {esenciaValuesContent.title}
             </SectionTitle>
@@ -51,7 +51,7 @@ export function ValuesSection() {
             className="relative mt-12 px-3 text-center lg:mt-14 lg:px-12"
             {...fadeUp(0.42)}
           >
-            <p className="mx-auto max-w-[62rem] text-[1.02rem] leading-7 text-cream-light/94 sm:text-[1.08rem] sm:leading-8 lg:text-[1.1rem] lg:leading-[1.72]">
+            <p className="type-body mx-auto max-w-[62rem] text-cream-light/94">
               {esenciaValuesContent.quote}
             </p>
           </motion.div>

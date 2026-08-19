@@ -29,7 +29,7 @@ export function BroteExperiences() {
         <motion.div className="mx-auto max-w-[38rem] text-center" {...fadeUp(0.04)}>
           <SectionTitle
             as="h2"
-            className="text-forest sm:text-[4.15rem] lg:text-[4.85rem]"
+            className="text-forest"
           >
             {broteExperiencesContent.title}
           </SectionTitle>

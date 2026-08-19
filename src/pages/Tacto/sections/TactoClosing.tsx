@@ -31,9 +31,9 @@ export function TactoClosing() {
       <div className="absolute inset-0 bg-forest/72" />
 
       <Container className="relative z-10 flex min-h-[20rem] items-center justify-center px-6 py-14 text-center sm:min-h-[23rem] lg:min-h-[24.8rem]">
-        <motion.div className="mx-auto max-w-[52rem]" {...fadeUp}>
+        <motion.div className="mx-auto w-full min-w-0 max-w-[52rem]" {...fadeUp}>
           <DecorativeLine variant="pink" className="mx-auto mb-10 w-[28rem] max-w-[68%] opacity-90" />
-          <p className="text-[1.2rem] font-medium leading-8 text-pink-soft sm:text-[1.42rem] sm:leading-9 lg:text-[1.55rem]">
+          <p className="type-quote font-medium text-pink-soft">
             {tactoClosingContent.description}
           </p>
         </motion.div>

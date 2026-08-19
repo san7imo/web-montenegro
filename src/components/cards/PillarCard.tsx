@@ -33,13 +33,13 @@ export function PillarCard({
       />
 
       <div className="flex flex-col">
-        <h3 className="font-heading text-[2.15rem] leading-none tracking-[-0.03em] text-pink-soft sm:text-[2.45rem]">
+        <h3 className="type-card-title text-pink-soft">
           {title}
         </h3>
-        <p className="mt-1.5 text-[0.96rem] leading-6 text-pink-soft/88 sm:text-[1.02rem]">
+        <p className="type-body mt-1.5 text-pink-soft/88">
           {subtitle}
         </p>
-        <p className="mt-6 text-[0.98rem] leading-7 text-cream-light/92 sm:mt-7 sm:text-[1rem] sm:leading-8">
+        <p className="type-body mt-6 text-cream-light/92 sm:mt-7">
           {description}
         </p>
       </div>

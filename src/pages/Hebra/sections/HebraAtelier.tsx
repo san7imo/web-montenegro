@@ -26,12 +26,12 @@ export function HebraAtelier() {
     <section className="grid bg-forest text-white lg:grid-cols-[1.05fr_1fr]">
       <div className="flex min-h-[36rem] items-center px-7 py-14 sm:px-10 lg:min-h-[43.75rem] lg:px-[7vw] lg:py-16">
         <motion.div className="w-full max-w-[39rem]" {...fadeUp(0.04)}>
-          <p className="text-[0.98rem] font-semibold leading-6 text-pink-soft">
+          <p className="type-body font-semibold text-pink-soft">
             {hebraAtelierContent.label}
           </p>
           <SectionTitle
             as="h2"
-            className="mt-2 text-white sm:text-[4.1rem] lg:text-[4.85rem]"
+            className="mt-2 text-white"
           >
             <span className="block">{hebraAtelierContent.titleLines[0]}</span>
             <span className="block">{hebraAtelierContent.titleLines[1]}</span>
@@ -43,10 +43,10 @@ export function HebraAtelier() {
                 key={item.eyebrow}
                 className="rounded-[1.4rem] bg-white/8 px-6 py-4 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.03),0_12px_28px_rgba(13,25,20,0.12)]"
               >
-                <p className="text-[0.74rem] font-bold uppercase tracking-[0.08em] text-pink-soft/90">
+                <p className="type-eyebrow text-pink-soft/90">
                   {item.eyebrow}
                 </p>
-                <p className="mt-2 text-[0.94rem] font-medium leading-6 text-cream-light/94 sm:text-[1rem]">
+                <p className="type-body-sm mt-2 font-medium text-cream-light/94">
                   {item.text}
                 </p>
               </div>

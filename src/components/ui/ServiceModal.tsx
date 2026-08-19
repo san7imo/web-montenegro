@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 
 import { getRandomServiceRecommendation, type ServiceCategory } from '../../data/serviceCatalog'
 import { getServiceModalDescription } from '../../data/serviceModalDescriptions'
+import { buildWhatsAppContactUrl } from '../../utils/whatsapp'
 import {
   getServicePricing,
   type ServicePriceOption,
@@ -35,7 +36,7 @@ function buildWhatsAppHref(title: string, duration?: string, price?: string) {
     .filter(Boolean)
     .join(' ')
 
-  return `https://wa.me/?text=${encodeURIComponent(details)}`
+  return buildWhatsAppContactUrl(details)
 }
 
 function buildShareText(title: string, description: string, duration?: string, price?: string) {
@@ -92,10 +93,10 @@ function BonusNotice({ children }: { children: string }) {
 
   return (
     <div className="mt-2 rounded-[1rem] border border-pink/25 bg-pink-soft/28 px-3 py-2.5 text-left">
-      <span className="text-[0.66rem] font-extrabold uppercase tracking-[0.12em] text-pink">
+      <span className="type-eyebrow font-extrabold text-pink">
         Bono disponible
       </span>
-      <p className="mt-0.5 whitespace-pre-line text-[0.78rem] font-semibold leading-5 text-forest-dark/88">
+      <p className="type-caption mt-0.5 whitespace-pre-line font-semibold text-forest-dark/88">
         {text}
       </p>
     </div>
@@ -155,17 +156,17 @@ function PriceBreakdownGrid({ breakdown }: { breakdown: PriceBreakdown }) {
               : 'border-forest/10 bg-white/42',
           ].join(' ')}
         >
-          <dt className="text-[0.56rem] font-extrabold uppercase leading-3 tracking-[0.06em] text-forest-dark/65 sm:text-[0.61rem]">
+          <dt className="type-eyebrow font-extrabold tracking-[0.06em] text-forest-dark/65">
             {item.label}
           </dt>
           <dd className="mt-1 leading-none">
             <PriceText
               value={item.value}
-              className="text-[0.9rem] font-extrabold leading-5 text-pink"
+              className="type-body-sm font-extrabold text-pink"
             />
           </dd>
           {item.detail ? (
-            <span className="mt-1 block text-[0.58rem] font-bold leading-3 text-forest-dark/68">
+            <span className="type-caption mt-1 block font-bold text-forest-dark/68">
               {item.detail}
             </span>
           ) : null}
@@ -185,10 +186,10 @@ function PricingOptions({
   return (
     <section aria-label="Tarifas y bonos" className="mt-5">
       <div className="flex items-center justify-between gap-4">
-        <h3 className="font-heading text-[1.45rem] font-semibold leading-none text-forest">
+        <h3 className="type-card-title-compact text-forest">
           Opciones y tarifas
         </h3>
-        <span className="rounded-full border border-forest/15 bg-white/35 px-3 py-1 text-[0.64rem] font-bold uppercase tracking-[0.1em] text-forest-dark/68">
+        <span className="type-eyebrow rounded-full border border-forest/15 bg-white/35 px-3 py-1 font-bold tracking-[0.1em] text-forest-dark/68">
           {options.length} {options.length === 1 ? 'opción' : 'opciones'}
         </span>
       </div>
@@ -206,7 +207,7 @@ function PricingOptions({
           return (
             <div key={option.name + '-' + index}>
               {showGroup ? (
-                <p className="mb-1.5 mt-4 text-[0.67rem] font-extrabold uppercase tracking-[0.11em] text-pink">
+                <p className="type-eyebrow mb-1.5 mt-4 font-extrabold text-pink">
                   {option.group}
                 </p>
               ) : null}
@@ -220,12 +221,12 @@ function PricingOptions({
                 ].join(' ')}
               >
                 {isBundle ? (
-                  <span className="mb-1.5 inline-flex rounded-full bg-pink px-2.5 py-1 text-[0.58rem] font-extrabold uppercase tracking-[0.11em] text-white">
+                  <span className="type-eyebrow mb-1.5 inline-flex rounded-full bg-pink px-2.5 py-1 font-extrabold text-white">
                     {isBonusOption ? 'Bono' : 'Pack'}
                   </span>
                 ) : null}
                 <div className={priceBreakdown ? '' : 'grid min-w-0 gap-1.5 sm:grid-cols-[minmax(0,1fr)_minmax(7rem,auto)] sm:items-start sm:gap-5'}>
-                  <p className="text-[0.84rem] font-semibold leading-5 text-forest-dark">
+                  <p className="type-body-sm font-semibold text-forest-dark">
                     {option.name}
                   </p>
                   {priceBreakdown ? (
@@ -233,7 +234,7 @@ function PricingOptions({
                   ) : (
                     <PriceText
                       value={option.price}
-                      className="min-w-0 break-words text-[0.9rem] font-extrabold leading-5 text-pink sm:max-w-[16rem] sm:text-right"
+                      className="type-body-sm min-w-0 break-words font-extrabold text-pink sm:max-w-[16rem] sm:text-right"
                     />
                   )}
                 </div>
@@ -267,9 +268,11 @@ export function ServiceModal({
     setShareStatus('')
     onClose()
   }, [onClose])
-  const currentKey = `${category}:${serviceId}`
-  const displayDescription = getServiceModalDescription(category, serviceId) || description
   const pricing = getServicePricing(category, serviceId)
+  const currentKey = `${category}:${serviceId}`
+  const displayDescription = getServiceModalDescription(category, serviceId)
+    || pricing?.description
+    || description
   const shareText = useMemo(
     () => buildShareText(title, displayDescription, duration, price),
     [displayDescription, duration, price, title],
@@ -391,7 +394,7 @@ export function ServiceModal({
               </button>
 
               {isShareOpen ? (
-                <div className="absolute right-0 top-10 z-[10001] min-w-[14rem] rounded-2xl border border-forest/15 bg-cream-light p-2 text-[0.8rem] font-semibold text-forest shadow-[0_16px_38px_rgba(13,25,20,0.2)]">
+                <div className="type-body-sm absolute right-0 top-10 z-[10001] min-w-[14rem] rounded-2xl border border-forest/15 bg-cream-light p-2 font-semibold text-forest shadow-[0_16px_38px_rgba(13,25,20,0.2)]">
                   <button
                     type="button"
                     onClick={shareNative}
@@ -423,7 +426,7 @@ export function ServiceModal({
                     Instagram Direct
                   </button>
                   {shareStatus ? (
-                    <p className="px-3 pb-1 pt-1 text-[0.72rem] leading-4 text-forest-dark/70">
+                    <p className="type-caption px-3 pb-1 pt-1 text-forest-dark/70">
                       {shareStatus}
                     </p>
                   ) : null}
@@ -441,11 +444,11 @@ export function ServiceModal({
             </button>
           </div>
 
-          <h2 className="mt-2 font-heading text-[2rem] font-semibold leading-[0.98] text-forest sm:mt-3 sm:text-[2.45rem] lg:text-[2.65rem]">
+          <h2 className="type-card-title mt-2 text-forest sm:mt-3">
             {title}
           </h2>
 
-          <p className="mt-3 line-clamp-5 max-w-[42rem] text-[0.88rem] font-medium leading-6 text-forest-dark/88 sm:text-[0.94rem] sm:leading-7">
+          <p className="type-body-sm mt-3 line-clamp-5 max-w-[42rem] font-medium text-forest-dark/88">
             {displayDescription}
           </p>
 
@@ -455,20 +458,20 @@ export function ServiceModal({
 
           <div className="mt-auto grid gap-4 pt-5 sm:grid-cols-[1fr_auto] sm:items-end">
             {pricing ? (
-              <p className="max-w-[22rem] text-[0.78rem] font-semibold leading-5 text-forest-dark/68">
+              <p className="type-caption max-w-[22rem] font-semibold text-forest-dark/68">
                 Elige la opción que prefieras al solicitar tu cita. Te confirmaremos duración y disponibilidad.
               </p>
             ) : (
               <dl className="grid grid-cols-2 gap-4">
                 <div>
-                  <dt className="text-[0.82rem] font-semibold text-forest-dark/80">Precio</dt>
-                  <dd className="mt-1 font-heading text-[1.38rem] font-semibold leading-none text-forest sm:text-[1.6rem]">
+                  <dt className="type-caption font-semibold text-forest-dark/80">Precio</dt>
+                  <dd className="type-price mt-1 text-forest">
                     <PriceText value={price} />
                   </dd>
                 </div>
                 <div>
-                  <dt className="text-[0.82rem] font-semibold text-forest-dark/80">Duración</dt>
-                  <dd className="mt-1 font-heading text-[1.38rem] font-semibold leading-none text-forest sm:text-[1.6rem]">
+                  <dt className="type-caption font-semibold text-forest-dark/80">Duración</dt>
+                  <dd className="type-price mt-1 text-forest">
                     {duration || 'Consultar'}
                   </dd>
                 </div>
@@ -479,7 +482,7 @@ export function ServiceModal({
               <button
                 type="button"
                 onClick={openResults}
-                className="inline-flex min-h-9 items-center justify-center justify-self-start rounded-full border border-forest/35 px-5 text-[0.82rem] font-bold text-forest no-underline transition-colors duration-200 hover:border-pink hover:bg-pink/8 hover:text-pink sm:justify-self-end"
+                className="type-body-sm inline-flex min-h-9 items-center justify-center justify-self-start rounded-full border border-forest/35 px-5 font-bold text-forest no-underline transition-colors duration-200 hover:border-pink hover:bg-pink/8 hover:text-pink sm:justify-self-end"
               >
                 Ver resultados
               </button>
@@ -487,7 +490,7 @@ export function ServiceModal({
                 href={whatsappHref}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex min-h-9 items-center justify-center justify-self-start rounded-full border border-pink px-5 text-[0.82rem] font-bold text-pink no-underline transition-colors duration-200 hover:bg-pink hover:text-white sm:justify-self-end"
+                className="type-body-sm inline-flex min-h-9 items-center justify-center justify-self-start rounded-full border border-pink px-5 font-bold text-pink no-underline transition-colors duration-200 hover:bg-pink hover:text-white sm:justify-self-end"
               >
                 {ctaLabel}
               </a>
@@ -508,16 +511,16 @@ export function ServiceModal({
             </div>
 
             <div className="min-w-0 py-1 pr-1">
-              <p className="text-[0.68rem] font-bold uppercase tracking-[0.08em] text-pink">
+              <p className="type-eyebrow font-bold text-pink">
                 Recomendación similar
               </p>
-              <h3 className="mt-0.5 line-clamp-1 font-heading text-[1.45rem] font-semibold leading-none text-forest">
+              <h3 className="type-card-title-compact mt-0.5 line-clamp-1 text-forest">
                 {recommendation.title}
               </h3>
-              <p className="mt-1 line-clamp-1 text-[0.78rem] font-medium leading-5 text-forest-dark/82">
+              <p className="type-caption mt-1 line-clamp-1 font-medium text-forest-dark/82">
                 {recommendation.description}
               </p>
-              <span className="mt-1 inline-block text-[0.8rem] font-bold text-pink">
+              <span className="type-body-sm mt-1 inline-block font-bold text-pink">
                 Ver servicio
               </span>
             </div>

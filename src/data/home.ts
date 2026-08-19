@@ -1,11 +1,14 @@
 import type { PagePlaceholderContent } from '../types/common'
+import { buildWhatsAppContactUrl } from '../utils/whatsapp'
 
 export const homePageContent: PagePlaceholderContent = {
   label: 'Home Hero',
   title: 'Sumérgete en el lujo, tu refugio de bienestar y belleza.',
   description:
     'Montenegro es el santuario donde la sabiduría ancestral, el lujo sensorial y la vanguardia de alta cosmética convergen para renovar tu ser integral.',
-  ctaHref: `https://wa.me/?text=${encodeURIComponent('Hola, quiero reservar una cita en Montenegro Salud y Belleza. ¿Me puedes confirmar disponibilidad?')}`,
+  ctaHref: buildWhatsAppContactUrl(
+    'Hola, quiero reservar una cita en Montenegro Salud y Belleza. ¿Me puedes confirmar disponibilidad?',
+  ),
   ctaLabel: 'RESERVA TU CITA',
 }
 

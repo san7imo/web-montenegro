@@ -31,9 +31,9 @@ export function FiloClosing() {
       <div className="absolute inset-0 bg-forest/72" />
 
       <Container className="relative z-10 flex min-h-[17rem] items-center justify-center px-6 py-12 text-center sm:min-h-[20rem] lg:min-h-[22rem]">
-        <motion.div className="mx-auto max-w-[58rem]" {...fadeUp}>
+        <motion.div className="mx-auto w-full min-w-0 max-w-[58rem]" {...fadeUp}>
           <DecorativeLine variant="pink" className="mx-auto mb-10 w-[28rem] max-w-[68%] opacity-90" />
-          <p className="text-[1.18rem] font-medium leading-8 text-pink-soft sm:text-[1.42rem] sm:leading-9 lg:text-[1.55rem]">
+          <p className="type-quote font-medium text-pink-soft">
             {filoClosingContent.description}
           </p>
         </motion.div>

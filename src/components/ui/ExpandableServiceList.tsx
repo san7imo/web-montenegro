@@ -38,7 +38,7 @@ export function ExpandableServiceList<T>({
             aria-expanded={isExpanded}
             onClick={() => setIsExpanded((current) => !current)}
             className={[
-              'inline-flex min-h-11 items-center justify-center rounded-full border border-pink bg-pink px-8 py-3 text-[0.74rem] font-bold uppercase tracking-[0.14em] text-white shadow-[0_16px_34px_rgba(194,11,114,0.24)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-pink-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink focus-visible:ring-offset-2 focus-visible:ring-offset-cream',
+              'type-action inline-flex min-h-11 items-center justify-center rounded-full border border-pink bg-pink px-8 py-3 font-bold text-white shadow-[0_16px_34px_rgba(194,11,114,0.24)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-pink-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink focus-visible:ring-offset-2 focus-visible:ring-offset-cream',
               buttonClassName,
             ]
               .filter(Boolean)

@@ -15,7 +15,7 @@ type ButtonProps = {
   AnchorHTMLAttributes<HTMLAnchorElement>
 
 const baseStyles =
-  'inline-flex min-h-11 items-center justify-center gap-3 rounded-full border px-6 py-3 text-[0.72rem] font-semibold uppercase tracking-[0.2em] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2'
+  'type-action inline-flex min-h-11 items-center justify-center gap-3 rounded-full border px-6 py-3 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2'
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:

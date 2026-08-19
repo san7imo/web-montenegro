@@ -1,4 +1,4 @@
-import { buildCategoryServiceItems } from './servicePricing'
+import { buildMappedCategoryServiceItems } from './servicePricing'
 
 export const oasisHeroContent = {
   titleLines: ['Oasis:', 'Tu Ritual de Purificación.'],
@@ -10,21 +10,21 @@ export const oasisHeroContent = {
 
 export const oasisPurificationExperiencesContent = {
   titleLines: ['Experiencias de', 'Purificación'],
-  items: buildCategoryServiceItems('oasis', [
-    'ritualesEnTina',
-    'exfoliacion',
-    'drenajeLinfatico',
-    'masajeRelajante',
-    'ventosas',
-    'ritualesEnTina',
-    'exfoliacion',
-    'ritualesEnTina',
-    'masajeRelajante',
-    'exfoliacion',
-    'ritualesEnTina',
-    'descontracturante',
-    'ritualesEnTina',
-  ] as const),
+  items: buildMappedCategoryServiceItems('oasis', {
+    'cerrar-matriz': 'cerrarMatriz',
+    'exfoliacion-corporal-frutal': 'exfoliacion',
+    'drenaje-linfatico': 'drenajeLinfatico',
+    'masaje-relajante': 'masajeRelajante',
+    ventosas: 'ventosas',
+    'bano-de-flores': 'banoFlores',
+    'ritual-botanico': 'ritualBotanico',
+    'bano-cleopatra': 'banoCleopatra',
+    'ritual-dos-almas': 'ritualDosAlmas',
+    'ritual-de-cacao': 'ritualCacao',
+    'ritual-vida': 'ritualVida',
+    'ritual-volcanico': 'ritualVolcanico',
+    'tina-de-sanacion': 'ritualesEnTina',
+  } as const),
   ctaLabel: 'RESERVA TU CITA',
   ctaHref: '/contacto',
 } as const

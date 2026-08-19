@@ -37,11 +37,12 @@ export function OasisHero() {
         <HeroOverlay />
 
         <div className="relative z-10 flex h-full items-end px-[6.2vw] pb-8 sm:pb-10 lg:pb-9">
-          <div className="max-w-[70rem]">
+          <div className="w-full min-w-0 max-w-[70rem]">
             <motion.div {...fadeUp(0.06)}>
               <SectionTitle
                 as="h1"
-                className="text-pink-soft drop-shadow-[0_10px_20px_rgba(18,22,18,0.3)] sm:text-[4.25rem] lg:text-[5.2rem] lg:leading-[0.9]"
+                variant="display"
+                className="text-pink-soft drop-shadow-[0_10px_20px_rgba(18,22,18,0.3)]"
               >
                 <span className="block">{oasisHeroContent.titleLines[0]}</span>
                 <span className="block">{oasisHeroContent.titleLines[1]}</span>
@@ -49,7 +50,7 @@ export function OasisHero() {
             </motion.div>
 
             <motion.p
-              className="mt-3 max-w-[52rem] text-[1rem] leading-7 text-cream-light/95 sm:text-[1.08rem] lg:text-[1.14rem]"
+              className="type-lead mt-3 max-w-[52rem] text-cream-light/95"
               {...fadeUp(0.18)}
             >
               {oasisHeroContent.description}
@@ -61,7 +62,7 @@ export function OasisHero() {
       <div className="bg-forest">
         <Container className="px-7 py-12 sm:px-8 sm:py-14 lg:px-12 lg:py-16">
           <motion.div className="mx-auto max-w-[51rem]" {...fadeUp(0.24)}>
-            <p className="text-[1.08rem] leading-[1.85] text-cream-light/96 sm:text-[1.18rem] sm:leading-[1.95] lg:text-[1.2rem] lg:leading-[2.05]">
+            <p className="type-lead text-cream-light/96">
               {oasisHeroContent.bodyDescription}
             </p>
             <DecorativeLine variant="light" className="mx-auto mt-10 w-[62%] max-w-[26rem] opacity-95" />

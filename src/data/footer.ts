@@ -1,4 +1,5 @@
 import type { FooterContent } from '../types/common'
+import { buildWhatsAppContactUrl } from '../utils/whatsapp'
 import { navigationLinks } from './navigation'
 
 export const footerContent: FooterContent = {
@@ -33,7 +34,9 @@ export const footerContent: FooterContent = {
     },
     {
       label: 'WhatsApp',
-      href: `https://wa.me/?text=${encodeURIComponent('Hola, quiero reservar una cita en Montenegro Salud y Belleza. ¿Me puedes confirmar disponibilidad?')}`,
+      href: buildWhatsAppContactUrl(
+        'Hola, quiero reservar una cita en Montenegro Salud y Belleza. ¿Me puedes confirmar disponibilidad?',
+      ),
       platform: 'whatsapp',
     },
     {

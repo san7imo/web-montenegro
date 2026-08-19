@@ -36,7 +36,7 @@ export function OasisBenefits() {
       <Container className="relative z-10 min-h-[34rem] px-5 py-10 sm:px-6 sm:py-12 lg:min-h-[36rem] lg:px-10 lg:py-12">
         <div className="max-w-[43rem]">
           <motion.p
-            className="text-[1.1rem] leading-8 text-pink-soft sm:text-[1.18rem]"
+            className="type-lead text-pink-soft"
             {...fadeUp(0.04)}
           >
             {oasisBenefitsContent.label}
@@ -45,7 +45,7 @@ export function OasisBenefits() {
           <motion.div className="mt-1" {...fadeUp(0.1)}>
             <SectionTitle
               as="h2"
-              className="max-w-[14ch] text-white sm:text-[4.4rem] lg:text-[5.25rem]"
+              className="max-w-[14ch] text-white"
             >
               {oasisBenefitsContent.title}
             </SectionTitle>
@@ -58,7 +58,7 @@ export function OasisBenefits() {
           </motion.div>
 
           <motion.p
-            className="mx-auto mt-8 max-w-[46rem] text-center text-[1.08rem] leading-8 text-white/96 sm:text-[1.12rem] lg:mx-0 lg:max-w-[40rem] lg:text-center"
+            className="type-lead mx-auto mt-8 max-w-[46rem] text-center text-white/96 lg:mx-0 lg:max-w-[40rem]"
             {...fadeUp(0.22)}
           >
             {oasisBenefitsContent.description}
@@ -69,7 +69,7 @@ export function OasisBenefits() {
               to={oasisBenefitsContent.ctaHref}
               variant="outline"
               showArrow
-              className="min-w-[16rem] border-pink-soft bg-transparent px-8 text-[0.8rem] tracking-[0.08em] text-pink-soft hover:border-white hover:bg-white/10 hover:text-white"
+              className="min-w-[16rem] border-pink-soft bg-transparent px-8 tracking-[0.08em] text-pink-soft hover:border-white hover:bg-white/10 hover:text-white"
             >
               {oasisBenefitsContent.ctaLabel}
             </Button>

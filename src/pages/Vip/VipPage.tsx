@@ -17,9 +17,9 @@ import {
 import logo from '../../assets/logo/montenegro-logo-footer.webp'
 import symbol from '../../assets/logo/montenegro-symbol.webp'
 import { serviceNavigationLinks } from '../../data/navigation'
-import { buildWhatsAppUrl, CLUB_CAMPAIGNS, LINKS, MESSAGES } from './clubConfig'
+import { buildWhatsAppUrl, LINKS, MESSAGES, VIP_CAMPAIGNS } from './vipConfig'
 
-type ClubCardProps = {
+type VipCardProps = {
   children: ReactNode
   className?: string
   surface?: 'light' | 'dark' | 'solid' | 'warm'
@@ -36,7 +36,7 @@ type ActionLinkProps = {
   tone?: 'primary' | 'light' | 'outline' | 'soft'
 }
 
-const clubServices = [
+const vipServices = [
   ...serviceNavigationLinks,
   { label: 'ECO', href: '/eco', description: 'Universo Montenegro' },
 ]
@@ -59,7 +59,7 @@ const cardSurfaceStyles = {
   warm: 'border-white/62 bg-[#efe4d4] text-forest-dark',
 }
 
-function ClubCard({ children, className = '', surface = 'light', ...props }: ClubCardProps) {
+function VipCard({ children, className = '', surface = 'light', ...props }: VipCardProps) {
   return (
     <section
       className={[
@@ -87,7 +87,7 @@ function ActionLink({
   tone = 'light',
 }: ActionLinkProps) {
   const classes = [
-    'inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full border px-5 py-3 text-center text-[0.82rem] font-semibold leading-5 transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink focus-visible:ring-offset-2',
+    'type-body-sm inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full border px-5 py-3 text-center font-semibold transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink focus-visible:ring-offset-2',
     toneStyles[tone],
     disabled ? 'cursor-not-allowed opacity-70 hover:bg-pink' : '',
     className,
@@ -132,17 +132,17 @@ function isMobileViewport() {
   return window.matchMedia('(max-width: 767px), (pointer: coarse)').matches
 }
 
-export function ClubPage() {
+export function VipPage() {
   const [toast, setToast] = useState('')
   const [isTreatmentsOpen, setIsTreatmentsOpen] = useState(false)
 
   const reviewUrl = useMemo(() => LINKS.googleReview, [])
 
   useEffect(() => {
-    document.title = 'Club Montenegro | Montenegro Salud y Belleza'
+    document.title = 'Montenegro VIP | Montenegro Salud y Belleza'
 
     const description =
-      'Accede al Club Montenegro, activa beneficios exclusivos, reserva tu próxima cita, comparte tu experiencia y descubre tratamientos premium de belleza y bienestar.'
+      'Accede a Montenegro VIP, activa beneficios exclusivos, reserva tu próxima cita, comparte tu experiencia y descubre tratamientos premium de belleza y bienestar.'
     let metaDescription = document.querySelector<HTMLMetaElement>('meta[name="description"]')
 
     if (!metaDescription) {
@@ -180,7 +180,7 @@ export function ClubPage() {
     const shareData = {
       title: 'Montenegro Salud y Belleza',
       text: MESSAGES.invite,
-      url: LINKS.website,
+      url: LINKS.vip,
     }
 
     try {
@@ -217,43 +217,43 @@ export function ClubPage() {
             className="mx-auto h-[8.25rem] w-auto object-contain opacity-95 [filter:brightness(0)_saturate(100%)_invert(25%)_sepia(17%)_saturate(651%)_hue-rotate(93deg)_brightness(92%)_contrast(88%)]"
             loading="eager"
           />
-          <p className="mt-4 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-pink">
-            Bienvenida al Club Montenegro
+          <p className="type-eyebrow mt-4 text-pink">
+            Bienvenida a Montenegro VIP
           </p>
-          <h1 className="mt-3 font-heading text-[2.25rem] font-semibold leading-[0.95] text-forest-dark">
+          <h1 className="type-feature-title mt-3 text-forest-dark">
             Tu experiencia continúa después de tu visita.
           </h1>
-          <p className="mx-auto mt-4 max-w-[19rem] text-[0.92rem] leading-6 text-forest-dark/70">
+          <p className="type-body-sm mx-auto mt-4 max-w-[19rem] text-forest-dark/70">
             Accede a beneficios, comparte tu experiencia y reserva tu próximo momento de bienestar.
           </p>
         </header>
 
         <ActionLink
-          href={CLUB_CAMPAIGNS.lipoSweepstakes.isActive
-            ? CLUB_CAMPAIGNS.lipoSweepstakes.href
+          href={VIP_CAMPAIGNS.lipoSweepstakes.isActive
+            ? VIP_CAMPAIGNS.lipoSweepstakes.href
             : undefined}
-          target={CLUB_CAMPAIGNS.lipoSweepstakes.isActive ? '_blank' : undefined}
-          disabled={!CLUB_CAMPAIGNS.lipoSweepstakes.isActive}
+          target={VIP_CAMPAIGNS.lipoSweepstakes.isActive ? '_blank' : undefined}
+          disabled={!VIP_CAMPAIGNS.lipoSweepstakes.isActive}
           tone="primary"
           icon={<FiGift />}
-          className="min-h-14 text-[0.86rem] shadow-[0_20px_42px_rgba(194,11,114,0.3)]"
+          className="min-h-14 shadow-[0_20px_42px_rgba(194,11,114,0.3)]"
         >
           <span className="flex flex-col items-center leading-tight">
             <span>Sorteo: Lipo Sin Cirugía</span>
-            <span className="mt-1 text-[0.62rem] font-bold uppercase tracking-[0.14em] text-white/82">
+            <span className="type-caption mt-1 font-bold uppercase tracking-[0.14em] text-white/82">
               Próximamente
             </span>
           </span>
         </ActionLink>
 
-        <ClubCard surface="dark">
+        <VipCard surface="dark">
           <div className="flex items-start gap-4">
             <img src={symbol} alt="" className="mt-1 h-10 w-10 object-contain opacity-86" loading="lazy" />
             <div>
-              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-pink-soft">
+              <p className="type-eyebrow text-pink-soft">
                 Queremos escucharte
               </p>
-              <h2 className="mt-4 font-heading text-[1.85rem] font-semibold leading-[1.08]">
+              <h2 className="type-card-title-compact mt-4">
                 ¿Cómo ha sido tu experiencia hoy con nosotros?
               </h2>
             </div>
@@ -267,16 +267,16 @@ export function ClubPage() {
               Quiero dejar una sugerencia
             </ActionLink>
           </div>
-        </ClubCard>
+        </VipCard>
 
-        <ClubCard surface="solid" className="p-6 text-center">
-          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-pink">
+        <VipCard surface="solid" className="p-6 text-center">
+          <p className="type-eyebrow text-pink">
             Beneficio exclusivo
           </p>
-          <h2 className="mt-3 font-heading text-[2rem] font-semibold leading-none text-forest-dark">
+          <h2 className="type-card-title-compact mt-3 text-forest-dark">
             Recibe un 5% de descuento por contar tu experiencia
           </h2>
-          <p className="mx-auto mt-3 max-w-[18rem] text-[0.9rem] leading-6 text-forest-dark/68">
+          <p className="type-body-sm mx-auto mt-3 max-w-[18rem] text-forest-dark/68">
             Completa estos dos pasos para conseguirlo:
           </p>
 
@@ -291,8 +291,8 @@ export function ClubPage() {
                 <FiStar aria-hidden="true" />
               </span>
               <span>
-                <span className="block text-[0.82rem] font-semibold">1. Valóranos en Google</span>
-                <span className="mt-0.5 block text-[0.74rem] leading-4 text-forest-dark/58">
+                <span className="type-body-sm block font-semibold">1. Valóranos en Google</span>
+                <span className="type-caption mt-0.5 block text-forest-dark/58">
                   Cuenta cómo fue tu visita de hoy.
                 </span>
               </span>
@@ -307,10 +307,10 @@ export function ClubPage() {
                 <FaInstagram aria-hidden="true" />
               </span>
               <span>
-                <span className="block text-[0.82rem] font-semibold">
+                <span className="type-body-sm block font-semibold">
                   2. Sube una story etiquetándonos
                 </span>
-                <span className="mt-0.5 block text-[0.74rem] leading-4 text-forest-dark/58">
+                <span className="type-caption mt-0.5 block text-forest-dark/58">
                   Menciona a @montenegrosaludbelleza.
                 </span>
               </span>
@@ -322,17 +322,17 @@ export function ClubPage() {
             target="_blank"
             tone="primary"
             icon={<FiCheckCircle />}
-            className="mt-5 min-h-14 text-[0.82rem] shadow-[0_20px_40px_rgba(194,11,114,0.32)]"
+            className="mt-5 min-h-14 shadow-[0_20px_40px_rgba(194,11,114,0.32)]"
           >
             Listo, aplicar descuento.
           </ActionLink>
-        </ClubCard>
+        </VipCard>
 
-        <ClubCard>
-          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-pink">
+        <VipCard>
+          <p className="type-eyebrow text-pink">
             Reserva y regala
           </p>
-          <h2 className="mt-2 font-heading text-[1.75rem] font-semibold leading-none">
+          <h2 className="type-card-title-compact mt-2">
             Continúa tu ritual cuando quieras.
           </h2>
           <div className="mt-5 grid gap-3">
@@ -346,20 +346,20 @@ export function ClubPage() {
               Explorar tratamientos
             </ActionLink>
           </div>
-        </ClubCard>
+        </VipCard>
 
-        <ClubCard id="tratamientos">
-          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-pink">
+        <VipCard id="tratamientos">
+          <p className="type-eyebrow text-pink">
             Tratamientos
           </p>
           <button
             type="button"
             aria-expanded={isTreatmentsOpen}
-            aria-controls="club-treatments-menu"
+            aria-controls="vip-treatments-menu"
             onClick={() => setIsTreatmentsOpen((current) => !current)}
             className="mt-2 flex w-full items-center justify-between gap-4 rounded-2xl border border-forest/10 bg-[#fbf8f1] px-4 py-3 text-left transition duration-300 hover:border-pink/28 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink focus-visible:ring-offset-2"
           >
-            <span className="font-heading text-[1.55rem] font-semibold leading-none text-forest-dark">
+            <span className="type-card-title-compact text-forest-dark">
               Elige tu universo de cuidado.
             </span>
             <span
@@ -376,7 +376,7 @@ export function ClubPage() {
           </button>
 
           <div
-            id="club-treatments-menu"
+            id="vip-treatments-menu"
             className={[
               'grid overflow-hidden transition-[grid-template-rows,opacity,margin] duration-300 ease-out',
               isTreatmentsOpen ? 'mt-4 grid-rows-[1fr] opacity-100' : 'mt-0 grid-rows-[0fr] opacity-0',
@@ -386,17 +386,17 @@ export function ClubPage() {
           >
             <div className="min-h-0">
               <div className="grid gap-2.5">
-                {clubServices.map((service) => (
+                {vipServices.map((service) => (
                   <a
                     key={service.href}
                     href={service.href}
                     className="group flex min-h-14 items-center justify-between gap-4 rounded-2xl border border-forest/10 bg-[#fbf8f1] px-4 py-3 transition duration-300 hover:border-pink/28 hover:bg-white"
                   >
                     <span>
-                      <span className="block text-[0.86rem] font-semibold uppercase tracking-[0.12em] text-forest-dark">
+                      <span className="type-eyebrow block text-forest-dark">
                         {service.label}
                       </span>
-                      <span className="mt-1 block text-[0.78rem] leading-4 text-forest-dark/62">
+                      <span className="type-caption mt-1 block text-forest-dark/62">
                         {service.description}
                       </span>
                     </span>
@@ -409,13 +409,13 @@ export function ClubPage() {
               </div>
             </div>
           </div>
-        </ClubCard>
+        </VipCard>
 
-        <ClubCard>
-          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-pink">
+        <VipCard>
+          <p className="type-eyebrow text-pink">
             Zona Selfie
           </p>
-          <h2 className="mt-2 font-heading text-[1.75rem] font-semibold leading-none">
+          <h2 className="type-card-title-compact mt-2">
             Presume tu resultado.
           </h2>
           <div className="mt-5 grid gap-3">
@@ -425,18 +425,18 @@ export function ClubPage() {
             <ActionLink href={LINKS.instagram} target="_blank" tone="light" icon={<FiMessageCircle />}>
               Comenta en nuestro último post
             </ActionLink>
-            <p className="px-2 pt-1 text-center text-[0.76rem] leading-5 text-forest-dark/62">
+            <p className="type-caption px-2 pt-1 text-center text-forest-dark/62">
               Hazte una foto en nuestro espejo y menciona a @montenegrosaludbelleza.
               Aura te enviará un detalle exclusivo por privado.
             </p>
           </div>
-        </ClubCard>
+        </VipCard>
 
-        <ClubCard surface="warm">
-          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-pink">
-            Club de Recomendaciones
+        <VipCard surface="warm">
+          <p className="type-eyebrow text-pink">
+            Programa VIP de Recomendaciones
           </p>
-          <h2 className="mt-2 font-heading text-[1.8rem] font-semibold leading-none">
+          <h2 className="type-card-title-compact mt-2">
             Comparte Montenegro con alguien especial.
           </h2>
           <div className="mt-5 grid gap-3">
@@ -447,7 +447,7 @@ export function ClubPage() {
               Invitar amigos a Montenegro
             </ActionLink>
           </div>
-        </ClubCard>
+        </VipCard>
 
         <footer className="px-4 pb-3 pt-5 text-center">
           <div className="flex items-center justify-center gap-3 text-forest-dark">
@@ -479,13 +479,13 @@ export function ClubPage() {
               <FaFacebookF aria-hidden="true" />
             </a>
           </div>
-          <p className="mt-5 text-[0.86rem] font-semibold text-forest-dark">
+          <p className="type-body-sm mt-5 font-semibold text-forest-dark">
             Montenegro Salud y Belleza
           </p>
-          <p className="mt-1 text-[0.75rem] uppercase tracking-[0.2em] text-forest-dark/52">
+          <p className="type-eyebrow mt-1 text-forest-dark/52">
             Vitoria-Gasteiz
           </p>
-          <p className="mt-4 text-[0.72rem] text-forest-dark/46">
+          <p className="type-caption mt-4 text-forest-dark/46">
             Desarrollado por{' '}
             <a
               href="https://mlanstudio.com/"
@@ -503,7 +503,7 @@ export function ClubPage() {
         role="status"
         aria-live="polite"
         className={[
-          'fixed inset-x-4 bottom-5 z-[80] mx-auto max-w-[390px] rounded-2xl bg-forest-dark px-4 py-3 text-center text-[0.84rem] font-medium text-white shadow-[0_18px_42px_rgba(31,53,43,0.22)] transition duration-300',
+          'type-body-sm fixed inset-x-4 bottom-5 z-[80] mx-auto max-w-[390px] rounded-2xl bg-forest-dark px-4 py-3 text-center font-medium text-white shadow-[0_18px_42px_rgba(31,53,43,0.22)] transition duration-300',
           toast ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-3 opacity-0',
         ]
           .filter(Boolean)
