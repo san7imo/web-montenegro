@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
-import auraImage from '../../../assets/contacto/contactoseccion2.png'
+import auraImage from '../../../assets/contacto/contactoseccion2.webp'
 import { Button } from '../../../components/ui/Button'
 import { ImageLayer } from '../../../components/ui/ImageLayer'
 import { SectionLabel } from '../../../components/ui/SectionLabel'

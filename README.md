@@ -35,8 +35,12 @@ La aplicación se encuentra funcional y compilable. Actualmente están implement
 - Modales detallados para cada servicio.
 - Página Eco con testimonios, resultados y galería.
 - Página de contacto.
+- Formulario de contacto y newsletter conectados a Formspree.
 - Montenegro VIP tipo *link-in-bio*.
 - Aviso legal, privacidad y política de cookies.
+- Consentimiento granular para contenido externo como Google Maps.
+- Metadatos SEO por ruta, sitemap, robots y página 404 propia.
+- Carga diferida por rutas y modales, fuentes locales e imágenes WebP optimizadas.
 - Navegación responsive, footer común y acceso flotante a WhatsApp.
 
 ## Tecnologías
@@ -108,8 +112,20 @@ El Smart Link público es `https://www.montenegrosaludybelleza.com/vip`. Sus có
 
 - Accesos a teléfono, correo, dirección y Google Maps.
 - CTAs con mensajes de WhatsApp predefinidos.
-- Formulario visual de contacto.
+- Formulario de contacto enviado mediante Formspree.
+- Newsletter enviado mediante un formulario independiente de Formspree.
+- Estados de envío, confirmación y error sin recargar la página.
+- Campos trampa contra bots y aceptación de privacidad obligatoria.
+- El mapa de Google solo se carga después de autorizar contenido externo.
 - Botón flotante de WhatsApp en las páginas principales.
+
+Los endpoints están centralizados en:
+
+```text
+src/data/forms.ts
+```
+
+Formspree permite que ambos formularios lleguen al correo configurado sin mantener un backend propio. La dirección receptora debe verificarse y administrarse desde la cuenta propietaria de cada formulario.
 
 ## Rutas
 
@@ -134,7 +150,7 @@ El Smart Link público es `https://www.montenegrosaludybelleza.com/vip`. Sus có
 | `/legal/politicas-de-seguridad` | Privacidad | Alias compatible con la navegación existente |
 | `/legal/cookies` | Cookies | Información sobre almacenamiento y terceros |
 
-La aplicación usa `BrowserRouter`. En producción, el servidor debe redirigir las rutas que no correspondan a un archivo físico hacia `index.html`.
+La aplicación usa `BrowserRouter` y carga cada página mediante un bloque JavaScript independiente. En Apache, las rutas conocidas sirven `index.html`, los aliases antiguos se redirigen de forma permanente y las rutas inexistentes conservan un estado HTTP 404 mientras React muestra la página de error de marca.
 
 ## Catálogo y precios
 
@@ -390,7 +406,7 @@ Los estilos globales se cargan desde `src/styles/globals.css`, que importa Tailw
 - Títulos: Cormorant Garamond.
 - Textos: Inter.
 
-Las fuentes se solicitan desde Google Fonts, por lo que requieren conexión a internet en la primera carga si no están almacenadas en caché.
+Las fuentes se sirven localmente desde `@fontsource-variable` y se limita la compilación a los subconjuntos latinos necesarios. No se realizan solicitudes a Google Fonts.
 
 La escala responsive está centralizada en `src/styles/typography.css`. Cada texto debe utilizar una categoría semántica en lugar de declarar un tamaño arbitrario dentro de la página:
 
@@ -446,7 +462,7 @@ Antes de publicar cambios visuales, revisar como mínimo anchos cercanos a 360 p
 
 ## SEO, cookies y páginas legales
 
-`index.html` contiene:
+`index.html` contiene los valores generales de respaldo para:
 
 - idioma español;
 - descripción general;
@@ -456,17 +472,29 @@ Antes de publicar cambios visuales, revisar como mínimo anchos cercanos a 360 p
 - imagen social de 1200 × 630;
 - favicon.
 
-La página Montenegro VIP actualiza su título y descripción al montarse.
+`src/components/ui/SeoManager.tsx` y `src/data/seo.ts` actualizan por ruta:
 
-El consentimiento de cookies guarda la elección en `localStorage` bajo la clave:
+- título y descripción;
+- URL canonical;
+- directiva de indexación;
+- Open Graph;
+- Twitter Card.
+
+Las rutas inexistentes usan `noindex, follow`. `public/robots.txt` y `public/sitemap.xml` publican únicamente las rutas canónicas; `/club` y el alias antiguo de privacidad no se incluyen en el sitemap.
+
+El consentimiento guarda la elección en una cookie propia bajo el nombre:
 
 ```text
-montenegro-cookie-consent
+montenegro_cookie_consent
 ```
 
-Actualmente no hay scripts de analítica o publicidad. Si se incorporan, deben cargarse únicamente después del consentimiento correspondiente y actualizarse las políticas legales.
+La categoría necesaria conserva la preferencia durante 182 días. La categoría `functionality` controla Google Maps, que no se inserta en el documento antes del consentimiento. El enlace “Configurar cookies” del footer permite modificar la decisión.
+
+Actualmente no hay scripts de analítica o publicidad. Si se incorporan, deben cargarse únicamente después del consentimiento correspondiente y deberán actualizarse el banner y las políticas legales.
 
 Los textos legales se centralizan en `src/data/legal.ts`.
+
+La razón social y el NIF/CIF permanecen marcados como pendientes de confirmación. Deben completarse antes de la publicación jurídica definitiva.
 
 ## Despliegue
 
@@ -483,7 +511,16 @@ npm run build
 4. Confirmar que también se haya subido `dist/.htaccess`.
 5. Verificar directamente rutas como `/filo`, `/vip` y `/legal/cookies`.
 
-`public/.htaccess` contiene la regla de fallback necesaria para React Router y Vite lo copia al build.
+`public/.htaccess` contiene:
+
+- reescritura de rutas conocidas para React Router;
+- redirecciones 301 de aliases antiguos;
+- respuesta 404 para rutas inexistentes;
+- compresión de recursos de texto;
+- caché prolongada para assets versionados;
+- cabeceras básicas de seguridad y privacidad.
+
+Vite lo copia automáticamente al build.
 
 ### Otros proveedores
 
@@ -502,6 +539,7 @@ Antes de entregar o desplegar:
 ```bash
 npm run lint
 npm run build
+npm audit
 ```
 
 Checklist recomendado:
@@ -517,14 +555,19 @@ Checklist recomendado:
 - revisar Montenegro VIP en móvil;
 - verificar el banner de cookies y las páginas legales;
 - revisar metadatos e imagen social en producción.
+- confirmar la recepción real del formulario y newsletter en Formspree;
+- comprobar que el servidor devuelve 301 en aliases y 404 en rutas inexistentes;
+- completar razón social y NIF/CIF antes de la publicación legal definitiva.
 
 ## Limitaciones actuales
 
-- El formulario de contacto es únicamente visual y todavía no envía datos a un backend, correo o CRM.
+- La razón social y el NIF/CIF todavía no han sido facilitados y permanecen señalados en `src/data/legal.ts`.
 - El botón **Sorteo: Lipo Sin Cirugía** ya tiene la URL definitiva, pero permanece desactivado mediante configuración hasta que comience la campaña.
 - No hay pruebas unitarias, de integración o E2E automatizadas.
 - No existe integración automática entre el Excel y `servicePricing.ts`; la sincronización debe revisarse antes de publicar.
-- Vite puede mostrar una advertencia por el tamaño del bundle principal. No impide compilar, pero puede mejorarse en el futuro con división de código por rutas.
+- La entrega de formularios depende de la disponibilidad y configuración de los dos formularios de Formspree.
+
+El bundle está dividido por rutas. Los modales y Cookie Consent también se cargan de forma diferida, y el build actual no genera advertencias por tamaño de JavaScript.
 
 ## Propiedad y uso
 

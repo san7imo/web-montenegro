@@ -1,12 +1,12 @@
-import cejasHennaImage from '../../assets/filo/cejasconhena.png'
-import depilacionCeraImage from '../../assets/filo/depilacionconcera.png'
+import cejasHennaImage from '../../assets/filo/cejasconhena.webp'
+import depilacionCeraImage from '../../assets/filo/depilacionconcera.webp'
 import depilacionCejasCeraImage from '../../assets/filo/depilacion-cejas-cera.webp'
-import depilacionIplImage from '../../assets/filo/depilacionipl.png'
+import depilacionIplImage from '../../assets/filo/depilacionipl.webp'
 import eliminacionMicropigmentacionCejasImage from '../../assets/filo/eliminacion-micropigmentacion-cejas.webp'
-import laserDiodoImage from '../../assets/filo/depilacionlaserdiodo.png'
-import extensionesPestanasImage from '../../assets/filo/extensionesdepestañas.png'
-import laminadoCejasImage from '../../assets/filo/laminadodecejas.png'
-import liftingPestanasImage from '../../assets/filo/liftingdepestañas.png'
+import laserDiodoImage from '../../assets/filo/depilacionlaserdiodo.webp'
+import extensionesPestanasImage from '../../assets/filo/extensionesdepestañas.webp'
+import laminadoCejasImage from '../../assets/filo/laminadodecejas.webp'
+import liftingPestanasImage from '../../assets/filo/liftingdepestañas.webp'
 import microbladingCejasImage from '../../assets/filo/microblading-cejas.webp'
 import micropigmentacionCejasImage from '../../assets/filo/micropigmentacion-cejas.webp'
 import pestanasOjoGatoImage from '../../assets/filo/pestanas-ojo-gato.webp'
@@ -15,7 +15,7 @@ import pestanasWispyImage from '../../assets/filo/pestanas-wispy.webp'
 import { Button } from '../ui/Button'
 import { ImageLayer } from '../ui/ImageLayer'
 import { PriceText } from '../ui/PriceText'
-import { ServiceModal } from '../ui/ServiceModal'
+import { DeferredServiceModal } from '../ui/DeferredServiceModal'
 import { useServiceModalState } from '../ui/useServiceModalState'
 
 type FiloExperienceImageKey =
@@ -130,7 +130,7 @@ export function FiloExperienceCard({
         </div>
       </div>
     </article>
-    <ServiceModal
+    <DeferredServiceModal
       isOpen={isModalOpen}
       onClose={closeModal}
       category="filo"

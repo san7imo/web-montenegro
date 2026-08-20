@@ -1,0 +1,63 @@
+#cc-main {
+  --cc-font-family: var(--font-body);
+  --cc-modal-border-radius: 1.5rem;
+  --cc-btn-border-radius: 999px;
+  --cc-link-color: var(--color-pink);
+  --cc-bg: var(--color-cream-light);
+  --cc-primary-color: var(--color-forest-dark);
+  --cc-secondary-color: rgba(36, 61, 49, 0.76);
+  --cc-btn-primary-bg: var(--color-pink);
+  --cc-btn-primary-color: var(--color-white);
+  --cc-btn-primary-border-color: var(--color-pink);
+  --cc-btn-primary-hover-bg: var(--color-pink-dark);
+  --cc-btn-primary-hover-color: var(--color-white);
+  --cc-btn-primary-hover-border-color: var(--color-pink-dark);
+  --cc-btn-secondary-bg: var(--color-forest);
+  --cc-btn-secondary-color: var(--color-white);
+  --cc-btn-secondary-border-color: var(--color-forest);
+  --cc-btn-secondary-hover-bg: var(--color-forest-dark);
+  --cc-btn-secondary-hover-color: var(--color-white);
+  --cc-btn-secondary-hover-border-color: var(--color-forest-dark);
+  --cc-separator-border-color: rgba(47, 77, 60, 0.14);
+  --cc-toggle-on-bg: var(--color-pink);
+  --cc-toggle-off-bg: var(--color-forest-soft);
+  --cc-toggle-readonly-bg: rgba(111, 128, 104, 0.55);
+  --cc-cookie-category-block-bg: rgba(232, 221, 202, 0.7);
+  --cc-cookie-category-block-border: rgba(47, 77, 60, 0.12);
+  --cc-cookie-category-block-hover-bg: rgba(232, 221, 202, 0.95);
+  --cc-cookie-category-block-hover-border: rgba(47, 77, 60, 0.2);
+  --cc-cookie-category-expanded-block-bg: rgba(247, 242, 232, 0.82);
+  --cc-cookie-category-expanded-block-hover-bg: rgba(47, 77, 60, 0.12);
+  --cc-overlay-bg: rgba(31, 53, 43, 0.7);
+  --cc-footer-bg: rgba(232, 221, 202, 0.58);
+  --cc-footer-color: rgba(36, 61, 49, 0.7);
+  --cc-footer-border-color: rgba(47, 77, 60, 0.12);
+}
+
+#cc-main .cm,
+#cc-main .pm {
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: 0 24px 64px rgba(31, 53, 43, 0.24);
+}
+
+#cc-main .cm__title,
+#cc-main .pm__title {
+  font-family: var(--font-heading);
+  font-size: 1.55rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
+
+#cc-main .cm__btn,
+#cc-main .pm__btn {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+#cc-main .pm__section-title {
+  color: var(--color-forest-dark);
+}
+

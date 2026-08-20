@@ -1,16 +1,16 @@
-import envolturaImage from '../../assets/brote/envoltura.png'
-import manicuraPedicuraImage from '../../assets/brote/manicuraypedicura.png'
-import masajeCorporalImage from '../../assets/brote/masajecorpotal.png'
+import envolturaImage from '../../assets/brote/envoltura.webp'
+import manicuraPedicuraImage from '../../assets/brote/manicuraypedicura.webp'
+import masajeCorporalImage from '../../assets/brote/masajecorpotal.webp'
 import meriendaSaludableImage from '../../assets/brote/merienda-saludable.webp'
-import miniHairSpaImage from '../../assets/brote/minihairspa.png'
+import miniHairSpaImage from '../../assets/brote/minihairspa.webp'
 import miniSpaPartyImage from '../../assets/brote/mini-spa-party.webp'
-import peinadosImage from '../../assets/brote/peinados.png'
-import spaFacialImage from '../../assets/brote/spafacial.png'
-import tinaMagicaImage from '../../assets/brote/tinamagica.png'
+import peinadosImage from '../../assets/brote/peinados.webp'
+import spaFacialImage from '../../assets/brote/spafacial.webp'
+import tinaMagicaImage from '../../assets/brote/tinamagica.webp'
 import { Button } from '../ui/Button'
 import { ImageLayer } from '../ui/ImageLayer'
 import { PriceText } from '../ui/PriceText'
-import { ServiceModal } from '../ui/ServiceModal'
+import { DeferredServiceModal } from '../ui/DeferredServiceModal'
 import { useServiceModalState } from '../ui/useServiceModalState'
 
 type BroteExperienceImageKey =
@@ -117,7 +117,7 @@ export function BroteExperienceCard({
         </div>
       </div>
     </article>
-    <ServiceModal
+    <DeferredServiceModal
       isOpen={isModalOpen}
       onClose={closeModal}
       category="brote"

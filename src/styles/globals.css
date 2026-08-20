@@ -1,11 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import "vanilla-cookieconsent/dist/cookieconsent.css";
 @import "tailwindcss";
 @import "./typography.css";
 @import "./utilities.css";
+@import "./cookie-consent.css";
+
+@font-face {
+  font-family: "Cormorant Garamond Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300 700;
+  src: url("@fontsource-variable/cormorant-garamond/files/cormorant-garamond-latin-wght-normal.woff2") format("woff2-variations");
+}
+
+@font-face {
+  font-family: "Inter Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("@fontsource-variable/inter/files/inter-latin-wght-normal.woff2") format("woff2-variations");
+}
 
 :root {
-  --font-heading: "Cormorant Garamond", serif;
-  --font-body: "Inter", sans-serif;
+  --font-heading: "Cormorant Garamond Variable", "Cormorant Garamond", serif;
+  --font-body: "Inter Variable", "Inter", sans-serif;
   --color-forest: #2f4d3c;
   --color-forest-dark: #243d31;
   --color-forest-deep: #1f352b;
@@ -31,8 +48,8 @@
 }
 
 @theme {
-  --font-heading: "Cormorant Garamond", serif;
-  --font-body: "Inter", sans-serif;
+  --font-heading: "Cormorant Garamond Variable", "Cormorant Garamond", serif;
+  --font-body: "Inter Variable", "Inter", sans-serif;
 
   --color-forest: #2f4d3c;
   --color-forest-dark: #243d31;

@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
-import atelierImage from '../../../assets/hebra/segundaseccion.png'
+import atelierImage from '../../../assets/hebra/segundaseccion.webp'
 import { ImageLayer } from '../../../components/ui/ImageLayer'
 import { SectionTitle } from '../../../components/ui/SectionTitle'
 import { hebraAtelierContent } from '../../../data/hebra'

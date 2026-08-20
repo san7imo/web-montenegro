@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
-import broteHeroBackground from '../../../assets/brote/herobrote.png'
+import broteHeroBackground from '../../../assets/brote/herobrote.webp'
 import { Container } from '../../../components/ui/Container'
 import { DecorativeLine } from '../../../components/ui/DecorativeLine'
 import { HeroOverlay } from '../../../components/ui/HeroOverlay'

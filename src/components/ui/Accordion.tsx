@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useId, useState } from 'react'
 
 type AccordionItem = {
   id: string
@@ -18,16 +18,21 @@ export function Accordion({
   className = '',
 }: AccordionProps) {
   const [openId, setOpenId] = useState<string | null>(defaultOpenId ?? items[0]?.id ?? null)
+  const accordionId = useId()
 
   return (
     <div className={['space-y-4', className].filter(Boolean).join(' ')}>
       {items.map((item) => {
         const isOpen = item.id === openId
+        const buttonId = `${accordionId}-${item.id}-button`
+        const panelId = `${accordionId}-${item.id}-panel`
 
         return (
           <div key={item.id} className="space-y-3">
             <button
               type="button"
+              id={buttonId}
+              aria-controls={panelId}
               aria-expanded={isOpen}
               onClick={() => setOpenId(isOpen ? null : item.id)}
               className="flex w-full items-center justify-between rounded-[1rem] border border-pink-soft bg-white/5 px-5 py-4 text-left text-pink-soft shadow-[0_10px_24px_rgba(13,24,19,0.12)] transition-colors duration-300 hover:bg-white/10 hover:text-white sm:px-6"
@@ -39,7 +44,12 @@ export function Accordion({
             </button>
 
             {isOpen ? (
-              <div className="type-body rounded-[0.95rem] border border-white/8 bg-forest-dark/28 px-5 py-4 text-cream-light sm:px-6">
+              <div
+                id={panelId}
+                role="region"
+                aria-labelledby={buttonId}
+                className="type-body rounded-[0.95rem] border border-white/8 bg-forest-dark/28 px-5 py-4 text-cream-light sm:px-6"
+              >
                 {item.content}
               </div>
             ) : null}

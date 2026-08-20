@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
-import raizHeroBackground from '../../../assets/raiz/heroraiz.png'
+import raizHeroBackground from '../../../assets/raiz/heroraiz.webp'
 import raizHeroVideo from '../../../assets/videos-hero/optimized/raiz.mp4'
 import { Container } from '../../../components/ui/Container'
 import { DecorativeLine } from '../../../components/ui/DecorativeLine'

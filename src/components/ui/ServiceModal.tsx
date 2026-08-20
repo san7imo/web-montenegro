@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { useNavigate } from 'react-router-dom'
 
@@ -12,7 +12,7 @@ import {
 import { formatPrice } from '../../utils/price'
 import { PriceText } from './PriceText'
 
-type ServiceModalProps = {
+export type ServiceModalProps = {
   ctaLabel?: string
   category: ServiceCategory
   description: string
@@ -262,6 +262,8 @@ export function ServiceModal({
 }: ServiceModalProps) {
   const [isShareOpen, setIsShareOpen] = useState(false)
   const [shareStatus, setShareStatus] = useState('')
+  const dialogRef = useRef<HTMLElement>(null)
+  const titleId = useId()
   const navigate = useNavigate()
   const handleClose = useCallback(() => {
     setIsShareOpen(false)
@@ -287,9 +289,53 @@ export function ServiceModal({
       return
     }
 
+    const previouslyFocusedElement = document.activeElement as HTMLElement | null
+    const dialog = dialogRef.current
+    const focusableSelector = [
+      'a[href]',
+      'button:not([disabled])',
+      'input:not([disabled])',
+      'select:not([disabled])',
+      'textarea:not([disabled])',
+      '[tabindex]:not([tabindex="-1"])',
+    ].join(',')
+
+    const focusFirstControl = () => {
+      const focusableElements = dialog?.querySelectorAll<HTMLElement>(focusableSelector)
+      const firstElement = focusableElements?.[0]
+
+      ;(firstElement ?? dialog)?.focus()
+    }
+
+    const focusFrame = window.requestAnimationFrame(focusFirstControl)
+
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         handleClose()
+        return
+      }
+
+      if (event.key !== 'Tab' || !dialog) return
+
+      const focusableElements = Array.from(
+        dialog.querySelectorAll<HTMLElement>(focusableSelector),
+      )
+
+      if (focusableElements.length === 0) {
+        event.preventDefault()
+        dialog.focus()
+        return
+      }
+
+      const firstElement = focusableElements[0]
+      const lastElement = focusableElements[focusableElements.length - 1]
+
+      if (event.shiftKey && document.activeElement === firstElement) {
+        event.preventDefault()
+        lastElement.focus()
+      } else if (!event.shiftKey && document.activeElement === lastElement) {
+        event.preventDefault()
+        firstElement.focus()
       }
     }
 
@@ -298,8 +344,10 @@ export function ServiceModal({
     window.addEventListener('keydown', handleKeyDown)
 
     return () => {
+      window.cancelAnimationFrame(focusFrame)
       document.body.style.overflow = previousOverflow
       window.removeEventListener('keydown', handleKeyDown)
+      previouslyFocusedElement?.focus()
     }
   }, [handleClose, isOpen])
 
@@ -366,9 +414,11 @@ export function ServiceModal({
       onClick={handleClose}
     >
       <section
+        ref={dialogRef}
         role="dialog"
         aria-modal="true"
-        aria-label={title}
+        aria-labelledby={titleId}
+        tabIndex={-1}
         className="relative z-[10000] grid max-h-[94vh] min-w-0 w-full max-w-[calc(100vw-1.5rem)] grid-cols-[minmax(0,1fr)] overflow-x-hidden overflow-y-auto rounded-[1.6rem] border border-white/85 bg-cream p-3 text-forest shadow-[0_28px_90px_rgba(13,25,20,0.48)] sm:max-w-[64rem] sm:rounded-[2rem] sm:p-4 lg:grid-cols-[minmax(16rem,25rem)_minmax(0,1fr)] lg:gap-x-5 lg:overflow-hidden lg:rounded-[2.35rem]"
         onClick={(event) => event.stopPropagation()}
       >
@@ -444,7 +494,7 @@ export function ServiceModal({
             </button>
           </div>
 
-          <h2 className="type-card-title mt-2 text-forest sm:mt-3">
+          <h2 id={titleId} className="type-card-title mt-2 text-forest sm:mt-3">
             {title}
           </h2>
 

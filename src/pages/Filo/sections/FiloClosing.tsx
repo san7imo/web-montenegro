@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
-import filoClosingBackground from '../../../assets/filo/seccionfinal.png'
+import filoClosingBackground from '../../../assets/filo/seccionfinal.webp'
 import { Container } from '../../../components/ui/Container'
 import { DecorativeLine } from '../../../components/ui/DecorativeLine'
 import { ImageLayer } from '../../../components/ui/ImageLayer'

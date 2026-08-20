@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
-import hebraHeroBackground from '../../../assets/hebra/herohebra.png'
+import hebraHeroBackground from '../../../assets/hebra/herohebra.webp'
 import hebraHeroVideo from '../../../assets/videos-hero/optimized/hebra.mp4'
 import { Container } from '../../../components/ui/Container'
 import { DecorativeLine } from '../../../components/ui/DecorativeLine'

@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
-import tactoClosingBackground from '../../../assets/tacto/ultimaseccion.png'
+import tactoClosingBackground from '../../../assets/tacto/ultimaseccion.webp'
 import { Container } from '../../../components/ui/Container'
 import { DecorativeLine } from '../../../components/ui/DecorativeLine'
 import { ImageLayer } from '../../../components/ui/ImageLayer'

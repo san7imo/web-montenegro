@@ -1,7 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
 import backgroundImage from '../../../assets/esencia/portada-fondo-estetica.webp'
-import olgaWithLeavesImage from '../../../assets/esencia/olga-con-hojas.png'
+import olgaWithLeavesImage from '../../../assets/esencia/olga-con-hojas.webp'
 import { esenciaHeroContent } from '../../../data/esencia'
 import { Container } from '../../../components/ui/Container'
 import { ImageLayer } from '../../../components/ui/ImageLayer'

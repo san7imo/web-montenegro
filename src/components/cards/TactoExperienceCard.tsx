@@ -1,17 +1,17 @@
-import acrilicasImage from '../../assets/tacto/acrilicas.png'
-import cortarYLimarImage from '../../assets/tacto/cortarylimar.png'
-import esmalteTradicionalImage from '../../assets/tacto/esmaltetradicional.png'
+import acrilicasImage from '../../assets/tacto/acrilicas.webp'
+import cortarYLimarImage from '../../assets/tacto/cortarylimar.webp'
+import esmalteTradicionalImage from '../../assets/tacto/esmaltetradicional.webp'
 import laserAntihongosImage from '../../assets/tacto/laser-antihongos.webp'
-import mantenimientoAcrilicoImage from '../../assets/tacto/mantenimientoacrilico.png'
-import permanenteImage from '../../assets/tacto/permanente.png'
-import pressOnImage from '../../assets/tacto/press-on.png'
-import reparacionesImage from '../../assets/tacto/reparaciones.png'
-import retirosImage from '../../assets/tacto/retiros.png'
+import mantenimientoAcrilicoImage from '../../assets/tacto/mantenimientoacrilico.webp'
+import permanenteImage from '../../assets/tacto/permanente.webp'
+import pressOnImage from '../../assets/tacto/press-on.webp'
+import reparacionesImage from '../../assets/tacto/reparaciones.webp'
+import retirosImage from '../../assets/tacto/retiros.webp'
 import retiroEsmalteTradicionalImage from '../../assets/tacto/retiro-esmalte-tradicional.webp'
 import { Button } from '../ui/Button'
 import { ImageLayer } from '../ui/ImageLayer'
 import { PriceText } from '../ui/PriceText'
-import { ServiceModal } from '../ui/ServiceModal'
+import { DeferredServiceModal } from '../ui/DeferredServiceModal'
 import { useServiceModalState } from '../ui/useServiceModalState'
 
 type TactoExperienceImageKey =
@@ -118,7 +118,7 @@ export function TactoExperienceCard({
         </div>
       </div>
     </article>
-    <ServiceModal
+    <DeferredServiceModal
       isOpen={isModalOpen}
       onClose={closeModal}
       category="tacto"

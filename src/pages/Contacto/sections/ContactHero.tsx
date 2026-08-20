@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
-import contactHeroImage from '../../../assets/contacto/portadacontacto.png'
+import contactHeroImage from '../../../assets/contacto/portadacontacto.webp'
 import { ImageLayer } from '../../../components/ui/ImageLayer'
 import { SectionTitle } from '../../../components/ui/SectionTitle'
 import { contactoHeroContent } from '../../../data/contacto'

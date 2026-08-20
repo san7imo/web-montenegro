@@ -1,22 +1,22 @@
 import banoCleopatraImage from '../../assets/oasis/bano-cleopatra.webp'
 import banoFloresImage from '../../assets/oasis/bano-de-flores.webp'
 import cerrarMatrizImage from '../../assets/oasis/cerrar-matriz.webp'
-import descontracturanteImage from '../../assets/oasis/descontracturante.png'
-import drenajeLinfaticoImage from '../../assets/oasis/drenajelinfatico.png'
-import exfoliacionImage from '../../assets/oasis/exfoliacion.png'
-import masajeRelajanteImage from '../../assets/oasis/masajerelajante.png'
-import presoterapiaImage from '../../assets/oasis/presoterapia.png'
-import ritualesEnTinaImage from '../../assets/oasis/ritualesentina.png'
+import descontracturanteImage from '../../assets/oasis/descontracturante.webp'
+import drenajeLinfaticoImage from '../../assets/oasis/drenajelinfatico.webp'
+import exfoliacionImage from '../../assets/oasis/exfoliacion.webp'
+import masajeRelajanteImage from '../../assets/oasis/masajerelajante.webp'
+import presoterapiaImage from '../../assets/oasis/presoterapia.webp'
+import ritualesEnTinaImage from '../../assets/oasis/ritualesentina.webp'
 import ritualBotanicoImage from '../../assets/oasis/ritual-botanico.webp'
 import ritualCacaoImage from '../../assets/oasis/ritual-de-cacao.webp'
 import ritualDosAlmasImage from '../../assets/oasis/ritual-dos-almas.webp'
 import ritualVidaImage from '../../assets/oasis/ritual-vida.webp'
 import ritualVolcanicoImage from '../../assets/oasis/ritual-volcanico.webp'
-import ventosasImage from '../../assets/oasis/ventosas.png'
+import ventosasImage from '../../assets/oasis/ventosas.webp'
 import { Button } from '../ui/Button'
 import { ImageLayer } from '../ui/ImageLayer'
 import { PriceText } from '../ui/PriceText'
-import { ServiceModal } from '../ui/ServiceModal'
+import { DeferredServiceModal } from '../ui/DeferredServiceModal'
 import { useServiceModalState } from '../ui/useServiceModalState'
 
 type ServiceExperienceImageKey =
@@ -133,7 +133,7 @@ export function ServiceExperienceCard({
         </div>
       </div>
     </article>
-    <ServiceModal
+    <DeferredServiceModal
       isOpen={isModalOpen}
       onClose={closeModal}
       category="oasis"

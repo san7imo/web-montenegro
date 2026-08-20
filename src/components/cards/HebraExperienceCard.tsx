@@ -1,18 +1,18 @@
-import cepilladoImage from '../../assets/hebra/cepillado.png'
-import coctelAnticaidaImage from '../../assets/hebra/coctelanticaida.png'
-import corteCaballeroImage from '../../assets/hebra/cortecaballero.png'
-import corteDamaImage from '../../assets/hebra/cortedama.png'
-import extensionesImage from '../../assets/hebra/extenciones.png'
-import iluminacionesImage from '../../assets/hebra/iluminaciones.png'
-import keratinaImage from '../../assets/hebra/keratina.png'
-import mechasImage from '../../assets/hebra/mechas.png'
-import planchadoImage from '../../assets/hebra/planchado.png'
-import spaHairAsiaticoImage from '../../assets/hebra/spahairasiatico.png'
-import tintesImage from '../../assets/hebra/tintes.png'
+import cepilladoImage from '../../assets/hebra/cepillado.webp'
+import coctelAnticaidaImage from '../../assets/hebra/coctelanticaida.webp'
+import corteCaballeroImage from '../../assets/hebra/cortecaballero.webp'
+import corteDamaImage from '../../assets/hebra/cortedama.webp'
+import extensionesImage from '../../assets/hebra/extenciones.webp'
+import iluminacionesImage from '../../assets/hebra/iluminaciones.webp'
+import keratinaImage from '../../assets/hebra/keratina.webp'
+import mechasImage from '../../assets/hebra/mechas.webp'
+import planchadoImage from '../../assets/hebra/planchado.webp'
+import spaHairAsiaticoImage from '../../assets/hebra/spahairasiatico.webp'
+import tintesImage from '../../assets/hebra/tintes.webp'
 import { Button } from '../ui/Button'
 import { ImageLayer } from '../ui/ImageLayer'
 import { PriceText } from '../ui/PriceText'
-import { ServiceModal } from '../ui/ServiceModal'
+import { DeferredServiceModal } from '../ui/DeferredServiceModal'
 import { useServiceModalState } from '../ui/useServiceModalState'
 
 type HebraExperienceImageKey =
@@ -121,7 +121,7 @@ export function HebraExperienceCard({
         </div>
       </div>
     </article>
-    <ServiceModal
+    <DeferredServiceModal
       isOpen={isModalOpen}
       onClose={closeModal}
       category="hebra"

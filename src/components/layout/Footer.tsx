@@ -1,11 +1,19 @@
 import { Link } from 'react-router-dom'
 import { FaFacebookF, FaInstagram, FaTiktok, FaWhatsapp } from 'react-icons/fa'
 import type { FormEvent } from 'react'
+import { useState } from 'react'
 
 import footerLogo from '../../assets/logo/montenegro-logo-footer.webp'
 import { footerContent } from '../../data/footer'
-import { buildWhatsAppContactUrl } from '../../utils/whatsapp'
+import { formspreeEndpoints } from '../../data/forms'
+import {
+  FormSubmissionError,
+  type FormSubmissionStatus,
+  submitFormspreeForm,
+} from '../../utils/formspree'
+import { showCookiePreferences } from '../../utils/cookieConsent'
 import { Container } from '../ui/Container'
+import { PrivacyCheckbox } from '../ui/PrivacyCheckbox'
 
 type FooterTone = 'dark' | 'sage'
 
@@ -33,19 +41,43 @@ const socialIconMap = {
 
 export function Footer({ tone = 'dark' }: FooterProps) {
   const toneClass = toneStyles[tone]
-  const handleNewsletterSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const [submissionStatus, setSubmissionStatus] = useState<FormSubmissionStatus>('idle')
+  const [submissionMessage, setSubmissionMessage] = useState('')
+
+  const handleNewsletterSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
+
+    if (submissionStatus === 'submitting') return
+
     const form = event.currentTarget
     const formData = new FormData(form)
     const email = String(formData.get('newsletterEmail') ?? '').trim()
 
-    if (!email) {
-      return
-    }
+    if (!email) return
 
-    const message = `Hola, quiero suscribirme a las novedades de Montenegro Salud y Belleza con el correo ${email}.`
-    window.open(buildWhatsAppContactUrl(message), '_blank', 'noopener,noreferrer')
-    form.reset()
+    formData.set('email', email)
+    formData.set('subject', 'Nueva suscripción al newsletter de Montenegro')
+    formData.set('formulario', 'Newsletter')
+    formData.set('fecha', new Date().toISOString())
+    formData.set('origen', window.location.href)
+    formData.set('versionPrivacidad', '2026-08-19')
+
+    setSubmissionStatus('submitting')
+    setSubmissionMessage('Enviando…')
+
+    try {
+      await submitFormspreeForm(formspreeEndpoints.newsletter, formData)
+      form.reset()
+      setSubmissionStatus('success')
+      setSubmissionMessage('¡Gracias! Hemos recibido tu suscripción.')
+    } catch (error) {
+      setSubmissionStatus('error')
+      setSubmissionMessage(
+        error instanceof FormSubmissionError
+          ? error.message
+          : 'No pudimos completar la suscripción. Inténtalo de nuevo.',
+      )
+    }
   }
 
   return (
@@ -99,6 +131,13 @@ export function Footer({ tone = 'dark' }: FooterProps) {
                 </li>
               ))}
             </ul>
+            <button
+              type="button"
+              onClick={() => void showCookiePreferences()}
+              className="type-body-sm text-left text-white/88 underline decoration-white/35 underline-offset-4 transition-colors hover:text-white"
+            >
+              Configurar cookies
+            </button>
           </div>
 
           <div className="space-y-4">
@@ -108,25 +147,67 @@ export function Footer({ tone = 'dark' }: FooterProps) {
             <p className="type-body-sm max-w-[18rem] text-white/88">
               {footerContent.newsletter}
             </p>
-            <form
-              onSubmit={handleNewsletterSubmit}
-              className="flex max-w-[294px] overflow-hidden rounded-[16px] bg-white/92"
-            >
-              <input
-                type="email"
-                name="newsletterEmail"
-                required
-                aria-label="Correo electrónico"
-                placeholder={footerContent.newsletterPlaceholder}
-                className="type-body-sm min-w-0 flex-1 bg-transparent px-4 py-3 text-forest-dark placeholder:text-forest-dark/34 focus:outline-none"
-              />
-              <button
-                type="button"
-                className="type-body-sm bg-white/24 px-5 py-3 font-medium text-white transition-colors duration-300 hover:bg-white/28"
+            <div className="max-w-[294px]">
+              <form
+                onSubmit={handleNewsletterSubmit}
+                aria-busy={submissionStatus === 'submitting'}
+                className="max-w-[294px]"
               >
-                {footerContent.newsletterButtonLabel}
-              </button>
-            </form>
+                <div className="absolute left-[-9999px]" aria-hidden="true">
+                  <label htmlFor="newsletter-website">No completar este campo</label>
+                  <input
+                    id="newsletter-website"
+                    type="text"
+                    name="_gotcha"
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </div>
+                <div className="flex overflow-hidden rounded-[16px] bg-white/92">
+                  <input
+                    type="email"
+                    name="newsletterEmail"
+                    autoComplete="email"
+                    required
+                    disabled={submissionStatus === 'submitting'}
+                    aria-label="Correo electrónico"
+                    placeholder={footerContent.newsletterPlaceholder}
+                    className="type-body-sm min-w-0 flex-1 bg-transparent px-4 py-3 text-forest-dark placeholder:text-forest-dark/34 focus:outline-none disabled:cursor-wait disabled:opacity-60"
+                  />
+                  <button
+                    type="submit"
+                    disabled={submissionStatus === 'submitting'}
+                    className="type-body-sm bg-white/24 px-5 py-3 font-medium text-white transition-colors duration-300 hover:bg-white/28 disabled:cursor-wait disabled:opacity-60"
+                  >
+                    {submissionStatus === 'submitting'
+                      ? 'Enviando…'
+                      : footerContent.newsletterButtonLabel}
+                  </button>
+                </div>
+
+                <div className="mt-3">
+                  <PrivacyCheckbox
+                    id="newsletter-privacy"
+                    name="consentimientoComercial"
+                    value="Sí, consentimiento expreso"
+                    tone="dark"
+                    label="Quiero recibir por correo novedades, promociones y noticias de Montenegro Salud y Belleza."
+                    description="Puedes retirar tu consentimiento en cualquier momento."
+                  />
+                </div>
+
+                <p
+                  role={submissionStatus === 'error' ? 'alert' : 'status'}
+                  aria-live="polite"
+                  className={[
+                    'type-caption mt-2 min-h-[1.25rem] max-w-[294px] font-semibold',
+                    submissionStatus === 'error' ? 'text-pink-soft' : 'text-white/82',
+                  ].join(' ')}
+                >
+                  {submissionMessage}
+                </p>
+              </form>
+            </div>
             <div className="flex items-center gap-4 pt-1 text-white">
               {footerContent.socialLinks.map((link) => (
                 <a

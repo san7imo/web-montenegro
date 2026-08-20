@@ -16,6 +16,7 @@ export function ImageLayer({
       src={src}
       alt={alt}
       loading={loading}
+      fetchPriority={loading === 'eager' ? 'high' : 'auto'}
       draggable={false}
       className={['pointer-events-none select-none object-contain', className]
         .filter(Boolean)

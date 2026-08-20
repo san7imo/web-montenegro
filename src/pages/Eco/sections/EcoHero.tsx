@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
-import ecoHeroImage from '../../../assets/eco/portadaeco.png'
+import ecoHeroImage from '../../../assets/eco/portadaeco.webp'
 import { ImageLayer } from '../../../components/ui/ImageLayer'
 import { SectionTitle } from '../../../components/ui/SectionTitle'
 import { ecoHeroContent } from '../../../data/eco'

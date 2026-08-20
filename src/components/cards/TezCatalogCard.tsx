@@ -1,22 +1,22 @@
 import eliminacionManchasImage from '../../assets/tez/eliminacion-de-manchas.webp'
 import eliminacionTatuajesImage from '../../assets/tez/eliminacion-de-tatuajes.webp'
-import gimnasiaPasivaImage from '../../assets/tez/gimnasiapasiva.png'
-import limpiezaFacialImage from '../../assets/tez/limpiezafacial.png'
+import gimnasiaPasivaImage from '../../assets/tez/gimnasiapasiva.webp'
+import limpiezaFacialImage from '../../assets/tez/limpiezafacial.webp'
 import manicuraPedicuraSemipermanenteImage from '../../assets/tez/manicura-y-pedicura-semipermanente.webp'
 import manicuraTradicionalImage from '../../assets/tez/manicura-tradicional.webp'
-import maderoterapiaImage from '../../assets/tez/maderoterapia.png'
-import metaloterapiaImage from '../../assets/tez/metaloterapia.png'
+import maderoterapiaImage from '../../assets/tez/maderoterapia.webp'
+import metaloterapiaImage from '../../assets/tez/metaloterapia.webp'
 import masajesReductoresImage from '../../assets/tez/masajes-reductores.webp'
 import micropigmentacionLabiosImage from '../../assets/tez/micropigmentacion-de-labios.webp'
-import packLipoImage from '../../assets/tez/packliposincirugia.png'
+import packLipoImage from '../../assets/tez/packliposincirugia.webp'
 import pedicuraCompletaTradicionalImage from '../../assets/tez/pedicura-completa-tradicional.webp'
-import radiofrecuenciaGeneralCorporalImage from '../../assets/tez/radifrecuenciageneralcorporal.png'
-import radiofrecuenciaGeneralImage from '../../assets/tez/ragiofrecuengeneral.png'
-import rejuvenecimientoVaginalImage from '../../assets/tez/rejuevenicmientovaginal.png'
-import tratamientoVaricesImage from '../../assets/tez/tratamientodevarices.png'
+import radiofrecuenciaGeneralCorporalImage from '../../assets/tez/radifrecuenciageneralcorporal.webp'
+import radiofrecuenciaGeneralImage from '../../assets/tez/ragiofrecuengeneral.webp'
+import rejuvenecimientoVaginalImage from '../../assets/tez/rejuevenicmientovaginal.webp'
+import tratamientoVaricesImage from '../../assets/tez/tratamientodevarices.webp'
 import { ImageLayer } from '../ui/ImageLayer'
 import { PriceText } from '../ui/PriceText'
-import { ServiceModal } from '../ui/ServiceModal'
+import { DeferredServiceModal } from '../ui/DeferredServiceModal'
 import { useServiceModalState } from '../ui/useServiceModalState'
 
 type TezCatalogImageKey =
@@ -124,7 +124,7 @@ export function TezCatalogCard({
         </div>
       </div>
     </article>
-    <ServiceModal
+    <DeferredServiceModal
       isOpen={isModalOpen}
       onClose={closeModal}
       category="tez"

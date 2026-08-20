@@ -1,17 +1,17 @@
 import asiaticaImage from '../../assets/raiz/asiatica.webp'
 import cavitacionImage from '../../assets/raiz/cavitacion.webp'
-import criolipolisisImage from '../../assets/raiz/criolipolisis.png'
+import criolipolisisImage from '../../assets/raiz/criolipolisis.webp'
 import dermapenImage from '../../assets/raiz/dermapen.webp'
 import hollywoodPeelingImage from '../../assets/raiz/hollywood-peeling.webp'
 import laserLuminageImage from '../../assets/raiz/laser-luminage.webp'
 import multifuncionalImage from '../../assets/raiz/multifuncional.webp'
-import presoterapiaImage from '../../assets/raiz/presoterapia1.png'
+import presoterapiaImage from '../../assets/raiz/presoterapia1.webp'
 import radiofrecuenciaFraccionadaImage from '../../assets/raiz/radiofrecuencia-fraccionada.webp'
-import radiofrecuenciaImage from '../../assets/raiz/radiofrecuencia.png'
+import radiofrecuenciaImage from '../../assets/raiz/radiofrecuencia.webp'
 import vacuumImage from '../../assets/raiz/vacuum.webp'
 import { ImageLayer } from '../ui/ImageLayer'
 import { PriceText } from '../ui/PriceText'
-import { ServiceModal } from '../ui/ServiceModal'
+import { DeferredServiceModal } from '../ui/DeferredServiceModal'
 import { useServiceModalState } from '../ui/useServiceModalState'
 
 type RaizTechnologyImageKey =
@@ -107,7 +107,7 @@ export function RaizTechnologyCard({
         </div>
       </div>
     </article>
-    <ServiceModal
+    <DeferredServiceModal
       isOpen={isModalOpen}
       onClose={closeModal}
       category="raiz"

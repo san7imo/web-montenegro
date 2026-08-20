@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
-import tezHeroBackground from '../../../assets/tez/herotez.png'
+import tezHeroBackground from '../../../assets/tez/herotez.webp'
 import tezHeroVideo from '../../../assets/videos-hero/optimized/tez.mp4'
 import { Container } from '../../../components/ui/Container'
 import { DecorativeLine } from '../../../components/ui/DecorativeLine'

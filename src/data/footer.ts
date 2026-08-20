@@ -19,8 +19,8 @@ export const footerContent: FooterContent = {
     { label: 'Cookies', href: '/legal/cookies' },
   ],
   newsletter: 'Recibe novedades, promos y noticias sobre nuevos servicios.',
-  newsletterPlaceholder: 'Tu correo electronico',
-  newsletterButtonLabel: 'Subscribirse',
+  newsletterPlaceholder: 'Tu correo electrónico',
+  newsletterButtonLabel: 'Suscribirse',
   socialLinks: [
     {
       label: 'Facebook',

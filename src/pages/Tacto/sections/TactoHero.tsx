@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
-import tactoHeroBackground from '../../../assets/tacto/hero.png'
+import tactoHeroBackground from '../../../assets/tacto/hero.webp'
 import tactoHeroVideo from '../../../assets/videos-hero/optimized/tacto.mp4'
 import { Container } from '../../../components/ui/Container'
 import { DecorativeLine } from '../../../components/ui/DecorativeLine'

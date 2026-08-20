@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 
-import olgaOne from '../../../assets/esencia/olga1.png'
-import olgaTwo from '../../../assets/esencia/olga2.png'
-import olgaThree from '../../../assets/esencia/olga3.png'
+import olgaOne from '../../../assets/esencia/olga1.webp'
+import olgaTwo from '../../../assets/esencia/olga2.webp'
+import olgaThree from '../../../assets/esencia/olga3.webp'
 import { ImageLayer } from '../../../components/ui/ImageLayer'
 import { esenciaFounderLegacyContent } from '../../../data/esencia'
 

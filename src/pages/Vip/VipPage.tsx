@@ -139,22 +139,6 @@ export function VipPage() {
   const reviewUrl = useMemo(() => LINKS.googleReview, [])
 
   useEffect(() => {
-    document.title = 'Montenegro VIP | Montenegro Salud y Belleza'
-
-    const description =
-      'Accede a Montenegro VIP, activa beneficios exclusivos, reserva tu próxima cita, comparte tu experiencia y descubre tratamientos premium de belleza y bienestar.'
-    let metaDescription = document.querySelector<HTMLMetaElement>('meta[name="description"]')
-
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta')
-      metaDescription.name = 'description'
-      document.head.appendChild(metaDescription)
-    }
-
-    metaDescription.content = description
-  }, [])
-
-  useEffect(() => {
     if (!toast) {
       return
     }

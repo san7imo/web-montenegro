@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
-import filoHeroBackground from '../../../assets/filo/hero-filo.png'
+import filoHeroBackground from '../../../assets/filo/hero-filo.webp'
 import filoHeroVideo from '../../../assets/videos-hero/optimized/filo.mp4'
 import { Container } from '../../../components/ui/Container'
 import { DecorativeLine } from '../../../components/ui/DecorativeLine'
