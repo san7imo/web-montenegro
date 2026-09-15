@@ -11,7 +11,7 @@ const GOOGLE_REVIEW_LAA = 'nmx-review-solicitation-ia2'
 export const VIP_CAMPAIGNS = {
   lipoSweepstakes: {
     href: 'https://docs.google.com/forms/d/e/1FAIpQLSf3rHZ0HFR8UYkzvcO-Zud9Y2GcG2h7MSJ5wQv0CbA72P30ug/viewform',
-    isActive: false,
+    isActive: true,
   },
 } as const
 

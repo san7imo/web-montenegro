@@ -222,12 +222,7 @@ export function VipPage() {
           icon={<FiGift />}
           className="min-h-14 shadow-[0_20px_42px_rgba(194,11,114,0.3)]"
         >
-          <span className="flex flex-col items-center leading-tight">
-            <span>Sorteo: Lipo Sin Cirugía</span>
-            <span className="type-caption mt-1 font-bold uppercase tracking-[0.14em] text-white/82">
-              Próximamente
-            </span>
-          </span>
+          Sorteo: Lipo Sin Cirugía
         </ActionLink>
 
         <VipCard surface="dark">
