@@ -9,7 +9,7 @@ export function CatalogServiceCard({ service }: { service: ServiceCatalogItem })
   return (
     <>
       <article className="overflow-hidden rounded-[2rem] border border-white/75 bg-cream-light p-3 shadow-[0_8px_24px_rgba(31,53,43,0.18)] sm:grid sm:grid-cols-[14rem_1fr] sm:gap-6">
-        <div className="aspect-square overflow-hidden rounded-[1.5rem] sm:h-full sm:min-h-64">
+        <div className="aspect-square w-full min-w-0 overflow-hidden rounded-[1.5rem] sm:aspect-auto sm:h-full sm:min-h-64">
           <ServiceArtwork image={service.image} title={service.title} />
         </div>
         <div className="flex min-w-0 flex-col p-4">
