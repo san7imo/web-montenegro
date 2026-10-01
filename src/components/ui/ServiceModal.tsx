@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom'
 import { useNavigate } from 'react-router-dom'
 
 import { getRandomServiceRecommendation, type ServiceCategory } from '../../data/serviceCatalog'
-import { getServiceModalDescription } from '../../data/serviceModalDescriptions'
+import { ServiceArtwork } from './ServiceArtwork'
 import { buildWhatsAppContactUrl } from '../../utils/whatsapp'
 import {
   getServicePricing,
@@ -238,6 +238,13 @@ function PricingOptions({
                     />
                   )}
                 </div>
+                {option.duration ? <p className="type-caption mt-2 font-semibold">Duración: {option.duration}</p> : null}
+                {option.description ? (
+                  <details className="type-body-sm mt-2">
+                    <summary className="cursor-pointer font-semibold text-forest">Descripción, beneficios y contraindicaciones</summary>
+                    <p className="mt-2 whitespace-pre-line text-forest-dark/88">{option.description}</p>
+                  </details>
+                ) : null}
                 {option.bonus ? <BonusNotice>{option.bonus}</BonusNotice> : null}
               </div>
             </div>
@@ -272,8 +279,7 @@ export function ServiceModal({
   }, [onClose])
   const pricing = getServicePricing(category, serviceId)
   const currentKey = `${category}:${serviceId}`
-  const displayDescription = getServiceModalDescription(category, serviceId)
-    || pricing?.description
+  const displayDescription = pricing?.description
     || description
   const shareText = useMemo(
     () => buildShareText(title, displayDescription, duration, price),
@@ -423,11 +429,7 @@ export function ServiceModal({
         onClick={(event) => event.stopPropagation()}
       >
         <div className="min-w-0 overflow-hidden rounded-[1.25rem] lg:rounded-[1.75rem]">
-          <img
-            src={image}
-            alt={title}
-            className="h-[13rem] w-full object-cover sm:h-[15rem] lg:h-full lg:min-h-[26rem]"
-          />
+          <ServiceArtwork image={image} title={title} className="!h-[13rem] sm:!h-[15rem] lg:!h-full lg:min-h-[26rem]" />
         </div>
 
         <div className="flex min-h-0 min-w-0 flex-col px-2 pb-1 pt-2 sm:px-1 sm:pt-3 lg:max-h-[calc(94vh-2rem)] lg:overflow-y-auto lg:px-0 lg:pr-2">
@@ -498,7 +500,7 @@ export function ServiceModal({
             {title}
           </h2>
 
-          <p className="type-body-sm mt-3 line-clamp-5 max-w-[42rem] font-medium text-forest-dark/88">
+          <p className="type-body-sm mt-3 whitespace-pre-line max-w-[42rem] font-medium text-forest-dark/88">
             {displayDescription}
           </p>
 
@@ -553,11 +555,7 @@ export function ServiceModal({
             onClick={openRecommendation}
           >
             <div className="hidden overflow-hidden rounded-[0.85rem] sm:block">
-              <img
-                src={recommendation.image}
-                alt={recommendation.title}
-                className="aspect-square h-full w-full object-cover"
-              />
+              <ServiceArtwork image={recommendation.image} title={recommendation.title} className="!min-h-0 aspect-square" />
             </div>
 
             <div className="min-w-0 py-1 pr-1">

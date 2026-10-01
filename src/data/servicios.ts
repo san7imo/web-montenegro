@@ -1,6 +1,6 @@
 export const serviciosHeroContent = {
   label: 'Universo Montenegro',
-  titleLines: ['Servicios:', 'Siete caminos hacia tu bienestar.'],
+  titleLines: ['Servicios:', 'Ocho caminos hacia tu bienestar.'],
   description:
     'Explora nuestras áreas de cuidado y encuentra la experiencia que mejor acompaña las necesidades de tu cuerpo, tu piel y tu momento personal.',
 } as const
@@ -11,7 +11,7 @@ export const serviceCategoryCards = [
     title: 'Oasis',
     subtitle: 'Rituales de purificación',
     description:
-      'Masajes, hidroterapia y rituales sensoriales creados para liberar tensiones, renovar la energía y devolverle calma profunda al cuerpo.',
+      'Hidroterapia, exfoliaciones, envolturas y rituales sensoriales creados para liberar tensiones, renovar la energía y devolverle calma profunda al cuerpo.',
     href: '/oasis',
     image: 'oasis',
   },
@@ -27,18 +27,18 @@ export const serviceCategoryCards = [
   {
     id: 'hebra',
     title: 'Hebra',
-    subtitle: 'Cuidado capilar',
+    subtitle: 'Spa capilar',
     description:
-      'Corte, color, estilismo y bienestar capilar personalizados para proteger la fibra y expresar tu identidad a través de una melena saludable.',
+      'Barros botánicos, cuidado del cuero cabelludo, reparación e hidratación de la fibra y experiencias Hair Spa personalizadas.',
     href: '/hebra',
     image: 'hebra',
   },
   {
     id: 'tacto',
     title: 'Tacto',
-    subtitle: 'Manos, pies y uñas',
+    subtitle: 'Masajes y bienestar',
     description:
-      'Servicios de manicura, pedicura y diseño de uñas donde la precisión estética se encuentra con el cuidado y el descanso de manos y pies.',
+      'Masajes relajantes, descontracturantes y reductores, drenaje linfático, maderoterapia y metaloterapia adaptados a tus necesidades.',
     href: '/tacto',
     image: 'tacto',
   },
@@ -53,7 +53,7 @@ export const serviceCategoryCards = [
   },
   {
     id: 'brote',
-    title: 'Brote',
+    title: 'Brotes',
     subtitle: 'Spa infantil',
     description:
       'Experiencias de autocuidado para niños y niñas que unen relajación, juego sensorial y celebración en un ambiente amable y seguro.',
@@ -61,12 +61,13 @@ export const serviceCategoryCards = [
     image: 'brote',
   },
   {
-    id: 'raiz',
-    title: 'Raíz',
-    subtitle: 'Bio-ciencia y tecnología',
-    description:
-      'Tecnología estética avanzada aplicada con criterio profesional para acompañar objetivos faciales y corporales de manera personalizada.',
-    href: '/raiz',
-    image: 'raiz',
+    id: 'lienzo', title: 'Lienzo', subtitle: 'Maquillaje',
+    description: 'Maquillaje de novia, quinceañeras y social, pruebas previas, caracterización y propuestas creativas.',
+    href: '/lienzo', image: 'lienzo',
+  },
+  {
+    id: 'lazo', title: 'Lazo', subtitle: 'Servicios en pareja',
+    description: 'Rituales de hidroterapia, masajes y experiencias de agua para disfrutar en compañía.',
+    href: '/lazo', image: 'lazo',
   },
 ] as const

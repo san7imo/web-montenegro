@@ -50,6 +50,8 @@ const VipPage = lazy(() =>
   import('../pages/Vip/VipPage').then(({ VipPage }) => ({ default: VipPage })),
 )
 
+const NewCategoryPage = lazy(() => import('../pages/Servicios/NewCategoryPage').then(({ NewCategoryPage }) => ({ default: NewCategoryPage })))
+
 export function AppRoutes() {
   return (
     <Suspense
@@ -72,6 +74,9 @@ export function AppRoutes() {
         <Route path="/tacto" element={<TactoPage />} />
         <Route path="/raiz" element={<RaizPage />} />
         <Route path="/brote" element={<BrotePage />} />
+        <Route path="/brotes" element={<Navigate to="/brote" replace />} />
+        <Route path="/lienzo" element={<NewCategoryPage category="lienzo" />} />
+        <Route path="/lazo" element={<NewCategoryPage category="lazo" />} />
         <Route path="/filo" element={<FiloPage />} />
         <Route path="/hebra" element={<HebraPage />} />
         <Route path="/tez" element={<TezPage />} />

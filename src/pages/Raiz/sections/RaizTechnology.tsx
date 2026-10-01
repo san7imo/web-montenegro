@@ -1,54 +1,10 @@
-import { motion, useReducedMotion } from 'framer-motion'
-
-import { RaizTechnologyCard } from '../../../components/cards/RaizTechnologyCard'
+import { Link } from 'react-router-dom'
+import { Container } from '../../../components/ui/Container'
 import { SectionTitle } from '../../../components/ui/SectionTitle'
-import { raizTechnologyContent } from '../../../data/raiz'
-
 export function RaizTechnology() {
-  const shouldReduceMotion = useReducedMotion()
-
-  const fadeUp = (delay: number) =>
-    shouldReduceMotion
-      ? {}
-      : {
-          initial: { opacity: 0, y: 24, filter: 'blur(6px)' },
-          whileInView: { opacity: 1, y: 0, filter: 'blur(0px)' },
-          viewport: { once: true, amount: 0.16 },
-          transition: {
-            delay,
-            duration: 0.82,
-            ease: 'easeOut' as const,
-          },
-        }
-
-  return (
-    <section className="bg-[linear-gradient(180deg,#87947b_0%,#2f4d3c_100%)] px-7 py-16 text-white sm:px-10 sm:py-20 lg:px-16 lg:py-[5.9rem]">
-      <motion.div className="text-center" {...fadeUp(0.04)}>
-        <span className="type-body inline-flex min-w-[13.6rem] items-center justify-center rounded-full border border-cream-light/75 px-6 py-2 font-semibold text-pink-soft">
-          {raizTechnologyContent.label}
-        </span>
-        <SectionTitle
-          as="h2"
-          className="mx-auto mt-6 max-w-[44rem] text-pink-soft lg:max-w-[64rem]"
-        >
-          {raizTechnologyContent.title}
-        </SectionTitle>
-      </motion.div>
-
-      <div className="mx-auto mt-14 grid max-w-[81rem] gap-5 sm:grid-cols-2 lg:mt-20 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-6">
-        {raizTechnologyContent.items.map((item, index) => (
-          <motion.div key={item.id} className="h-full" {...fadeUp(0.08 + index * 0.04)}>
-            <RaizTechnologyCard
-              id={item.id}
-              title={item.title}
-              description={item.description}
-              duration={item.duration}
-              price={item.price}
-              image={item.image}
-            />
-          </motion.div>
-        ))}
-      </div>
-    </section>
-  )
+  return <section className="bg-cream py-20 text-forest"><Container>
+    <SectionTitle as="h2">Tecnología y cuidado de la piel</SectionTitle>
+    <p className="type-body mt-5">Descubre los tratamientos faciales y corporales, con sus opciones y bonos, en Tez.</p>
+    <Link to="/tez" className="type-action mt-6 inline-block rounded-full bg-pink px-6 py-3 text-white">Explorar Tez</Link>
+  </Container></section>
 }

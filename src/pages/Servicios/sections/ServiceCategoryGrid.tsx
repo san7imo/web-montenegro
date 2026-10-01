@@ -5,11 +5,10 @@ import broteImage from '../../../assets/brote/herobrote.webp'
 import filoImage from '../../../assets/filo/hero-filo.webp'
 import hebraImage from '../../../assets/hebra/herohebra.webp'
 import oasisImage from '../../../assets/oasis/oasis-portada.webp'
-import raizImage from '../../../assets/raiz/heroraiz.webp'
-import tactoImage from '../../../assets/tacto/hero.webp'
+import tactoImage from '../../../assets/oasis/masajerelajante.webp'
 import tezImage from '../../../assets/tez/herotez.webp'
 import { Container } from '../../../components/ui/Container'
-import { ImageLayer } from '../../../components/ui/ImageLayer'
+import { ServiceArtwork } from '../../../components/ui/ServiceArtwork'
 import { SectionTitle } from '../../../components/ui/SectionTitle'
 import { serviceCategoryCards } from '../../../data/servicios'
 
@@ -18,7 +17,8 @@ const imageByKey = {
   filo: filoImage,
   hebra: hebraImage,
   oasis: oasisImage,
-  raiz: raizImage,
+  lienzo: '',
+  lazo: '',
   tacto: tactoImage,
   tez: tezImage,
 } as const
@@ -53,9 +53,9 @@ export function ServiceCategoryGrid() {
                 className="group flex h-full min-h-[32rem] flex-col overflow-hidden rounded-[1.8rem] border border-white/75 bg-cream-light/72 shadow-[0_14px_34px_rgba(31,53,43,0.15)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_42px_rgba(31,53,43,0.21)]"
               >
                 <div className="relative h-[17rem] shrink-0 overflow-hidden">
-                  <ImageLayer
-                    src={imageByKey[item.image]}
-                    alt={item.title}
+                  <ServiceArtwork
+                    image={imageByKey[item.image]}
+                    title={item.title}
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.035]"
                   />
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(27,46,37,0.04)_30%,rgba(27,46,37,0.72)_100%)]" />

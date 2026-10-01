@@ -1,11 +1,10 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
-import tactoHeroBackground from '../../../assets/tacto/hero.webp'
-import tactoHeroVideo from '../../../assets/videos-hero/optimized/tacto.mp4'
+import tactoHeroBackground from '../../../assets/oasis/masajerelajante.webp'
 import { Container } from '../../../components/ui/Container'
 import { DecorativeLine } from '../../../components/ui/DecorativeLine'
 import { HeroOverlay } from '../../../components/ui/HeroOverlay'
-import { HeroVideoBackground } from '../../../components/ui/HeroVideoBackground'
+import { ImageLayer } from '../../../components/ui/ImageLayer'
 import { SectionTitle } from '../../../components/ui/SectionTitle'
 import { tactoHeroContent } from '../../../data/tacto'
 
@@ -29,9 +28,9 @@ export function TactoHero() {
   return (
     <section className="overflow-hidden bg-forest text-white">
       <div className="relative h-[64svh] min-h-[25rem] max-h-[44rem]">
-        <HeroVideoBackground
-          src={tactoHeroVideo}
-          poster={tactoHeroBackground}
+        <ImageLayer
+          src={tactoHeroBackground}
+          alt=""
           className="absolute inset-0 h-full w-full object-cover object-[43%_center] sm:object-center"
         />
         <HeroOverlay />
@@ -44,7 +43,7 @@ export function TactoHero() {
               className="text-pink-soft drop-shadow-[0_10px_20px_rgba(18,22,18,0.26)]"
             >
               <span className="block">{tactoHeroContent.titleLines[0]}</span>
-              <span className="block sm:whitespace-nowrap">{tactoHeroContent.titleLines[1]}</span>
+              <span className="block ">{tactoHeroContent.titleLines[1]}</span>
             </SectionTitle>
             <p className="type-lead mt-3 max-w-[45rem] text-cream-light/96">
               {tactoHeroContent.description}

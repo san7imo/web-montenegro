@@ -27,7 +27,7 @@ export const seoByPath: Record<string, SeoMetadata> = {
   '/servicios': {
     title: 'Servicios de bienestar y belleza | Montenegro',
     description:
-      'Explora todas las categorías de servicios Montenegro: rituales, estética facial y corporal, cuidado capilar, uñas, mirada y bienestar infantil.',
+      'Explora todas las categorías de servicios Montenegro: rituales, estética facial y corporal, spa capilar, masajes, maquillaje, servicios en pareja, mirada y bienestar infantil.',
   },
   '/oasis': {
     title: 'Oasis: rituales de purificación | Montenegro',
@@ -35,9 +35,9 @@ export const seoByPath: Record<string, SeoMetadata> = {
       'Experiencias de purificación, baños medicinales y rituales sensoriales para liberar tensiones y recuperar el equilibrio del cuerpo y la mente.',
   },
   '/tacto': {
-    title: 'Tacto: manos, pies y uñas | Montenegro',
+    title: 'Tacto: masajes y bienestar | Montenegro',
     description:
-      'Manicura, pedicura, cuidado de uñas y rituales de spa para manos y pies con atención estética precisa y nutrición botánica.',
+      'Masajes relajantes, descontracturantes, reductores, drenaje linfático, maderoterapia y metaloterapia.',
   },
   '/raiz': {
     title: 'Raíz: estética corporal avanzada | Montenegro',
@@ -45,7 +45,7 @@ export const seoByPath: Record<string, SeoMetadata> = {
       'Tratamientos corporales y tecnología estética para modelar, tonificar y cuidar el cuerpo mediante protocolos personalizados.',
   },
   '/brote': {
-    title: 'Brote: spa y bienestar infantil | Montenegro',
+    title: 'Brotes: spa y bienestar infantil | Montenegro',
     description:
       'Experiencias de spa infantil, celebraciones y rituales de bienestar diseñados para que los más pequeños disfruten y se relajen.',
   },
@@ -55,10 +55,12 @@ export const seoByPath: Record<string, SeoMetadata> = {
       'Servicios de depilación láser e IPL, diseño de cejas, pestañas y micropigmentación adaptados a cada mirada y tipo de piel.',
   },
   '/hebra': {
-    title: 'Hebra: peluquería y salud capilar | Montenegro',
+    title: 'Hebra: spa capilar | Montenegro',
     description:
-      'Peluquería, coloración y rituales de salud capilar que cuidan el cuero cabelludo y transforman la fibra desde el interior.',
+      'Spa capilar, barros botánicos, cuidado del cuero cabelludo, reparación e hidratación de la fibra capilar.',
   },
+  '/lienzo': { title: 'Lienzo: maquillaje | Montenegro', description: 'Maquillaje de novia, quinceañeras y social, pruebas previas y propuestas creativas.' },
+  '/lazo': { title: 'Lazo: bienestar en pareja | Montenegro', description: 'Hidroterapia, masajes y rituales de agua para dos.' },
   '/tez': {
     title: 'Tez: estética facial y corporal | Montenegro',
     description:

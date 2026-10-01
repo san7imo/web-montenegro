@@ -1,32 +1,9 @@
-import { buildMappedCategoryServiceItems } from './servicePricing'
-
 export const oasisHeroContent = {
   titleLines: ['Oasis:', 'Tu Ritual de Purificación.'],
   description:
     'El primer paso hacia la transformación. Limpia el ruido exterior, libera toxinas y prepara tu cuerpo para renacer.',
   bodyDescription:
     'En Montenegro, creemos que no se puede construir belleza sobre un cuerpo saturado. Oasis es nuestra estación de parada obligatoria. Inspirados en los baños medicinales del Amazonas, hemos creado un entorno de hidroterapia y detoxificación que resetea tu organismo. Aquí, el agua no solo hidrata; cura y purifica.',
-} as const
-
-export const oasisPurificationExperiencesContent = {
-  titleLines: ['Experiencias de', 'Purificación'],
-  items: buildMappedCategoryServiceItems('oasis', {
-    'cerrar-matriz': 'cerrarMatriz',
-    'exfoliacion-corporal-frutal': 'exfoliacion',
-    'drenaje-linfatico': 'drenajeLinfatico',
-    'masaje-relajante': 'masajeRelajante',
-    ventosas: 'ventosas',
-    'bano-de-flores': 'banoFlores',
-    'ritual-botanico': 'ritualBotanico',
-    'bano-cleopatra': 'banoCleopatra',
-    'ritual-dos-almas': 'ritualDosAlmas',
-    'ritual-de-cacao': 'ritualCacao',
-    'ritual-vida': 'ritualVida',
-    'ritual-volcanico': 'ritualVolcanico',
-    'tina-de-sanacion': 'ritualesEnTina',
-  } as const),
-  ctaLabel: 'RESERVA TU CITA',
-  ctaHref: '/contacto',
 } as const
 
 export const oasisBenefitsContent = {
