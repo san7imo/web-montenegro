@@ -1,7 +1,10 @@
 import { approvedServicePricing } from './approvedServicePricing'
+import { octoberTezPricing } from './octoberServicePricing'
+import { updatedCatalogOptionImages } from './updatedCatalogImages'
 
 export type PricingCategory = 'oasis' | 'tez' | 'filo' | 'brote' | 'hebra' | 'tacto' | 'raiz' | 'lienzo' | 'lazo'
 export type ServicePriceOption = {
+  image?: string
   bonus?: string
   group?: string
   name: string
@@ -18,7 +21,13 @@ export type ServicePricing = {
   options: ServicePriceOption[]
   title: string
 }
-export const servicePricingByCategory: Record<PricingCategory, ServicePricing[]> = approvedServicePricing
+export const servicePricingByCategory: Record<PricingCategory, ServicePricing[]> = {
+  ...approvedServicePricing,
+  tez: [
+    ...approvedServicePricing.tez.map((service) => octoberTezPricing.find((update) => update.id === service.id) ?? service),
+    ...octoberTezPricing.filter((update) => !approvedServicePricing.tez.some((service) => service.id === update.id)),
+  ],
+}
 
 export function getCategoryPricing(category: PricingCategory): readonly ServicePricing[] {
   return servicePricingByCategory[category]
@@ -28,7 +37,10 @@ export function getServicePricing(
   category: PricingCategory,
   serviceId: string,
 ): ServicePricing | undefined {
-  return getCategoryPricing(category).find((service) => service.id === serviceId)
+  const service = getCategoryPricing(category).find((item) => item.id === serviceId)
+  return service ? { ...service, options: service.options.map((option) => ({
+    ...option, image: updatedCatalogOptionImages[category + ':' + serviceId + ':' + option.name] ?? option.image,
+  })) } : undefined
 }
 
 export function getServiceCardPrice(service: ServicePricing) {

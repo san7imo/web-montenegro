@@ -1,3 +1,4 @@
+import { updatedCatalogImages } from './updatedCatalogImages'
 import image0 from '../assets/brote/bolsa-de-regalo.webp'
 import image1 from '../assets/brote/envoltura.webp'
 import image2 from '../assets/brote/masajecorpotal.webp'
@@ -110,6 +111,8 @@ export const catalogImagePaths: Record<string, string> = {
 'filo:pestanas': 'filo/extensionesdepestañas.webp',
 }
 export function getCatalogImage(category: string, id: string) {
+  const updatedImage = updatedCatalogImages[`${category}:${id}`]
+  if (updatedImage) return updatedImage
   let path = catalogImagePaths[`${category}:${id}`]
   if (category === 'filo' && id.includes('depilacion-con-cera')) path = 'filo/depilacionconcera.webp'
   if (category === 'filo' && id.includes('depilacion-ipl')) path = 'filo/depilacionipl.webp'

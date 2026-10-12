@@ -4,7 +4,8 @@ import tactoHeroBackground from '../../../assets/oasis/masajerelajante.webp'
 import { Container } from '../../../components/ui/Container'
 import { DecorativeLine } from '../../../components/ui/DecorativeLine'
 import { HeroOverlay } from '../../../components/ui/HeroOverlay'
-import { ImageLayer } from '../../../components/ui/ImageLayer'
+import { HeroVideoBackground } from '../../../components/ui/HeroVideoBackground'
+import tactoHeroVideo from '../../../assets/updates/20-tacto-portada.mp4'
 import { SectionTitle } from '../../../components/ui/SectionTitle'
 import { tactoHeroContent } from '../../../data/tacto'
 
@@ -28,9 +29,9 @@ export function TactoHero() {
   return (
     <section className="overflow-hidden bg-forest text-white">
       <div className="relative h-[64svh] min-h-[25rem] max-h-[44rem]">
-        <ImageLayer
-          src={tactoHeroBackground}
-          alt=""
+        <HeroVideoBackground
+          src={tactoHeroVideo}
+          poster={tactoHeroBackground}
           className="absolute inset-0 h-full w-full object-cover object-[43%_center] sm:object-center"
         />
         <HeroOverlay />

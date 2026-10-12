@@ -8,11 +8,9 @@ import { ecoLeaveContent, ecoTestimonialsContent } from '../../../data/eco'
 
 type Review = (typeof ecoTestimonialsContent.reviews)[number]
 
-const reviewColumns: Review[][] = [
-  [ecoTestimonialsContent.reviews[0], ecoTestimonialsContent.reviews[1]],
-  [ecoTestimonialsContent.reviews[2], ecoTestimonialsContent.reviews[3]],
-  [ecoTestimonialsContent.reviews[4], ecoTestimonialsContent.reviews[5]],
-]
+const reviewColumns: Review[][] = Array.from({ length: 3 }, (_, index) =>
+  ecoTestimonialsContent.reviews.slice(index * 2, index * 2 + 2),
+).filter((column) => column.length > 0)
 
 function RatingStars({ rating }: { rating: number }) {
   return (

@@ -220,6 +220,7 @@ function PricingOptions({
                     : 'border-forest/12 bg-white/38',
                 ].join(' ')}
               >
+                {option.image ? <img src={option.image} alt={option.name} loading="lazy" className="mb-3 h-40 w-full rounded-xl object-cover sm:h-48" /> : null}
                 {isBundle ? (
                   <span className="type-eyebrow mb-1.5 inline-flex rounded-full bg-pink px-2.5 py-1 font-extrabold text-white">
                     {isBonusOption ? 'Bono' : 'Pack'}

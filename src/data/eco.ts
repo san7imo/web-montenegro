@@ -56,15 +56,6 @@ export const ecoTestimonialsContent = {
       initials: 'A',
       color: 'bg-[linear-gradient(135deg,#12237a,#3f6bc6)]',
     },
-    {
-      id: 'img',
-      rating: 5,
-      text: 'Me he realizado manicura y manicura semipermanente. Natalia y su compañera dos chicas muy profesionales y agradables. Lo recomiendo.',
-      name: 'IMG',
-      date: 'Mayo, 2026.',
-      initials: 'I',
-      color: 'bg-[linear-gradient(135deg,#c07a57,#c4d8d3)]',
-    },
   ],
   moreLabel: 'VER MÁS',
 } as const
@@ -83,23 +74,9 @@ export const ecoGalleryContent = {
   description:
     'Da click en tu sección favorita para visualizar nuestros resultados y clientes satisfechos con sus antes y después.',
   items: [
-    {
-      id: 'hebra',
-      title: 'GALERÍA DE HEBRA',
-      image: 'hebra',
-      href: '/hebra',
-    },
-    {
-      id: 'tacto',
-      title: 'GALERÍA DE TACTO',
-      image: 'tacto',
-      href: '/tacto',
-    },
-    {
-      id: 'tez',
-      title: 'GALERÍA DE TEZ',
-      image: 'tez',
-      href: '/tez',
-    },
+    { id: 'tez', title: 'GALERÍA DE TEZ' },
+    { id: 'oasis', title: 'GALERÍA DE OASIS' },
+    { id: 'hebra', title: 'GALERÍA DE HEBRA' },
+    { id: 'filo', title: 'GALERÍA DE FILO' },
   ],
 } as const

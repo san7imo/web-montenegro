@@ -1,0 +1,356 @@
+[
+  {
+    "id": "14uHc8VHW0KYOw4dDLgu_8vfZrOuOq--8",
+    "title": "Lazo portada.mp4",
+    "local": "src/assets/updates/0-lazo-portada.mp4",
+    "url": "https://drive.google.com/file/d/14uHc8VHW0KYOw4dDLgu_8vfZrOuOq--8/view?usp=drivesdk"
+  },
+  {
+    "id": "1vy-CGkafU5JjFwCfQ0hOjIRrKVZVWeyI",
+    "title": "Filo - pestañas - ardilla.webp",
+    "local": "src/assets/updates/1-filo-pestanas-ardilla.webp",
+    "url": "https://drive.google.com/file/d/1vy-CGkafU5JjFwCfQ0hOjIRrKVZVWeyI/view?usp=drivesdk"
+  },
+  {
+    "id": "1prVa2WbvXKgHVmP1qNmSTye7eWYlBlTV",
+    "title": "Filo - pestañas - ojo de gato.webp",
+    "local": "src/assets/updates/2-filo-pestanas-ojo-de-gato.webp",
+    "url": "https://drive.google.com/file/d/1prVa2WbvXKgHVmP1qNmSTye7eWYlBlTV/view?usp=drivesdk"
+  },
+  {
+    "id": "1ap9FO4MblVMdQElGVgkxYk-ZTBBWS3Cs",
+    "title": "Filo - pestañas - wispy.webp",
+    "local": "src/assets/updates/3-filo-pestanas-wispy.webp",
+    "url": "https://drive.google.com/file/d/1ap9FO4MblVMdQElGVgkxYk-ZTBBWS3Cs/view?usp=drivesdk"
+  },
+  {
+    "id": "1GutjARyf6GWWkOgLm9UnaGshk6KtxIKa",
+    "title": "Filo - Laser diodo zona pequeña.webp",
+    "local": "src/assets/updates/4-filo-laser-diodo-zona-pequena.webp",
+    "url": "https://drive.google.com/file/d/1GutjARyf6GWWkOgLm9UnaGshk6KtxIKa/view?usp=drivesdk"
+  },
+  {
+    "id": "1RTfPwpBdc2tt0mLa7QjnWmyIazSv2Rp0",
+    "title": "Filo - Cejas - Micropigmentación.webp",
+    "local": "src/assets/updates/5-filo-cejas-micropigmentacion.webp",
+    "url": "https://drive.google.com/file/d/1RTfPwpBdc2tt0mLa7QjnWmyIazSv2Rp0/view?usp=drivesdk"
+  },
+  {
+    "id": "1NR66VYMIWMKz7DAhQuhIFdvFIrc9_tlO",
+    "title": "Filo - pestatañas - clasicas.webp",
+    "local": "src/assets/updates/6-filo-pestatanas-clasicas.webp",
+    "url": "https://drive.google.com/file/d/1NR66VYMIWMKz7DAhQuhIFdvFIrc9_tlO/view?usp=drivesdk"
+  },
+  {
+    "id": "1j0DiSldxBAyeXQd5RxxjG0I4g8rsK_JN",
+    "title": "Filo - pestañas - volumen ruso.webp",
+    "local": "src/assets/updates/7-filo-pestanas-volumen-ruso.webp",
+    "url": "https://drive.google.com/file/d/1j0DiSldxBAyeXQd5RxxjG0I4g8rsK_JN/view?usp=drivesdk"
+  },
+  {
+    "id": "1XWsxk94AoP-ZCEC1CQOa15mUA-fhLOmg",
+    "title": "Filo - pastañas - lifting.webp",
+    "local": "src/assets/updates/8-filo-pastanas-lifting.webp",
+    "url": "https://drive.google.com/file/d/1XWsxk94AoP-ZCEC1CQOa15mUA-fhLOmg/view?usp=drivesdk"
+  },
+  {
+    "id": "16P0Rkyo9JGiLJD23NmoABJbAwPIhiXVz",
+    "title": "Tez - Micropigmentacion de labios.webp",
+    "local": "src/assets/updates/9-tez-micropigmentacion-de-labios.webp",
+    "url": "https://drive.google.com/file/d/16P0Rkyo9JGiLJD23NmoABJbAwPIhiXVz/view?usp=drivesdk"
+  },
+  {
+    "id": "1xDBnoGlESGX1mDnPZN-nPVWj6mP70AW-",
+    "title": "Filo - Pack IPL.webp",
+    "local": "src/assets/updates/10-filo-pack-ipl.webp",
+    "url": "https://drive.google.com/file/d/1xDBnoGlESGX1mDnPZN-nPVWj6mP70AW-/view?usp=drivesdk"
+  },
+  {
+    "id": "1fU_ZJUv2aozmHaohStdqz4Uac6yXSN8w",
+    "title": "Filo - Pack diodo.webp",
+    "local": "src/assets/updates/11-filo-pack-diodo.webp",
+    "url": "https://drive.google.com/file/d/1fU_ZJUv2aozmHaohStdqz4Uac6yXSN8w/view?usp=drivesdk"
+  },
+  {
+    "id": "1WINOl5434lv1WdA7zDG7-2zYpBRj07HG",
+    "title": "Filo - Laser diodo zona mediana.webp",
+    "local": "src/assets/updates/12-filo-laser-diodo-zona-mediana.webp",
+    "url": "https://drive.google.com/file/d/1WINOl5434lv1WdA7zDG7-2zYpBRj07HG/view?usp=drivesdk"
+  },
+  {
+    "id": "1GEDxZEFm_htfJpTnOZnKH9TXzNM-mAuQ",
+    "title": "Filo - Laser diodo zona grande.webp",
+    "local": "src/assets/updates/13-filo-laser-diodo-zona-grande.webp",
+    "url": "https://drive.google.com/file/d/1GEDxZEFm_htfJpTnOZnKH9TXzNM-mAuQ/view?usp=drivesdk"
+  },
+  {
+    "id": "1J9vVLeFFvj3UhMvWGyHwu77kzKdn9h-X",
+    "title": "Filo - Cejas - Microblading.webp",
+    "local": "src/assets/updates/14-filo-cejas-microblading.webp",
+    "url": "https://drive.google.com/file/d/1J9vVLeFFvj3UhMvWGyHwu77kzKdn9h-X/view?usp=drivesdk"
+  },
+  {
+    "id": "1EuxVNuQxlBWTQ4FLNwDbRkL_Aru1YWvS",
+    "title": "Filo - Cejas - Laminado.webp",
+    "local": "src/assets/updates/15-filo-cejas-laminado.webp",
+    "url": "https://drive.google.com/file/d/1EuxVNuQxlBWTQ4FLNwDbRkL_Aru1YWvS/view?usp=drivesdk"
+  },
+  {
+    "id": "1ycc7pTfZ-nFdLBUGx3O6_jl4UDnH6pqZ",
+    "title": "Filo - Cejas - Hilo.webp",
+    "local": "src/assets/updates/16-filo-cejas-hilo.webp",
+    "url": "https://drive.google.com/file/d/1ycc7pTfZ-nFdLBUGx3O6_jl4UDnH6pqZ/view?usp=drivesdk"
+  },
+  {
+    "id": "1dd2SayBJTqGSvAVBgls_ZbMQGQOPh6Cc",
+    "title": "Filo - Cejas - Henna.webp",
+    "local": "src/assets/updates/17-filo-cejas-henna.webp",
+    "url": "https://drive.google.com/file/d/1dd2SayBJTqGSvAVBgls_ZbMQGQOPh6Cc/view?usp=drivesdk"
+  },
+  {
+    "id": "1JX48v3Vspq4maYkPqF00qLCTl_KFkK7S",
+    "title": "Filo - Cejas - Eliminacion de micropigmentacion.webp",
+    "local": "src/assets/updates/18-filo-cejas-eliminacion-de-micropigmentacion.webp",
+    "url": "https://drive.google.com/file/d/1JX48v3Vspq4maYkPqF00qLCTl_KFkK7S/view?usp=drivesdk"
+  },
+  {
+    "id": "1Fb1GSMY19zLxy45EtbBfQOzK7O8u9RB6",
+    "title": "Tez - rejuvenecimiento 360 facial.webp",
+    "local": "src/assets/updates/19-tez-rejuvenecimiento-360-facial.webp",
+    "url": "https://drive.google.com/file/d/1Fb1GSMY19zLxy45EtbBfQOzK7O8u9RB6/view?usp=drivesdk"
+  },
+  {
+    "id": "15u25KPMZJvb12fj87WAy4tJuoREvfFk8",
+    "title": "Tacto portada.mp4",
+    "local": "src/assets/updates/20-tacto-portada.mp4",
+    "url": "https://drive.google.com/file/d/15u25KPMZJvb12fj87WAy4tJuoREvfFk8/view?usp=drivesdk"
+  },
+  {
+    "id": "1J6T9fbSBEe1pchugBWYZjmmNCSaIJbp2",
+    "title": "Lienzo - Caracterizacion.webp",
+    "local": "src/assets/updates/21-lienzo-caracterizacion.webp",
+    "url": "https://drive.google.com/file/d/1J6T9fbSBEe1pchugBWYZjmmNCSaIJbp2/view?usp=drivesdk"
+  },
+  {
+    "id": "1AvBcflEDJ0QwHTZHTuXqV4s3vUfC5Bt7",
+    "title": "Lazo - masaje.webp",
+    "local": "src/assets/updates/22-lazo-masaje.webp",
+    "url": "https://drive.google.com/file/d/1AvBcflEDJ0QwHTZHTuXqV4s3vUfC5Bt7/view?usp=drivesdk"
+  },
+  {
+    "id": "1jR4baoVpJ0FQ1_j9jH4MRbcJ9L1wf5Y5",
+    "title": "Filo - cera zona pequeña.webp",
+    "local": "src/assets/updates/23-filo-cera-zona-pequena.webp",
+    "url": "https://drive.google.com/file/d/1jR4baoVpJ0FQ1_j9jH4MRbcJ9L1wf5Y5/view?usp=drivesdk"
+  },
+  {
+    "id": "151h-HSH1G8YzVvskDori13-ajGVSnGaq",
+    "title": "Oasis - envoltura.webp",
+    "local": "src/assets/updates/24-oasis-envoltura.webp",
+    "url": "https://drive.google.com/file/d/151h-HSH1G8YzVvskDori13-ajGVSnGaq/view?usp=drivesdk"
+  },
+  {
+    "id": "14evQv9C2NnX20fZB38GQr7Vnw49LVKbC",
+    "title": "Oasis - Ritual botánico.webp",
+    "local": "src/assets/updates/25-oasis-ritual-botanico.webp",
+    "url": "https://drive.google.com/file/d/14evQv9C2NnX20fZB38GQr7Vnw49LVKbC/view?usp=drivesdk"
+  },
+  {
+    "id": "1m2UdJaHfHeUDBkBkFh1nMaD8vmTYVsZU",
+    "title": "Tacto - Maderoterapia facial.webp",
+    "local": "src/assets/updates/26-tacto-maderoterapia-facial.webp",
+    "url": "https://drive.google.com/file/d/1m2UdJaHfHeUDBkBkFh1nMaD8vmTYVsZU/view?usp=drivesdk"
+  },
+  {
+    "id": "1qmD29-OwDe2JeUhGdEpc1rjsKYdgg8Sj",
+    "title": "Tacto - Drenaje linfatico.webp",
+    "local": "src/assets/updates/27-tacto-drenaje-linfatico.webp",
+    "url": "https://drive.google.com/file/d/1qmD29-OwDe2JeUhGdEpc1rjsKYdgg8Sj/view?usp=drivesdk"
+  },
+  {
+    "id": "16NdeyOHLmH1tI9cOGCvFBTqSTKCQw5sY",
+    "title": "Tez - Eliminacion de microblading.webp",
+    "local": "src/assets/updates/28-tez-eliminacion-de-microblading.webp",
+    "url": "https://drive.google.com/file/d/16NdeyOHLmH1tI9cOGCvFBTqSTKCQw5sY/view?usp=drivesdk"
+  },
+  {
+    "id": "1smJEGcZ3E0lI8v1wvWF8UlwyR_MKp0mL",
+    "title": "tez - tratamiento acne IPL.webp",
+    "local": "src/assets/updates/29-tez-tratamiento-acne-ipl.webp",
+    "url": "https://drive.google.com/file/d/1smJEGcZ3E0lI8v1wvWF8UlwyR_MKp0mL/view?usp=drivesdk"
+  },
+  {
+    "id": "1hYJGTdQnfm-Hn25CNVmlKMPD2dUtGfSS",
+    "title": "tez - rejuvenecimiento facial.webp",
+    "local": "src/assets/updates/30-tez-rejuvenecimiento-facial.webp",
+    "url": "https://drive.google.com/file/d/1hYJGTdQnfm-Hn25CNVmlKMPD2dUtGfSS/view?usp=drivesdk"
+  },
+  {
+    "id": "1bBaJXDsuB7bGI_46XvN8h5y9Wkyle1QY",
+    "title": "Hebra - Barro.webp",
+    "local": "src/assets/updates/31-hebra-barro.webp",
+    "url": "https://drive.google.com/file/d/1bBaJXDsuB7bGI_46XvN8h5y9Wkyle1QY/view?usp=drivesdk"
+  },
+  {
+    "id": "1u4law1mqItRUt2ABEAeoTtpl7fB71poq",
+    "title": "Hebra - cuero cabelludo.webp",
+    "local": "src/assets/updates/32-hebra-cuero-cabelludo.webp",
+    "url": "https://drive.google.com/file/d/1u4law1mqItRUt2ABEAeoTtpl7fB71poq/view?usp=drivesdk"
+  },
+  {
+    "id": "1xe6sDMFA6iEpmzAIXz6EOjs6R1JecZf2",
+    "title": "Hebra - Fibra capilar.webp",
+    "local": "src/assets/updates/33-hebra-fibra-capilar.webp",
+    "url": "https://drive.google.com/file/d/1xe6sDMFA6iEpmzAIXz6EOjs6R1JecZf2/view?usp=drivesdk"
+  },
+  {
+    "id": "1s6nsN1f8NFaJzuew8FqQPTghwLfFHcXk",
+    "title": "Lienzo - Maquillaje de novia.webp",
+    "local": "src/assets/updates/34-lienzo-maquillaje-de-novia.webp",
+    "url": "https://drive.google.com/file/d/1s6nsN1f8NFaJzuew8FqQPTghwLfFHcXk/view?usp=drivesdk"
+  },
+  {
+    "id": "1r7lsBlwIor9AySJPahFefWmT9LO1U_C0",
+    "title": "Lienzo - Quinceañera.webp",
+    "local": "src/assets/updates/35-lienzo-quinceanera.webp",
+    "url": "https://drive.google.com/file/d/1r7lsBlwIor9AySJPahFefWmT9LO1U_C0/view?usp=drivesdk"
+  },
+  {
+    "id": "1cZBT_saL4bEl0pLI9LUXx3R3R6sbET5-",
+    "title": "Lienzo - Maquillaje social.webp",
+    "local": "src/assets/updates/36-lienzo-maquillaje-social.webp",
+    "url": "https://drive.google.com/file/d/1cZBT_saL4bEl0pLI9LUXx3R3R6sbET5-/view?usp=drivesdk"
+  },
+  {
+    "id": "1Us6icTKtMKyTev8vH6Qs5C21jPA8Dycc",
+    "title": "Lazo - Hidroterapia.webp",
+    "local": "src/assets/updates/37-lazo-hidroterapia.webp",
+    "url": "https://drive.google.com/file/d/1Us6icTKtMKyTev8vH6Qs5C21jPA8Dycc/view?usp=drivesdk"
+  },
+  {
+    "id": "1WrN-ZQyUGv0c-mFD2Qv6TwlDnYbQRGqw",
+    "title": "Lazo - vichy.webp",
+    "local": "src/assets/updates/38-lazo-vichy.webp",
+    "url": "https://drive.google.com/file/d/1WrN-ZQyUGv0c-mFD2Qv6TwlDnYbQRGqw/view?usp=drivesdk"
+  },
+  {
+    "id": "1FxkBpudDO7DexqpBFqvOu39req2CIn_Y",
+    "title": "Lazo - Hammam.webp",
+    "local": "src/assets/updates/39-lazo-hammam.webp",
+    "url": "https://drive.google.com/file/d/1FxkBpudDO7DexqpBFqvOu39req2CIn_Y/view?usp=drivesdk"
+  },
+  {
+    "id": "1mfTiM9GlWRuPt6qRSne38S2f5fhCJT5J",
+    "title": "Lazo - Ritual.webp",
+    "local": "src/assets/updates/40-lazo-ritual.webp",
+    "url": "https://drive.google.com/file/d/1mfTiM9GlWRuPt6qRSne38S2f5fhCJT5J/view?usp=drivesdk"
+  },
+  {
+    "id": "1wrnL1zTJuyAh8pSnBBnS0tnYjVf0WXrV",
+    "title": "Filo - Depilacion ipl zona pequeña.webp",
+    "local": "src/assets/updates/41-filo-depilacion-ipl-zona-pequena.webp",
+    "url": "https://drive.google.com/file/d/1wrnL1zTJuyAh8pSnBBnS0tnYjVf0WXrV/view?usp=drivesdk"
+  },
+  {
+    "id": "1x9-XHUVuzk7tw6XB4E_Sabiu9leeF74A",
+    "title": "Filo - Depilacion IPL zona mediana.webp",
+    "local": "src/assets/updates/42-filo-depilacion-ipl-zona-mediana.webp",
+    "url": "https://drive.google.com/file/d/1x9-XHUVuzk7tw6XB4E_Sabiu9leeF74A/view?usp=drivesdk"
+  },
+  {
+    "id": "1J5MK4oz0vNa4UsvP7IHC1cnseVAQ0J_x",
+    "title": "Filo - cera zona mediana.webp",
+    "local": "src/assets/updates/43-filo-cera-zona-mediana.webp",
+    "url": "https://drive.google.com/file/d/1J5MK4oz0vNa4UsvP7IHC1cnseVAQ0J_x/view?usp=drivesdk"
+  },
+  {
+    "id": "1pRm81Vze0ubRAeiReEaEh-wqRGd5j2Ir",
+    "title": "Oasis - Exfoliaciones sensoriales",
+    "local": "src/assets/updates/44-oasis-exfoliaciones-sensoriales.webp",
+    "url": "https://drive.google.com/file/d/1pRm81Vze0ubRAeiReEaEh-wqRGd5j2Ir/view?usp=drivesdk"
+  },
+  {
+    "id": "1xMUiOh0RZ2TX8pldg5Ur2SxvZnoc3QP8",
+    "title": "Oasis - ritual holistico 2.webp",
+    "local": "src/assets/updates/45-oasis-ritual-holistico-2.webp",
+    "url": "https://drive.google.com/file/d/1xMUiOh0RZ2TX8pldg5Ur2SxvZnoc3QP8/view?usp=drivesdk"
+  },
+  {
+    "id": "1L9YMXxmnZhArwmVbfSwp0xXBzxi1T8fT",
+    "title": "Oasis - Ritual holistico.webp",
+    "local": "src/assets/updates/46-oasis-ritual-holistico.webp",
+    "url": "https://drive.google.com/file/d/1L9YMXxmnZhArwmVbfSwp0xXBzxi1T8fT/view?usp=drivesdk"
+  },
+  {
+    "id": "1A3fDpugbrudYL_7Rhrns9rjrESQFqXTJ",
+    "title": "Tez - limpieza facial.webp",
+    "local": "src/assets/updates/47-tez-limpieza-facial.webp",
+    "url": "https://drive.google.com/file/d/1A3fDpugbrudYL_7Rhrns9rjrESQFqXTJ/view?usp=drivesdk"
+  },
+  {
+    "id": "1Q4vX9xP1Y74IKTAQFTqxw4RHJewPGD9O",
+    "title": "Tez - limpieza facial.mp4",
+    "local": "src/assets/updates/48-tez-limpieza-facial.mp4",
+    "url": "https://drive.google.com/file/d/1Q4vX9xP1Y74IKTAQFTqxw4RHJewPGD9O/view?usp=drivesdk"
+  },
+  {
+    "id": "1OClVWfXq6itIvM6ixSzYUdW9EjimwI56",
+    "title": "Filo - Lifting de pestañas 1.webp",
+    "local": "src/assets/updates/49-filo-lifting-de-pestanas-1.webp",
+    "url": "https://drive.google.com/file/d/1OClVWfXq6itIvM6ixSzYUdW9EjimwI56/view?usp=drivesdk"
+  },
+  {
+    "id": "1Ln8xjw2V8tNwUherZnA530C9TdQ7uiCB",
+    "title": "Tez - presoterapia.webp",
+    "local": "src/assets/updates/50-tez-presoterapia.webp",
+    "url": "https://drive.google.com/file/d/1Ln8xjw2V8tNwUherZnA530C9TdQ7uiCB/view?usp=drivesdk"
+  },
+  {
+    "id": "1VEegBRX1o6f9cqrHNGqUZPjr96ebUUQc",
+    "title": "Tez - presoterapia (1).webp",
+    "local": "src/assets/updates/51-tez-presoterapia-1-.webp",
+    "url": "https://drive.google.com/file/d/1VEegBRX1o6f9cqrHNGqUZPjr96ebUUQc/view?usp=drivesdk"
+  },
+  {
+    "id": "1GfEFrUGf30H_VkfawwsXg66F5EUX7Qgk",
+    "title": "Filo - Extensiones de pestañas.webp",
+    "local": "src/assets/updates/52-filo-extensiones-de-pestanas.webp",
+    "url": "https://drive.google.com/file/d/1GfEFrUGf30H_VkfawwsXg66F5EUX7Qgk/view?usp=drivesdk"
+  },
+  {
+    "id": "1bRi-NAbRdfG0qIL_5kJ3z0Wo-1UKu2Az",
+    "title": "Filo - Lifting de pestañas 3.webp",
+    "local": "src/assets/updates/53-filo-lifting-de-pestanas-3.webp",
+    "url": "https://drive.google.com/file/d/1bRi-NAbRdfG0qIL_5kJ3z0Wo-1UKu2Az/view?usp=drivesdk"
+  },
+  {
+    "id": "1YAWViFAVZybrQZVcQ0l2ZpHLHtElWtSh",
+    "title": "Filo - lifting de pestañas 2.webp",
+    "local": "src/assets/updates/54-filo-lifting-de-pestanas-2.webp",
+    "url": "https://drive.google.com/file/d/1YAWViFAVZybrQZVcQ0l2ZpHLHtElWtSh/view?usp=drivesdk"
+  },
+  {
+    "id": "1OYvj0bS0cXqb2tKEqaglR81sBg6m2njk",
+    "title": "Hebra - hair spa asiatico.mp4",
+    "local": "src/assets/updates/55-hebra-hair-spa-asiatico.mp4",
+    "url": "https://drive.google.com/file/d/1OYvj0bS0cXqb2tKEqaglR81sBg6m2njk/view?usp=drivesdk"
+  },
+  {
+    "id": "1Mps9_qlpQeaDmrF6ctR57A30ahghGoEG",
+    "title": "Tez - lipo sin cirugia2.mp4",
+    "local": "src/assets/updates/56-tez-lipo-sin-cirugia2.mp4",
+    "url": "https://drive.google.com/file/d/1Mps9_qlpQeaDmrF6ctR57A30ahghGoEG/view?usp=drivesdk"
+  },
+  {
+    "id": "1JZecXDLwW3easEb3HdEuVWIBT2YGLVro",
+    "title": "Tez - lipo sin cirugia.mp4",
+    "local": "src/assets/updates/57-tez-lipo-sin-cirugia.mp4",
+    "url": "https://drive.google.com/file/d/1JZecXDLwW3easEb3HdEuVWIBT2YGLVro/view?usp=drivesdk"
+  },
+  {
+    "id": "1RCgCQgQkalGdK54kqTK9NxKy2dz_4zAn",
+    "title": "Tez - Lipo sin cirugia3.MOV",
+    "local": "src/assets/updates/58-tez-lipo-sin-cirugia3.mp4",
+    "url": "https://drive.google.com/file/d/1RCgCQgQkalGdK54kqTK9NxKy2dz_4zAn/view?usp=drivesdk"
+  }
+]
