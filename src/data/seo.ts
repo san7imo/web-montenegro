@@ -27,7 +27,7 @@ export const seoByPath: Record<string, SeoMetadata> = {
   '/servicios': {
     title: 'Servicios de bienestar y belleza | Montenegro',
     description:
-      'Explora todas las categorías de servicios Montenegro: rituales, estética facial y corporal, spa capilar, masajes, maquillaje, servicios en pareja, mirada y bienestar infantil.',
+      'Explora todas las categorías de servicios Montenegro: rituales, estética facial y corporal, spa capilar, masajes, servicios en pareja, mirada y bienestar infantil.',
   },
   '/oasis': {
     title: 'Oasis: rituales de purificación | Montenegro',
@@ -59,7 +59,6 @@ export const seoByPath: Record<string, SeoMetadata> = {
     description:
       'Spa capilar, barros botánicos, cuidado del cuero cabelludo, reparación e hidratación de la fibra capilar.',
   },
-  '/lienzo': { title: 'Lienzo: maquillaje | Montenegro', description: 'Maquillaje de novia, quinceañeras y social, pruebas previas y propuestas creativas.' },
   '/lazo': { title: 'Lazo: bienestar en pareja | Montenegro', description: 'Hidroterapia, masajes y rituales de agua para dos.' },
   '/tez': {
     title: 'Tez: estética facial y corporal | Montenegro',

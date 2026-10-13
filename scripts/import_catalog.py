@@ -26,10 +26,12 @@ def money(value):
     return clean(value)
 
 workbook = openpyxl.load_workbook(SOURCE, data_only=True)
-catalog = {key: [] for key in ['oasis', 'tacto', 'tez', 'filo', 'hebra', 'lienzo', 'lazo', 'brote', 'raiz']}
+catalog = {key: [] for key in ['oasis', 'tacto', 'tez', 'filo', 'hebra', 'lazo', 'brote', 'raiz']}
 counts = {}
 for sheet in workbook:
     category = 'filo' if '(Filo)' in sheet.title else ('brote' if sheet.title == 'Brotes' else sheet.title.lower())
+    if category not in catalog:
+        continue
     current = None
     counts[sheet.title] = 0
     for row in range(5, sheet.max_row + 1):
@@ -45,10 +47,10 @@ for sheet in workbook:
         description = str(cells['D'] if category == 'brote' else cells['G']).strip()
         if not current['description']:
             current['description'] = description
-        duration_col = {'Oasis': 'O', 'Tacto': 'P', 'Tez': 'Q', 'Lienzo': 'P', 'Brotes': 'J', 'Depilacion IPL (Filo)': 'Q', 'Depilacion Laser Diodo (Filo)': 'S'}.get(sheet.title, 'M')
+        duration_col = {'Oasis': 'O', 'Tacto': 'P', 'Tez': 'Q', 'Brotes': 'J', 'Depilacion IPL (Filo)': 'Q', 'Depilacion Laser Diodo (Filo)': 'S'}.get(sheet.title, 'M')
         duration = clean(cells[duration_col])
         option = {'name': clean(cells['A'] if category == 'brote' else (cells['D'] or current['title'])), 'price': money(cells['H'] if category == 'brote' else cells['K']), 'description': description, 'duration': duration if duration and duration != '--' else 'Consultar', 'sourceSheet': sheet.title, 'sourceRow': row}
-        if sheet.title in ['Oasis', 'Tacto', 'Tez', 'Lienzo'] and cells['M']:
+        if sheet.title in ['Oasis', 'Tacto', 'Tez'] and cells['M']:
             option['bonus'] = str(cells['M']).strip()
         if sheet.title == 'Depilacion IPL (Filo)':
             option['price'] = f"Primera Sesión: {money(cells['K'])} Sesión Individual: {money(cells['M'])} Bono de 6 Sesiones: {money(cells['O'])}"

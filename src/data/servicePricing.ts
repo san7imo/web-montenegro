@@ -2,7 +2,7 @@ import { approvedServicePricing } from './approvedServicePricing'
 import { octoberTezPricing } from './octoberServicePricing'
 import { updatedCatalogOptionImages } from './updatedCatalogImages'
 
-export type PricingCategory = 'oasis' | 'tez' | 'filo' | 'brote' | 'hebra' | 'tacto' | 'raiz' | 'lienzo' | 'lazo'
+export type PricingCategory = 'oasis' | 'tez' | 'filo' | 'brote' | 'hebra' | 'tacto' | 'raiz' | 'lazo'
 export type ServicePriceOption = {
   image?: string
   bonus?: string

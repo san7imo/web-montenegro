@@ -19,7 +19,6 @@ import update13 from '../assets/updates/13-filo-laser-diodo-zona-grande.webp'
 import update14 from '../assets/updates/14-filo-cejas-microblading.webp'
 import update18 from '../assets/updates/18-filo-cejas-eliminacion-de-micropigmentacion.webp'
 import update19 from '../assets/updates/19-tez-rejuvenecimiento-360-facial.webp'
-import update21 from '../assets/updates/21-lienzo-caracterizacion.webp'
 import update22 from '../assets/updates/22-lazo-masaje.webp'
 import update23 from '../assets/updates/23-filo-cera-zona-pequena.webp'
 import update24 from '../assets/updates/24-oasis-envoltura.webp'
@@ -32,9 +31,6 @@ import update30 from '../assets/updates/30-tez-rejuvenecimiento-facial.webp'
 import update31 from '../assets/updates/31-hebra-barro.webp'
 import update32 from '../assets/updates/32-hebra-cuero-cabelludo.webp'
 import update33 from '../assets/updates/33-hebra-fibra-capilar.webp'
-import update34 from '../assets/updates/34-lienzo-maquillaje-de-novia.webp'
-import update35 from '../assets/updates/35-lienzo-quinceanera.webp'
-import update36 from '../assets/updates/36-lienzo-maquillaje-social.webp'
 import update37 from '../assets/updates/37-lazo-hidroterapia.webp'
 import update40 from '../assets/updates/40-lazo-ritual.webp'
 import update41 from '../assets/updates/41-filo-depilacion-ipl-zona-pequena.webp'
@@ -72,10 +68,6 @@ export const updatedCatalogImages: Record<string, string> = {
   'hebra:barros-botanicos': update31,
   'hebra:cuero-cabelludo': update32,
   'hebra:fibra-capilar': update33,
-  'lienzo:cracterizacion-maquillaje-creativo': update21,
-  'lienzo:maquillaje-de-novia': update34,
-  'lienzo:maquillaje-para-quinceaneras': update35,
-  'lienzo:maquillaje-social': update36,
   'lazo:ritual-dual-hidroterapia-para-dos': update37,
   'lazo:masaje-relajante-dual': update22,
   'lazo:rituales-de-agua-para-dos': update40,

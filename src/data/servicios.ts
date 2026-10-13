@@ -1,6 +1,6 @@
 export const serviciosHeroContent = {
   label: 'Universo Montenegro',
-  titleLines: ['Servicios:', 'Ocho caminos hacia tu bienestar.'],
+  titleLines: ['Servicios:', 'Siete caminos hacia tu bienestar.'],
   description:
     'Explora nuestras áreas de cuidado y encuentra la experiencia que mejor acompaña las necesidades de tu cuerpo, tu piel y tu momento personal.',
 } as const
@@ -59,11 +59,6 @@ export const serviceCategoryCards = [
       'Experiencias de autocuidado para niños y niñas que unen relajación, juego sensorial y celebración en un ambiente amable y seguro.',
     href: '/brote',
     image: 'brote',
-  },
-  {
-    id: 'lienzo', title: 'Lienzo', subtitle: 'Maquillaje',
-    description: 'Maquillaje de novia, quinceañeras y social, pruebas previas, caracterización y propuestas creativas.',
-    href: '/lienzo', image: 'lienzo',
   },
   {
     id: 'lazo', title: 'Lazo', subtitle: 'Servicios en pareja',

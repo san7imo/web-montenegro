@@ -17,7 +17,6 @@ const imageByKey = {
   filo: filoImage,
   hebra: hebraImage,
   oasis: oasisImage,
-  lienzo: '',
   lazo: '',
   tacto: tactoImage,
   tez: tezImage,

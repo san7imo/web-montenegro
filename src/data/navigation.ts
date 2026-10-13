@@ -10,7 +10,6 @@ export const navigationLinks: NavigationItem[] = [
   { label: 'TACTO', href: '/tacto' },
   { label: 'FILO', href: '/filo' },
   { label: 'BROTES', href: '/brote' },
-  { label: 'LIENZO', href: '/lienzo' },
   { label: 'LAZO', href: '/lazo' },
   { label: 'RAÍZ', href: '/raiz' },
   { label: 'ECO', href: '/eco' },
@@ -36,6 +35,5 @@ export const serviceNavigationLinks = [
   { label: 'TACTO', href: '/tacto', description: 'Masajes y bienestar' },
   { label: 'FILO', href: '/filo', description: 'Depilación y mirada' },
   { label: 'BROTES', href: '/brote', description: 'Spa infantil' },
-  { label: 'LIENZO', href: '/lienzo', description: 'Maquillaje' },
   { label: 'LAZO', href: '/lazo', description: 'Servicios en pareja' },
 ] satisfies Array<NavigationItem & { description?: string }>

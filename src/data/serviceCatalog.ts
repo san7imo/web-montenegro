@@ -14,7 +14,7 @@ export type ServiceCatalogItem = {
 }
 export const categoryLabels: Record<PricingCategory, string> = {
   oasis: 'Oasis', tacto: 'Tacto', tez: 'Tez', filo: 'Filo', hebra: 'Hebra',
-  brote: 'Brotes', lienzo: 'Lienzo', lazo: 'Lazo', raiz: 'Raíz',
+  brote: 'Brotes', lazo: 'Lazo', raiz: 'Raíz',
 }
 export const serviceCatalog: ServiceCatalogItem[] = Object.entries(servicePricingByCategory)
   .flatMap(([key, services]) => services.map((service) => {

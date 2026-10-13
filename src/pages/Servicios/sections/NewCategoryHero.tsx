@@ -1,17 +1,15 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
-import lienzoHeroImage from '../../../assets/updates/34-lienzo-maquillaje-de-novia.webp'
 import lazoHeroVideo from '../../../assets/updates/0-lazo-portada.mp4'
 import lazoHeroPoster from '../../../assets/updates/0-lazo-portada-poster.webp'
 import { Container } from '../../../components/ui/Container'
 import { DecorativeLine } from '../../../components/ui/DecorativeLine'
 import { HeroOverlay } from '../../../components/ui/HeroOverlay'
 import { HeroVideoBackground } from '../../../components/ui/HeroVideoBackground'
-import { ImageLayer } from '../../../components/ui/ImageLayer'
 import { SectionTitle } from '../../../components/ui/SectionTitle'
 import { newCategoryContent } from '../../../data/newCategories'
 
-export function NewCategoryHero({ category }: { category: 'lienzo' | 'lazo' }) {
+export function NewCategoryHero({ category }: { category: 'lazo' }) {
   const page = newCategoryContent[category]
   const shouldReduceMotion = useReducedMotion()
   const fadeUp = (delay: number) =>
@@ -27,11 +25,7 @@ export function NewCategoryHero({ category }: { category: 'lienzo' | 'lazo' }) {
   return (
     <section className="overflow-hidden bg-forest text-white">
       <div className="relative h-[64svh] min-h-[25rem] max-h-[44rem]">
-        {category === 'lazo' ? (
-          <HeroVideoBackground src={lazoHeroVideo} poster={lazoHeroPoster} />
-        ) : (
-          <ImageLayer src={lienzoHeroImage} alt="" loading="eager" className="absolute inset-0 h-full w-full object-cover object-[50%_35%]" />
-        )}
+        <HeroVideoBackground src={lazoHeroVideo} poster={lazoHeroPoster} />
         <HeroOverlay />
         <div className="relative z-10 flex h-full items-end px-[6.2vw] pb-8 sm:pb-10 lg:pb-9">
           <motion.div className="w-full min-w-0 max-w-[70rem]" {...fadeUp(0.08)}>
