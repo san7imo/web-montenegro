@@ -6,29 +6,29 @@ export const approvedServicePricing = {
     {
       "id": "cerrar-matriz",
       "title": "Cerrar Matriz",
-      "description": "Descripción: Ritual holístico y de acompañamiento diseñado para devolver la estructura, contención y alivio térmico al área abdominal y lumbar. Se trabaja con maniobras envolventes y calor húmedo localizado mediante toallas impregnadas en botánicos relajantes, finalizando con la infusión de la casa para equilibrar el organismo.\n\nBeneficios:\n- Alivia la tensión muscular acumulada en el abdomen bajo y la zona sacrolumbar.\n- Promueve el alivio del dolor cólico, la fatiga física y la sobrecarga postural.\n- Induce a un estado profundo de relajación del sistema nervioso.\n\nContraindicaciones: Procesos infecciosos agudos, fiebre, presencia de DIU o dispositivos intrauterinos recién colocados (menos de 30 días), sangrados o hemorragias activas y embarazo.\n\nRecomendaciones: Acudir con ropa cómoda y holgada, no ingerir comidas copiosas durante las 2 horas previas y mantenerse bien hidratada tras finalizar la sesión.",
+      "description": "Reconecta con tu nueva feminidad con experiencias de bienestar integral para etapas de gran transformación como el posparto o periodos de estrés intenso.",
       "options": [
         {
           "name": "Ritual Matriz Tradicional",
-          "price": "90 €",
-          "description": "Descripción: Ritual holístico y de acompañamiento diseñado para devolver la estructura, contención y alivio térmico al área abdominal y lumbar. Se trabaja con maniobras envolventes y calor húmedo localizado mediante toallas impregnadas en botánicos relajantes, finalizando con la infusión de la casa para equilibrar el organismo.\n\nBeneficios:\n- Alivia la tensión muscular acumulada en el abdomen bajo y la zona sacrolumbar.\n- Promueve el alivio del dolor cólico, la fatiga física y la sobrecarga postural.\n- Induce a un estado profundo de relajación del sistema nervioso.\n\nContraindicaciones: Procesos infecciosos agudos, fiebre, presencia de DIU o dispositivos intrauterinos recién colocados (menos de 30 días), sangrados o hemorragias activas y embarazo.\n\nRecomendaciones: Acudir con ropa cómoda y holgada, no ingerir comidas copiosas durante las 2 horas previas y mantenerse bien hidratada tras finalizar la sesión.",
+          "price": "130€",
+          "description": "Restaura el equilibrio físico y emocional de tu centro pélvico. Ideal para ti si buscas aliviar molestias menstruales o favorecer tu salud uterina.",
           "duration": "40 min",
           "sourceSheet": "Oasis",
           "sourceRow": 5
         },
         {
           "name": "Ritual Matriz Rehabilitación Pélvica",
-          "price": "130 €",
-          "description": "Descripción: Experiencia regeneradora que integra la terapia de vapor herbal (vapo-infusión fito-activa) para favorecer la descongestión pélvica y la vasodilatación suave, combinada con un masaje corporal completo con aceites vegetales templados que restauran la energía física y emocional.\n\nBeneficios:\n- Desinflama y descongestiona los tejidos pélvicos y abdominales.\n- Mejora la microcirculación y la flexibilidad del tejido blando.\n- Nutre profundamente la piel corporal e hidrata en profundidad gracias a los aceites tibios.\n\nContraindicaciones: Heridas abiertas en la zona perineal o abdominal, infecciones urinarias o vaginales activas, candidiasis, hipermenorrea (sangrado abundante) e hipertensión arterial no controlada.\n\nRecomendaciones: Evitar ducharse con agua muy fría inmediatamente después del baño de vapor y guardar reposo relativo durante el resto del día para prolongar el efecto térmico.",
+          "price": "130€",
+          "description": "Tonifica y fortalece la musculatura de tu suelo pélvico. Es ideal para ti si estás pasando por el posparto, sufres de incontinencia urinaria o sientes incomodidad pélvica.",
           "duration": "60 min",
           "sourceSheet": "Oasis",
           "sourceRow": 9
         },
         {
           "name": "Ritual Matriz Intensiva",
-          "price": "180 €",
-          "description": "Descripción: Ritual holístico y de acompañamiento diseñado para devolver la estructura, contención y alivio térmico al área abdominal y lumbar. Se trabaja con maniobras envolventes y calor húmedo localizado mediante toallas impregnadas en botánicos relajantes, finalizando con la infusión de la casa para equilibrar el organismo.\n\nBeneficios:\n- Alivia la tensión muscular acumulada en el abdomen bajo y la zona sacrolumbar.\n- Promueve el alivio del dolor cólico, la fatiga física y la sobrecarga postural.\n- Induce a un estado profundo de relajación del sistema nervioso.\n\nContraindicaciones: Procesos infecciosos agudos, fiebre, presencia de DIU o dispositivos intrauterinos recién colocados (menos de 30 días), sangrados o hemorragias activas y embarazo.\n\nRecomendaciones: Acudir con ropa cómoda y holgada, no ingerir comidas copiosas durante las 2 horas previas y mantenerse bien hidratada tras finalizar la sesión.",
-          "duration": "120 min",
+          "price": "180€",
+          "description": "Perfecto para que renueves la energía vital de tu matriz en casos severos de inflamación crónica, desequilibrios hormonales o congestión pélvica.",
+          "duration": "60 min",
           "sourceSheet": "Oasis",
           "sourceRow": 13
         }
@@ -37,52 +37,52 @@ export const approvedServicePricing = {
     {
       "id": "ritual-botanico-linea-medicinal-hidroterapia",
       "title": "Ritual Botánico (Línea Medicinal) Hidroterapia",
-      "description": "21 Hierbas Ancestrales: Ruda, caléndula, árnica, romero, salvia, manzanilla, milenrama, albahaca, etc. + 7 Sales Minerales: Sal de Epsom, Himalaya, Mar Muerto. + Potenciador extra Montenegro: Leche de cabra, etc.\n\nBeneficios: Tonifica la musculatura pélvica, ayuda a la retracción uterina, desinflama la zona abdominal y acelera la cicatrización o recuperación tisular. APORTA nutrición profunda a la piel estirada gracias a la leche de cabra y la rosa mosqueta.\n\nContraindicaciones: Heridas quirúrgicas recientes sin cicatrizar (puntos de cesárea o episiotomía abiertos o infectados), hemorragias postparto activas (loquios muy abundantes), fiebre o infección uterina.",
+      "description": "Empodera la salud de tu cuerpo desde el interior. Desintoxica, activa tu circulación y libera tensiones profundas con extractos medicinales botánicos.",
       "options": [
         {
           "name": "Cierre de Matriz & Desintoxicación",
-          "price": "160 €",
-          "description": "21 Hierbas Ancestrales: Ruda, caléndula, árnica, romero, salvia, manzanilla, milenrama, albahaca, etc. + 7 Sales Minerales: Sal de Epsom, Himalaya, Mar Muerto. + Potenciador extra Montenegro: Leche de cabra, etc.\n\nBeneficios: Tonifica la musculatura pélvica, ayuda a la retracción uterina, desinflama la zona abdominal y acelera la cicatrización o recuperación tisular. APORTA nutrición profunda a la piel estirada gracias a la leche de cabra y la rosa mosqueta.\n\nContraindicaciones: Heridas quirúrgicas recientes sin cicatrizar (puntos de cesárea o episiotomía abiertos o infectados), hemorragias postparto activas (loquios muy abundantes), fiebre o infección uterina.",
+          "price": "160€",
+          "description": "Recupera la vitalidad corporal tras el posparto o un proceso físico y emocional intenso a través de la liberación de toxinas.",
           "duration": "60 min",
           "sourceSheet": "Oasis",
           "sourceRow": 17
         },
         {
           "name": "Detox, Drenante & Anticelulítica",
-          "price": "150 €",
-          "description": "6 Hierbas Ancestrales: Centella asiática, cola de caballo, hiedra, etc. + 2 Sales Minerales: Sales del Mar Muerto (alto contenido en potasio), etc. + Potenciador extra Montenegro: Espirulina en polvo, etc. \n\nBeneficios: Estimula el sistema linfático, moviliza líquidos estancados, favorece la eliminación de toxinas por ósmosis cutánea y mejora visiblemente la textura de la piel de naranja.\n\nContraindicaciones: Insuficiencia renal grave, problemas de tiroides no controlados (por el contenido de yodo del alga espirulina), varices en fase inflamatoria aguda o tromboflebitis.",
+          "price": "150€",
+          "description": "Combate la retención de líquidos de forma natural. Perfecto si quieres alisar tu piel, eliminar toxinas acumuladas y moldear tu figura con el poder purificante de la botánica.",
           "duration": "50 min",
           "sourceSheet": "Oasis",
           "sourceRow": 21
         },
         {
           "name": "Reafirmante, Colágeno & Elasticidad",
-          "price": "150 €",
-          "description": "5 Hierbas Ancestrales: Ortiga verde, ginkgo biloba, etc. + 1 Sales Minerales: Sales de Epsom (sulfato de magnesio). + Potenciador extra Montenegro: Colágeno hidrolizado soluble, etc. \n\nBeneficios: Restablece la densidad y firmeza del tejido conjuntivo, estimula la síntesis de colágeno natural, refuerza la barrera lipídica y previene la flacidez tras pérdidas de peso o el parto.\n\nContraindicaciones: Alergia a las proteínas de origen marino o animal (colágeno), dermatitis atópica en brote severo o heridas abiertas.",
+          "price": "150€",
+          "description": "Empodera la salud de tu piel activando la producción natural de colágeno. Combate la flacidez, la opacidad y la resequedad con lo mejor en botánica para la piel.",
           "duration": "60 min",
           "sourceSheet": "Oasis",
           "sourceRow": 25
         },
         {
           "name": "Relajación Profunda & Anti-Cortisol",
-          "price": "145 €",
-          "description": "5 Hierbas Ancestrales: Lavanda, melisa, etc. + 2 Sales Minerales: Cloruro de Magnesio concentrado, etc. + Potenciador extra Montenegro: Flores de Malva secas, etc. \n\nBeneficios: Induce una sedación neuromuscular profunda mediante la absorción de magnesio, disminuye los niveles de cortisol (estrés), alivia contracturas por tensión y prepara el cuerpo para un descanso reparador.\n\nContraindicaciones: Hipotensión severa (presión arterial muy baja), bloqueos cardíacos o bradicardia sintomática.",
+          "price": "145€",
+          "description": "Reduce tus niveles de estrés y reconecta con tu centro alcanzando un estado de plenitud a través de la estimulación sonora y un baño de especias aromáticas.",
           "duration": "60 min",
           "sourceSheet": "Oasis",
           "sourceRow": 29
         },
         {
           "name": "Purificante, Oxigenante & Piel Nueva",
-          "price": "145 €",
-          "description": "5 Hierbas Ancestrales: Tomillo, eucalipto, etc + 2 Sales Minerales: Sal marina pura, etc + Potenciador extra Montenegro: Carbón activo vegetal de coco, etc. \n\nBeneficios: Atrapa impurezas y metales pesados de los poros gracias al carbón activo, regula el exceso de sebo, oxigena el tejido epidérmico y equilibra el pH cutáneo.\n\nContraindicaciones: Pieles extremadamente secas o con descamación severa, alergia al árbol de té o sensibilidad al bicarbonato de sodio en mucosas.",
+          "price": "145€",
+          "description": "Luce una piel suave y radiante, eliminando impurezas y células muertas. Oxigenamos tus poros, unificamos tu tono de piel y le devolvemos su luminosidad.",
           "duration": "50 min",
           "sourceSheet": "Oasis",
           "sourceRow": 33
         },
         {
           "name": "Circulatoria & Piernas Ligeras",
-          "price": "145 €",
-          "description": "5 Hierbas Ancestrales: Vid roja, castaño de Indias, etc. + 2 Sales Minerales: Sales de Epsom, etc. + Potenciador extra Montenegro: Mentol vegetal cristalizado, etc.\n\nBeneficios: Produce una vasoconstricción inicial seguida de una reactivación venosa, alivia inmediatamente la sensación de pesadez, combate el edema en tobillos y aporta un efecto refrescante prolongado por el mentol.\n\nContraindicaciones: Hipersensibilidad al mentol, enfermedad de Raynaud, úlceras venosas abiertas o pieles con sensibilidad extrema al frío.",
+          "price": "145€",
+          "description": "Encuentra al instante alivio a la pesadez de tus piernas. Descongestiona tus tejidos con masajes que activan tu flujo sanguíneo.",
           "duration": "50 min",
           "sourceSheet": "Oasis",
           "sourceRow": 37
@@ -92,52 +92,52 @@ export const approvedServicePricing = {
     {
       "id": "ritual-holistico-linea-energetica-hidroterapia",
       "title": "Ritual Holístico - (Línea Energética) Hidroterapia",
-      "description": "6 Hierbas Ancestrales: Pétalos de rosa roja, flor de azahar, jazmín, etc. + 2 Sales Minerales: Sal de la Rosa del Himalaya, etc. +Potenciador extra Montenegro:  Aceite esencial de Ylang Ylang, aceite de Jojoba, etc. \n\nBeneficios: Equilibra el chakra corazón, promueve la autoaceptación, eleva el magnetismo personal y revitaliza la piel opaca gracias al cuarzo rosa y la hidratación de la jojoba.  \n\nContraindicaciones: Alergia a las rosáceas o aceites esenciales florales intensos como el ylang ylang (puede provocar mareo en personas hipotensas).",
+      "description": "¡Reconecta con tu poder interior! Energízate, purifica y armoniza tu vibración a través de baños de inversión aromáticos.",
       "options": [
         {
           "name": "Ritual Amor Propio & Atracción",
-          "price": "150 €",
-          "description": "6 Hierbas Ancestrales: Pétalos de rosa roja, flor de azahar, jazmín, etc. + 2 Sales Minerales: Sal de la Rosa del Himalaya, etc. +Potenciador extra Montenegro:  Aceite esencial de Ylang Ylang, aceite de Jojoba, etc. \n\nBeneficios: Equilibra el chakra corazón, promueve la autoaceptación, eleva el magnetismo personal y revitaliza la piel opaca gracias al cuarzo rosa y la hidratación de la jojoba.  \n\nContraindicaciones: Alergia a las rosáceas o aceites esenciales florales intensos como el ylang ylang (puede provocar mareo en personas hipotensas).",
+          "price": "150€",
+          "description": "Potencia tu energía de atracción rodeada de aceites esenciales florales intensos como el ylang ylang, para cultivar tu autoestima conectándote con personas en tu sintonía.",
           "duration": "60 min",
           "sourceSheet": "Oasis",
           "sourceRow": 41
         },
         {
           "name": "Ritual Abrecaminos & Éxito",
-          "price": "150 €",
-          "description": "6 Hierbas Ancestrales: Laurel, albahaca, romero, etc. + 2 Sales Minerales: Sal marina dorada con micas naturales, etc. + Potenciador extra Montenegro: Aceite esencial de Naranja dulce, Aceite de Pepita de Uva, etc. \n\nBeneficios: Despeja el cansancio mental, estimula la motivación, activa la microcirculación y revitaliza el cuerpo con aceites cítricos y especiados.  \n\nContraindicaciones: Piel sensible, reactiva o con rosácea (la canela puede causar rubor/calor), exposición solar inmediata tras el baño (fototoxicidad por cítricos).",
+          "price": "150€",
+          "description": "Desbloquea tu potencial y abre las puertas hacia nuevos proyectos y metas con aceites cítricos que activan la microcirculación para ponerte en acción con enfoque y energía.",
           "duration": "50 min",
           "sourceSheet": "Oasis",
           "sourceRow": 45
         },
         {
           "name": "Ritual Buena Suerte & Abundancia",
-          "price": "160 €",
-          "description": "5 Hierbas Ancestrales: Ruda, menta piperita, trébol seco, etc. + 2 Sales Minerales: Sales de Magnesio, etc. + Potenciador extra Montenegro: Aceite de Oliva virgen macerado con Oro cosmético (24k), etc. \n\nBeneficios: Eleva el tono vital, aporta luminosidad a la piel con el oro cosmético de 24k, tonifica el cuerpo y equilibra el sistema nervioso.  \n\nContraindicaciones: Hipersensibilidad al mentol o a la bergamota, o presencia de heridas abiertas en la piel.",
+          "price": "160€",
+          "description": "Eleva tu frecuencia para sintonizar con la prosperidad en todas sus formas. Diseñado para activar la gratitud, atraer la fortuna y permitir que la riqueza fluya sin esfuerzo hacia ti.",
           "duration": "60 min",
           "sourceSheet": "Oasis",
           "sourceRow": 49
         },
         {
           "name": "Ritual Limpieza Energética & Descarga",
-          "price": "145 €",
-          "description": "6 Hierbas Ancestrales: Salvia blanca, ruda, enebro, etc. + 2 Sales Minerales: Sal Marina Pura de roca, etc. + Potenciador extra Montenegro: Aceite esencial de Palo Santo, Salvia Romana, etc. \n\nBeneficios: Libera la pesadez mental y emocional, elimina toxinas de los poros mediante el carbón activo de coco y alivia la tensión muscular con las sales de roca.  \n\nContraindicaciones: Piel con deshidratación extrema o descamación profunda, o alergia conocida a aceites resinosos (palo santo/incienso).",
+          "price": "145€",
+          "description": "Libérate de cargas pesadas, estrés y vibraciones densas acumuladas con aceites esenciales como Palo Santo, etc.",
           "duration": "60 min",
           "sourceSheet": "Oasis",
           "sourceRow": 53
         },
         {
           "name": "Ritual Armonía, Paz & Calma Interior",
-          "price": "145 €",
-          "description": "5 Hierbas Ancestrales: Manzanilla, flor de azahar, etc. + 2 Sales Minerales: Cloruro de Magnesio, etc. + Potenciador extra Montenegro: Aceite esencial de Lavanda pura, Cedro del Atlas, etc. \n\nBeneficios: Desconecta el ruido mental, favorece la inducción al sueño, calma irritaciones cutáneas con la avena coloidal y relaja los músculos.  \n\nContraindicaciones: Hipotensión severa (el magnesio y la lavanda bajan la presión arterial) o somnolencia si se requiere conducir inmediatamente después.",
+          "price": "145€",
+          "description": "Silencia el ruido mental y encuentra un refugio de serenidad absoluta. Es perfecto si buscas equilibrar tus emociones con un baño de aceite puro de lavanda y hierbas.",
           "duration": "60 min",
           "sourceSheet": "Oasis",
           "sourceRow": 57
         },
         {
           "name": "Ritual Renovación & Florecimiento",
-          "price": "145 €",
-          "description": "6 Hierbas Ancestrales: Artemisa, caléndula, aciano azul, etc. + 2 Sales Minerales: Sales del Mar Muerto, etc. + Potenciador extra Montenegro: Aceite esencial de Geranio, Neroli, etc. \n\nBeneficios: Regenera la epidermis, aporta un efecto efervescente suave que suaviza el agua, restaura la elasticidad cutánea y promueve una sensación de reinicio.  \n\nContraindicaciones: Sensibilidad cutánea al bicarbonato de sodio en mucosas o alergia a la caléndula/geranio.",
+          "price": "145€",
+          "description": "Dale bienvenida a tu versión más radiante con un baño enriquecido con aceite de geranio y otros aceites esenciales.",
           "duration": "50 min",
           "sourceSheet": "Oasis",
           "sourceRow": 61
@@ -147,52 +147,52 @@ export const approvedServicePricing = {
     {
       "id": "exfoliaciones-frutales",
       "title": "Exfoliaciones Frutales",
-      "description": "Sal marina fina, Azúcar de caña orgánico, Pulpa fresca triturada de Naranja y Pomelo, Cáscara cítrica rallada fina, Aceite de almendras dulces, Manteca de karité, Aceite esencial de Naranja. \n\nBeneficios: Aporta una alta dosis de vitamina C directa a la piel, estimula la síntesis de colágeno, promueve el drenaje linfático y desinflama los tejidos con celulitis.\n\nContraindicaciones: Pieles recién depiladas, heridas abiertas, eccemas activos o fotosensibilidad (evitar la exposición solar directa durante las 12 horas posteriores al tratamiento).",
+      "description": "Disfruta de una piel suave, firme y revitalizada con nuestras exfoliaciones frutales que combinan ingredientes orgánicos, enzimas naturales y aceites nutritivos para eliminar células muertas y estimular la circulación.",
       "options": [
         {
           "name": "Exfoliación Cítrica & Anticelulítica (Naranja & Pomelo)",
-          "price": "85 €",
-          "description": "Sal marina fina, Azúcar de caña orgánico, Pulpa fresca triturada de Naranja y Pomelo, Cáscara cítrica rallada fina, Aceite de almendras dulces, Manteca de karité, Aceite esencial de Naranja. \n\nBeneficios: Aporta una alta dosis de vitamina C directa a la piel, estimula la síntesis de colágeno, promueve el drenaje linfático y desinflama los tejidos con celulitis.\n\nContraindicaciones: Pieles recién depiladas, heridas abiertas, eccemas activos o fotosensibilidad (evitar la exposición solar directa durante las 12 horas posteriores al tratamiento).",
-          "duration": "60 min",
+          "price": "85€",
+          "description": "Combate la celulitis y reduce la hinchazón con el poder de los cítricos. ¡Prepárate para lucir una piel lisa y firme!",
+          "duration": "60min",
           "sourceSheet": "Oasis",
           "sourceRow": 65
         },
         {
           "name": "Exfoliación Tropical Enzimática (Coco & Piña Natural)",
-          "price": "85 €",
-          "description": "Sal de Epsom, Azúcar de caña fino, Puré de piña fresca (alta en bromelaína), Coco fresco rallado fino, Aceite puro de Coco, Manteca de Cacao, Leche de coco en polvo. \n\nBeneficios: Combina la exfoliación física con la acción de las enzimas naturales de la bromelaína para disolver células muertas sin fricción brusca, dejando la piel profundamente suave e hidratada.\n\nContraindicaciones: Alergia o sensibilidad a las enzimas de la piña (bromelaína), pieles hiperreactivas o con dermatitis en fase aguda.",
-          "duration": "60 min",
+          "price": "85€",
+          "description": "Nutre e hidrata tu piel con extractos de piña para una renovación celular suave pero profunda.",
+          "duration": "60min",
           "sourceSheet": "Oasis",
           "sourceRow": 69
         },
         {
           "name": "Exfoliación Antioxidante Vital (Frutos Rojos & Granada)",
-          "price": "90 €",
-          "description": "Sal del Himalaya fina, Azúcar moreno, Fresas y frambuesas frescas machacadas, Semillas de granada y frutos rojos, Aceite de Pepita de Uva, Manteca de Karité, Aceite de Semilla de Frambuesa. \n\nBeneficios: Protege las células contra los radicales libres y el envejecimiento prematuro, activa la microcirculación y devuelve la luminosidad a pieles apagadas o desvitalizadas.\n\nContraindicaciones: Rosácea severa o fragilidad capilar extrema (las semillas trituradas pueden generar fricción excesiva si se ejerce mucha presión).",
+          "price": "90€",
+          "description": "Regálale a tu piel un baño de antioxidantes para protegerla del desgaste diario y mantenerla radiante por más tiempo.",
           "duration": "60 min",
           "sourceSheet": "Oasis",
           "sourceRow": 73
         },
         {
           "name": "Exfoliación Reafirmante Silvestre (Mango & Maracuyá)",
-          "price": "85 €",
-          "description": "Azúcar de caña orgánico, Sal del Himalaya, Pulpa fresca de Mango maduro, Pulpa y semillas naturales de Maracuyá, Aceite de Jojoba, Manteca de Mango, Aceite puro de Argán. \n\nBeneficios: Aporta ácidos grasos esenciales y vitamina A para reestructurar la barrera cutánea, nutrir en profundidad y devolver la elasticidad a zonas propensas a la flacidez o sequedad.\n\nContraindicaciones: Pieles con tendencia al acné corporal (espalda o pecho) por la riqueza lipídica de la manteca de mango.",
+          "price": "85€",
+          "description": "Tonifica y suaviza tu piel de forma natural mientras te regalas un momento de relax con un toque exótico.",
           "duration": "60 min",
           "sourceSheet": "Oasis",
           "sourceRow": 77
         },
         {
           "name": "Exfoliación Calmante Nutritiva (Fresa Natural & Avena)",
-          "price": "80 €",
-          "description": "Azúcar blanco ultra fino, Sal marina fina, Pure de fresa natural fresca, Avena coloidal y hojuelas finas, Aceite de Almendras dulces, Manteca de Karité, Leche de almendras fresca. \n\nBeneficios: Diseñada para pieles delicadas o reactivas; alivia rojeces, hidrata intensamente mediante los mucílagos de la avena y suaviza la textura cutánea de forma respetuosa.\n\nContraindicaciones: Alergia a las rosáceas (fresas), al gluten o a la avena.",
+          "price": "80€",
+          "description": "Calma la irritación, alivia rojeces y aporta una nutrición reconfortante y delicada para tu piel sensible o reactiva.",
           "duration": "60 min",
           "sourceSheet": "Oasis",
           "sourceRow": 81
         },
         {
           "name": "Exfoliación Purificante Bio (Limón Real & Menta Fresca)",
-          "price": "80 €",
-          "description": "Sal marina pura fina, Sales de Epsom, Zumo y pulpa de Limón fresco congelado, Hojas frescas de Menta trituradas, Aceite de Jojoba, Manteca de Karité, Aceite esencial de Limón. \n\nBeneficios: Regula el exceso de sebo, desinfecta los poros, oxigena la epidermis y produce una intensa sensación refrescante y tonificante en la musculatura.\n\nContraindicaciones: Hipersensibilidad al mentol, pieles extremadamente secas, cortes de afeitado/depilación o quemaduras solares.",
+          "price": "80€",
+          "description": "Limpia tus poros en profundidad y siente un frescor instantáneo. Ideal para equilibrar el exceso de grasa en la piel y liberar tensiones acumuladas.",
           "duration": "60 min",
           "sourceSheet": "Oasis",
           "sourceRow": 85
@@ -202,52 +202,52 @@ export const approvedServicePricing = {
     {
       "id": "exfoliaciones-sensoriales",
       "title": "Exfoliaciones Sensoriales",
-      "description": "Azúcar moreno orgánico, Sal marina fina, Café arábica molido fresco, Piel y semilla de uva tinta triturada, Aceite de Pepita de Uva, Manteca de Cacao, Extracto fluido de Resveratrol. \n\nBeneficios: Estimula fuertemente la descomposición de nódulos grasos por la cafeína, aporta potentes polifenoles antioxidantes y tonifica la piel flácida.\n\nContraindicaciones: Sensibilidad a la cafeína, hipertensión arterial grave o pieles con fragilidad capilar extrema.",
+      "description": "Transforma el sonido de la ducha en música para tus oídos. Desconecta con una experiencia de cuidado personal profunda de texturas cremosas y aromas naturales para una piel tersa y radiante.",
       "options": [
         {
           "name": "Exfoliación Antioxidante de Café & Vinoterapia",
-          "price": "75 €",
-          "description": "Azúcar moreno orgánico, Sal marina fina, Café arábica molido fresco, Piel y semilla de uva tinta triturada, Aceite de Pepita de Uva, Manteca de Cacao, Extracto fluido de Resveratrol. \n\nBeneficios: Estimula fuertemente la descomposición de nódulos grasos por la cafeína, aporta potentes polifenoles antioxidantes y tonifica la piel flácida.\n\nContraindicaciones: Sensibilidad a la cafeína, hipertensión arterial grave o pieles con fragilidad capilar extrema.",
+          "price": "75€",
+          "description": "Combina la potencia reafirmante de la cafeína con los polifenoles de la uva. Estimula la producción de colágeno y tonifica el cuerpo al instante.",
           "duration": "60 min",
           "sourceSheet": "Oasis",
           "sourceRow": 89
         },
         {
           "name": "Exfoliación Especiada de Oro & Canela (Chai Termal)",
-          "price": "75 €",
-          "description": "Sal del Himalaya fina, Azúcar de caña, Jengibre, canela y clavo molidos, Te negro Chai concentrado en polvo, Aceite de Sésamo templado, Micas de oro cosmético, Aceite esencial de Canela y Naranja. \n\nBeneficios: Aumenta la temperatura local favoreciendo el alivio de contracturas o rigidez, activa la microcirculación y deja un acabado perlado de oro en la piel.\n\nContraindicaciones: Pieles sensibles, con eccemas, rosácea o fotosensibilidad.",
+          "price": "75€",
+          "description": "Un envolvente efecto calor que estimula la circulación y reconforta tus músculos. Aporta un velo dorado y radiante que viste tu piel de lujo.",
           "duration": "60 min",
           "sourceSheet": "Oasis",
           "sourceRow": 93
         },
         {
           "name": "Exfoliación Sedosa de Cacao & Miel (Chocoterapia)",
-          "price": "75 €",
-          "description": "Azúcar moreno ultra fino, Sal marina fina, Cacao puro desgrasado 100% bio, Leche en polvo y miel deshidratada, Aceite de Almendras dulces, Manteca de Cacao pura, Aceite de Avellana. \n\nBeneficios: Nutre profundamente las pieles secas o desnutridas, estimula la liberación de endorfinas por aromaterapia y regenera la capa lipídica.\n\nContraindicaciones: Tendencia al acné corporal severo en espalda o tórax.",
+          "price": "75€",
+          "description": "Un abrazo de nutrición intensa para pieles secas. Estimula la liberación de endorfinas mientras la miel repara y suaviza profundamente cada zona.",
           "duration": "60 min",
           "sourceSheet": "Oasis",
           "sourceRow": 97
         },
         {
           "name": "Exfoliación Detox de Té Verde & Carbón de Coco",
-          "price": "75 €",
-          "description": "Sales de Epsom, Sal marina fina, Té Matcha orgánico en polvo, Carbón activo de coco y Matcha hoja, Aceite de Jojoba, Manteca de Karité, Aceite esencial de Árbol de Té y Menta. \n\nBeneficios: Purifica los poros atrapando la polución, equilibra la producción de grasa y previene el envejecimiento prematuro.\n\nContraindicaciones: Pieles con deshidratación extrema o descamación severa.",
+          "price": "75€",
+          "description": "Atrapa impurezas, toxinas y contaminación acumulada. Una limpieza profunda que permite a tu piel respirar de nuevo y recuperar su pureza.",
           "duration": "60 min",
           "sourceSheet": "Oasis",
           "sourceRow": 101
         },
         {
           "name": "Exfoliación Nutritiva de Karité, Avena & Algodón",
-          "price": "75 €",
-          "description": "Azúcar blanco ultra fino, Sal marina fina, Avena coloidal pura, Semilla de algodón molida fina, Aceite de Almendras dulces, Manteca de Karité pura, Aceite de Arroz. \n\nBeneficios: Diseñada para pieles ultrasensibles, maduras o atópicas; restaura la barrera epidérmica sin causar enrojecimiento.\n\nContraindicaciones: Alergia a la avena o al gluten.",
+          "price": "75€",
+          "description": "Restaura la barrera cutánea de la piel deshidratada. Aporta elasticidad, suavidad extrema y un confort duradero tras la primera aplicación.",
           "duration": "60 min",
           "sourceSheet": "Oasis",
           "sourceRow": 105
         },
         {
           "name": "Exfoliación Marino-Oceánica de Algas & Eucalipto",
-          "price": "75 €",
-          "description": "Sales del Mar Muerto, Sal marina gruesa no refinada, Alga Espirulina y Fucus en polvo, Hojas de eucalipto trituradas, Aceite de Pepita de Uva, Arcilla verde ventilada, Aceite esencial de Eucalipto y Menta. \n\nBeneficios: Efecto drenante intenso, alcaliniza la piel, oxigena los tejidos y desobstruye las vías respiratorias.\n\nContraindicaciones: Alteraciones tiroideas (por el yodo natural de las algas) o insuficiencia renal.",
+          "price": "75€",
+          "description": "Descongestiona tu cuerpo con el poder del agua. Activa el drenaje linfático y brinda una sensación de ligereza absoluta.",
           "duration": "60 min",
           "sourceSheet": "Oasis",
           "sourceRow": 109
@@ -257,53 +257,53 @@ export const approvedServicePricing = {
     {
       "id": "envolturas",
       "title": "Envolturas",
-      "description": "Arcilla verde ventilada, Barro del Mar Muerto, Alga Fucus y Espirulina en polvo, Té verde deshidratado, Aceite de Pepita de Uva, Gel de Centella Asiática, Aceite esencial de Enebro y Pomelo. \n\nBeneficios: Moviliza depósitos grasos y celulitis rebelde, promueve una intensa sudoración osmótica para liberar toxinas retenidas y tonifica la piel.\n\nContraindicaciones: Trastornos tiroideos (por el contenido de yodo en las algas fucus), insuficiencia renal grave o claustrofobia al envolver con film/manta térmica.",
+      "description": "Haz que tu cuerpo respire. Regálate una merecida pausa envuelta en un baño de aromas cautivadores y fórmulas botánicas que enriquecen tu piel.",
       "options": [
         {
           "name": "Envoltura Reductora & Algas del Mar Muerto",
-          "price": "75 €",
-          "description": "Arcilla verde ventilada, Barro del Mar Muerto, Alga Fucus y Espirulina en polvo, Té verde deshidratado, Aceite de Pepita de Uva, Gel de Centella Asiática, Aceite esencial de Enebro y Pomelo. \n\nBeneficios: Moviliza depósitos grasos y celulitis rebelde, promueve una intensa sudoración osmótica para liberar toxinas retenidas y tonifica la piel.\n\nContraindicaciones: Trastornos tiroideos (por el contenido de yodo en las algas fucus), insuficiencia renal grave o claustrofobia al envolver con film/manta térmica.",
-          "duration": "50 - 60 min",
+          "price": "75€",
+          "description": "Tonifica tu silueta a través de una esencial fórmula marina que estimula la sudoración para movilizar grasa saturada y liberar toxinas retenidas.",
+          "duration": "50-60min",
           "sourceSheet": "Oasis",
           "sourceRow": 113
         },
         {
           "name": "Envoltura Reafirmante de Chocolate & Alimentos Satori",
-          "price": "75 €",
-          "description": "Arcilla blanca (Kaolín), Arcilla roja, Cacao puro 100% sin azúcar, Colágeno hidrolizado en polvo, Aceite de Almendras dulces, Manteca de Cacao, Extracto de Cafeína pura. \n\nBeneficios: Estimula la producción natural de colágeno, combate el envejecimiento del tejido cutáneo, nutre la epidermis y estimula la serotonina a través de la aromaterapia.\n\nContraindicaciones: Pieles propensas al acné corporal severo en espalda o pecho.",
-          "duration": "50 - 60 min",
+          "price": "75€",
+          "description": "Combate los signos de la edad envuelta en el aroma del chocolate que activa la «hormona de la felicidad» para una experiencia más placentera.",
+          "duration": "50-60 min",
           "sourceSheet": "Oasis",
           "sourceRow": 117
         },
         {
           "name": "Envoltura Nutritiva & Regeneradora de Leche & Miel",
-          "price": "70 €",
-          "description": "Arcilla blanca (Kaolín), Fécula de arroz, Leche de cabra en polvo, Miel deshidratada en polvo, Aceite de Jojoba, Manteca de Karité, Aceite vegetal de Rosa Mosqueta. \n\nBeneficios: Repara profundamente pieles deshidratadas o desnutridas, alivia la tirantez, estimula la regeneración celular y devuelve un tacto aterciopelado.\n\nContraindicaciones: Alergia a la proteína de la leche, lactosa o productos de la colmena (miel).",
-          "duration": "50 - 60 min",
+          "price": "70€",
+          "description": "Hidrata y nutre tu piel contra la resequedad con una fusión de leche, miel y mantecas botánicas que estimulan la regeneración celular para un tacto más suave.",
+          "duration": "50-60 min",
           "sourceSheet": "Oasis",
           "sourceRow": 121
         },
         {
           "name": "Envoltura Detox & Antiox de Vino Tinto & Resveratrol",
-          "price": "80 €",
-          "description": "Arcilla roja cosmética, Arcilla blanca, Marc de uva tinta molido, Extracto de granada y resveratrol, Aceite de Pepita de Uva, Manteca de Karité, Aceite esencial de Romero. \n\nBeneficios: Alto poder neutralizador de radicales libres, mejora la microcirculación capilar, tonifica las paredes venosas y previene la flacidez tisular.\n\nContraindicaciones: Pieles ultrasensibles o con heridas abiertas.",
-          "duration": "50 - 60 min",
+          "price": "80€",
+          "description": "Previene la flacidez y la opacidad en tu piel protegiéndola del desgaste diario con extractos de uva que refrescan y purifican tu tono.",
+          "duration": "50-60 min",
           "sourceSheet": "Oasis",
           "sourceRow": 125
         },
         {
           "name": "Envoltura Calmante Termal de Avena & Manzanilla",
-          "price": "70 €",
-          "description": "Arcilla blanca (Kaolín), Talco cosmético puro, Avena coloidal pura, Extracto seco de Manzanilla y Caléndula, Aceite de Almendras dulces, Aloe vera gel estabilizado, Aceite esencial de Lavanda. \n\nBeneficios: Formulada para pieles sensibles, reactivas o irritadas; descongestiona el tejido, calma rojeces y proporciona alivio tras exposiciones solares.\n\nContraindicaciones: Alergia al gluten o a la avena.",
-          "duration": "50 - 60 min",
+          "price": "70€",
+          "description": "Ideal para pieles sensibles. Calma y descongestiona las rojeces tras la exposición solar o una alergia a través de la avena y la manzanilla.",
+          "duration": "50- 60 min",
           "sourceSheet": "Oasis",
           "sourceRow": 129
         },
         {
           "name": "Envoltura Purificante de Carbón Vegetal & Eucalipto",
-          "price": "70 €",
-          "description": "Arcilla verde ventilada, Barro volcánico, Carbón activo vegetal de coco, Hojas de eucalipto y árbol de té molidas 25 ml Aceite de Jojoba, Bicarbonato de sodio, Aceite esencial de Árbol de Té y Menta. \n\nBeneficios: Absorbe el exceso de grasa y contaminantes de los poros, oxigena la epidermis, purifica el acné corporal y aporta una sensación descongestiva.\n\nContraindicaciones: Pieles extremadamente secas o descamadas, o hipersensibilidad a aceites esenciales mentolados.",
-          "duration": "50 - 60 min",
+          "price": "70€",
+          "description": "Equilibra la tendencia grasa de tu piel. Limpiamos las impurezas de tus poros a través del carbón activado y la arcilla verde para una piel más fresca.",
+          "duration": "50- 60 min",
           "sourceSheet": "Oasis",
           "sourceRow": 133
         }
@@ -314,12 +314,12 @@ export const approvedServicePricing = {
     {
       "id": "drenaje-linfatico",
       "title": "Drenaje Linfático",
-      "description": "Descripción: Masaje linfático localizado mediante maniobras de bombeo y pases suaves y rítmicos. Enfocado de manera exclusiva en una zona anatómica a elección de la clienta (como piernas y tobillos para aliviar pesadez, o abdomen para descongestionar), facilitando una descongestión rápida y puntual.\n\nBeneficios:\n- Alivio inmediato de la pesadez y la tirantez en la zona tratada.\n- Estimulación puntual de la circulación de retorno en sesiones breves de 30 minutos.\n- Disminución del volumen y la inflamación localizada tras jornadas de pie o esfuerzo.\n\nContraindicaciones: Infecciones cutáneas activas en la zona a tratar, trombosis venosa profunda reciente, fiebre o heridas abiertas.\n\nRecomendaciones: Evitar prendas que opriman la zona tratada tras la sesión y beber al menos 500 ml de agua para facilitar la eliminación de los líquidos movilizados.",
+      "description": "Deshincha, revitaliza, recupera la ligereza que tu cuerpo necesita. Fusionamos técnica manual y alta tecnología para reducir la retención de líquidos y mejorar tu circulación.",
       "options": [
         {
           "name": "Drenaje Express (Zona focal)",
-          "price": "40 €",
-          "description": "Descripción: Masaje linfático localizado mediante maniobras de bombeo y pases suaves y rítmicos. Enfocado de manera exclusiva en una zona anatómica a elección de la clienta (como piernas y tobillos para aliviar pesadez, o abdomen para descongestionar), facilitando una descongestión rápida y puntual.\n\nBeneficios:\n- Alivio inmediato de la pesadez y la tirantez en la zona tratada.\n- Estimulación puntual de la circulación de retorno en sesiones breves de 30 minutos.\n- Disminución del volumen y la inflamación localizada tras jornadas de pie o esfuerzo.\n\nContraindicaciones: Infecciones cutáneas activas en la zona a tratar, trombosis venosa profunda reciente, fiebre o heridas abiertas.\n\nRecomendaciones: Evitar prendas que opriman la zona tratada tras la sesión y beber al menos 500 ml de agua para facilitar la eliminación de los líquidos movilizados.",
+          "price": "40€",
+          "description": "Masaje linfático exclusivo para 1 zona que elijas (piernas, abdomen, tobillos, etc.). Recibe un alivio puntual y en tiempo récord a través de suaves maniobras de bombeo.",
           "duration": "30 min",
           "sourceSheet": "Tacto",
           "sourceRow": 5,
@@ -327,8 +327,8 @@ export const approvedServicePricing = {
         },
         {
           "name": "Drenaje Completo",
-          "price": "70 €",
-          "description": "Descripción: Protocolo manual holístico e integral que recorre las principales estaciones ganglionares del cuerpo (piernas, abdomen, glúteos y espalda). Mediante pases rítmicos muy suaves y precisos, se favorece el vaciado de los vasos linfáticos, estimulando la evacuación natural de toxinas y el exceso de fluido retenido.\n\nBeneficios:\n- Desinflamación corporal global y reducción ostensible del volumen general por retención de líquidos.\n- Reactivación profunda del sistema linfático e inmunitario.\n- Efecto sedante sobre el sistema nervioso central, reduciendo el estrés y favoreciendo el descanso.\n\nContraindicaciones: Insuficiencia cardíaca congestiva, insuficiencia renal grave, procesos tumorales u oncológicos activos sin autorización médica, e infecciones agudas (erisipela o celulitis infecciosa).\n\nRecomendaciones: Aumentar la ingesta de agua durante las 24 horas posteriores para apoyar el filtrado renal de toxinas y evitar consumir alimentos con alto contenido en sodio tras el tratamiento.",
+          "price": "70€",
+          "description": "Recupera la armonía corporal al 100%. Recorremos las zonas de mayor hinchazón y pesadez (piernas, abdomen, glúteos y espalda) para que sientas alivio instantáneo.",
           "duration": "60 min",
           "sourceSheet": "Tacto",
           "sourceRow": 9,
@@ -336,8 +336,8 @@ export const approvedServicePricing = {
         },
         {
           "name": "Drenaje Combinado con Presoterapia",
-          "price": "90 €",
-          "description": "Descripción: Tratamiento dual de alta eficacia que integra la precisión del drenaje manual localizado (en abdomen y piernas) con la acción descompresiva de la presoterapia médica. La secuencia de inflado neumático controlado potencia el arrastre linfático, tonifica el tejido vascular y previene la flacidez cutánea.\n\nBeneficios:\n- Acción drenante potenciada: multiplica por dos la velocidad de eliminación de toxinas.\n- Mejora significativa de la celulitis edematosa y la firmeza del tejido.\n- Máxima sensación de ligereza y descanso duradero en extremidades inferiores.\n\nContraindicaciones: Marcapasos o dispositivos electrónicos implantados, presencia de várices de gran relieve o flebitis activa, tromboflebitis, hipertensión arterial severa o embarazo (en la zona abdominal).\n\nRecomendaciones: Acudir con ropa cómoda (o mallas finas para la presoterapia) y realizar una caminata suave de 15 a 20 minutos tras finalizar la sesión para reactivar la bomba muscular de los gemelos.",
+          "price": "90€",
+          "description": "Multiplica los resultados con el plus de la presoterapia. Tonifica el tejido vascular y previene la flacidez, regalándote una experiencia de bienestar superior.",
           "duration": "75 min",
           "sourceSheet": "Tacto",
           "sourceRow": 13,
@@ -348,28 +348,28 @@ export const approvedServicePricing = {
     {
       "id": "masaje-relajante",
       "title": "Masaje Relajante",
-      "description": "Descripción: Terapia focalizada de descanso rápido diseñada para liberar el estrés acumulado en la cadena muscular superior. Se aplican maniobras envolventes y amasamientos suaves en la espalda, cuello, hombros y cuero cabelludo, desactivando contracturas por tensión laboral o mala postura.\n\nBeneficios:\n- Alivio inmediato de la carga postural y rigidez en el área cervical y dorsal.\n- Disminución de dolores de cabeza tensionales y fatiga mental.\n- Solución ágil para desconectar en sesiones breves de 30 minutos.\n\nContraindicaciones: Heridas abiertas en la zona, estados febriles, procesos infecciosos agudos o quemaduras solares en espalda y hombros.\n\nRecomendaciones: Reposar unos minutos al finalizar para evitar mareos por hipotensión postural y mantener una hidratación adecuada el resto del día.",
+      "description": "¿El estrés le está pasando factura a tu cuerpo? Libérate de las tensiones por el desgaste diario o las malas posturas. Siente alivio al instante con masajes profundos.",
       "options": [
         {
           "name": "Masaje Relajante Express",
-          "price": "55 €",
-          "description": "Descripción: Terapia focalizada de descanso rápido diseñada para liberar el estrés acumulado en la cadena muscular superior. Se aplican maniobras envolventes y amasamientos suaves en la espalda, cuello, hombros y cuero cabelludo, desactivando contracturas por tensión laboral o mala postura.\n\nBeneficios:\n- Alivio inmediato de la carga postural y rigidez en el área cervical y dorsal.\n- Disminución de dolores de cabeza tensionales y fatiga mental.\n- Solución ágil para desconectar en sesiones breves de 30 minutos.\n\nContraindicaciones: Heridas abiertas en la zona, estados febriles, procesos infecciosos agudos o quemaduras solares en espalda y hombros.\n\nRecomendaciones: Reposar unos minutos al finalizar para evitar mareos por hipotensión postural y mantener una hidratación adecuada el resto del día.",
+          "price": "55€",
+          "description": "Un respiro en tu jornada laboral. Ideal para aliviar las zonas más afectadas por pasar horas en el ordenador (espalda, cuello y hombros). ¡Siéntete ligera y fresca!",
           "duration": "45 min",
           "sourceSheet": "Tacto",
           "sourceRow": 17
         },
         {
           "name": "Masaje Relajante Completo",
-          "price": "70 €",
-          "description": "Descripción: Experiencia corporal completa que abarca desde la zona craneal hasta la planta de los pies. Emplea aceites vegetales y esenciales puros con pases rítmicos, continuos y lentos que reducen el ritmo cardiaco, descontracturan la musculatura de forma global y equilibran la mente.\n\nBeneficios:\n- Regulación profunda del sistema nervioso (reducción de cortisol) y alivio del insomnio.\n- Nutrición de la piel mediante la absorción de aceites esenciales puros.\n- Sensación de ligereza, hidratación y relajación muscular total.\n\nContraindicaciones: Fases agudas de enfermedades infecciosas, trombosis venosa, cáncer en tratamiento activo (sin autorización médica) o brotes cutáneos severos.\n\nRecomendaciones: Dejar los aceites esenciales en la piel unas horas tras la sesión para potenciar la nutrición y evitar realizar actividad física intensa inmediatamente después.",
+          "price": "70€",
+          "description": "Experimenta una relajación muscular total. Desconecta y equilibra tu mente, envuelta en aceites esenciales para sumergirte en un estado de tranquilidad absoluto.",
           "duration": "60 min",
           "sourceSheet": "Tacto",
           "sourceRow": 21
         },
         {
           "name": "Masaje Relajante Premium Hot Stones",
-          "price": "120 €",
-          "description": "Descripción: Ritual termo-terapéutico y holístico que combina la terapia manual con la aplicación de piedras volcánicas de basalto a temperatura controlada. El calor radiante penetra profundamente en los tejidos musculares sin producir dolor, potenciado con un elixir de aromaterapia seleccionado a medida.\n\nBeneficios:\n- Descompresión muscular profunda gracias al calor del basalto volcánico.\n- Intensa vasodilatación que oxigena los tejidos y elimina toxinas.\n- Experiencia inmersiva que combate el agobio mental, la fatiga crónica y la rigidez articular.\n\nContraindicaciones: Sensibilidad alterada al calor, várices graves o flebitis, hipertensión no controlada, lesiones dermatológicas con inflamación y embarazo.\n\nRecomendaciones: Beber agua abundante tras el tratamiento para respaldar la eliminación de toxinas e integrar un descanso tranquilo para prolongar los beneficios del calor corporal.",
+          "price": "120€",
+          "description": "Combate la fatiga crónica causada por situaciones de estrés extremo. Combinamos aromaterapia con piedras volcánicas para una desconexión profunda.",
           "duration": "90 min",
           "sourceSheet": "Tacto",
           "sourceRow": 25
@@ -379,28 +379,28 @@ export const approvedServicePricing = {
     {
       "id": "masaje-descontracturante",
       "title": "Masaje Descontracturante",
-      "description": "Descripción: Terapia focalizada de alta intensidad formulada para desarticular bloqueos musculares agudos. Mediante maniobras de presión profunda, pases transversales y digitopresión en puntos gatillo (en zona lumbar, dorsal o cervical), se disuelven los nudos musculares originados por posturas forzadas o picos de tensión.\n\nBeneficios:\n- Desactivación rápida de contracturas localizadas en sesiones de 30 minutos.\n- Alivio inmediato del dolor punzante y la rigidez articular en la zona crítica.\n- Recuperación de la amplitud de movimiento y flexibilidad inmediata.\n\nContraindicaciones: Traumatismos o roturas musculares recientes (menos de 72 horas), procesos inflamatorios agudos sin diagnosticar, fiebre o heridas en la piel.\n\nRecomendaciones: Beber suficiente agua tras la sesión para depurar las toxinas liberadas en el tejido y evitar esfuerzos físicos pesados durante las horas posteriores.",
+      "description": "Lleva tu rutina sin nudos que te hacen todo cuesta arriba. Recupera tu ritmo diario sin tensiones, restaurando la movilidad de tus músculos con masajes intensivos.",
       "options": [
         {
           "name": "Masaje Descontracturante Express",
-          "price": "70 €",
-          "description": "Descripción: Terapia focalizada de alta intensidad formulada para desarticular bloqueos musculares agudos. Mediante maniobras de presión profunda, pases transversales y digitopresión en puntos gatillo (en zona lumbar, dorsal o cervical), se disuelven los nudos musculares originados por posturas forzadas o picos de tensión.\n\nBeneficios:\n- Desactivación rápida de contracturas localizadas en sesiones de 30 minutos.\n- Alivio inmediato del dolor punzante y la rigidez articular en la zona crítica.\n- Recuperación de la amplitud de movimiento y flexibilidad inmediata.\n\nContraindicaciones: Traumatismos o roturas musculares recientes (menos de 72 horas), procesos inflamatorios agudos sin diagnosticar, fiebre o heridas en la piel.\n\nRecomendaciones: Beber suficiente agua tras la sesión para depurar las toxinas liberadas en el tejido y evitar esfuerzos físicos pesados durante las horas posteriores.",
+          "price": "70€",
+          "description": "Masaje exclusivo para una zona específica de tu elección. Ideal para experimentar los primeros resultados de estimular la circulación para definir la silueta.",
           "duration": "50 min",
           "sourceSheet": "Tacto",
           "sourceRow": 29
         },
         {
           "name": "Masaje Descontracturante Completo",
-          "price": "90 €",
-          "description": "Descripción: Protocolo corporal integral de descarga muscular que trabaja en profundidad todas las cadenas musculares (piernas, espalda, hombros, cuello y brazos). Combina amasaduras profundas, fricciones intensas y presiones neuro-musculares para liberar tensiones crónicas acumuladas y oxigenar las fibras agarrotadas.\n\nBeneficios:\n- Disolución de adherencias y contracturas crónicas en todo el cuerpo.\n- Reactivación de la circulación sanguínea y oxigenación celular profunda del tejido muscular.\n- Alivio de la fatiga muscular acumulada, restituyendo la postura y la movilidad corporal.\n\nContraindicaciones: Trombosis venosa profunda, fragilidad capilar extrema, estados febriles, fracturas no consolidadas o toma de anticoagulantes.\n\nRecomendaciones: Si aparece una leve molestia o agujetas al día siguiente debido al trabajo en planos profundos, aplicar calor seco local y mantenerse muy bien hidratada.",
+          "price": "90€",
+          "description": "Alivia el dolor punzante de las zonas más propensas a nudos (cervical, lumbar, dorsal, etc.). Libérate de tensiones agudas y siente bienestar instantáneo.",
           "duration": "60 min",
           "sourceSheet": "Tacto",
           "sourceRow": 33
         },
         {
           "name": "Masaje Descontracturante Avanzado + Terapia Térmica",
-          "price": "130 €",
-          "description": "Descripción: Ritual terapéutico de alto rendimiento para musculatura severamente sobrecargada. Integra la descarga manual profunda con la tecnología de radiofrecuencia (que aporta calor interno para diatermia tisular y elasticidad al colágeno), seguido de la aplicación de bálsamos botánicos desinflamatorios e hiperemiantes que regeneran las fibras musculares.\n\nBeneficios:\n- Regeneración y relajación tisular acelerada gracias a la sinergia de diatermia (radiofrecuencia) y terapia manual.\n- Desinflamación profunda y alivio sostenido en casos de sobrecarga muscular severa o deportiva.\n- Gran capacidad analgésica e hiperemiante que suaviza la rigidez en zonas de difícil acceso.\n\nContraindicaciones: Marcapasos o implantes electrónicos, prótesis metálicas en la zona tratada, procesos tumorales activos, eccemas o alergia a bálsamos mentolados/especiados y embarazo.\n\nRecomendaciones: Evitar ducharse con agua fría inmediatamente después para conservar el efecto del calor terapéutico en los tejidos y descansar la zona tratada el resto de la jornada.",
+          "price": "130€",
+          "description": "Perfecta si estás pasando por sobrecarga muscular severa. Combina radiofrecuencia y descarga manual para acelerar la desinflamación y la liberación de nudos.",
           "duration": "90 min",
           "sourceSheet": "Tacto",
           "sourceRow": 37
@@ -410,28 +410,28 @@ export const approvedServicePricing = {
     {
       "id": "masajes-reductores",
       "title": "Masajes Reductores",
-      "description": "Descripción: Masaje manual anticelulítico y reductor vigoroso en 1 sola zona a elección, finalizando con la aplicación de crema termoactiva o reductora.\n\nBeneficios: Estimulación de la circulación local, movilización inicial de depósitos grasos y mejora en la firmeza y textura de la zona tratada.\n\nContraindicaciones: Heridas abiertas o afecciones cutáneas activas en la zona, fragilidad capilar severa, várices inflamadas o sospecha de embarazo.",
+      "description": "Modela tu silueta, combate la celulitis localizada y activa la eliminación de toxinas. Tratamientos corporales especializados para ayudarte a alcanzar tus metas de bienestar y estética.",
       "options": [
         {
           "name": "Masaje Reductor Básico",
-          "price": "50 €",
-          "description": "Descripción: Masaje manual anticelulítico y reductor vigoroso en 1 sola zona a elección, finalizando con la aplicación de crema termoactiva o reductora.\n\nBeneficios: Estimulación de la circulación local, movilización inicial de depósitos grasos y mejora en la firmeza y textura de la zona tratada.\n\nContraindicaciones: Heridas abiertas o afecciones cutáneas activas en la zona, fragilidad capilar severa, várices inflamadas o sospecha de embarazo.",
+          "price": "50€",
+          "description": "Masaje exclusivo para una zona específica de tu elección. Ideal para experimentar los primeros resultados de estimular la circulación para definir la silueta.",
           "duration": "30 min",
           "sourceSheet": "Tacto",
           "sourceRow": 41
         },
         {
           "name": "Masaje Reductor Estándar",
-          "price": "70 €",
-          "description": "Descripción: Masaje manual intenso de modelación en 2 o más zonas, combinado con elementos de maderoterapia o ventosas (cupping), concluyendo con envoltura reductora o drenaje final.\n\nBeneficios: Remodelación corporal en múltiples áreas, ayuda en la eliminación de toxinas, reducción de retención de líquidos y atenuación de la piel de naranja.\n\nContraindicaciones: Procesos infecciosos o febriles, hipertensión no controlada, problemas renales o hepáticos y várices prominentes.",
+          "price": "70€",
+          "description": "Intensa sesión de modelación en múltiples zonas combinada con maderoterapia o ventosas. Perfecta para reducir la retención de líquidos con mayor efecto.",
           "duration": "60 min",
           "sourceSheet": "Tacto",
           "sourceRow": 45
         },
         {
           "name": "Masaje Reductor Premium",
-          "price": "90 €",
-          "description": "Descripción: Exfoliación preparatoria + masaje reductor profundo con maderoterapia en cuerpo entero + ampolla lipolítica concentrada + botas de presoterapia drenante para eliminar las toxinas movilizadas.\n\nBeneficios: Remodelación corporal en múltiples áreas, ayuda en la eliminación de toxinas, reducción de retención de líquidos y atenuación de la piel de naranja.\n\nContraindicaciones: Procesos infecciosos o febriles, hipertensión no controlada, problemas renales o hepáticos y várices prominentes.",
+          "price": "90€",
+          "description": "Sesión de modelación completa que combina exfoliación, maderoterapia profunda y presoterapia para definir tu silueta con resultados más visibles.",
           "duration": "90 min",
           "sourceSheet": "Tacto",
           "sourceRow": 49
@@ -441,12 +441,12 @@ export const approvedServicePricing = {
     {
       "id": "maderoterapia",
       "title": "Maderoterapia",
-      "description": "Descripción: Sesión focalizada en una zona específica, ideal como primer contacto o prueba para verificar la eficacia de la técnica y experimentar alivio sintomático inmediato.\n\nBeneficios: Activación rápida de la circulación local, alivio de la tensión muscular y tonificación inicial en un área puntual.\n\nContraindicaciones: Hematomas o heridas en la zona a tratar, hipertensión no controlada o sensibilidad/fragilidad capilar extrema.",
+      "description": "Combate la celulitis más rebelde y devuelve la firmeza a tu piel desde la primera sesión con una técnica 100% natural que utiliza herramientas de madera noble para moldear tu figura.",
       "options": [
         {
           "name": "Maderoterapia Express",
-          "price": "45 €",
-          "description": "Descripción: Sesión focalizada en una zona específica, ideal como primer contacto o prueba para verificar la eficacia de la técnica y experimentar alivio sintomático inmediato.\n\nBeneficios: Activación rápida de la circulación local, alivio de la tensión muscular y tonificación inicial en un área puntual.\n\nContraindicaciones: Hematomas o heridas en la zona a tratar, hipertensión no controlada o sensibilidad/fragilidad capilar extrema.",
+          "price": "45€",
+          "description": "Sesión focalizada en una zona específica, ideal como primer contacto para experimentar alivio y tonificación inicial.",
           "duration": "40 min",
           "sourceSheet": "Tacto",
           "sourceRow": 53,
@@ -454,8 +454,8 @@ export const approvedServicePricing = {
         },
         {
           "name": "Maderoterapia Completa",
-          "price": "65 €",
-          "description": "Descripción: Masaje de apertura ganglionar + secuencia completa de maderoterapia corporal (champiñón, tabla moldeadora, copa sueca) + aceite reafirmante/reductor. Abarca piernas completas (delante y detrás), glúteos, abdomen y flancos.\n\nBeneficios: Estimulación profunda del sistema linfático, alisado visible de la celulitis, redefinición de cintura/glúteos y reafirmación de tejidos en zonas críticas.\n\nContraindicaciones: Afecciones dermatológicas o quemaduras en el cuerpo, trastornos de la coagulación, embarazo o cáncer activo.",
+          "price": "65€",
+          "description": "Masaje linfático y secuencia corporal completa con maderas y aceite reafirmante para moldear piernas, glúteos y abdomen.",
           "duration": "60 min",
           "sourceSheet": "Tacto",
           "sourceRow": 57,
@@ -463,8 +463,8 @@ export const approvedServicePricing = {
         },
         {
           "name": "Plan Maderoterapia Premium",
-          "price": "85 €",
-          "description": "Descripción: Maderoterapia corporal completa combinada con botas de presoterapia médica/estética para acelerar la eliminación linfática y reabsorber líquidos retenidos en la misma sesión.\n\nBeneficios: Maximiza la remodelación corporal, acelera la eliminación de la grasa movilizada y combate la pesadez de piernas retenidas.\n\nContraindicaciones: Trombosis venosa profunda, marcapasos o problemas cardiacos graves, insuficiencia renal o hepática, y embarazo.",
+          "price": "85€",
+          "description": "Combinación de maderoterapia corporal con botas de presoterapia para acelerar la eliminación de líquidos y grasa movilizada.",
           "duration": "60 min",
           "sourceSheet": "Tacto",
           "sourceRow": 61,
@@ -472,8 +472,8 @@ export const approvedServicePricing = {
         },
         {
           "name": "Plan Maderoterapia Post Parto",
-          "price": "65 €",
-          "description": "Descripción: Drenaje linfático manual suave de apertura y maderoterapia específica no agresiva (copa sueca y tabla moldeadora) con aceite reafirmante apto para lactancia. Centrado en recolocar tejidos abdominales, redefinir cintura y drenar el edema.\n\nBeneficios: Acelera la recuperación de la silueta postparto, combate la flacidez y retención de líquidos de forma segura y apta durante el periodo de lactancia.\n\nContraindicaciones: Parto reciente sin alta médica (mínimo 6-8 semanas o tras indicación médica), cesárea con cicatriz no consolidada o infecciones.",
+          "price": "65€",
+          "description": "Masaje suave y maderoterapia no agresiva con aceite apto para lactancia, enfocado en recolocar tejidos y drenar el edema.",
           "duration": "60 min",
           "sourceSheet": "Tacto",
           "sourceRow": 65,
@@ -484,12 +484,12 @@ export const approvedServicePricing = {
     {
       "id": "metaloterapia",
       "title": "Metaloterapia",
-      "description": "Descripción: Trabajo localizado y profundo sobre la adiposidad o celulitis rebelde mediante accesorios anatómicos de aleación metálica.\n\nBeneficios: Efecto térmico del metal que favorece la ruptura de nódulos celulíticos, reafirmación intensiva y tonificación en una zona focalizada.\n\nContraindicaciones: Alergia o hipersensibilidad al contacto con metales, fragilidad capilar alta, hematomas o heridas abiertas.",
+      "description": "Lleva la remodelación corporal al siguiente nivel con la metaloterapia. Acción lipolítica profunda, reafirmando los tejidos y esculpiendo tu silueta con resultados visibles.",
       "options": [
         {
           "name": "Anticelulitis Express",
-          "price": "50 €",
-          "description": "Descripción: Trabajo localizado y profundo sobre la adiposidad o celulitis rebelde mediante accesorios anatómicos de aleación metálica.\n\nBeneficios: Efecto térmico del metal que favorece la ruptura de nódulos celulíticos, reafirmación intensiva y tonificación en una zona focalizada.\n\nContraindicaciones: Alergia o hipersensibilidad al contacto con metales, fragilidad capilar alta, hematomas o heridas abiertas.",
+          "price": "50€",
+          "description": "Trabajo localizado mediante accesorios metálicos para combatir la celulitis rebelde y tonificar una zona específica.",
           "duration": "40 min",
           "sourceSheet": "Tacto",
           "sourceRow": 69,
@@ -497,8 +497,8 @@ export const approvedServicePricing = {
         },
         {
           "name": "Masaje Reductor Estándar",
-          "price": "75 €",
-          "description": "Descripción: Masaje de apertura ganglionar seguido de secuencia completa de metaloterapia corporal (disco, copa de succión metálica y nudillar) con emulsión reafirmante/reductora en piernas, glúteos, abdomen y flancos.\n\nBeneficios: Tonificación tisular profunda, alisado de nódulos grasos gracias al frío/calor del metal y modelado de la figura sin agredir la piel.\n\nContraindicaciones: Hipertensión no controlada, alteraciones vasculares graves, infecciones cutáneas o procesos tumorales.",
+          "price": "75€",
+          "description": "Secuencia completa de metaloterapia corporal con emulsión reductora para modelar piernas, glúteos y abdomen.",
           "duration": "60 min",
           "sourceSheet": "Tacto",
           "sourceRow": 73,
@@ -506,8 +506,8 @@ export const approvedServicePricing = {
         },
         {
           "name": "Masaje Reductor Premium",
-          "price": "95 €",
-          "description": "Descripción: Metaloterapia corporal completa combinada con botas de presoterapia médica/estética para acelerar la eliminación de líquidos y potenciar la firmeza.\n\nBeneficios: Acción reafirmante y lipolítica combinada, eliminación efectiva de toxinas y alivio inmediato de la retención de líquidos.\n\nContraindicaciones: Trombosis, patologías renales o cardiacas graves, marcapasos, embarazo o inflamación aguda en extremidades.",
+          "price": "95€",
+          "description": "Metaloterapia corporal completa combinada con presoterapia para potenciar la firmeza y eliminar toxinas con mayor rapidez.",
           "duration": "60 min",
           "sourceSheet": "Tacto",
           "sourceRow": 77,
@@ -518,7 +518,7 @@ export const approvedServicePricing = {
     {
       "id": "maderoterapia-facial",
       "title": "Maderoterapia Facial",
-      "description": "Descripción: Terapia holística de remodelación facial que combina maniobras manuales con el uso de herramientas anatómicas de madera noble diseñadas para el rostro (rodillos estriados, copa sueca facial y tabla moldeadora). Trabaja la estimulación del colágeno, activa la circulación sanguínea y oxigena los tejidos del rostro, cuello y escote, finalizando con un aceite nutritivo reafirmante.\n\nBeneficios: Efecto lifting y reafirmante inmediato, redefinición del óvalo facial y pómulos, reducción de la papada y bolsas por acumulación de tensión o líquidos, y estimulación de la producción natural de elastina y colágeno.\n\nContraindicaciones: Acné inflamatorio severo o en brote activo, rosácea grave, presencia de hilos tensores o relleno de ácido hialurónico/bótox aplicado recientemente (esperar al menos 3 a 4 semanas), o heridas abiertas en el rostro.",
+      "description": "Terapia de remodelación con herramientas de madera para estimular el colágeno, definir el óvalo facial y oxigenar los tejidos.",
       "options": [
         {
           "name": "Maderoterapia Facial",
@@ -533,7 +533,7 @@ export const approvedServicePricing = {
     {
       "id": "drenaje-linfatico-facial",
       "title": "Drenaje Linfático Facial",
-      "description": "Descripción: Protocolo manual ultrasuave basado en el método Vodder que estimula los ganglios linfáticos del rostro, cuello y zona clavicular mediante presiones lentas, rítmicas y bombeos indoloros. Diseñado para canalizar los fluidos estancados hacia las vías de eliminación natural, desintoxicar la tez y calmar la inflamación.\n\nBeneficios: Desinflamación profunda del rostro y contorno de ojos, alivio de bolsas y ojeras edematosas, aceleración de la recuperación post-cirugía facial (como blefaroplastia o rinoplastia), eliminación de toxinas y alivio de la congestión sin agredir la piel.\n\nContraindicaciones: Infecciones bucales o cutáneas activas en el rostro, acné infeccioso, problemas de tiroides no controlados (al trabajar la zona cervical), o procesos infecciosos con fiebre.",
+      "description": "Protocolo manual ultrasuave con el método Vodder para desinflamar el rostro, reducir bolsas y calmar la retención de líquidos.",
       "options": [
         {
           "name": "Drenaje Linfático Facial",
@@ -550,12 +550,12 @@ export const approvedServicePricing = {
     {
       "id": "eliminacion-de-tatuajes",
       "title": "Eliminación de Tatuajes",
-      "description": "Descripción: Tratamiento láser de micro-focalización diseñado para borrar tatuajes de formato reducido, símbolos o perfilados finos. Incluye limpieza previa de la zona, pulso térmico ultra-corto, emulsión regeneradora calmante y apósito estéril protector.\n\nBeneficios:\n- Tratamiento rápido en sesión de solo 30 minutos.\n- Precisión milimétrica que protege la piel circundante sin pigmentar.\n- Ideal para pequeñas marcas o preparación de microrretoques (cover-up).\n\nContraindicaciones: Piel bronceada o expuesta al sol en los últimos 30 días, embarazo/lactancia, tendencia a queloides, infecciones locales o fármacos fotosensibles.\n\nRecomendaciones: Mantener el apósito 24 h, aplicar la emulsión cicatrizante 3 veces al día, no rascar costras y usar protección solar FPS 50+ durante todo el proceso. Espaciar las sesiones entre 6 y 8 semanas.",
+      "description": "Dile adiós a lo que ya no te representa con nuestra tecnología láser avanzada. Borramos tu tinta de forma segura, cuidando tu piel de quemaduras o irritaciones crónicas.",
       "options": [
         {
           "name": "Tatuaje Pequeño (hasta 5 × 5 cm)",
-          "price": "120 €",
-          "description": "Descripción: Tratamiento láser de micro-focalización diseñado para borrar tatuajes de formato reducido, símbolos o perfilados finos. Incluye limpieza previa de la zona, pulso térmico ultra-corto, emulsión regeneradora calmante y apósito estéril protector.\n\nBeneficios:\n- Tratamiento rápido en sesión de solo 30 minutos.\n- Precisión milimétrica que protege la piel circundante sin pigmentar.\n- Ideal para pequeñas marcas o preparación de microrretoques (cover-up).\n\nContraindicaciones: Piel bronceada o expuesta al sol en los últimos 30 días, embarazo/lactancia, tendencia a queloides, infecciones locales o fármacos fotosensibles.\n\nRecomendaciones: Mantener el apósito 24 h, aplicar la emulsión cicatrizante 3 veces al día, no rascar costras y usar protección solar FPS 50+ durante todo el proceso. Espaciar las sesiones entre 6 y 8 semanas.",
+          "price": "120€",
+          "description": "Borra símbolos y pequeños detalles en solo minutos con máxima precisión y cuidado para tu piel.",
           "duration": "30 min",
           "sourceSheet": "Tez",
           "sourceRow": 5,
@@ -563,8 +563,8 @@ export const approvedServicePricing = {
         },
         {
           "name": "Tatuaje Mediano (hasta 15 × 15 cm)",
-          "price": "300 €",
-          "description": "Descripción: Protocolo láser enfocado en tatuajes de tamaño medio (antebrazos, gemelos, omóplatos o zonas delimitadas). Descompone las partículas de tinta en micropartículas eliminables por el sistema linfático. Incluye higienización, emisión focalizada, emulsión de alta reparación y sellado.\n\nBeneficios:\n- Reducción progresiva y uniforme de pigmentos oscuros y densos.\n- Preserva la elasticidad del tejido epidérmico sin dejar relieve.\n- Recuperación ágil permitiendo retomar la rutina diaria tras la sesión.\n\nContraindicaciones: Quemaduras solares recientes, procesos de inflamación cutánea (dermatitis, psoriasis), uso de isotretinoína y problemas de drenaje linfático o inmunológicos descompensados.\n\nRecomendaciones: Evitar saunas, piscinas y sudoración excesiva las primeras 48 h. No frotar la zona al secar tras la ducha. Es imprescindible proteger la zona del sol 3 semanas antes y después de cada sesión.",
+          "price": "300€",
+          "description": "Desvanece los pigmentos oscuros de tu piel obteniendo un tono uniforme, hidratado y fuerte.",
           "duration": "45 min",
           "sourceSheet": "Tez",
           "sourceRow": 9,
@@ -572,8 +572,8 @@ export const approvedServicePricing = {
         },
         {
           "name": "Tatuaje Grande (hasta 20 × 30 cm o superior)",
-          "price": "450 €",
-          "description": "Descripción: Sesión intensiva de 60 minutos para piezas extensas (espalda parcial, muslos parcial, mangas parcial o costado parcial). Emplea pulsos de alta eficacia ajustados al volumen de tinta para fragmentar los pigmentos por fases, acompañados de una preparación aseptizada y un protocolo final de sellado térmico y tisular.\n\nBeneficios:\n- Cobertura homogénea en grandes extensiones sin saturar el tejido.\n- Eliminación completa o aclarado intensivo para rediseños/coberturas grandes.\n- Alta eficacia con empaquetado de bono (ahorro directo de 1 sesión).\n\nContraindicaciones: Exposición solar activa, fotosensibilidad farmacológica, embarazo/lactancia, historial de cicatrización hipertrófica y presencia de lesiones cutáneas o lunares sospechosos en la zona.\n\nRecomendaciones: Aplicar frío local indirecto las primeras horas si hay sensación de calor. Lavar con agua tibia y jabón neutro a toques suaves. Mantener una estricta pauta de hidratación y fotoprotección total (FPS 50+) continua.",
+          "price": "450€",
+          "description": "Aclara o elimina tatuajes de mayor pigmentación y tamaño con una sesión intensiva que te devuelve un tono uniforme, luminoso y sin resequedad.",
           "duration": "60 min",
           "sourceSheet": "Tez",
           "sourceRow": 13,
@@ -581,8 +581,8 @@ export const approvedServicePricing = {
         },
         {
           "name": "Tatuaje Extragrande",
-          "price": "600 €",
-          "description": "Descripción: Protocolo avanzado de alta cobertura diseñado para piezas de gran envergadura (mangas completas, espaldas enteras, piernas o pechos completos). Se realiza una emisión láser estructurada por cuadrantes de seguridad para evitar la saturación térmica del tejido. Incluye asepsia previa, aplicación de pulso térmico adaptado al tipo y densidad de la tinta, tratamiento descongestivo inmediato, emulsión de reparación profunda y sellado protector estéril.\n\nBeneficios:\n- Permite abordar proyectos extensos de forma uniforme y segura en una sola sesión programada.\n- Diseñado específicamente para despigmentaciones profundas de piezas complejas o preparación de cover-ups gigantes.\n- Maximiza el ahorro mediante la adquisición del bono de 5 sesiones.\n\nContraindicaciones: Exposición solar o solárium en la zona en los últimos 30 días, embarazo o lactancia, tendencia a la formación de queloides, tratamientos con fármacos fotosensibles (isotretinoína, antibióticos fotosensibilizantes), o alteraciones del sistema linfático e inmunitario sin supervisión médica.\n\nRecomendaciones:\nDividir el cuidado post-sesión por zonas si la pieza abarca varias áreas corporales.\nMantener el apósito protector las primeras 24 horas y lavar suavemente con agua tibia y jabón neutro sin frotar.\nAplicar la emulsión regeneradora 3 veces al día durante los primeros 10-12 días.\nUsar fotoprotección total (FPS 50+) estricta durante todo el proceso.\n\nEspaciado obligatorio: Dejar un margen de 7 a 9 semanas entre sesiones para permitir que el sistema linfático drene la gran carga de micropartículas de tinta liberadas.",
+          "price": "600€",
+          "description": "Tratamiento avanzado para tatuajes en mangas o espaldas enteras. Incluye asepsia previa y sellado protector estéril para eliminar con total seguridad.",
           "duration": "60 min",
           "sourceSheet": "Tez",
           "sourceRow": 17,
@@ -593,7 +593,7 @@ export const approvedServicePricing = {
     {
       "id": "eliminacion-de-micropigmentacion",
       "title": "Eliminación de Micropigmentación",
-      "description": "Descripción: Protocolo de alta precisión para la fragmentación y remoción de pigmentos densos o compactos (técnicas de sombreado, powder brows o maquillaje semipermanente antiguo) en la zona de las cejas mediante disparos de luz láser o agentes des-pigmentantes específicos.\n\nBeneficios: Eliminación eficaz de tonos virados a rojo, violeta, gris o azul; aclarado homogéneo de la zona para dejar la piel preparada ante un nuevo diseño o recuperar el aspecto natural de la ceja.\n\nContraindicaciones: Tendencia a la formación de cicatrices queloides, infecciones o herpes activo en la zona, tratamientos con retinoides orales o tópicos recientes, y enfermedades autoinmunes de la piel.",
+      "description": "Despídete del maquillaje semipermanente que ya no te favorece. Elimina pigmentos indeseados y corrige virajes de color con un tratamiento láser.",
       "options": [
         {
           "name": "Cejas",
