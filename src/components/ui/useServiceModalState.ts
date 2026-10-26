@@ -1,40 +1,39 @@
-import { useCallback, useMemo, useState } from 'react'
+import { useCallback } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 
 export function useServiceModalState(serviceId: string) {
-  const [isModalOpen, setIsModalOpen] = useState(false)
   const location = useLocation()
   const navigate = useNavigate()
-  const isOpenedByUrl = useMemo(() => {
-    const params = new URLSearchParams(location.search)
-
-    return params.get('service') === serviceId
-  }, [location.search, serviceId])
+  const params = new URLSearchParams(location.search)
+  const isModalOpen = params.get('service') === serviceId
 
   const openModal = useCallback(() => {
-    setIsModalOpen(true)
-  }, [])
+    const nextParams = new URLSearchParams(location.search)
+    if (nextParams.get('service') === serviceId) return
+
+    nextParams.set('service', serviceId)
+    navigate({
+      pathname: location.pathname,
+      search: `?${nextParams.toString()}`,
+      hash: location.hash,
+    })
+  }, [location.hash, location.pathname, location.search, navigate, serviceId])
 
   const closeModal = useCallback(() => {
-    setIsModalOpen(false)
+    const nextParams = new URLSearchParams(location.search)
+    if (nextParams.get('service') !== serviceId) return
 
-    const params = new URLSearchParams(location.search)
-
-    if (params.get('service') !== serviceId) {
-      return
-    }
-
-    params.delete('service')
-    const nextSearch = params.toString()
+    nextParams.delete('service')
+    const nextSearch = nextParams.toString()
     navigate(
-      `${location.pathname}${nextSearch ? `?${nextSearch}` : ''}${location.hash}`,
+      {
+        pathname: location.pathname,
+        search: nextSearch ? `?${nextSearch}` : '',
+        hash: location.hash,
+      },
       { replace: true },
     )
   }, [location.hash, location.pathname, location.search, navigate, serviceId])
 
-  return {
-    closeModal,
-    isModalOpen: isModalOpen || isOpenedByUrl,
-    openModal,
-  }
+  return { closeModal, isModalOpen, openModal }
 }
