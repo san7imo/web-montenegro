@@ -15,27 +15,32 @@ export function FloatingWhatsAppButton({
   const shouldReduceMotion = useReducedMotion()
 
   return (
-    <motion.a
-      href={href}
-      onClick={() => trackMetaEvent("Contact", { content_name: "WhatsApp Aura" })}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Hablar con Aura por WhatsApp"
-      title="Hablar con Aura por WhatsApp"
-      className="fixed bottom-5 right-5 z-[90] inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_6px_22px_rgba(0,0,0,0.22)] transition-colors duration-200 hover:bg-[#20BA5A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 sm:bottom-7 sm:right-7"
-      initial={false}
-      animate={shouldReduceMotion ? undefined : {
-        rotate: [0, 0, -4, 4, -3, 3, 0, 0],
-        scale: [1, 1, 1.025, 1.025, 1.015, 1.015, 1, 1],
-      }}
-      transition={shouldReduceMotion ? undefined : {
-        duration: 0.8,
-        repeat: Infinity,
-        repeatDelay: 4.2,
-        ease: 'easeInOut',
-      }}
-    >
-      <FaWhatsapp aria-hidden="true" className="h-7 w-7" />
-    </motion.a>
+    <div className="fixed bottom-5 right-5 z-[90] flex items-center gap-3 sm:bottom-7 sm:right-7">
+      <span className="aura-whatsapp-label pointer-events-none rounded-xl bg-white px-3 py-2 text-sm font-semibold text-[#174B32] shadow-[0_3px_16px_rgba(0,0,0,0.18)]">
+        Reserva con Aura
+      </span>
+      <motion.a
+        href={href}
+        onClick={() => trackMetaEvent('Contact', { content_name: 'WhatsApp Aura' })}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Reservar con Aura por WhatsApp"
+        title="Reserva con Aura"
+        className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_6px_22px_rgba(0,0,0,0.22)] transition-colors duration-200 hover:bg-[#20BA5A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2"
+        initial={false}
+        animate={shouldReduceMotion ? undefined : {
+          rotate: [0, -7, 7, -6, 6, -3, 3, 0],
+          x: [0, -1, 1, -1, 1, 0, 0, 0],
+        }}
+        transition={shouldReduceMotion ? undefined : {
+          duration: 0.55,
+          repeat: Infinity,
+          repeatDelay: 4.45,
+          ease: 'easeInOut',
+        }}
+      >
+        <FaWhatsapp aria-hidden="true" className="h-7 w-7" />
+      </motion.a>
+    </div>
   )
 }
