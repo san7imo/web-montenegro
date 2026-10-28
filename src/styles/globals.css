@@ -125,3 +125,24 @@
     color: var(--color-forest-deep);
   }
 }
+
+
+/* Subtle WhatsApp-style invitation: appears briefly every 10 seconds. */
+.aura-whatsapp-label {
+  opacity: 0;
+  transform: translateX(8px);
+  animation: aura-message-preview 10s ease-in-out 10s infinite;
+}
+
+@keyframes aura-message-preview {
+  0%, 4%, 28%, 100% { opacity: 0; transform: translateX(8px); }
+  8%, 24% { opacity: 1; transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aura-whatsapp-label {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
