@@ -5,6 +5,7 @@ export const cookieConsentChangeEvent = 'montenegro:cookie-consent-change'
 export const cookieCategories = {
   necessary: 'necessary',
   externalMedia: 'functionality',
+  marketing: 'marketing',
 } as const
 
 export type CookieCategory = (typeof cookieCategories)[keyof typeof cookieCategories]
@@ -44,7 +45,7 @@ export function initializeCookieConsent() {
   initializationPromise = getCookieConsentApi().then(async (api) => {
     await api.run({
       mode: 'opt-in',
-      revision: 1,
+      revision: 2,
       autoClearCookies: true,
       disablePageInteraction: false,
       cookie: {
@@ -69,6 +70,10 @@ export function initializeCookieConsent() {
           enabled: true,
           readOnly: true,
         },
+        marketing: {
+          enabled: false,
+          services: { metaPixel: { label: 'Meta Pixel (Facebook e Instagram)' } },
+        },
         functionality: {
           enabled: false,
           services: {
@@ -86,7 +91,7 @@ export function initializeCookieConsent() {
               label: 'Preferencias de privacidad',
               title: 'Tu privacidad, en tus manos',
               description:
-                'Utilizamos almacenamiento técnico para recordar tus preferencias. El contenido externo, como Google Maps, solo se carga si nos das permiso.',
+                'Utilizamos almacenamiento técnico para recordar tus preferencias. El contenido externo y la medición publicitaria con Meta Pixel solo se activan si nos das permiso.',
               acceptAllBtn: 'Aceptar',
               acceptNecessaryBtn: 'Rechazar',
               showPreferencesBtn: 'Configurar',
@@ -132,6 +137,11 @@ export function initializeCookieConsent() {
                   description:
                     'Autoriza la carga del mapa interactivo de Google Maps en la página de contacto. Si se rechaza, la dirección y el enlace externo siguen disponibles.',
                   linkedCategory: 'functionality',
+                },
+                {
+                  title: 'Publicidad y medición',
+                  description: 'Permite medir visitas e interacciones con Meta Pixel (ID 4615219068711620) para analizar campañas de Facebook e Instagram. Es opcional.',
+                  linkedCategory: 'marketing',
                 },
                 {
                   title: 'Más información',
