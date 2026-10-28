@@ -127,21 +127,40 @@
 }
 
 
-/* Subtle WhatsApp-style invitation: appears briefly every 10 seconds. */
+/* A short, visible shake once every 10 seconds. */
+.aura-whatsapp-button {
+  transform-origin: center;
+  animation: aura-whatsapp-shake 10s ease-in-out infinite;
+}
+
+@keyframes aura-whatsapp-shake {
+  0%, 1%, 9%, 100% { transform: translateX(0) rotate(0); }
+  2% { transform: translateX(-2px) rotate(-8deg); }
+  3% { transform: translateX(2px) rotate(8deg); }
+  4% { transform: translateX(-2px) rotate(-7deg); }
+  5% { transform: translateX(2px) rotate(7deg); }
+  6% { transform: translateX(-1px) rotate(-3deg); }
+  7% { transform: translateX(0) rotate(0); }
+}
+
+/* A brief invitation every 30 seconds, beginning after 30 seconds. */
 .aura-whatsapp-label {
   opacity: 0;
   transform: translateX(8px);
-  animation: aura-message-preview 10s ease-in-out 10s infinite;
+  animation: aura-message-preview 30s ease-in-out 30s infinite;
 }
 
 @keyframes aura-message-preview {
-  0%, 4%, 28%, 100% { opacity: 0; transform: translateX(8px); }
-  8%, 24% { opacity: 1; transform: translateX(0); }
+  0%, 1%, 10%, 100% { opacity: 0; transform: translateX(8px); }
+  2%, 8% { opacity: 1; transform: translateX(0); }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .aura-whatsapp-button,
   .aura-whatsapp-label {
     animation: none;
+  }
+  .aura-whatsapp-label {
     opacity: 1;
     transform: none;
   }
