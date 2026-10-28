@@ -24,12 +24,6 @@ export function FloatingWhatsAppButton({
         aria-label="Reservar con Aura por WhatsApp"
         title="Reserva aquí"
         className="aura-whatsapp-button inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_6px_22px_rgba(0,0,0,0.22)] transition-colors duration-200 hover:bg-[#20BA5A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2"
-        transition={shouldReduceMotion ? undefined : {
-          duration: 0.55,
-          repeat: Infinity,
-          repeatDelay: 4.45,
-          ease: 'easeInOut',
-        }}
       >
         <FaWhatsapp aria-hidden="true" className="h-7 w-7" />
       </a>
