@@ -2,6 +2,7 @@ import { useLocation } from 'react-router-dom'
 
 import { AppRoutes } from './routes'
 import { CookieConsent } from '../components/ui/CookieConsent'
+import { MetaPixelTracker } from '../components/ui/MetaPixelTracker'
 import { FloatingWhatsAppButton } from '../components/ui/FloatingWhatsAppButton'
 import { ScrollToTop } from '../components/ui/ScrollToTop'
 import { SeoManager } from '../components/ui/SeoManager'
@@ -14,9 +15,10 @@ export default function App() {
     <>
       <ScrollToTop />
       <SeoManager />
+      <MetaPixelTracker />
       <AppRoutes />
       <FloatingWhatsAppButton />
-      {showCookieConsent ? <CookieConsent /> : null}
+      <CookieConsent />
     </>
   )
 }
