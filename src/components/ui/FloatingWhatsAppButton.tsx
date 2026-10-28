@@ -22,7 +22,7 @@ export function FloatingWhatsAppButton({
       rel="noopener noreferrer"
       aria-label="Hablar con Aura por WhatsApp"
       title="Hablar con Aura por WhatsApp"
-      className="fixed bottom-5 left-5 z-[90] inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_6px_22px_rgba(0,0,0,0.22)] transition-colors duration-200 hover:bg-[#20BA5A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 sm:bottom-7 sm:left-7"
+      className="fixed bottom-5 right-5 z-[90] inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_6px_22px_rgba(0,0,0,0.22)] transition-colors duration-200 hover:bg-[#20BA5A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 sm:bottom-7 sm:right-7"
       initial={false}
       animate={shouldReduceMotion ? undefined : {
         rotate: [0, 0, -4, 4, -3, 3, 0, 0],
