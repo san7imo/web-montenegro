@@ -31,7 +31,7 @@ export function FloatingWhatsAppButton({
       transition={shouldReduceMotion ? undefined : {
         duration: 0.8,
         repeat: Infinity,
-        repeatDelay: 9.2,
+        repeatDelay: 4.2,
         ease: 'easeInOut',
       }}
     >
