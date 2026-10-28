@@ -8,7 +8,7 @@ type FloatingWhatsAppButtonProps = {
 
 export function FloatingWhatsAppButton({
   href = buildWhatsAppContactUrl(
-    'Hola, quiero reservar una cita en Montenegro Salud y Belleza. ¿Me puedes confirmar disponibilidad?',
+    'Hola Aura, me gustaría recibir información sobre los servicios de Montenegro Salud y Belleza. ¿Me puedes ayudar?',
   ),
 }: FloatingWhatsAppButtonProps) {
   const shouldReduceMotion = useReducedMotion()
@@ -17,12 +17,21 @@ export function FloatingWhatsAppButton({
     <motion.a
       href={href}
       target="_blank"
-      rel="noreferrer"
-      aria-label="Abrir contacto por WhatsApp"
-      className="fixed right-5 bottom-5 z-[70] inline-flex h-14 w-14 items-center justify-center rounded-full bg-pink text-white shadow-[var(--shadow-pink)] transition-transform duration-300 hover:scale-[1.03] hover:bg-pink-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink focus-visible:ring-offset-2 sm:right-7 sm:bottom-7"
-      initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.86, y: 20 }}
-      animate={shouldReduceMotion ? undefined : { opacity: 1, scale: 1, y: 0 }}
-      transition={{ delay: 0.95, duration: 0.75, ease: 'easeOut' }}
+      rel="noopener noreferrer"
+      aria-label="Hablar con Aura por WhatsApp"
+      title="Hablar con Aura por WhatsApp"
+      className="fixed bottom-5 left-5 z-[90] inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_6px_22px_rgba(0,0,0,0.22)] transition-colors duration-200 hover:bg-[#20BA5A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 sm:bottom-7 sm:left-7"
+      initial={false}
+      animate={shouldReduceMotion ? undefined : {
+        rotate: [0, 0, -4, 4, -3, 3, 0, 0],
+        scale: [1, 1, 1.025, 1.025, 1.015, 1.015, 1, 1],
+      }}
+      transition={shouldReduceMotion ? undefined : {
+        duration: 0.8,
+        repeat: Infinity,
+        repeatDelay: 7.2,
+        ease: 'easeInOut',
+      }}
     >
       <FaWhatsapp aria-hidden="true" className="h-7 w-7" />
     </motion.a>
